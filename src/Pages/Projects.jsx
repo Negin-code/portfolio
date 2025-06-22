@@ -7,6 +7,7 @@ import CultureCafeImage from "../assets/CCCover.png";
 import GuardianImage from "../assets/Guardiancard.webp";
 
 import ChromaGridCard from "../components/ChromaGridCard";
+
 import "./Projects.css";
 
 const Projects = () => {

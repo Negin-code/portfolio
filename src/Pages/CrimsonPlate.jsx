@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaGithub, FaExternalLinkAlt, FaClock, FaCode, FaLink, FaTools } from 'react-icons/fa';
 import { IoIosArrowDropupCircle, IoIosArrowRoundBack } from "react-icons/io";
 import CrimsonPlateImage from "../assets/CrimsonPlateHero.webp";
-import ProjectHero from '../Components/ProjectHero';
+import ProjectHero from '../components/ProjectHero';
 
 const CrimsonPlate = () => {
   return (

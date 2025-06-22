@@ -21,14 +21,14 @@ import {
 } from "react-icons/si";
 import { DiJavascript } from "react-icons/di";
 import { VscCode } from "react-icons/vsc";
-import ProfileImage from "../Components/ProfileImage";
-import HeroContent from "../Components/HeroContent";
-import AccordionSection from "../Components/AccordionSection";
-import Value from "../Components/Value";
-import GlassIcon from "../Components/GlassIcon";
+import ProfileImage from "../components/ProfileImage";
+import HeroContent from "../components/HeroContent";
+import AccordionSection from "../components/AccordionSection";
+import Value from "../components/Value";
+import GlassIcon from "../components/GlassIcon";
 import NeginImage1 from "../assets/profilephoto.png";
-import styles from "../Components/Scroll.module.css";
-import Button from '../Components/Button';
+import styles from "../components/Scroll.module.css";
+import Button from '../components/Button';
 
 const About = () => {
   const [expandedSection, setExpandedSection] = useState(null);

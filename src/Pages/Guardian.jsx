@@ -24,7 +24,7 @@ import ResourceHubImage from "../assets/ResourcesHome.svg";
 
 
 import "./Guardian.css";
-import ProjectHero from '../Components/ProjectHero';
+import ProjectHero from '../components/ProjectHero';
 
 const Guardian = () => {
   const [selectedFeature, setSelectedFeature] = useState(1);

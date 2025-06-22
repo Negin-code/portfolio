@@ -4,17 +4,17 @@ import { IoIosArrowRoundBack, IoIosArrowDropupCircle } from "react-icons/io";
 import { FaFigma } from 'react-icons/fa';
 import { SiCanva, SiGoogleforms, SiZoom } from "react-icons/si";
 import { MdAssessment } from "react-icons/md";
-import ProjectHero from '../Components/ProjectHero';
-import ObjectiveCard from '../Components/ObjectiveCard';
-import HMWSection from '../Components/HMWSection';
-import UserStudySection from '../Components/UserStudySection';
-import SUSScoreSection from '../Components/SUSScoreSection';
-import TaskInsightSection from '../Components/TaskInsightSection';
-import KeyTakeawaysSection from '../Components/KeyTakeawaysSection';
-import ReflectionSection from '../Components/ReflectionSection';
-import NextStepsSection from '../Components/NextStepsSection';
+import ProjectHero from '../components/ProjectHero';
+import ObjectiveCard from '../components/ObjectiveCard';
+import HMWSection from '../components/HMWSection';
+import UserStudySection from '../components/UserStudySection';
+import SUSScoreSection from '../components/SUSScoreSection';
+import TaskInsightSection from '../components/TaskInsightSection';
+import KeyTakeawaysSection from '../components/KeyTakeawaysSection';
+import ReflectionSection from '../components/ReflectionSection';
+import NextStepsSection from '../components/NextStepsSection';
 import GuardianImage from "../assets/Guardiancard.webp"; // Temporarily using Guardian image
-import SolutionsSection from '../Components/SolutionsSection';
+import SolutionsSection from '../components/SolutionsSection';
 
 const GoodReads = () => {
   return (
