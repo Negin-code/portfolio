@@ -78,9 +78,8 @@ const GoodReads = () => {
               <div>
                 <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">My Role</h3>
                 <div className="space-y-1">
-                  <p className="text-base sm:text-lg font-medium text-[#493B32]">UX/UI Designer</p>
-                  <p className="text-base sm:text-lg font-medium text-[#493B32]">Research Facilitator</p>
-                  <p className="text-base sm:text-lg font-medium text-[#493B32]">Prototype Developer</p>
+                  <p className="text-base sm:text-lg font-medium text-[#493B32]">UX Designer V1</p>
+                  <p className="text-base sm:text-lg font-medium text-[#493B32]">UX/UI Designer V2</p>
                 </div>
               </div>
             </div>
