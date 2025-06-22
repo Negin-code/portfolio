@@ -1,16 +1,16 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import AnimatedCursor from 'react-animated-cursor';
-import Layout from './Components/Layout';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Projects from './Pages/Projects';
-import CrimsonPlate from './Pages/CrimsonPlate';
-import AlzCare from './Pages/AlzCare';
-import ListeningLab from './Pages/ListeningLab';
-import CultureCafe from './Pages/CultureCafe';
-import Guardian from './Pages/Guardian';
-import GoodReads from './Pages/GoodReads';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects.jsx';
+import CrimsonPlate from './pages/CrimsonPlate';
+import AlzCare from './pages/AlzCare';
+import ListeningLab from './pages/ListeningLab';
+import CultureCafe from './pages/CultureCafe';
+import Guardian from './pages/Guardian.jsx';
+import GoodReads from './pages/GoodReads.jsx';
 import './App.css';
 
 function App() {
