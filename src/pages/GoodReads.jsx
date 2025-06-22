@@ -121,6 +121,7 @@ const GoodReads = () => {
                   <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer" title="Google Forms">
                     <SiGoogleforms className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
                   </div>
+                  
                 </div>
               </div>
             </div>
@@ -137,7 +138,7 @@ const GoodReads = () => {
           </div>
 
           <p className="text-[#493B32] leading-relaxed text-lg">
-            Goodreads is a well-established platform for book lovers, but key features—like organizing shelves, connecting with readers, and engaging in discussions—have become frustratingly outdated. Through user testing, we identified critical usability gaps and redesigned the experience with more intuitive, modern interactions.
+            Goodreads is a well-established platform for book lovers, but key features—like organizing shelves, connecting with readers, and engaging in discussions—have become frustratingly outdated. Through user testing, we identified critical usability gaps and redesigned the experience with more intuitive, modern interactions.This redesign is part of a student case study project completed at BCIT. It is not affiliated with or commissioned by Goodreads.
           </p>
         </section>
 
