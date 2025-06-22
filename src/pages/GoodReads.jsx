@@ -13,7 +13,7 @@ import TaskInsightSection from '../components/TaskInsightSection';
 import KeyTakeawaysSection from '../components/KeyTakeawaysSection';
 import ReflectionSection from '../components/ReflectionSection';
 import NextStepsSection from '../components/NextStepsSection';
-import GuardianImage from "../assets/Guardiancard.webp"; // Temporarily using Guardian image
+import GoodReadsImage from "../assets/goodreadshero.png"; 
 import SolutionsSection from '../components/SolutionsSection';
 
 const GoodReads = () => {
@@ -29,7 +29,7 @@ const GoodReads = () => {
       <div className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 ml-20 lg:ml-10">
         <ProjectHero 
           title="GoodReads Website Usability Study"
-          image={GuardianImage}
+          image={GoodReadsImage}
           imageAlt="GoodReads Website Usability Study Preview"
         />
 
