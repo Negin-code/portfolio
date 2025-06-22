@@ -5,8 +5,8 @@ import { MdVerified, MdLocationOn, MdSort } from 'react-icons/md';
 import MagnifiableImage from './MagnifiableImage';
 
 // Import images - you'll need to add these to your assets
-import beforeImage from '../assets/before1.png'; // Temporarily using existing image
-import afterImage from '../assets/after1.png'; // Temporarily using existing image
+import beforeImage from '../assets/Before1.png'; // Temporarily using existing image
+import afterImage from '../assets/After1.png'; // Temporarily using existing image
 
 const FlowStep = ({ icon: Icon, text, iconColor, bgColor }) => (
   <div className="flex flex-col items-center gap-1 text-center">
