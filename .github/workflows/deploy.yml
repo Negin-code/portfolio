@@ -1,4 +1,4 @@
-name: 🚀 Deploy to HostPapa
+name: 🚀 Build & Deploy Vite React App to HostPapa
 
 on:
   push:
@@ -6,16 +6,29 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: 📥 Checkout code
+      - name: 🛎️ Checkout code
         uses: actions/checkout@v3
 
-      - name: 📡 Deploy to HostPapa via FTP
+      - name: 🛠️ Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # or 16 if needed
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🧱 Build the Vite app
+        run: npm run build
+
+      - name: 🚀 Deploy to HostPapa via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_TARGET }}/
+          local-dir: dist
