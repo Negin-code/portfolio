@@ -3,9 +3,9 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BiCodeAlt, BiPalette } from "react-icons/bi";
 
-import Button from '../Components/Button';
-import AnimatedThreads from '../Components/AnimatedThreads';
-import CategoryCard from '../Components/CategoryCard';
+import Button from '../components/Button';
+import AnimatedThreads from '../components/AnimatedThreads';
+import CategoryCard from '../components/CategoryCard';
 
 const Home = () => {
   return (
