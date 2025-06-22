@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { IoIosArrowDropupCircle } from "react-icons/io";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { SiFigma } from "react-icons/si";
-import AlzCareImage from "../assets/AlzCare.svg";
+import AlzCareImage from "../assets/Alzcare.svg";
 import DesignProcess from "../assets/designProcess.svg";
 import UserPersona from "../assets/userpersona.svg";
 import CompetitorAnalysis from "../assets/competitive.svg";
