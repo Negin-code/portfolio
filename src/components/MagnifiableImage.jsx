@@ -8,13 +8,13 @@ const MagnifiableImage = ({ src, alt, caption }) => {
     <div className="relative">
       {/* Image Container */}
       <div 
-        className="relative group cursor-zoom-in overflow-hidden rounded-lg"
+        className="relative group cursor-zoom-in overflow-hidden rounded-lg h-64 md:h-80"
         onClick={() => setIsModalOpen(true)}
       >
         <img 
           src={src} 
           alt={alt}
-          className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         
         {/* Zoom Icon Overlay */}
