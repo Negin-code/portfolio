@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { FaFigma } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaFigma } from "react-icons/fa";
 import { SiCanva, SiGoogleforms, SiZoom } from "react-icons/si";
 import { MdAssessment } from "react-icons/md";
-import ProjectHero from '../components/ProjectHero';
-import ObjectiveCard from '../components/ObjectiveCard';
-import HMWSection from '../components/HMWSection';
-import UserStudySection from '../components/UserStudySection';
-import SUSScoreSection from '../components/SUSScoreSection';
-import TaskInsightSection from '../components/TaskInsightSection';
-import KeyTakeawaysSection from '../components/KeyTakeawaysSection';
-import ReflectionSection from '../components/ReflectionSection';
-import NextStepsSection from '../components/NextStepsSection';
-import GoodReadsImage from "../assets/goodreadshero.png"; 
-import SolutionsSection from '../components/SolutionsSection';
+import ProjectHero from "../components/ProjectHero";
+import ObjectiveCard from "../components/ObjectiveCard";
+import HMWSection from "../components/HMWSection";
+import UserStudySection from "../components/UserStudySection";
+import SUSScoreSection from "../components/SUSScoreSection";
+import TaskInsightSection from "../components/TaskInsightSection";
+import KeyTakeawaysSection from "../components/KeyTakeawaysSection";
+import ReflectionSection from "../components/ReflectionSection";
+import NextStepsSection from "../components/NextStepsSection";
+import GoodReadsImage from "../assets/goodreadshero.png";
+import SolutionsSection from "../components/SolutionsSection";
 
 const GoodReads = () => {
   return (
@@ -25,7 +25,7 @@ const GoodReads = () => {
 
       {/* Project Content Container */}
       <div className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 ml-20 lg:ml-10">
-        <ProjectHero 
+        <ProjectHero
           title="GoodReads Website Usability Study"
           image={GoodReadsImage}
           imageAlt="GoodReads Website Usability Study Preview"
@@ -37,14 +37,30 @@ const GoodReads = () => {
           <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
               </div>
               <div>
-                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">Project Type</h3>
-                <p className="text-base sm:text-lg font-medium text-[#493B32]">4-week study</p>
-                <p className="text-xs sm:text-sm text-[#493B32]/80 mt-0.5 sm:mt-1">(UX Research)</p>
+                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">
+                  Project Type
+                </h3>
+                <p className="text-base sm:text-lg font-medium text-[#493B32]">
+                  4-week study
+                </p>
+                <p className="text-xs sm:text-sm text-[#493B32]/80 mt-0.5 sm:mt-1">
+                  (UX Research)
+                </p>
               </div>
             </div>
           </div>
@@ -53,14 +69,30 @@ const GoodReads = () => {
           <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
                 </svg>
               </div>
               <div>
-                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">Team Size</h3>
-                <p className="text-base sm:text-lg font-medium text-[#493B32]">4 members</p>
-                <p className="text-xs sm:text-sm text-[#493B32]/80 mt-0.5 sm:mt-1">Team project</p>
+                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">
+                  Team Size
+                </h3>
+                <p className="text-base sm:text-lg font-medium text-[#493B32]">
+                  4 members
+                </p>
+                <p className="text-xs sm:text-sm text-[#493B32]/80 mt-0.5 sm:mt-1">
+                  Team project
+                </p>
               </div>
             </div>
           </div>
@@ -69,15 +101,31 @@ const GoodReads = () => {
           <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
                 </svg>
               </div>
               <div>
-                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">My Role</h3>
+                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">
+                  My Role
+                </h3>
                 <div className="space-y-1">
-                  <p className="text-base sm:text-lg font-medium text-[#493B32]">UX Designer V1</p>
-                  <p className="text-base sm:text-lg font-medium text-[#493B32]">UX/UI Designer V2</p>
+                  <p className="text-base sm:text-lg font-medium text-[#493B32]">
+                    UX Designer V1
+                  </p>
+                  <p className="text-base sm:text-lg font-medium text-[#493B32]">
+                    UX/UI Designer V2
+                  </p>
                 </div>
               </div>
             </div>
@@ -87,39 +135,70 @@ const GoodReads = () => {
           <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
                 </svg>
               </div>
               <div>
-                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-4 sm:mb-5">Tools & Process</h3>
+                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-4 sm:mb-5">
+                  Tools & Process
+                </h3>
                 <div className="flex items-center gap-2 sm:gap-3 mt-4 sm:mt-5 flex-wrap">
                   {/* Figma Icon */}
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer" title="Figma">
+                  <div
+                    className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                    title="Figma"
+                  >
                     <FaFigma className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
                   </div>
-                  
+
                   {/* Canva Icon */}
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer" title="Canva">
+                  <div
+                    className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                    title="Canva"
+                  >
                     <SiCanva className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
                   </div>
 
                   {/* Zoom Icon */}
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer" title="Zoom">
+                  <div
+                    className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                    title="Zoom"
+                  >
                     <SiZoom className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
                   </div>
 
                   {/* SUS Icon */}
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer" title="System Usability Scale (SUS)">
+                  <div
+                    className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                    title="System Usability Scale (SUS)"
+                  >
                     <MdAssessment className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
                   </div>
 
                   {/* Google Forms Icon */}
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer" title="Google Forms">
+                  <div
+                    className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                    title="Google Forms"
+                  >
                     <SiGoogleforms className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -136,17 +215,20 @@ const GoodReads = () => {
           </div>
 
           <p className="text-[#493B32] leading-relaxed text-lg">
-            Goodreads is a well-established platform for book lovers, but key features—like organizing shelves, connecting with readers, and engaging in discussions—have become frustratingly outdated. Through user testing, we identified critical usability gaps and redesigned the experience with more intuitive, modern interactions.This redesign is part of a student case study project completed at BCIT. It is not affiliated with or commissioned by Goodreads.
+            Goodreads is a well-established platform for book lovers, but key
+            features—like organizing shelves, connecting with readers, and
+            engaging in discussions—have become frustratingly outdated. Through
+            user testing, we identified critical usability gaps and redesigned
+            the experience with more intuitive, modern interactions.This
+            redesign is part of a student case study project completed at BCIT.
+            It is not affiliated with or commissioned by Goodreads.
           </p>
         </section>
 
-         {/* How Might We Section */}
-         <section className="mt-16 mb-16">
-          <HMWSection 
-            question="...make Goodreads more intuitive and socially connected, by redesigning key features like shelf creation, friend search, and community discussion?"
-          />
+        {/* How Might We Section */}
+        <section className="mt-16 mb-16">
+          <HMWSection question="...make Goodreads more intuitive and socially connected, by redesigning key features like shelf creation, friend search, and community discussion?" />
         </section>
-
 
         {/* Project Objectives Section */}
         <section id="objectives" className="space-y-6 mt-16">
@@ -176,8 +258,6 @@ const GoodReads = () => {
           </div>
         </section>
 
-        
-       
         {/* User Study Section */}
         <section id="study" className="mt-12">
           <UserStudySection />
@@ -202,7 +282,6 @@ const GoodReads = () => {
         <section id="solutions" className="mt-16">
           <SolutionsSection />
         </section>
-
 
         {/* Reflections Section */}
         <section id="reflections" className="mt-16">

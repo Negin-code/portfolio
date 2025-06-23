@@ -1,7 +1,7 @@
-import React from 'react';
-import UIComparisonSection from './UIComparisonSection';
-import DiscussionUISection from './DiscussionUISection';
-import FriendDiscoverySection from './FriendDiscoverySection';
+import React from "react";
+import UIComparisonSection from "./UIComparisonSection";
+import DiscussionUISection from "./DiscussionUISection";
+import FriendDiscoverySection from "./FriendDiscoverySection";
 
 const SolutionsSection = () => {
   return (
@@ -35,4 +35,4 @@ const SolutionsSection = () => {
   );
 };
 
-export default SolutionsSection; 
+export default SolutionsSection;
