@@ -7,7 +7,7 @@ import MagnifiableImage from './MagnifiableImage';
 
 // Import existing images
 import beforeImage from '../assets/Before2.png';
-import afterImage from '../assets/After1.png';
+import afterImage from '../assets/After2.png';
 
 const FlowStep = ({ icon: Icon, text, iconColor, bgColor }) => (
   <div className="flex flex-col items-center gap-1 text-center">
