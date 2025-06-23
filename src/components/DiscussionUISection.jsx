@@ -6,7 +6,7 @@ import { IoMdMegaphone } from 'react-icons/io';
 import MagnifiableImage from './MagnifiableImage';
 
 // Import existing images
-import beforeImage from '../assets/Before1.png';
+import beforeImage from '../assets/Before2.png';
 import afterImage from '../assets/After1.png';
 
 const FlowStep = ({ icon: Icon, text, iconColor, bgColor }) => (
