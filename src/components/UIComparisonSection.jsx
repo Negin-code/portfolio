@@ -6,7 +6,7 @@ import { IoMdCheckmarkCircle } from 'react-icons/io';
 import MagnifiableImage from './MagnifiableImage';
 
 // Import images with correct filenames
-import beforeImage from '../assets/Before1.jpg';
+import beforeImage from '../assets/Before10.png';
 import afterImage from '../assets/After1.png';
 
 
