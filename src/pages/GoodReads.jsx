@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { IoIosArrowRoundBack, IoIosArrowDropupCircle } from "react-icons/io";
 import { FaFigma } from 'react-icons/fa';
 import { SiCanva, SiGoogleforms, SiZoom } from "react-icons/si";
 import { MdAssessment } from "react-icons/md";

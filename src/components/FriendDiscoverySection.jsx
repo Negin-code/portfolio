@@ -6,7 +6,7 @@ import MagnifiableImage from './MagnifiableImage';
 
 // Import images - you'll need to add these to your assets
 import beforeImage from '../assets/Before1.png'; // Temporarily using existing image
-import afterImage from '../assets/After1.png'; // Temporarily using existing image
+import afterImage3 from '../assets/After3.png';
 
 const FlowStep = ({ icon: Icon, text, iconColor, bgColor }) => (
   <div className="flex flex-col items-center gap-1 text-center">
@@ -215,7 +215,7 @@ const FriendDiscoverySection = () => {
           
           {/* After Image with Magnification */}
           <MagnifiableImage
-            src={afterImage}
+            src={afterImage3}
             alt="Redesigned Goodreads friend discovery interface"
             caption="Clear profile discovery with unique usernames and smart filters"
           />
