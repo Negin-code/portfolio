@@ -5,6 +5,7 @@ import AlzcareImage from "../assets/Alzcare.svg";
 import ListeningLabImage from "../assets/LLCover.png";
 import CultureCafeImage from "../assets/CCCover.png";
 import GuardianImage from "../assets/Guardiancard.webp";
+import GoodReadsImage from "../assets/goodreadshero.png";
 
 import ChromaGridCard from "../components/ChromaGridCard";
 
@@ -29,7 +30,7 @@ const Projects = () => {
       gradientTo: "#FF8C94"
     },
     {
-      image: GuardianImage,
+      image: GoodReadsImage,
       imageAlt: "GoodReads Website",
       category: "UI/UX Design",
       categoryType: "design",
