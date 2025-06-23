@@ -203,38 +203,6 @@ const GoodReads = () => {
           <SolutionsSection />
         </section>
 
-        {/* Prototype Section */}
-        <section id="prototype" className="mt-16">
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-[#493B32]/10">
-            <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-tan text-[#493B32]">
-                Interactive Prototype
-              </h2>
-              <a 
-                href="https://www.figma.com/proto/your-prototype-link" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#493B32] text-white rounded-lg hover:bg-[#493B32]/90 transition-colors group"
-              >
-                <FaFigma className="w-4 h-4" />
-                <span className="font-medium">View in Figma</span>
-                <svg 
-                  className="w-4 h-4 transform transition-transform group-hover:translate-x-1" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M17 8l4 4m0 0l-4 4m4-4H3" 
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </section>
 
         {/* Reflections Section */}
         <section id="reflections" className="mt-16">
