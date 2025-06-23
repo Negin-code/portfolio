@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFigma, FaUsers } from "react-icons/fa";
+import { FaFigma, FaUsers, FaClock } from "react-icons/fa";
 import { SiCanva, SiGoogleforms, SiZoom } from "react-icons/si";
 import { MdAssessment, MdWork } from "react-icons/md";
 import ProjectHero from "../components/ProjectHero";
@@ -37,19 +37,7 @@ const GoodReads = () => {
           <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                <FaClock className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
               </div>
               <div>
                 <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">
