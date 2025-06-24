@@ -52,7 +52,7 @@ const Home = () => {
         {/* Title section - full width */}
         <div className="col-span-4 md:col-span-6 lg:col-span-11 text-right mt-15 md:mt-20 px-6 md:px-10 lg:px-0">
           
-          <h1 className="font-tan text-[1.4rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[5rem] xl:text-[6rem] leading-relaxed mb-6 mr-8 lg:mr-0">
+          <h1 className="font-tan text-[1.4rem] sm:text-[2.5rem] md:text-[3.25rem] lg:text-[5rem] xl:text-[6rem] leading-relaxed mb-6 mr-8 lg:mr-0">
             <span 
               className="block text-transparent"
               style={{
@@ -77,7 +77,7 @@ const Home = () => {
           </h1>
 
           <div className="max-w-2xl ml-auto mt-10">
-            <p className="text-lg sm:text-2xl md:text-3xl font-open text-[#493B32] mb-6 leading-relaxed sm:leading-tight mr-8 lg:mr-0">
+            <p className="text-lg sm:text-xl md:text-3xl font-open text-[#493B32] mb-6 leading-relaxed sm:leading-tight mr-8 lg:mr-0">
             Bridging the gap between
               <span className="block sm:inline text-[#F75590] font-bold"> logic and empathy</span>
             </p>
