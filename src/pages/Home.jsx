@@ -106,14 +106,14 @@ const Home = () => {
       </section>
 
       {/* Animated Threads Section */}
-      <section className="col-span-full mt-20 sm:mt-15">
+      <section className="col-span-full mt-10 sm:mt-0">
       <AnimatedThreads />
       </section>
 
-      <section className="col-span-full grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2">
+      
 
         {/* Category Spotlight Section */}
-        <section className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 col-span-full py-5 sm:py-20 px-6 md:px-10 lg:px-20 bg-[#FFF7F2]">
+        <section className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 col-span-full mb-10 sm:mb-20 mt-10 sm:mt-15 px-6 md:px-10 lg:px-20 bg-[#FFF7F2]">
           {/* Section Title */}
           <div className="col-span-full flex items-center gap-4 mb-12">
             <div 
@@ -128,7 +128,7 @@ const Home = () => {
           </div>
 
           {/* Category Cards */}
-          <div className="col-span-full lg:col-start-2 lg:col-span-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-5xl mx-auto">
+          <div className="col-span-full lg:col-start-2 lg:col-span-10 grid grid-cols-1 md:grid-cols-2 mt-0 sm:mt-10 gap-8 md:gap-15 max-w-5xl mx-auto">
             {/* UX/UI Design Card */}
             <CategoryCard
               icon={BiPalette}
@@ -153,7 +153,7 @@ const Home = () => {
           </div>
         </section>
 
-      </section>
+      
     </main>
   );
 };
