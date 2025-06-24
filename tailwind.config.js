@@ -10,7 +10,7 @@ export default {
         'xs': '23.4375rem', // 375px
         'sm': '26.875rem', // 430px
         'md': '48rem',     // 768px
-        'lg': '64rem',     // 1024px
+        'lg': '64rem',     // 1375
         'xl': '80rem',     // 1280px
         '2xl': '100rem',   // 1600px
         '3xl': '120rem',   // 1920px
