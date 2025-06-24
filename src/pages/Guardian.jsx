@@ -1050,7 +1050,7 @@ const Guardian = () => {
         {/* Key Features section */}
         <section id="key-features" className="mt-16 overflow-hidden">
           <div className="flex flex-row items-center gap-2 mb-12">
-            <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
+            <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32] mt-10"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
               Key Features
             </h2>
