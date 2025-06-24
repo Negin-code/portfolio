@@ -103,7 +103,7 @@ const Projects = () => {
       <div className="absolute left-16 md:left-20 top-0 sm:h-[90rem] h-[185rem] md:h-[115rem] lg:h-[80rem] w-[2px] bg-[#493b32]"></div>
 
       {/* Right vertical line */}
-      <div className="absolute right-10 top-0 sm:h-[35rem] h-[190rem] md:h-[115rem] lg:h-[80rem] w-[2px] bg-[#493b32]"></div>
+      <div className="absolute right-10 top-0 sm:h-[35rem] h-[185rem] md:h-[115rem] lg:h-[80rem] w-[2px] bg-[#493b32]"></div>
 
       {/* Content container */}
       <section className="col-span-full grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 ml-20 lg:ml-10">
