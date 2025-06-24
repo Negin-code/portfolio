@@ -111,26 +111,27 @@ const Projects = () => {
           {/* Project Title */}
           <div className="flex flex-row items-start justify-start gap-1 mb-8">
             <div className="w-[4vh] sm:w-[4vh] md:w-[5vh] h-[3px] bg-gradient-to-r from-[#493B32] to-[#F75590] mt-4"></div>
-            <h1 id="top" className="text-2xl sm:text-5xl font-tan text-[#493B32]">
+            <h1
+              id="top"
+              className="text-2xl sm:text-5xl font-tan text-[#493B32]"
+            >
               My Projects
             </h1>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 ml-10 mb-20 mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 ml-8 mb-20 mx-auto max-w-7xl">
             {filteredProjects.map((project, index) => (
-              <ChromaGridCard
-                key={index}
-                {...project}
-                index={index}
-              />
+              <ChromaGridCard key={index} {...project} index={index} />
             ))}
           </div>
-          
+
           {/* Empty State */}
           {filteredProjects.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-[#493B32]/60 text-lg">No projects found in this category.</p>
+              <p className="text-[#493B32]/60 text-lg">
+                No projects found in this category.
+              </p>
             </div>
           )}
         </div>
