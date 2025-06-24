@@ -8,7 +8,7 @@ import {
   IoHeartOutline
 } from "react-icons/io5";
 import { SiCanva } from "react-icons/si";
-import { FaFigma } from "react-icons/fa";
+import { FaFigma, FaClock } from "react-icons/fa";
 import GuardianImage from "../assets/hero.png";
 import PersonaImage from "../assets/Persona.jpg";
 import WelcomeImageV1 from "../assets/Welcome-V1.svg";
@@ -89,9 +89,7 @@ const Guardian = () => {
           <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+                <FaClock className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
               </div>
               <div>
                 <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">Project Type</h3>
