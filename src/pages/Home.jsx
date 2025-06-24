@@ -77,7 +77,7 @@ const Home = () => {
           </h1>
 
           <div className="max-w-2xl ml-auto mt-10">
-            <p className="text-lg sm:text-xl md:text-3xl font-open text-[#493B32] mb-6 leading-relaxed sm:leading-tight mr-8 lg:mr-0">
+            <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-open text-[#493B32] mb-6 leading-relaxed sm:leading-tight mr-8 lg:mr-0">
             Bridging the gap between
               <span className="block sm:inline text-[#F75590] font-bold"> logic and empathy</span>
             </p>
