@@ -106,7 +106,7 @@ const Home = () => {
       </section>
 
       {/* Animated Threads Section */}
-      <section className="col-span-full mt-20 md:mt-10">
+      <section className="col-span-full mt-20 sm:mt-10 mb-10">
       <AnimatedThreads />
       </section>
 
