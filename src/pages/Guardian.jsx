@@ -1048,7 +1048,7 @@ const Guardian = () => {
           </div>
         </section>
         {/* Key Features section */}
-        <section id="key-features" className="mt-16 px-4 md:px-8">
+        <section id="key-features" className="mt-16 overflow-hidden">
           <div className="flex flex-row items-center gap-2 mb-12">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32] mt-10"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -1056,19 +1056,51 @@ const Guardian = () => {
             </h2>
           </div>
 
-          {/* Content Container */}
-          <div className="relative mx-auto max-w-[1200px] bg-gradient-to-br from-[#FFF7F2] to-[#493B32]/5 rounded-3xl shadow-lg p-6 md:p-12">
-            {/* Main Content Container */}
-            <div className="relative max-w-4xl mx-auto">
-              {/* Feature Category Label */}
-              <div className="text-center mb-8">
-                <span className="inline-block px-6 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-[#493B32]/70 tracking-wider uppercase shadow-sm">
-                  Feature {selectedFeature} of {features.length}
-                </span>
-              </div>
+          {/* Decorative Frame Container */}
+          <div className="relative mx-auto max-w-[1200px] p-4 md:p-8">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 bg-[#FFF7F2] rounded-3xl shadow-lg">
+              {/* Subtle Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/50 rounded-3xl"></div>
+            </div>
 
-              {/* iPhone Frame Container */}
-              <div className="relative mb-8">{/* Removed problematic gradient overlays */}
+            {/* Content Container */}
+            <div className="relative z-10 p-4 md:p-8 lg:p-12">
+              {/* Features Carousel Container */}
+              <div className="relative">
+                {/* Background Design Elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute top-1/4 -left-10 w-40 h-40 bg-[#F75590]/10 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-1/4 -right-10 w-40 h-40 bg-[#493B32]/10 rounded-full blur-3xl"></div>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[120%] bg-gradient-to-b from-transparent via-[#FFF7F2]/50 to-transparent"></div>
+                </div>
+
+                {/* Main Content Container */}
+                <div className="relative z-10 max-w-6xl mx-auto">
+                  {/* Feature Category Label */}
+                  <div className="text-center mb-8">
+                    <span className="inline-block px-6 py-2 bg-[#493B32]/5 rounded-full text-sm font-medium text-[#493B32]/70 tracking-wider uppercase">
+                      Feature {selectedFeature} of {features.length}
+                    </span>
+                  </div>
+
+                  {/* iPhone Frame Container */}
+                  <div className="relative">
+                    {/* Left Gradient Overlay */}
+                    <div 
+                      className="absolute left-0 top-0 bottom-0 w-8 md:w-16 z-10"
+                      style={{
+                        background: 'linear-gradient(to right, #FFF7F2, transparent)'
+                      }}
+                    ></div>
+                    
+                    {/* Right Gradient Overlay */}
+                    <div 
+                      className="absolute right-0 top-0 bottom-0 w-8 md:w-16 z-10"
+                      style={{
+                        background: 'linear-gradient(to left, #FFF7F2, transparent)'
+                      }}
+                    ></div>
 
                     {/* iPhone Frame */}
                     <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative transform transition-transform duration-700 hover:scale-[1.02]">
@@ -1123,69 +1155,59 @@ const Guardian = () => {
                     </div>
                   </div>
 
-              {/* Feature Content */}
-              <div className="text-center max-w-2xl mx-auto mb-12">
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-medium text-[#493B32] transition-all duration-500">
-                    {features[selectedFeature - 1].title}
-                  </h3>
-                  <p className="text-[#493B32]/70 text-lg leading-relaxed transition-all duration-500">
-                    {features[selectedFeature - 1].description}
-                  </p>
-                </div>
-              </div>
+                  {/* Navigation */}
+                  <div className="mt-12 flex flex-col items-center gap-8">
+                    {/* Dots */}
+                    <div className="flex justify-center items-center gap-4">
+                      {features.map((feature, index) => (
+                        <button 
+                          key={feature.id}
+                          className={`group relative w-4 h-4 transition-all duration-300 ${
+                            selectedFeature === index + 1 ? 'scale-125' : 'hover:scale-110'
+                          }`}
+                          aria-label={`Show ${feature.title}`}
+                          onClick={() => setSelectedFeature(index + 1)}
+                        >
+                          <div className={`absolute inset-0 bg-[#493B32] rounded-full transition-all duration-300 ${
+                            selectedFeature === index + 1 ? 'opacity-100' : 'opacity-30 group-hover:opacity-50'
+                          }`}></div>
+                          <div className={`absolute inset-0 bg-[#493B32] rounded-full transform transition-transform duration-300 ${
+                            selectedFeature === index + 1 ? 'animate-ping opacity-25' : 'opacity-0'
+                          }`}></div>
+                        </button>
+                      ))}
+                    </div>
 
-              {/* Navigation */}
-              <div className="flex flex-col items-center gap-6">
-                {/* Dots */}
-                <div className="flex justify-center items-center gap-4">
-                  {features.map((feature, index) => (
-                    <button 
-                      key={feature.id}
-                      className={`group relative w-4 h-4 transition-all duration-300 ${
-                        selectedFeature === index + 1 ? 'scale-125' : 'hover:scale-110'
-                      }`}
-                      aria-label={`Show ${feature.title}`}
-                      onClick={() => setSelectedFeature(index + 1)}
-                    >
-                      <div className={`absolute inset-0 bg-[#493B32] rounded-full transition-all duration-300 ${
-                        selectedFeature === index + 1 ? 'opacity-100' : 'opacity-30 group-hover:opacity-50'
-                      }`}></div>
-                      <div className={`absolute inset-0 bg-[#493B32] rounded-full transform transition-transform duration-300 ${
-                        selectedFeature === index + 1 ? 'animate-ping opacity-25' : 'opacity-0'
-                      }`}></div>
-                    </button>
-                  ))}
-                </div>
-
-                {/* Arrow Navigation */}
-                <div className="flex justify-center gap-4">
-                  <button
-                    onClick={() => setSelectedFeature(prev => Math.max(1, prev - 1))}
-                    className={`p-3 rounded-full bg-white/80 backdrop-blur-sm shadow-md transition-all duration-300 ${
-                      selectedFeature === 1 
-                        ? 'opacity-30 cursor-not-allowed' 
-                        : 'hover:bg-white hover:shadow-lg hover:scale-105'
-                    }`}
-                    disabled={selectedFeature === 1}
-                  >
-                    <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-                  <button
-                    onClick={() => setSelectedFeature(prev => Math.min(features.length, prev + 1))}
-                    className={`p-3 rounded-full bg-white/80 backdrop-blur-sm shadow-md transition-all duration-300 ${
-                      selectedFeature === features.length 
-                        ? 'opacity-30 cursor-not-allowed' 
-                        : 'hover:bg-white hover:shadow-lg hover:scale-105'
-                    }`}
-                    disabled={selectedFeature === features.length}
-                  >
-                    <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
+                    {/* Arrow Navigation */}
+                    <div className="flex justify-center gap-4">
+                      <button
+                        onClick={() => setSelectedFeature(prev => Math.max(1, prev - 1))}
+                        className={`p-2 rounded-full transition-all duration-300 ${
+                          selectedFeature === 1 
+                            ? 'opacity-30 cursor-not-allowed' 
+                            : 'hover:bg-[#493B32]/10'
+                        }`}
+                        disabled={selectedFeature === 1}
+                      >
+                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
+                      <button
+                        onClick={() => setSelectedFeature(prev => Math.min(features.length, prev + 1))}
+                        className={`p-2 rounded-full transition-all duration-300 ${
+                          selectedFeature === features.length 
+                            ? 'opacity-30 cursor-not-allowed' 
+                            : 'hover:bg-[#493B32]/10'
+                        }`}
+                        disabled={selectedFeature === features.length}
+                      >
+                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
