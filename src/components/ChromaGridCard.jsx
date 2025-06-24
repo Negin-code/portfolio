@@ -34,7 +34,7 @@ const ChromaGridCard = ({
           <img
             src={image}
             alt={imageAlt}
-            className={`w-full h-auto object-cover object-center aspect-[4/3] transition-all duration-300 hover:opacity-95 ${
+            className={`w-full h-auto object-cover object-center transition-all duration-300 hover:opacity-95 ${
               isHovered ? "scale-105" : "scale-100"
             }`}
           />
