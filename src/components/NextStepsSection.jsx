@@ -24,7 +24,8 @@ const NextStepsSection = () => {
   const steps = [
     "Conduct second-round testing on mobile experience",
     "Explore notifications for discussion replies and new friend activity",
-    "Collaborate with developers for handoff & implementation feasibility"
+    "Add accessibility enhancements",
+    "Develop a community onboarding experience"
   ];
 
   return (
