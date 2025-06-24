@@ -113,7 +113,7 @@ const Home = () => {
       
 
         {/* Category Spotlight Section */}
-        <section className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 col-span-full mb-10 sm:mb-20 mt-10 px-6 md:px-10 lg:px-20 bg-[#FFF7F2]">
+        <section className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 col-span-full mb-10 sm:mb-20 px-6 md:px-10 lg:px-20 bg-[#FFF7F2]">
           {/* Section Title */}
           <div className="col-span-full flex items-center gap-4 mb-12">
             <div 
