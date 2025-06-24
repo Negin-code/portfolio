@@ -120,7 +120,7 @@ const Projects = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 ml-8 mb-20 mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 ml-8 sm:ml-0 mb-20 mx-auto max-w-7xl">
             {filteredProjects.map((project, index) => (
               <ChromaGridCard key={index} {...project} index={index} />
             ))}
