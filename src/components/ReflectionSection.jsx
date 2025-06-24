@@ -22,16 +22,16 @@ const ReflectionCard = ({ title, description }) => (
 const ReflectionSection = () => {
   const reflections = [
     {
-      title: "User-Centric Design",
-      description: "Streamlining flows reduced friction and abandonment"
+      title: "Design Where Action Happens",
+      description: "Users need controls like “edit shelf” exactly where they expect to act."
     },
     {
-      title: "Social Integration",
-      description: "Social features should never feel like an afterthought"
+      title: "The Power of Small UX Changes",
+      description: "Tiny shifts like tabbed search and feedback made a big difference in usability."
     },
     {
-      title: "Validation Process",
-      description: "Prototyping and testing with real users was essential to validating our redesign decisions"
+      title: "It’s Not About Pretty - It’s About Mental Models",
+      description: "Real UX impact comes from aligning with user expectations, not just redesigning visually."
     }
   ];
 
