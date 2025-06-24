@@ -157,7 +157,7 @@ const About = () => {
         </section>
 
         {/* Accordion Sections */}
-        <section className=" space-y-3 sm:space-y-4 mb-12 sm:mb-16 lg:mb-20">
+        <section className=" space-y-4 sm:space-y-4 mb-12 sm:mb-16 lg:mb-20">
           <AccordionSection
             title="My Core Values"
             isExpanded={expandedSection === "value"}
