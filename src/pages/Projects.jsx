@@ -100,10 +100,10 @@ const Projects = () => {
   return (
     <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 min-h-screen relative w-full pt-30 sm:pt-45 lg:pt-50 lg:px-0 overflow-hidden">
       {/* Left vertical line */}
-      <div className="absolute left-16 md:left-20 top-0 sm:h-[90rem] h-[185rem] md:h-[150rem] lg:h-[80rem] w-[2px] bg-[#493b32]"></div>
+      <div className="absolute left-16 md:left-20 top-0 sm:h-[120rem] h-[185rem] md:h-[150rem] lg:h-[80rem] w-[2px] bg-[#493b32]"></div>
 
       {/* Right vertical line */}
-      <div className="absolute right-10 top-0 sm:h-[90rem] h-[185rem] md:h-[150rem] lg:h-[80rem] w-[2px] bg-[#493b32]"></div>
+      <div className="absolute right-10 top-0 sm:h-[120rem] h-[185rem] md:h-[150rem] lg:h-[80rem] w-[2px] bg-[#493b32]"></div>
 
       {/* Content container */}
       <section className="col-span-full grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 ml-20 lg:ml-10">
