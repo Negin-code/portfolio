@@ -50,7 +50,7 @@ const Home = () => {
       {/* Content container */}
     <section className="col-span-full grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2">
         {/* Title section - full width */}
-        <div className="col-span-4 md:col-span-6 lg:col-span-11 text-right mt-20 md:mt-20 px-6 md:px-10 lg:px-0">
+        <div className="col-span-4 md:col-span-6 lg:col-span-11 text-right mt-15 md:mt-20 px-6 md:px-10 lg:px-0">
           
           <h1 className="font-tan text-[1.4rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[5rem] xl:text-[6rem] leading-relaxed mb-6 mr-8 lg:mr-0">
             <span 
@@ -85,7 +85,7 @@ const Home = () => {
             
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-end sm:mr-8 lg:mr-0 gap-8 sm:gap-6 mt-20 sm:mt-10">
+          <div className="flex flex-col sm:flex-row items-center justify-end sm:mr-8 lg:mr-0 gap-8 sm:gap-6 mt-20 sm:mt-15">
             <Button 
               href="/assets/resume/resume.pdf"
               variant="primary"
@@ -106,14 +106,14 @@ const Home = () => {
       </section>
 
       {/* Animated Threads Section */}
-      <section className="col-span-full mt-10 sm:mt-0">
+      <section className="col-span-full mt-20 md:mt-10">
       <AnimatedThreads />
       </section>
 
       
 
         {/* Category Spotlight Section */}
-        <section className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 col-span-full mb-10 sm:mb-20 mt-10 sm:mt-15 px-6 md:px-10 lg:px-20 bg-[#FFF7F2]">
+        <section className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 col-span-full mb-10 sm:mb-20 mt-10 px-6 md:px-10 lg:px-20 bg-[#FFF7F2]">
           {/* Section Title */}
           <div className="col-span-full flex items-center gap-4 mb-12">
             <div 
