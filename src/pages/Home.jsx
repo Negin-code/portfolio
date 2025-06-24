@@ -52,7 +52,7 @@ const Home = () => {
         {/* Title section - full width */}
         <div className="col-span-4 md:col-span-6 lg:col-span-11 text-right mt-15 md:mt-20 px-6 md:px-10 lg:px-0">
           
-          <h1 className="font-tan text-[1.4rem] sm:text-[2.5rem] md:text-[3.25rem] lg:text-[5.25rem] xl:text-[6rem] leading-relaxed mb-6 mr-8 lg:mr-0">
+          <h1 className="font-tan text-[1.4rem] sm:text-[2.5rem] md:text-[3.25rem] lg:text-[5rem] xl:text-[6rem] leading-relaxed mb-6 mr-8 lg:mr-0">
             <span 
               className="block text-transparent"
               style={{
