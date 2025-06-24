@@ -11,6 +11,15 @@ const ScoreGauge = ({ currentScore, targetScore }) => {
       {/* Score Scale */}
       <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 rounded-full" />
       
+      {/* Target Score Fill Area */}
+      <div 
+        className="absolute bottom-0 h-2 bg-green-500/30 rounded-full transition-all duration-1000"
+        style={{ 
+          left: `${currentPercent}%`, 
+          width: `${targetPercent - currentPercent}%` 
+        }}
+      />
+      
       {/* Current Score Marker */}
       <div 
         className="absolute bottom-2 transform -translate-x-1/2 transition-all duration-1000"
