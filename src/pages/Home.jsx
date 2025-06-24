@@ -23,7 +23,7 @@ const Home = () => {
         {/* Social links */}
         <div className="absolute -right-3 sm:top-[42rem] top-[36rem] md:top-[42rem] lg:top-[45rem] xl:top-[52rem] -translate-y-1/2 flex flex-col items-center justify-evenly gap-7 z-20 text-[#493b32]">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/neginasem/"
             target="_blank"
             rel="noopener noreferrer"
             className="transition duration-500 ease-in-out transform hover:translate-y-1 hover:scale-120"
@@ -37,7 +37,7 @@ const Home = () => {
             <MdEmail size={32}/>
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/Negin-code"
             target="_blank"
             rel="noopener noreferrer"
             className="transition duration-500 ease-in-out transform hover:translate-y-1 hover:scale-120"
@@ -95,7 +95,7 @@ const Home = () => {
               View My Resume
             </Button>
             <Button 
-              href="#contact" 
+              href="https://www.linkedin.com/in/neginasem/" 
               variant="outline"
               className="w-[225px] sm:w-auto text-center"
             >
