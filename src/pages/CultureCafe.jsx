@@ -74,7 +74,7 @@ const CultureCafe = () => {
 
       {/* Project Title */}
       <div className="col-span-4 sm:col-span-4 md:col-span-6 lg:col-span-10 lg:col-start-2 flex flex-row items-start justify-start gap-1 px-20 pt-15 sm:pt-25 lg:pt-0">
-        <div className="w-[4vh] sm:w-[5vh] md:w-[7vh] h-[2px] bg-[#493B32] mt-4"></div>
+        <div className="w-[4vh] sm:w-[5vh] md:w-[7vh] h-[2px] bg-gradient-to-r from-[#493B32] to-[#F75590] mt-4"></div>
         <h1 id="top" className="text-2xl sm:text-5xl font-tan text-[#493B32] mb-12">
           Culture Cafe
         </h1>
