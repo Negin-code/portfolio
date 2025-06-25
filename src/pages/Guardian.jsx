@@ -219,7 +219,7 @@ const Guardian = () => {
           </div>
           {/* User insight Subsection */}
           <div className="space-y-6 mt-8">
-            <div className="flex flex-row items-center gap-2 pl-4">
+            <div className="flex flex-row items-center gap-2 pl-4 mr-10 sm:mr-0">
               <div className="w-[2vh] sm:w-[2vh] md:w-[3vh] h-[2px] bg-[#493B32]"></div>
               <h3 className="text-xl sm:text-2xl font-tan text-[#493B32]">
                 User Insight
