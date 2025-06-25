@@ -688,201 +688,216 @@ const Guardian = () => {
             </div>
 
             {/* Scenario Cards Container */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
-              {/* Scenario 1: Uses Alone At Home */}
-              <div className="bg-gradient-to-br from-red-100 to-red-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="p-6 space-y-4">
-                  <div className="space-y-2">
-                    <h4 className="text-lg font-medium text-red-900">
-                      Scenario 1: Uses Alone At Home
-                    </h4>
-                    <div className="space-y-3">
-                      <div>
-                        <p className="text-sm font-medium text-red-800">
-                          Before (Without Guardian):
-                        </p>
-                        <p className="text-sm text-red-700">
-                          Evelyn uses a pill by herself in a new night to
-                          unwind. Experiences the typical set-up alone: finding
-                          a comfortable spot, using without any safety measures
-                          in place.
-                        </p>
+            <div className="relative px-4 md:px-8">
+              {/* Left Gradient Overlay */}
+              <div 
+                className="absolute left-0 top-0 bottom-0 w-8 md:w-16 z-10 pointer-events-none md:hidden"
+                style={{
+                  background: 'linear-gradient(to right, #FFF7F2, transparent)'
+                }}
+              ></div>
+              
+              {/* Right Gradient Overlay */}
+              <div 
+                className="absolute right-0 top-0 bottom-0 w-8 md:w-16 z-10 pointer-events-none md:hidden"
+                style={{
+                  background: 'linear-gradient(to left, #FFF7F2, transparent)'
+                }}
+              ></div>
+
+              {/* Scrollable Container on Mobile */}
+              <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto md:overflow-visible pb-6 md:pb-0 snap-x snap-mandatory">
+                {/* Scenario 1: Uses Alone At Home */}
+                <div className="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-center bg-gradient-to-br from-red-100 to-red-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="p-6 space-y-4">
+                    <div className="space-y-2">
+                      <h4 className="text-lg font-medium text-red-900">
+                        Scenario 1: Uses Alone At Home
+                      </h4>
+                      <div className="space-y-3">
+                        <div>
+                          <p className="text-sm font-medium text-red-800">
+                            Before (Without Guardian):
+                          </p>
+                          <p className="text-sm text-red-700">
+                            Evelyn uses a pill by herself in a new night to
+                            unwind. Experiences the typical set-up alone: finding
+                            a comfortable spot, using without any safety measures
+                            in place.
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-red-800">
+                            After (With Guardian):
+                          </p>
+                          <p className="text-sm text-red-700">
+                            Evelyn opens Guardian, sets up a 15-minute timer,
+                            checks in with her roommate, and has location services
+                            on for the session.
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-sm font-medium text-red-800">
-                          After (With Guardian):
-                        </p>
-                        <p className="text-sm text-red-700">
-                          Evelyn opens Guardian, sets up a 15-minute timer,
-                          checks in with her roommate, and has location services
-                          on for the session.
-                        </p>
+                    </div>
+                    <div className="pt-4 border-t border-red-200">
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">
+                          Risk Management
+                        </span>
+                        <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">
+                          Solo Safety
+                        </span>
+                        <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">
+                          Time Control
+                        </span>
                       </div>
                     </div>
                   </div>
-                  <div className="pt-4 border-t border-red-200">
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">
-                        Risk Management
-                      </span>
-                      <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">
-                        Solo Safety
-                      </span>
-                      <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">
-                        Time Control
-                      </span>
+                </div>
+
+                {/* Scenario 2: At A Rave With Friends */}
+                <div className="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-center bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="p-6 space-y-4">
+                    <div className="space-y-2">
+                      <h4 className="text-lg font-medium text-purple-900">
+                        Scenario 2: At A Rave With Friends
+                      </h4>
+                      <div className="space-y-3">
+                        <div>
+                          <p className="text-sm font-medium text-purple-800">
+                            Before (Without Guardian):
+                          </p>
+                          <p className="text-sm text-purple-700">
+                            Evelyn takes a substance with friends at a crowded
+                            venue. Everyone gets separated. There's too much noise
+                            to coordinate or check in with each other.
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-purple-800">
+                            After (With Guardian):
+                          </p>
+                          <p className="text-sm text-purple-700">
+                            She starts a Guardian session noting timing, has GPS
+                            and shares it with a designated friend. They can check
+                            in on her emergency contact features.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="pt-4 border-t border-purple-200">
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
+                          Group Safety
+                        </span>
+                        <span className="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
+                          Location Sharing
+                        </span>
+                        <span className="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
+                          Friend Network
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Scenario 3: Bad Reaction Or Panic Attack */}
+                <div className="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-center bg-gradient-to-br from-amber-100 to-amber-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="p-6 space-y-4">
+                    <div className="space-y-2">
+                      <h4 className="text-lg font-medium text-amber-900">
+                        Scenario 3: Bad Reaction Or Panic Attack
+                      </h4>
+                      <div className="space-y-3">
+                        <div>
+                          <p className="text-sm font-medium text-amber-800">
+                            Before (Without Guardian):
+                          </p>
+                          <p className="text-sm text-amber-700">
+                            Evelyn feels a new substance isn't reacting well with
+                            her system. She doesn't want to call 911 but needs
+                            help. No one is around.
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-amber-800">
+                            After (With Guardian):
+                          </p>
+                          <p className="text-sm text-amber-700">
+                            Uses the SOS button to alert her friend. Accesses harm
+                            reduction resources and can connect with a counselor
+                            if needed.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="pt-4 border-t border-amber-200">
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-3 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">
+                          Emergency Response
+                        </span>
+                        <span className="px-3 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">
+                          Support Access
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Scenario 4: Takes Unknown Substance */}
+                <div className="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-center bg-gradient-to-br from-green-100 to-green-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="p-6 space-y-4">
+                    <div className="space-y-2">
+                      <h4 className="text-lg font-medium text-green-900">
+                        Scenario 4: Takes Unknown Substance
+                      </h4>
+                      <div className="space-y-3">
+                        <div>
+                          <p className="text-sm font-medium text-green-800">
+                            Before (Without Guardian):
+                          </p>
+                          <p className="text-sm text-green-700">
+                            A friend hands her a pill at a party. She's unsure of
+                            its content. Wants to be safe but doesn't want to kill
+                            the vibe.
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-green-800">
+                            After (With Guardian):
+                          </p>
+                          <p className="text-sm text-green-700">
+                            Before taking anything, she checks the app's drug
+                            safety tips and alerts her trusted contacts of her
+                            plans.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="pt-4 border-t border-green-200">
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
+                          Harm Prevention
+                        </span>
+                        <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
+                          Education
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Scenario 2: At A Rave With Friends */}
-              <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="p-6 space-y-4">
-                  <div className="space-y-2">
-                    <h4 className="text-lg font-medium text-purple-900">
-                      Scenario 2: At A Rave With Friends
-                    </h4>
-                    <div className="space-y-3">
-                      <div>
-                        <p className="text-sm font-medium text-purple-800">
-                          Before (Without Guardian):
-                        </p>
-                        <p className="text-sm text-purple-700">
-                          Evelyn takes a substance with friends at a crowded
-                          venue. Everyone gets separated. There's too much noise
-                          to coordinate or check in with each other.
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-purple-800">
-                          After (With Guardian):
-                        </p>
-                        <p className="text-sm text-purple-700">
-                          She starts a Guardian session noting timing, has GPS
-                          and shares it with a designated friend. They can check
-                          in on her emergency contact features.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="pt-4 border-t border-purple-200">
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
-                        Group Safety
-                      </span>
-                      <span className="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
-                        Location Sharing
-                      </span>
-                      <span className="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
-                        Friend Network
-                      </span>
-                    </div>
-                  </div>
-                </div>
+              {/* Scroll Progress Indicator - Only on Mobile */}
+              <div className="flex justify-center gap-2 mt-6 md:hidden">
+                {[0, 1, 2, 3].map((index) => (
+                  <div
+                    key={index}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === 0 ? 'bg-[#493B32]' : 'bg-[#493B32]/30'
+                    }`}
+                  ></div>
+                ))}
               </div>
-
-              {/* Scenario 3: Bad Reaction Or Panic Attack */}
-              <div className="bg-gradient-to-br from-amber-100 to-amber-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="p-6 space-y-4">
-                  <div className="space-y-2">
-                    <h4 className="text-lg font-medium text-amber-900">
-                      Scenario 3: Bad Reaction Or Panic Attack
-                    </h4>
-                    <div className="space-y-3">
-                      <div>
-                        <p className="text-sm font-medium text-amber-800">
-                          Before (Without Guardian):
-                        </p>
-                        <p className="text-sm text-amber-700">
-                          Evelyn feels a new substance isn't reacting well with
-                          her system. She doesn't want to call 911 but needs
-                          help. No one is around.
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-amber-800">
-                          After (With Guardian):
-                        </p>
-                        <p className="text-sm text-amber-700">
-                          Uses the SOS button to alert her friend. Accesses harm
-                          reduction resources and can connect with a counselor
-                          if needed.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="pt-4 border-t border-amber-200">
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">
-                        Emergency Response
-                      </span>
-                      <span className="px-3 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">
-                        Support Access
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Scenario 4: Takes Unknown Substance */}
-              <div className="bg-gradient-to-br from-green-100 to-green-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="p-6 space-y-4">
-                  <div className="space-y-2">
-                    <h4 className="text-lg font-medium text-green-900">
-                      Scenario 4: Takes Unknown Substance
-                    </h4>
-                    <div className="space-y-3">
-                      <div>
-                        <p className="text-sm font-medium text-green-800">
-                          Before (Without Guardian):
-                        </p>
-                        <p className="text-sm text-green-700">
-                          A friend hands her a pill at a party. She's unsure of
-                          its content. Wants to be safe but doesn't want to kill
-                          the vibe.
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-green-800">
-                          After (With Guardian):
-                        </p>
-                        <p className="text-sm text-green-700">
-                          Before taking anything, she checks the app's drug
-                          safety tips and alerts her trusted contacts of her
-                          plans.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="pt-4 border-t border-green-200">
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
-                        Harm Prevention
-                      </span>
-                      <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
-                        Education
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile Carousel Controls - Only visible on mobile */}
-            <div className="flex justify-center gap-2 mt-4 md:hidden">
-              {features.map((feature, index) => (
-                <button
-                  key={feature.id}
-                  onClick={() => setSelectedFeature(index + 1)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    selectedFeature === index + 1 
-                      ? 'bg-[#493B32] scale-125' 
-                      : 'bg-[#493B32]/30 hover:bg-[#493B32]/50'
-                  }`}
-                  aria-label={`Show ${feature.title}`}
-                />
-              ))}
             </div>
           </div>
 
