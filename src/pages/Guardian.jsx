@@ -1050,45 +1050,36 @@ const Guardian = () => {
         {/* Key Features section */}
         <section id="key-features" className="mt-16 overflow-hidden">
           <div className="flex flex-row items-center gap-2 mb-12">
-            <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32] mt-10"></div>
+            <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
               Key Features
             </h2>
           </div>
 
-          {/* Decorative Frame Container */}
+          {/* Main Content Container */}
           <div className="relative mx-auto max-w-[1200px] p-4 md:p-8">
             {/* Background Pattern */}
             <div className="absolute inset-0 bg-[#FFF7F2] rounded-3xl shadow-lg">
-              {/* Subtle Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/50 rounded-3xl"></div>
             </div>
 
             {/* Content Container */}
             <div className="relative z-10 p-4 md:p-8 lg:p-12">
-              {/* Features Carousel Container */}
-              <div className="relative">
-                {/* Background Design Elements */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                  <div className="absolute top-1/4 -left-10 w-40 h-40 bg-[#F75590]/10 rounded-full blur-3xl"></div>
-                  <div className="absolute bottom-1/4 -right-10 w-40 h-40 bg-[#493B32]/10 rounded-full blur-3xl"></div>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[120%] bg-gradient-to-b from-transparent via-[#FFF7F2]/50 to-transparent"></div>
-                </div>
+              {/* Feature Category Label */}
+              <div className="text-center mb-8">
+                <span className="inline-block px-6 py-2 bg-[#493B32]/5 rounded-full text-sm font-medium text-[#493B32]/70 tracking-wider uppercase">
+                  Feature {selectedFeature} of {features.length}
+                </span>
+              </div>
 
-                {/* Main Content Container */}
-                <div className="relative z-10 max-w-6xl mx-auto">
-                  {/* Feature Category Label */}
-                  <div className="text-center mb-8">
-                    <span className="inline-block px-6 py-2 bg-[#493B32]/5 rounded-full text-sm font-medium text-[#493B32]/70 tracking-wider uppercase">
-                      Feature {selectedFeature} of {features.length}
-                    </span>
-                  </div>
-
-                  {/* iPhone Frame Container */}
+              {/* Two Column Layout */}
+              <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+                {/* Left Column - iPhone Frame */}
+                <div className="w-full lg:w-1/2">
                   <div className="relative">
                     {/* Left Gradient Overlay */}
                     <div 
-                      className="absolute left-0 top-0 bottom-0 w-8 md:w-16 z-10"
+                      className="absolute left-0 top-0 bottom-0 w-8 md:w-16 z-10 lg:hidden"
                       style={{
                         background: 'linear-gradient(to right, #FFF7F2, transparent)'
                       }}
@@ -1096,7 +1087,7 @@ const Guardian = () => {
                     
                     {/* Right Gradient Overlay */}
                     <div 
-                      className="absolute right-0 top-0 bottom-0 w-8 md:w-16 z-10"
+                      className="absolute right-0 top-0 bottom-0 w-8 md:w-16 z-10 lg:hidden"
                       style={{
                         background: 'linear-gradient(to left, #FFF7F2, transparent)'
                       }}
@@ -1141,24 +1132,27 @@ const Guardian = () => {
                       </div>
                     </div>
                   </div>
+                </div>
 
+                {/* Right Column - Feature Content */}
+                <div className="w-full lg:w-1/2 space-y-8">
                   {/* Feature Content */}
-                  <div className="relative mt-12 text-center max-w-2xl mx-auto">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-[#493B32]/20 to-transparent"></div>
-                    <div className="pt-8 space-y-4">
-                      <h3 className="text-2xl font-medium text-[#493B32] transition-all duration-500">
+                  <div className="text-center lg:text-left space-y-6">
+                    <div className="relative">
+                      <div className="h-px w-1/2 bg-gradient-to-r from-transparent via-[#493B32]/20 to-transparent absolute top-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0"></div>
+                      <h3 className="text-3xl font-medium text-[#493B32] pt-8">
                         {features[selectedFeature - 1].title}
                       </h3>
-                      <p className="text-[#493B32]/70 text-lg leading-relaxed transition-all duration-500">
-                        {features[selectedFeature - 1].description}
-                      </p>
                     </div>
+                    <p className="text-[#493B32]/70 text-lg leading-relaxed">
+                      {features[selectedFeature - 1].description}
+                    </p>
                   </div>
 
-                  {/* Navigation */}
-                  <div className="mt-12 flex flex-col items-center gap-8">
+                  {/* Navigation Controls */}
+                  <div className="space-y-6">
                     {/* Dots */}
-                    <div className="flex justify-center items-center gap-4">
+                    <div className="flex justify-center lg:justify-start items-center gap-4">
                       {features.map((feature, index) => (
                         <button 
                           key={feature.id}
@@ -1179,7 +1173,7 @@ const Guardian = () => {
                     </div>
 
                     {/* Arrow Navigation */}
-                    <div className="flex justify-center gap-4">
+                    <div className="flex justify-center lg:justify-start gap-4">
                       <button
                         onClick={() => setSelectedFeature(prev => Math.max(1, prev - 1))}
                         className={`p-2 rounded-full transition-all duration-300 ${
