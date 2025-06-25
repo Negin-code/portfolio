@@ -58,7 +58,7 @@ const Guardian = () => {
       id: 4,
       title: "Resource Hub",
       description: "Access harm reduction guides, naloxone training resources, and mental health support.",
-      image: WelcomeImageV1 
+      image: ResourceHubImage
     },
     {
       id: 5,
