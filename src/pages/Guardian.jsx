@@ -152,7 +152,7 @@ const Guardian = () => {
         </div>
 
         {/* Project Overview Section */}
-        <section id="overview" className="space-y-6 mt-12 mr-10 sm:mr-0">
+        <section id="overview" className="space-y-6 mt-12 mr-15 sm:mr-0">
           <div className="flex flex-row items-center gap-2">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -160,7 +160,7 @@ const Guardian = () => {
             </h2>
           </div>
 
-          <p className="text-[#493B32] leading-relaxed mr-5 sm:mr-0">
+          <p className="text-[#493B32] leading-relaxed">
             Guardian is a harm reduction mobile application designed for
             recreational substance users, particularly young adults like Evelyn
             who use drugs in isolation or in social settings. The app acts as a
@@ -173,7 +173,7 @@ const Guardian = () => {
         </section>
 
         {/* Problem Section */}
-        <section id="problem" className="space-y-6 mt-12 mr-15 md:mr-0">
+        <section id="problem" className="space-y-6 mt-12 mr-15 lg:mr-0">
           <div className="flex flex-row items-center gap-2">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -210,7 +210,7 @@ const Guardian = () => {
         </section>
 
         {/* Research & discovery section */}
-        <section id="research-discovery" className="space-y-6 mt-16">
+        <section id="research-discovery" className="space-y-6 mt-16 mr-15 lg:mr-0">
           <div className="flex flex-row items-center gap-2">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
