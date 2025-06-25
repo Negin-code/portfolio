@@ -13,7 +13,7 @@ import { MdWork } from "react-icons/md";
 import GuardianImage from "../assets/hero.png";
 import PersonaImage from "../assets/Persona.jpg";
 import WelcomeImageV1 from "../assets/Welcome-V1.svg";
-import WelcomeImage from "../assets/Welcome.svg";
+import WelcomeImage from "../assets/Welcome.png";
 import HomeImage from "../assets/Home.svg";
 import HomeImageV1 from "../assets/Home-V1.svg";
 import TimerImageV1 from "../assets/TimerV1.svg";
