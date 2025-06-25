@@ -40,7 +40,7 @@ const Guardian = () => {
       id: 1,
       title: "Timer Setup",
       description: "Set customizable timers based on substance type. Automatic alerts sent if unresponsive.",
-      image: TimerImage // Updated here
+      image: TimerImage 
     },
     {
       id: 2,
@@ -64,7 +64,7 @@ const Guardian = () => {
       id: 5,
       title: "Anonymous Mode",
       description: "Use the app without registration. Privacy-first approach with no personal data stored.",
-      image: WelcomeImageV1 
+      image: WelcomeImage 
     }
   ];
 
