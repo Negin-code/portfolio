@@ -160,7 +160,7 @@ const Guardian = () => {
             </h2>
           </div>
 
-          <p className="text-[#493B32] leading-relaxed">
+          <p className="text-[#493B32] leading-relaxed mr-5 sm:mr-0">
             Guardian is a harm reduction mobile application designed for
             recreational substance users, particularly young adults like Evelyn
             who use drugs in isolation or in social settings. The app acts as a
@@ -181,7 +181,7 @@ const Guardian = () => {
             </h2>
           </div>
 
-          <div className="bg-[#493B32]/5 p-8 rounded-lg border border-[#493B32]/10">
+          <div className="bg-[#493B32]/5 p-8 rounded-lg border border-[#493B32]/10 mr-5 sm:mr-0">
             <p className="text-[#493B32] leading-relaxed">
               Many people who use drugs casually or alone face a high risk of
               fatal overdose, particularly due to the presence of hidden
@@ -219,7 +219,7 @@ const Guardian = () => {
           </div>
           {/* User insight Subsection */}
           <div className="space-y-6 mt-8">
-            <div className="flex flex-row items-center gap-2 pl-4 mr-15 sm:mr-0">
+            <div className="flex flex-row items-center gap-2 pl-4">
               <div className="w-[2vh] sm:w-[2vh] md:w-[3vh] h-[2px] bg-[#493B32]"></div>
               <h3 className="text-xl sm:text-2xl font-tan text-[#493B32]">
                 User Insight
@@ -260,7 +260,7 @@ const Guardian = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="space-y-3 flex-grow">
+                <div className="space-y-3 flex-grow mr-15 sm:mr-0">
                   <p className="text-[#493B32] leading-relaxed">
                     Evelyn was created based on firsthand insights from one of
                     our team members with direct experience in the overdose
