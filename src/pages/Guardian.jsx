@@ -1105,11 +1105,11 @@ const Guardian = () => {
                           </div>
                         </div>
 
-                        {/* Buttons */}
+                        {/* Buttons 
                         <div className="absolute top-[83px] md:top-[110px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
                         <div className="absolute top-[143px] md:top-[190px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
                         <div className="absolute top-[180px] md:top-[240px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
-                        <div className="absolute top-[98px] md:top-[130px] -right-[2px] w-[3px] md:w-[4px] h-[38px] md:h-[50px] bg-[#2a2a2a] rounded-r-full"></div>
+                        <div className="absolute top-[98px] md:top-[130px] -right-[2px] w-[3px] md:w-[4px] h-[38px] md:h-[50px] bg-[#2a2a2a] rounded-r-full"></div>*/}
 
                         {/* Screen Content */}
                         <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
