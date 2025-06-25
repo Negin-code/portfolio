@@ -260,7 +260,7 @@ const Guardian = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="space-y-3 flex-grow mr-15 sm:mr-0">
+                <div className="space-y-3 flex-grow">
                   <p className="text-[#493B32] leading-relaxed">
                     Evelyn was created based on firsthand insights from one of
                     our team members with direct experience in the overdose
@@ -871,10 +871,18 @@ const Guardian = () => {
 
             {/* Mobile Carousel Controls - Only visible on mobile */}
             <div className="flex justify-center gap-2 mt-4 md:hidden">
-              <div className="w-2 h-2 rounded-full bg-[#493B32]"></div>
-              <div className="w-2 h-2 rounded-full bg-[#493B32]/30"></div>
-              <div className="w-2 h-2 rounded-full bg-[#493B32]/30"></div>
-              <div className="w-2 h-2 rounded-full bg-[#493B32]/30"></div>
+              {features.map((feature, index) => (
+                <button
+                  key={feature.id}
+                  onClick={() => setSelectedFeature(index + 1)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    selectedFeature === index + 1 
+                      ? 'bg-[#493B32] scale-125' 
+                      : 'bg-[#493B32]/30 hover:bg-[#493B32]/50'
+                  }`}
+                  aria-label={`Show ${feature.title}`}
+                />
+              ))}
             </div>
           </div>
 
