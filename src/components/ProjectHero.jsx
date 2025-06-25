@@ -6,7 +6,7 @@ const ProjectHero = ({ title, image, imageAlt }) => {
       {/* Project Title */}
       <div className="flex flex-row items-start justify-start gap-1 mb-8 pl-0 mt-10 lg:mt-0">
         <div className="w-[4vh] sm:w-[4vh] md:w-[5vh] h-[3px] bg-gradient-to-r from-[#493B32] to-[#F75590] mt-4"></div>
-        <h1 id="top" className="text-2xl sm:text-4xl md:text-5xl leading-relaxed font-tan text-[#493B32]">
+        <h1 id="top" className="text-xl sm:text-4xl md:text-5xl leading-relaxed font-tan text-[#493B32]">
           {title}
         </h1>
       </div>
