@@ -688,323 +688,267 @@ const Guardian = () => {
             </div>
 
             {/* Scenario Cards Container */}
-            <div className="relative px-4 md:px-8">
-              {/* Left Gradient Overlay */}
-              <div 
-                className="absolute left-0 top-0 bottom-0 w-8 md:w-16 z-10 pointer-events-none md:hidden"
-                style={{
-                  background: 'linear-gradient(to right, #FFF7F2, transparent)'
-                }}
-              ></div>
-              
-              {/* Right Gradient Overlay */}
-              <div 
-                className="absolute right-0 top-0 bottom-0 w-8 md:w-16 z-10 pointer-events-none md:hidden"
-                style={{
-                  background: 'linear-gradient(to left, #FFF7F2, transparent)'
-                }}
-              ></div>
-
-              {/* Scrollable Container on Mobile */}
-              <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto md:overflow-visible pb-6 md:pb-0 snap-x snap-mandatory">
+            <div className="px-4 md:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Scenario 1: Uses Alone At Home */}
-                <div className="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-center bg-gradient-to-br from-red-100 to-red-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                  <div className="p-6 space-y-4">
-                    <div className="space-y-2">
-                      <h4 className="text-lg font-medium text-red-900">
-                        Scenario 1: Uses Alone At Home
-                      </h4>
-                      <div className="space-y-3">
-                        <div>
-                          <p className="text-sm font-medium text-red-800">
-                            Before (Without Guardian):
-                          </p>
-                          <p className="text-sm text-red-700">
-                            Evelyn uses a pill by herself in a new night to
-                            unwind. Experiences the typical set-up alone: finding
-                            a comfortable spot, using without any safety measures
-                            in place.
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium text-red-800">
-                            After (With Guardian):
-                          </p>
-                          <p className="text-sm text-red-700">
-                            Evelyn opens Guardian, sets up a 15-minute timer,
-                            checks in with her roommate, and has location services
-                            on for the session.
-                          </p>
-                        </div>
+                <div className="bg-gradient-to-br from-red-100 to-red-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="p-4 md:p-6 space-y-4">
+                    <h4 className="text-lg font-medium text-red-900">
+                      Uses Alone At Home
+                    </h4>
+                    <div className="space-y-4">
+                      <div className="bg-white/50 rounded-lg p-3">
+                        <p className="text-sm font-medium text-red-800 mb-1">
+                          Without Guardian
+                        </p>
+                        <p className="text-sm text-red-700">
+                          Uses substances alone without any safety measures in place.
+                        </p>
+                      </div>
+                      <div className="bg-white/50 rounded-lg p-3">
+                        <p className="text-sm font-medium text-red-800 mb-1">
+                          With Guardian
+                        </p>
+                        <p className="text-sm text-red-700">
+                          Sets timer, enables location sharing, and connects with trusted contacts.
+                        </p>
                       </div>
                     </div>
-                    <div className="pt-4 border-t border-red-200">
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">
-                          Risk Management
-                        </span>
-                        <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">
-                          Solo Safety
-                        </span>
-                        <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">
-                          Time Control
-                        </span>
-                      </div>
+                    <div className="flex flex-wrap gap-2 pt-3">
+                      <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">
+                        Risk Management
+                      </span>
+                      <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">
+                        Solo Safety
+                      </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Scenario 2: At A Rave With Friends */}
-                <div className="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-center bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                  <div className="p-6 space-y-4">
-                    <div className="space-y-2">
-                      <h4 className="text-lg font-medium text-purple-900">
-                        Scenario 2: At A Rave With Friends
-                      </h4>
-                      <div className="space-y-3">
-                        <div>
-                          <p className="text-sm font-medium text-purple-800">
-                            Before (Without Guardian):
-                          </p>
-                          <p className="text-sm text-purple-700">
-                            Evelyn takes a substance with friends at a crowded
-                            venue. Everyone gets separated. There's too much noise
-                            to coordinate or check in with each other.
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium text-purple-800">
-                            After (With Guardian):
-                          </p>
-                          <p className="text-sm text-purple-700">
-                            She starts a Guardian session noting timing, has GPS
-                            and shares it with a designated friend. They can check
-                            in on her emergency contact features.
-                          </p>
-                        </div>
+                {/* Scenario 2: At A Rave */}
+                <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="p-4 md:p-6 space-y-4">
+                    <h4 className="text-lg font-medium text-purple-900">
+                      At A Rave
+                    </h4>
+                    <div className="space-y-4">
+                      <div className="bg-white/50 rounded-lg p-3">
+                        <p className="text-sm font-medium text-purple-800 mb-1">
+                          Without Guardian
+                        </p>
+                        <p className="text-sm text-purple-700">
+                          Gets separated from friends in crowded venue with no way to coordinate.
+                        </p>
+                      </div>
+                      <div className="bg-white/50 rounded-lg p-3">
+                        <p className="text-sm font-medium text-purple-800 mb-1">
+                          With Guardian
+                        </p>
+                        <p className="text-sm text-purple-700">
+                          Shares location with designated friend and sets up emergency contacts.
+                        </p>
                       </div>
                     </div>
-                    <div className="pt-4 border-t border-purple-200">
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
-                          Group Safety
-                        </span>
-                        <span className="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
-                          Location Sharing
-                        </span>
-                        <span className="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
-                          Friend Network
-                        </span>
-                      </div>
+                    <div className="flex flex-wrap gap-2 pt-3">
+                      <span className="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
+                        Group Safety
+                      </span>
+                      <span className="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
+                        Location Sharing
+                      </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Scenario 3: Bad Reaction Or Panic Attack */}
-                <div className="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-center bg-gradient-to-br from-amber-100 to-amber-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                  <div className="p-6 space-y-4">
-                    <div className="space-y-2">
-                      <h4 className="text-lg font-medium text-amber-900">
-                        Scenario 3: Bad Reaction Or Panic Attack
-                      </h4>
-                      <div className="space-y-3">
-                        <div>
-                          <p className="text-sm font-medium text-amber-800">
-                            Before (Without Guardian):
-                          </p>
-                          <p className="text-sm text-amber-700">
-                            Evelyn feels a new substance isn't reacting well with
-                            her system. She doesn't want to call 911 but needs
-                            help. No one is around.
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium text-amber-800">
-                            After (With Guardian):
-                          </p>
-                          <p className="text-sm text-amber-700">
-                            Uses the SOS button to alert her friend. Accesses harm
-                            reduction resources and can connect with a counselor
-                            if needed.
-                          </p>
-                        </div>
+                {/* Scenario 3: Bad Reaction */}
+                <div className="bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="p-4 md:p-6 space-y-4">
+                    <h4 className="text-lg font-medium text-amber-900">
+                      Bad Reaction
+                    </h4>
+                    <div className="space-y-4">
+                      <div className="bg-white/50 rounded-lg p-3">
+                        <p className="text-sm font-medium text-amber-800 mb-1">
+                          Without Guardian
+                        </p>
+                        <p className="text-sm text-amber-700">
+                          Experiences adverse effects alone with no immediate help available.
+                        </p>
+                      </div>
+                      <div className="bg-white/50 rounded-lg p-3">
+                        <p className="text-sm font-medium text-amber-800 mb-1">
+                          With Guardian
+                        </p>
+                        <p className="text-sm text-amber-700">
+                          Uses SOS button to alert friend and access immediate support resources.
+                        </p>
                       </div>
                     </div>
-                    <div className="pt-4 border-t border-amber-200">
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">
-                          Emergency Response
-                        </span>
-                        <span className="px-3 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">
-                          Support Access
-                        </span>
-                      </div>
+                    <div className="flex flex-wrap gap-2 pt-3">
+                      <span className="px-3 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">
+                        Emergency Response
+                      </span>
+                      <span className="px-3 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">
+                        Support Access
+                      </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Scenario 4: Takes Unknown Substance */}
-                <div className="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-center bg-gradient-to-br from-green-100 to-green-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                  <div className="p-6 space-y-4">
-                    <div className="space-y-2">
-                      <h4 className="text-lg font-medium text-green-900">
-                        Scenario 4: Takes Unknown Substance
-                      </h4>
-                      <div className="space-y-3">
-                        <div>
-                          <p className="text-sm font-medium text-green-800">
-                            Before (Without Guardian):
-                          </p>
-                          <p className="text-sm text-green-700">
-                            A friend hands her a pill at a party. She's unsure of
-                            its content. Wants to be safe but doesn't want to kill
-                            the vibe.
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium text-green-800">
-                            After (With Guardian):
-                          </p>
-                          <p className="text-sm text-green-700">
-                            Before taking anything, she checks the app's drug
-                            safety tips and alerts her trusted contacts of her
-                            plans.
-                          </p>
-                        </div>
+                {/* Scenario 4: Unknown Substance */}
+                <div className="bg-gradient-to-br from-green-100 to-green-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="p-4 md:p-6 space-y-4">
+                    <h4 className="text-lg font-medium text-green-900">
+                      Unknown Substance
+                    </h4>
+                    <div className="space-y-4">
+                      <div className="bg-white/50 rounded-lg p-3">
+                        <p className="text-sm font-medium text-green-800 mb-1">
+                          Without Guardian
+                        </p>
+                        <p className="text-sm text-green-700">
+                          Takes unknown substance without verifying content or safety measures.
+                        </p>
+                      </div>
+                      <div className="bg-white/50 rounded-lg p-3">
+                        <p className="text-sm font-medium text-green-800 mb-1">
+                          With Guardian
+                        </p>
+                        <p className="text-sm text-green-700">
+                          Checks safety alerts and notifies trusted contacts before use.
+                        </p>
                       </div>
                     </div>
-                    <div className="pt-4 border-t border-green-200">
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
-                          Harm Prevention
-                        </span>
-                        <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
-                          Education
-                        </span>
-                      </div>
+                    <div className="flex flex-wrap gap-2 pt-3">
+                      <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
+                        Harm Prevention
+                      </span>
+                      <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
+                        Education
+                      </span>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Scroll Progress Indicator - Only on Mobile */}
-              <div className="flex justify-center gap-2 mt-6 md:hidden">
-                {[0, 1, 2, 3].map((index) => (
-                  <div
-                    key={index}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === 0 ? 'bg-[#493B32]' : 'bg-[#493B32]/30'
-                    }`}
-                  ></div>
-                ))}
               </div>
             </div>
           </div>
 
-          {/* Narrative Arc Subsection */}
-          <div className="space-y-6 mt-12">
-            <div className="flex flex-row items-center gap-2 pl-4">
-              <div className="w-[2vh] sm:w-[2vh] md:w-[3vh] h-[2px] bg-[#493B32]"></div>
-              <h3 className="text-xl sm:text-2xl font-tan text-[#493B32]">
-                The 4 C's of Guardian's Story
-              </h3>
-            </div>
-
-            {/* Arc Container */}
-            <div className="relative w-full bg-[#FFF7F2] p-8 rounded-lg border border-[#493B32]/10">
-              <div className="max-w-4xl mx-auto">
-                {/* Title and Description */}
-                <div className="text-center mb-8">
-                  <p className="text-base font-open text-[#493B32]/70">The journey of Guardian's development through the classic story arc</p>
-                </div>
-
-                {/* SVG Arc */}
-                <div className="relative h-[500px] w-full">
-                  {/* Content Cards - Positioned BEHIND the SVG */}
-                  <div className="absolute top-0 left-0 w-full h-full">
-                    <div className="relative w-full h-full">
-                      {/* Context Content */}
-                      <div className="absolute left-[5%] bottom-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                        <p className="text-xs text-[#493B32]">After initial research, She downloads the app</p>
-                      </div>
-
-                      {/* Conflict Content */}
-                      <div className="absolute left-[5%] top-[22%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                        <p className="text-xs text-[#493B32]">Evelyn attends a rave on the weekend with friends. They've bought pills from a new source.</p>
-                      </div>
-                      <div className="absolute left-[5%] top-[40%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                        <p className="text-xs text-[#493B32]">She's unsure about the pill's safety due to recent overdose warnings on Instagram.</p>
-                      </div>
-
-                      {/* Climax Content */}
-                      <div className="absolute left-[55%] top-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                        <p className="text-xs text-[#493B32]"> Decides to use the app. Sets her roommate as a contact, and enters "Pills" as method then the timer activated.</p>
-                      </div>
-                      <div className="absolute left-[75%] top-[30%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                        <p className="text-xs text-[#493B32]"> Evelyn doesn't tap "I'm OK" in time. App sends alert + GPS to roommate. Roommate checks in and revives her. After the event, Evelyn reads resources in the app, finds naloxone training nearby, and shares app with friends</p>
-                      </div>
-
-                      {/* Closure Content */}
-                      <div className="absolute right-[5%] bottom-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                        <p className="text-xs text-[#493B32]">App becomes a trusted harm-reduction tool</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* SVG with points and labels - Positioned ABOVE the content cards */}
-                  <svg className="w-full h-full absolute top-0 left-0 z-10" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
-                    {/* Background Grid - subtle lines */}
-                    <defs>
-                      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#493B32" strokeWidth="0.1"/>
-                      </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#grid)" />
-
-                    {/* Main Arc Path */}
-                    <path
-                      d="M 50,350 C 200,350 350,100 400,100 C 450,100 600,350 750,350"
-                      fill="none"
-                      stroke="#493B32"
-                      strokeWidth="3"
-                      className="animate-draw-line"
-                    />
-
-                    {/* Points and Labels */}
-                    {/* Context */}
-                    <g>
-                      <circle cx="50" cy="350" r="6" fill="#493B32"/>
-                      <text x="50" y="380" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Research</text>
-                      <text x="50" y="395" textAnchor="middle" className="text-xs" fill="#493B32">CONTEXT</text>
-                    </g>
-
-                    {/* Conflict */}
-                    <g>
-                      <circle cx="243" cy="245" r="6" fill="#493B32"/>
-                      <text x="250" y="220" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Core Insight</text>
-                      <text x="250" y="235" textAnchor="middle" className="text-xs" fill="#493B32">CONFLICT</text>
-                    </g>
-
-                    {/* Climax */}
-                    <g>
-                      <circle cx="400" cy="100" r="6" fill="#493B32"/>
-                      <text x="400" y="80" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Solution</text>
-                      <text x="400" y="65" textAnchor="middle" className="text-xs" fill="#493B32">CLIMAX</text>
-                    </g>
-
-                    {/* Closure */}
-                    <g>
-                      <circle cx="750" cy="350" r="6" fill="#493B32"/>
-                      <text x="750" y="380" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Vision of Future</text>
-                      <text x="750" y="395" textAnchor="middle" className="text-xs" fill="#493B32">CLOSURE</text>
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
+          {/* Scroll Progress Indicator - Only on Mobile */}
+          <div className="flex justify-center gap-2 mt-6 md:hidden">
+            {[0, 1, 2, 3].map((index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === 0 ? 'bg-[#493B32]' : 'bg-[#493B32]/30'
+                }`}
+              ></div>
+            ))}
           </div>
         </section>
+
+        {/* Narrative Arc Subsection */}
+        <div className="space-y-6 mt-12">
+          <div className="flex flex-row items-center gap-2 pl-4">
+            <div className="w-[2vh] sm:w-[2vh] md:w-[3vh] h-[2px] bg-[#493B32]"></div>
+            <h3 className="text-xl sm:text-2xl font-tan text-[#493B32]">
+              The 4 C's of Guardian's Story
+            </h3>
+          </div>
+
+          {/* Arc Container */}
+          <div className="relative w-full bg-[#FFF7F2] p-8 rounded-lg border border-[#493B32]/10">
+            <div className="max-w-4xl mx-auto">
+              {/* Title and Description */}
+              <div className="text-center mb-8">
+                <p className="text-base font-open text-[#493B32]/70">The journey of Guardian's development through the classic story arc</p>
+              </div>
+
+              {/* SVG Arc */}
+              <div className="relative h-[500px] w-full">
+                {/* Content Cards - Positioned BEHIND the SVG */}
+                <div className="absolute top-0 left-0 w-full h-full">
+                  <div className="relative w-full h-full">
+                    {/* Context Content */}
+                    <div className="absolute left-[5%] bottom-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                      <p className="text-xs text-[#493B32]">After initial research, She downloads the app</p>
+                    </div>
+
+                    {/* Conflict Content */}
+                    <div className="absolute left-[5%] top-[22%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                      <p className="text-xs text-[#493B32]">Evelyn attends a rave on the weekend with friends. They've bought pills from a new source.</p>
+                    </div>
+                    <div className="absolute left-[5%] top-[40%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                      <p className="text-xs text-[#493B32]">She's unsure about the pill's safety due to recent overdose warnings on Instagram.</p>
+                    </div>
+
+                    {/* Climax Content */}
+                    <div className="absolute left-[55%] top-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                      <p className="text-xs text-[#493B32]"> Decides to use the app. Sets her roommate as a contact, and enters "Pills" as method then the timer activated.</p>
+                    </div>
+                    <div className="absolute left-[75%] top-[30%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                      <p className="text-xs text-[#493B32]"> Evelyn doesn't tap "I'm OK" in time. App sends alert + GPS to roommate. Roommate checks in and revives her. After the event, Evelyn reads resources in the app, finds naloxone training nearby, and shares app with friends</p>
+                    </div>
+
+                    {/* Closure Content */}
+                    <div className="absolute right-[5%] bottom-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                      <p className="text-xs text-[#493B32]">App becomes a trusted harm-reduction tool</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* SVG with points and labels - Positioned ABOVE the content cards */}
+                <svg className="w-full h-full absolute top-0 left-0 z-10" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
+                  {/* Background Grid - subtle lines */}
+                  <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#493B32" strokeWidth="0.1"/>
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#grid)" />
+
+                  {/* Main Arc Path */}
+                  <path
+                    d="M 50,350 C 200,350 350,100 400,100 C 450,100 600,350 750,350"
+                    fill="none"
+                    stroke="#493B32"
+                    strokeWidth="3"
+                    className="animate-draw-line"
+                  />
+
+                  {/* Points and Labels */}
+                  {/* Context */}
+                  <g>
+                    <circle cx="50" cy="350" r="6" fill="#493B32"/>
+                    <text x="50" y="380" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Research</text>
+                    <text x="50" y="395" textAnchor="middle" className="text-xs" fill="#493B32">CONTEXT</text>
+                  </g>
+
+                  {/* Conflict */}
+                  <g>
+                    <circle cx="243" cy="245" r="6" fill="#493B32"/>
+                    <text x="250" y="220" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Core Insight</text>
+                    <text x="250" y="235" textAnchor="middle" className="text-xs" fill="#493B32">CONFLICT</text>
+                  </g>
+
+                  {/* Climax */}
+                  <g>
+                    <circle cx="400" cy="100" r="6" fill="#493B32"/>
+                    <text x="400" y="80" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Solution</text>
+                    <text x="400" y="65" textAnchor="middle" className="text-xs" fill="#493B32">CLIMAX</text>
+                  </g>
+
+                  {/* Closure */}
+                  <g>
+                    <circle cx="750" cy="350" r="6" fill="#493B32"/>
+                    <text x="750" y="380" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Vision of Future</text>
+                    <text x="750" y="395" textAnchor="middle" className="text-xs" fill="#493B32">CLOSURE</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
 
         {/* Design goals section */}
         <section id="design-goals" className="space-y-6 mt-16">
