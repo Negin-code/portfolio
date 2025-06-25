@@ -182,7 +182,7 @@ const Guardian = () => {
           </div>
 
           <div className="bg-[#493B32]/5 p-8 rounded-lg border border-[#493B32]/10">
-            <p className="text-[#493B32] leading-relaxed text-lg">
+            <p className="text-[#493B32] leading-relaxed">
               Many people who use drugs casually or alone face a high risk of
               fatal overdose, particularly due to the presence of hidden
               substances like fentanyl. Existing harm reduction services such as
@@ -261,7 +261,7 @@ const Guardian = () => {
                   </div>
                 </div>
                 <div className="space-y-3 flex-grow">
-                  <p className="text-[#493B32] text-lg md:text-xl leading-relaxed">
+                  <p className="text-[#493B32] leading-relaxed">
                     Evelyn was created based on firsthand insights from one of
                     our team members with direct experience in the overdose
                     prevention sector. This grounding ensured the persona
