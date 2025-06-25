@@ -21,7 +21,7 @@ import TimerImageV2 from "../assets/TimerV2.svg";
 import TimerImage from "../assets/Timer.svg";
 import ContactImage from "../assets/AddContact.svg";
 import DrugAlertImage from "../assets/DrugAlertFeed.svg";
-import ResourceHubImage from "../assets/ResourcesHome.svg";
+import ResourceHubImage from "../assets/ResourcesHome.png";
 
 
 import "./Guardian.css";
