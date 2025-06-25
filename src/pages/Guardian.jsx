@@ -173,7 +173,7 @@ const Guardian = () => {
         </section>
 
         {/* Problem Section */}
-        <section id="problem" className="space-y-6 mt-12 mr-15 sm:mr-0">
+        <section id="problem" className="space-y-6 mt-12 mr-10 md:mr-0">
           <div className="flex flex-row items-center gap-2">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -181,7 +181,7 @@ const Guardian = () => {
             </h2>
           </div>
 
-          <div className="bg-[#493B32]/5 p-8 rounded-lg border border-[#493B32]/10 mr-5 sm:mr-0">
+          <div className="bg-[#493B32]/5 p-8 rounded-lg border border-[#493B32]/10">
             <p className="text-[#493B32] leading-relaxed">
               Many people who use drugs casually or alone face a high risk of
               fatal overdose, particularly due to the presence of hidden
