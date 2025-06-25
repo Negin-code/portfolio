@@ -160,7 +160,7 @@ const Guardian = () => {
             </h2>
           </div>
 
-          <p className="text-[#493B32] leading-relaxed text-lg">
+          <p className="text-[#493B32] leading-relaxed">
             Guardian is a harm reduction mobile application designed for
             recreational substance users, particularly young adults like Evelyn
             who use drugs in isolation or in social settings. The app acts as a
