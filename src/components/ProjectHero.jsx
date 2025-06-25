@@ -11,14 +11,19 @@ const ProjectHero = ({ title, image, imageAlt }) => {
         </h1>
       </div>
 
-      {/* Hero Image - Full Width */}
-      <div className="w-full mb-16">
-        <div className="relative w-full overflow-hidden bg-[#FFF7F2] max-h-[600px]">
-          <img
-            src={image}
-            alt={imageAlt}
-            className="w-full h-[600px] object-cover"
-          />
+      {/* Project Hero Image Container */}
+      <div className="w-full mb-8 sm:mb-12 lg:mb-16">
+        <div className="relative w-full overflow-hidden bg-[#FFF7F2]">
+          {/* Aspect ratio container */}
+          <div className="relative w-full h-0 pb-[75%] sm:pb-[65%] md:pb-[55%] lg:pb-[45%]">
+            <img
+              src={image}
+              alt={imageAlt}
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            {/* Optional gradient overlay for better text visibility if needed */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10"></div>
+          </div>
         </div>
       </div>
     </>
