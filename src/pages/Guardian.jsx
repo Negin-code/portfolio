@@ -963,7 +963,7 @@ const Guardian = () => {
         </div>
 
         {/* Design goals section */}
-        <section id="design-goals" className="space-y-6 mt-16">
+        <section id="design-goals" className="space-y-6 mt-16 mr-15 sm:mr-0">
           <div className="flex flex-row items-center gap-2">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
