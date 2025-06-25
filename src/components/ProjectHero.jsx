@@ -12,8 +12,8 @@ const ProjectHero = ({ title, image, imageAlt }) => {
       </div>
 
       {/* Project Hero Image Container */}
-      <div className="w-full mb-8 mr-10 sm:mr-0 sm:mb-12 lg:mb-16">
-        <div className="relative w-full overflow-hidden bg-[#FFF7F2]">
+      <div className="w-full mb-8 sm:mb-12 lg:mb-16">
+        <div className="relative w-[calc(100%-2rem)] sm:w-full overflow-hidden bg-[#FFF7F2] rounded-r-3xl sm:rounded-none">
           {/* Aspect ratio container */}
           <div className="relative w-full h-0 pb-[75%] sm:pb-[65%] md:pb-[55%] lg:pb-[45%]">
             <img
