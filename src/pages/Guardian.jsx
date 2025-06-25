@@ -688,10 +688,11 @@ const Guardian = () => {
             </div>
 
             {/* Scenario Cards Container */}
-            <div className="px-4 md:px-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="relative px-4">
+              {/* Scrollable Container */}
+              <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 overflow-x-auto pb-6 md:pb-0 hide-scrollbar">
                 {/* Scenario 1: Uses Alone At Home */}
-                <div className="bg-gradient-to-br from-red-100 to-red-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="min-w-[280px] flex-shrink-0 md:min-w-0 bg-gradient-to-br from-red-100 to-red-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                   <div className="p-4 md:p-6 space-y-4">
                     <h4 className="text-lg font-medium text-red-900">
                       Uses Alone At Home
@@ -726,7 +727,7 @@ const Guardian = () => {
                 </div>
 
                 {/* Scenario 2: At A Rave */}
-                <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="min-w-[280px] flex-shrink-0 md:min-w-0 bg-gradient-to-br from-purple-100 to-purple-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                   <div className="p-4 md:p-6 space-y-4">
                     <h4 className="text-lg font-medium text-purple-900">
                       At A Rave
@@ -761,7 +762,7 @@ const Guardian = () => {
                 </div>
 
                 {/* Scenario 3: Bad Reaction */}
-                <div className="bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="min-w-[280px] flex-shrink-0 md:min-w-0 bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                   <div className="p-4 md:p-6 space-y-4">
                     <h4 className="text-lg font-medium text-amber-900">
                       Bad Reaction
@@ -796,7 +797,7 @@ const Guardian = () => {
                 </div>
 
                 {/* Scenario 4: Unknown Substance */}
-                <div className="bg-gradient-to-br from-green-100 to-green-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="min-w-[280px] flex-shrink-0 md:min-w-0 bg-gradient-to-br from-green-100 to-green-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                   <div className="p-4 md:p-6 space-y-4">
                     <h4 className="text-lg font-medium text-green-900">
                       Unknown Substance
@@ -831,6 +832,17 @@ const Guardian = () => {
                 </div>
               </div>
             </div>
+
+            {/* Add this CSS to your global styles or a CSS module */}
+            <style jsx>{`
+              .hide-scrollbar {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+              }
+              .hide-scrollbar::-webkit-scrollbar {
+                display: none;  /* Chrome, Safari and Opera */
+              }
+            `}</style>
           </div>
 
           {/* Scroll Progress Indicator - Only on Mobile */}
@@ -960,7 +972,7 @@ const Guardian = () => {
           </div>
 
           {/* Goals Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 mr">
             {/* Goal 1 */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-[#493B32]/5 to-[#493B32]/10 transform skew-y-0 -rotate-3 rounded-2xl transition-transform group-hover:-rotate-1"></div>
