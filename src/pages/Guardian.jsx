@@ -1394,8 +1394,8 @@ const Guardian = () => {
                     <div className="flex justify-center items-center gap-6 mt-8 mb-4 md:hidden">
                       <button 
                         className={`w-6 h-6 rounded-full border-2 border-[#493B32] transition-all duration-300 ${
-                          contactsVersion === 1 ? 'bg-[#493B32]' : 'bg-white'
-                        } hover:bg-[#493B32]/50`}
+                          contactsVersion === 1 ? 'bg-[#493B32]' : 'bg-red'
+                        }`}
                         aria-label="Show Version 1"
                         onClick={() => setContactsVersion(1)}
                       ></button>
