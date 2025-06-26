@@ -22,7 +22,7 @@ import TimerImage from "../assets/Timer.svg";
 import ContactImage from "../assets/AddContact.svg";
 import DrugAlertImage from "../assets/DrugAlertFeed.svg";
 import ResourceHubImage from "../assets/ResourcesHome.png";
-import MagnifiableMobileFrame from "../components/MagnifiableMobileFrame";
+
 
 import "./Guardian.css";
 import ProjectHero from '../components/ProjectHero';
@@ -1200,95 +1200,231 @@ const Guardian = () => {
               <h3 className="text-xl font-medium text-[#493B32] mb-6">UI Evolution</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Timer Screen Evolution */}
-                <MagnifiableMobileFrame caption="Timer Screen Evolution">
-                  <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(activeVersion - 1) * 100}%)` }}>
-                    {/* Version 1 */}
-                    <div className="min-w-full transition-opacity duration-300">
-                      <img 
-                        src={TimerImageV1} 
-                        alt="Timer Screen Version 1.0" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-                    {/* Version 2 */}
-                    <div className="min-w-full transition-opacity duration-300">
-                      <img 
-                        src={TimerImageV2} 
-                        alt="Timer Screen Version 2.0" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-                    {/* Version 3 */}
-                    <div className="min-w-full transition-opacity duration-300">
-                      <img 
-                        src={TimerImage} 
-                        alt="Timer Screen Version 3.0" 
-                        className="w-full h-full object-cover"
-                      />
+                <div className="bg-white rounded-2xl p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="text-lg font-medium text-[#493B32]">Welcome Screen</h4>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-[#493B32]/60">Version 1.0</span>
+                      <svg className="w-5 h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                      <span className="text-sm text-[#493B32]/60">Version 2.0</span>
                     </div>
                   </div>
-                </MagnifiableMobileFrame>
+                  <div className="relative group cursor-pointer">
+                    {/* Phone Frame */}
+                    <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative">
+                      <div className="absolute inset-0 bg-[#F75590] rounded-[45px] md:rounded-[55px] p-4 shadow-xl">
+                        {/* Dynamic Island */}
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95px] md:w-[126px] h-[26px] md:h-[35px] bg-[#F75590] rounded-b-[18px] md:rounded-b-[24px] flex items-center justify-center">
+                          <div className="w-[68px] md:w-[90px] h-[18px] md:h-[24px] bg-black rounded-[15px] md:rounded-[20px] flex items-center">
+                            <div className="w-[9px] md:w-[12px] h-[9px] md:h-[12px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                            <div className="w-[6px] md:w-[8px] h-[6px] md:h-[8px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                            <div className="w-[30px] md:w-[40px] h-[3px] md:h-[4px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                          </div>
+                        </div>
+
+                        {/* Buttons */}
+                        <div className="absolute top-[83px] md:top-[110px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                        <div className="absolute top-[143px] md:top-[190px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                        <div className="absolute top-[180px] md:top-[240px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                        <div className="absolute top-[98px] md:top-[130px] -right-[2px] w-[3px] md:w-[4px] h-[38px] md:h-[50px] bg-[#2a2a2a] rounded-r-full"></div>
+
+                        {/* Screen Content */}
+                        <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
+                          {/* Version 1 */}
+                          <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
+                            <img 
+                              src={WelcomeImageV1} 
+                              alt="Timer Screen Version 1.0" 
+                              className="w-full h-full object-cover"
+                            />
+                            {/* Version 1 Hover Instruction */}
+                            <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                              <div className="bg-[#493B32]/80 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                                Hover to see Version 2.0
+                              </div>
+                            </div>
+                          </div>
+                          {/* Version 2 */}
+                          <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <img 
+                              src={WelcomeImage} 
+                              alt="Timer Screen Version 2.0" 
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                   
+                  </div>
+                </div>
 
                 {/* Contacts Screen Evolution */}
-                <MagnifiableMobileFrame caption="Home Screen Evolution">
-                  <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(activeVersion - 1) * 100}%)` }}>
-                    {/* Version 1 */}
-                    <div className="min-w-full transition-opacity duration-300">
-                      <img 
-                        src={HomeImageV1} 
-                        alt="Home Screen Version 1.0" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-                    {/* Version 2 */}
-                    <div className="min-w-full transition-opacity duration-300">
-                      <img 
-                        src={HomeImage} 
-                        alt="Home Screen Version 2.0" 
-                        className="w-full h-full object-cover"
-                      />
+                <div className="bg-white rounded-2xl p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="text-lg font-medium text-[#493B32]">Adding Contacts Overlay Screen</h4>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-[#493B32]/60">Version 1.0</span>
+                      <svg className="w-5 h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                      <span className="text-sm text-[#493B32]/60">Version 2.0</span>
                     </div>
                   </div>
-                </MagnifiableMobileFrame>
+                  <div className="relative group cursor-pointer">
+                    {/* Phone Frame */}
+                    <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative">
+                      <div className="absolute inset-0 bg-[#F75590] rounded-[45px] md:rounded-[55px] p-4 shadow-xl">
+                        {/* Dynamic Island */}
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95px] md:w-[126px] h-[26px] md:h-[35px] bg-[#F75590] rounded-b-[18px] md:rounded-b-[24px] flex items-center justify-center">
+                          <div className="w-[68px] md:w-[90px] h-[18px] md:h-[24px] bg-black rounded-[15px] md:rounded-[20px] flex items-center">
+                            <div className="w-[9px] md:w-[12px] h-[9px] md:h-[12px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                            <div className="w-[6px] md:w-[8px] h-[6px] md:h-[8px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                            <div className="w-[30px] md:w-[40px] h-[3px] md:h-[4px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                          </div>
+                        </div>
 
-                {/* Welcome Screen Evolution */}
-                <MagnifiableMobileFrame caption="Welcome Screen Evolution">
-                  <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(activeVersion - 1) * 100}%)` }}>
-                    {/* Version 1 */}
-                    <div className="min-w-full transition-opacity duration-300">
-                      <img 
-                        src={WelcomeImageV1} 
-                        alt="Welcome Screen Version 1.0" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                        {/* Buttons */}
+                        <div className="absolute top-[83px] md:top-[110px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                        <div className="absolute top-[143px] md:top-[190px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                        <div className="absolute top-[180px] md:top-[240px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                        <div className="absolute top-[98px] md:top-[130px] -right-[2px] w-[3px] md:w-[4px] h-[38px] md:h-[50px] bg-[#2a2a2a] rounded-r-full"></div>
 
-                    {/* Version 2 */}
-                    <div className="min-w-full transition-opacity duration-300">
-                      <img 
-                        src={WelcomeImage} 
-                        alt="Welcome Screen Version 2.0" 
-                        className="w-full h-full object-cover"
-                      />
+                        {/* Screen Content */}
+                        <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
+                          {/* Version 1 */}
+                          <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
+                            <img 
+                              src={HomeImageV1} 
+                              alt="Home Screen Version 1.0" 
+                              className="w-full h-full object-cover"
+                            />
+                            {/* Version 1 Hover Instruction */}
+                            <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                              <div className="bg-[#493B32]/80 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                                Hover to see Version 2.0
+                              </div>
+                            </div>
+                          </div>
+                          {/* Version 2 */}
+                          <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <img 
+                              src={HomeImage} 
+                              alt="Home Screen Version 2.0" 
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </MagnifiableMobileFrame>
+                </div>
+                {/* Timer Screen Evolution */}
+                <div className="bg-white rounded-2xl p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="text-lg font-medium text-[#493B32]">Timer Screen</h4>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-[#493B32]/60">Version 1.0</span>
+                      <svg className="w-5 h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                      <span className="text-sm text-[#493B32]/60">Version 2.0</span>
+                      <svg className="w-5 h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                      <span className="text-sm text-[#493B32]/60">Version 3.0</span>
+                    </div>
+            </div>
+
+                  <div className="relative group">
+                    {/* Phone Frame */}
+                    <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative">
+                      <div className="absolute inset-0 bg-[#F75590] rounded-[45px] md:rounded-[55px] p-4 shadow-xl">
+                        {/* Dynamic Island */}
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95px] md:w-[126px] h-[26px] md:h-[35px] bg-[#F75590] rounded-b-[18px] md:rounded-b-[24px] flex items-center justify-center">
+                          <div className="w-[68px] md:w-[90px] h-[18px] md:h-[24px] bg-black rounded-[15px] md:rounded-[20px] flex items-center">
+                            <div className="w-[9px] md:w-[12px] h-[9px] md:h-[12px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                            <div className="w-[6px] md:w-[8px] h-[6px] md:h-[8px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                            <div className="w-[30px] md:w-[40px] h-[3px] md:h-[4px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                          </div>
+                        </div>
+
+                        {/* Buttons */}
+                        <div className="absolute top-[83px] md:top-[110px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                        <div className="absolute top-[143px] md:top-[190px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                        <div className="absolute top-[180px] md:top-[240px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                        <div className="absolute top-[98px] md:top-[130px] -right-[2px] w-[3px] md:w-[4px] h-[38px] md:h-[50px] bg-[#2a2a2a] rounded-r-full"></div>
+
+                        {/* Screen Content */}
+                        <div className="relative w-full h-full bg-white rounded-[38px] md:rounded-[48px] overflow-hidden">
+                          {/* Carousel Container */}
+                          <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(activeVersion - 1) * 100}%)` }}>
+                            {/* Version 1 */}
+                            <div className="min-w-full transition-opacity duration-300">
+                              <img 
+                                src={TimerImageV1} 
+                                alt="Timer Screen Version 1.0" 
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+
+                            {/* Version 2 */}
+                            <div className="min-w-full transition-opacity duration-300">
+                              <img 
+                                src={TimerImageV2} 
+                                alt="Timer Screen Version 2.0" 
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+
+                            {/* Version 3 */}
+                            <div className="min-w-full transition-opacity duration-300">
+                              <img 
+                                src={TimerImage} 
+                                alt="Timer Screen Version 3.0" 
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Navigation Dots */}
+                  <div className="flex justify-center items-center gap-3 mt-12 ">
+                    <button 
+                      className="w-5 h-5 rounded-full bg-[#493B32] shadow-lg hover:scale-125"
+                      style={{ boxShadow: '0 0 0 2px #493B32' }}
+                      aria-label="Show Version 1"
+                      onClick={() => updateActiveVersion(1)}
+                    ></button>
+                    <button 
+                      className="w-5 h-5 rounded-full bg-[#493B32] shadow-lg hover:scale-125"
+                      style={{ boxShadow: '0 0 0 2px #493B32',}}
+                      aria-label="Show Version 2"
+                      onClick={() => updateActiveVersion(2)}
+                    ></button>
+                    <button 
+                      className="w-5 h-5 rounded-full bg-[#493B32] shadow-lg hover:scale-125"
+                      style={{ boxShadow: '0 0 0 2px #493B32' }}
+                      aria-label="Show Version 3"
+                      onClick={() => updateActiveVersion(3)}
+                    ></button>
+                  </div>
+
+                  {/* Version Label */}
+                  <div className="text-center mt-6">
+                    <span className="text-lg font-medium text-[#493B32]">Version {activeVersion}.0</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Add this CSS to your global styles or a CSS module */}
-            <style jsx>{`
-              .hide-scrollbar {
-                -ms-overflow-style: none;  /* IE and Edge */
-                scrollbar-width: none;  /* Firefox */
-              }
-              .hide-scrollbar::-webkit-scrollbar {
-                display: none;  /* Chrome, Safari and Opera */
-              }
-            `}</style>
+
           </section>
           {/* Design system Section */}
          <section id="design-system" className="mt-16 mb-24">
