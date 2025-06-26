@@ -4,8 +4,8 @@ const ProjectHero = ({ title, image, imageAlt }) => {
   return (
     <>
       {/* Project Title */}
-      <div className="flex flex-row items-start justify-start gap-1 mb-4 pl-0 mt-10 sm:mt-15 lg:mt-0">
-        <div className="w-[4vh] sm:w-[4vh] md:w-[5vh] h-[3px] bg-gradient-to-r from-[#493B32] to-[#F75590] mt-4 sm:mt-0"></div>
+      <div className="flex flex-row items-start justify-start gap-1 mb-4 pl-0 mt-15 md:mt-10 lg:mt-0">
+        <div className="w-[4vh] sm:w-[4vh] md:w-[5vh] h-[3px] bg-gradient-to-r from-[#493B32] to-[#F75590] mt-4"></div>
         <h1 id="top" className="text-xl sm:text-4xl md:text-5xl leading-relaxed font-tan text-[#493B32]">
           {title}
         </h1>
