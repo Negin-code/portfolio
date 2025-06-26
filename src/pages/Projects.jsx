@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from 'react-helmet-async';
 import { useOutletContext, useSearchParams } from "react-router-dom";
 import CrimsonPlateImage from "../assets/CrimsonPlate.webp";
 import AlzcareImage from "../assets/Alzcare.svg";
@@ -99,20 +98,7 @@ const Projects = () => {
     : projects.filter(project => project.categoryType === selectedCategory);
 
   return (
-    <>
-      <Helmet>
-        <title>Projects - Negin Asem Portfolio | UI/UX Design & Frontend Development</title>
-        <meta name="description" content="Explore Negin Asem's portfolio featuring UI/UX design projects, frontend development work, and service design solutions. View projects like Guardian app, Crimson Plate website, AlzCare, and more." />
-        <meta name="keywords" content="UI/UX Design Portfolio, Frontend Development Projects, Service Design, Guardian App, Crimson Plate, AlzCare, User Experience Projects" />
-        <meta property="og:title" content="Projects - Negin Asem Portfolio | UI/UX Design & Frontend Development" />
-        <meta property="og:description" content="Explore Negin Asem's portfolio featuring UI/UX design projects, frontend development work, and service design solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://neginasem.ca/projects" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Projects - Negin Asem Portfolio" />
-        <meta name="twitter:description" content="Explore Negin Asem's portfolio featuring UI/UX design projects, frontend development work, and service design solutions." />
-        <link rel="canonical" href="https://neginasem.ca/projects" />
-      </Helmet>
+
       
       <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 min-h-screen relative w-full pt-30 sm:pt-45 lg:pt-50 lg:px-0 overflow-hidden">
       {/* Left vertical line */}
@@ -153,7 +139,6 @@ const Projects = () => {
         </div>
       </section>
     </main>
-    </>
   );
 };
 

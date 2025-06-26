@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from 'react-helmet-async';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BiCodeAlt, BiPalette } from "react-icons/bi";
@@ -10,29 +9,7 @@ import CategoryCard from "../components/CategoryCard";
 
 const Home = () => {
   return (
-    <>
-      <Helmet>
-        <title>Negin Asem - UI/UX Designer & Frontend Developer</title>
-        <meta name="description" content="UI/UX Designer and Frontend Developer bridging the gap between logic and empathy. Creating meaningful digital experiences with a focus on user-centered design and modern web development." />
-        <meta name="keywords" content="UI/UX Designer, Frontend Developer, Web Design, User Experience, React Developer, JavaScript, Tailwind CSS, Portfolio" />
-        <meta property="og:title" content="Negin Asem - UI/UX Designer & Frontend Developer" />
-        <meta property="og:description" content="UI/UX Designer and Frontend Developer bridging the gap between logic and empathy. Creating meaningful digital experiences with a focus on user-centered design and modern web development." />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://neginasem.ca/assets/social-share-hero.png" />
-        <meta property="og:image:alt" content="Negin Asem - UI/UX Designer & Frontend Developer Portfolio" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:image" content="https://neginasem.ca/assets/social-share-hero.png" />
-        <meta name="twitter:image:alt" content="Negin Asem - UI/UX Designer & Frontend Developer Portfolio" />
-        <meta property="og:url" content="https://neginasem.ca" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Negin Asem - UI/UX Designer & Frontend Developer" />
-        <meta name="twitter:description" content="UI/UX Designer and Frontend Developer bridging the gap between logic and empathy. Creating meaningful digital experiences." />
-        <link rel="canonical" href="https://neginasem.ca" />
-      </Helmet>
-      
-      <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 min-h-screen relative w-full pt-20 lg:pt-40 lg:px-0 overflow-hidden">
+    <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 min-h-screen relative w-full pt-20 lg:pt-40 lg:px-0 overflow-hidden">
         {/* Left vertical line */}
         <div className="absolute left-16 md:left-20 top-0 sm:h-[40rem] h-[38rem] md:h-[40rem] lg:h-[40rem] xl:h-[50rem] w-[2px] bg-[#493b32]">
           <span className="absolute -left-6 md:-left-9 top-[40rem] sm:top-[43rem] md:top-[45rem] lg:top-[45rem] xl:top-[54rem] -translate-y-1/2 rotate-[-90deg] text-md md:text-xl text-[#493B32] font-tan">
@@ -173,7 +150,6 @@ const Home = () => {
           </div>
         </section>
       </main>
-    </>
   );
 };
 

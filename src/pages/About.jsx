@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Helmet } from 'react-helmet-async';
 import {
   FaFigma,
   FaWordpress,
@@ -87,22 +86,7 @@ const About = () => {
   const loopedTools = [...softwareTools, ...softwareTools];
 
   return (
-    <>
-      <Helmet>
-        <title>About Negin Asem - UI/UX Designer & Frontend Developer</title>
-        <meta name="description" content="Learn about Negin Asem, a UI/UX designer and frontend developer studying New Media Design and Web Development at BCIT. Passionate about human-centered design and creating meaningful digital experiences." />
-        <meta name="keywords" content="About Negin Asem, UX Designer Background, Frontend Developer Skills, BCIT Student, Design Philosophy, Software Tools" />
-        <meta property="og:title" content="About Negin Asem - UI/UX Designer & Frontend Developer" />
-        <meta property="og:description" content="Learn about Negin Asem, a UI/UX designer and frontend developer studying New Media Design and Web Development at BCIT. Passionate about human-centered design and creating meaningful digital experiences." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://neginasem.ca/about" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Negin Asem - UI/UX Designer & Frontend Developer" />
-        <meta name="twitter:description" content="Learn about Negin Asem, a UI/UX designer and frontend developer studying New Media Design and Web Development at BCIT." />
-        <link rel="canonical" href="https://neginasem.ca/about" />
-      </Helmet>
-      
-      <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
+    <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
       {/* Left vertical line */}
       <div className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-4rem)] w-[2px] bg-[#493b32]"></div>
 
@@ -202,7 +186,6 @@ const About = () => {
         </section>
       </div>
     </main>
-    </>
   );
 };
 

@@ -13,24 +13,11 @@ import ReflectionSection from "../components/ReflectionSection";
 import NextStepsSection from "../components/NextStepsSection";
 import GoodReadsImage from "../assets/goodreadshero.png";
 import SolutionsSection from "../components/SolutionsSection";
-import { Helmet } from 'react-helmet-async';
+
 
 const GoodReads = () => {
   return (
-    <>
-      <Helmet>
-        <title>GoodReads Website Usability Study | Negin Asem</title>
-        <meta name="description" content="Comprehensive usability study of the GoodReads website evaluating design effectiveness and user experience. Analysis of navigation patterns, user behavior, and accessibility improvements." />
-        <meta name="keywords" content="GoodReads Usability Study, Website Analysis, User Experience Research, Usability Testing, Web Design Analysis" />
-        <meta property="og:title" content="GoodReads Website Usability Study" />
-        <meta property="og:description" content="Comprehensive usability study of the GoodReads website evaluating design effectiveness and user experience." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://neginasem.ca/projects/goodreads" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="GoodReads Website Usability Study" />
-        <meta name="twitter:description" content="Comprehensive usability study of the GoodReads website evaluating design effectiveness and user experience." />
-        <link rel="canonical" href="https://neginasem.ca/projects/goodreads" />
-      </Helmet>
+  
       
       <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
       {/* Left vertical line */}
@@ -254,7 +241,6 @@ const GoodReads = () => {
         </section>
       </div>
     </main>
-    </>
   );
 };
 

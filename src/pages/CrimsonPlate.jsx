@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaExternalLinkAlt, FaClock, FaCode, FaLink, FaTools } from 'react-icons/fa';
 import { IoIosArrowDropupCircle, IoIosArrowRoundBack } from "react-icons/io";
@@ -8,22 +7,6 @@ import ProjectHero from '../components/ProjectHero';
 
 const CrimsonPlate = () => {
   return (
-    <>
-      <Helmet>
-        <title>Crimson Plate Restaurant Website - Frontend Development Project | Negin Asem</title>
-        <meta name="description" content="Crimson Plate restaurant website built with HTML, JavaScript, and Tailwind CSS. Features responsive design, interactive elements, and modern web development best practices." />
-        <meta name="keywords" content="Crimson Plate, Restaurant Website, Frontend Development, HTML, JavaScript, Tailwind CSS, Responsive Design, Web Development Portfolio" />
-        <meta property="og:title" content="Crimson Plate Restaurant Website - Frontend Development Project" />
-        <meta property="og:description" content="Crimson Plate restaurant website built with HTML, JavaScript, and Tailwind CSS. Features responsive design, interactive elements, and modern web development best practices." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://neginasem.ca/projects/crimson-plate" />
-        <meta property="og:image" content="https://neginasem.ca/src/assets/CrimsonPlateHero.webp" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Crimson Plate Restaurant Website - Frontend Development Project" />
-        <meta name="twitter:description" content="Crimson Plate restaurant website built with HTML, JavaScript, and Tailwind CSS." />
-        <meta name="twitter:image" content="https://neginasem.ca/src/assets/CrimsonPlateHero.webp" />
-        <link rel="canonical" href="https://neginasem.ca/projects/crimson-plate" />
-      </Helmet>
       
       <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
         {/* Left vertical line */}
@@ -216,7 +199,6 @@ const CrimsonPlate = () => {
           </section>
         </div>
       </main>
-    </>
   );
 };
 
