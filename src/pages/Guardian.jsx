@@ -1406,7 +1406,7 @@ const Guardian = () => {
             </div>
 
             {/* Figma Design Container */}
-            <div className="px-4 md:px-8">
+            <div className="px-4 md:px-8 mr-10 sm:mr-0">
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#493B32]/10">
                 {/* Figma Embed */}
                 <div className="relative w-full" style={{ paddingTop: '56.25%' }}> {/* 16:9 Aspect Ratio */}
