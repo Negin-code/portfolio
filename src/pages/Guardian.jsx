@@ -90,7 +90,7 @@ const Guardian = () => {
         />
 
         {/* Project Info Cards */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 mr-15 md:mr-0 sm:gap-6 mb-8 sm:mb-12 px-4 sm:px-0">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12 px-4 sm:px-0">
           {/* Project Type Card */}
           <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
@@ -157,7 +157,7 @@ const Guardian = () => {
         </div>
 
         {/* Project Overview Section */}
-        <section id="overview" className="space-y-6 mt-12 mr-15 md:mr-0">
+        <section id="overview" className="space-y-6 mt-12">
           <div className="flex flex-row items-center gap-2">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -178,7 +178,7 @@ const Guardian = () => {
         </section>
 
         {/* Problem Section */}
-        <section id="problem" className="space-y-6 mt-12 mr-15 md:mr-0">
+        <section id="problem" className="space-y-6 mt-12">
           <div className="flex flex-row items-center gap-2">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -215,7 +215,7 @@ const Guardian = () => {
         </section>
 
         {/* Research & discovery section */}
-        <section id="research-discovery" className="space-y-6 mt-16 mr-15 lg:mr-0">
+        <section id="research-discovery" className="space-y-6 mt-16">
           <div className="flex flex-row items-center gap-2">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -838,7 +838,7 @@ const Guardian = () => {
         </section>
 
         {/* Narrative Arc Subsection */}
-        <div className="space-y-6 mt-12 mr-10 md:mr-0">
+        <div className="space-y-6 mt-12">
           <div className="flex flex-row items-center gap-2 pl-4">
             <div className="w-[2vh] sm:w-[2vh] md:w-[3vh] h-[2px] bg-[#493B32]"></div>
             <h3 className="text-xl sm:text-2xl font-tan text-[#493B32]">
@@ -942,7 +942,7 @@ const Guardian = () => {
         </div>
 
         {/* Design goals section */}
-        <section id="design-goals" className="space-y-6 mt-16 mr-10 md:mr-0">
+        <section id="design-goals" className="space-y-6 mt-16">
           <div className="flex flex-row items-center gap-2">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -951,7 +951,7 @@ const Guardian = () => {
           </div>
 
           {/* Goals Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 mr">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             {/* Goal 1 */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-[#493B32]/5 to-[#493B32]/10 transform skew-y-0 -rotate-3 rounded-2xl transition-transform group-hover:-rotate-1"></div>
@@ -1006,7 +1006,7 @@ const Guardian = () => {
           </div>
         </section>
         {/* Key Features section */}
-        <section id="key-features" className="mt-16 overflow-hidden mr-15 md:mr-0">
+        <section id="key-features" className="mt-16 overflow-hidden">
           <div className="flex flex-row items-center gap-2 mb-12 mt-12">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -1166,7 +1166,7 @@ const Guardian = () => {
           </div>
         </section>
           {/* User Feedback & Iteration Section */}    
-          <section id="user-feedback" className="mt-16 mr-10 md:mr-0">
+          <section id="user-feedback" className="mt-16">
             <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
               <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
               <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -1398,7 +1398,7 @@ const Guardian = () => {
 
           </section>
           {/* Design system Section */}
-         <section id="design-system" className="mt-16 mb-24 mr-10 md:mr-0">
+         <section id="design-system" className="mt-16 mb-24">
             <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
               <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
               <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -1407,7 +1407,7 @@ const Guardian = () => {
             </div>
 
             {/* Figma Design Container */}
-            <div className="px-4 md:px-8 mr-10 sm:mr-0">
+            <div className="px-4 md:px-8">
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#493B32]/10">
                 {/* Figma Embed */}
                 <div className="relative w-full" style={{ paddingTop: '56.25%' }}> {/* 16:9 Aspect Ratio */}
@@ -1435,7 +1435,7 @@ const Guardian = () => {
             </div>
           </section>
             {/* Reflection Section */}
-            <section id="reflection" className="mt-10 sm:mt-16 mb-24 mr-10 md:mr-0">
+            <section id="reflection" className="mt-10 sm:mt-16 mb-24">
               <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
                 <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
                 <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
