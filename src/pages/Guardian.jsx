@@ -1192,7 +1192,7 @@ const Guardian = () => {
                 {/* Timer Screen Evolution */}
                 <div className="bg-white rounded-2xl p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-lg font-medium text-[#493B32]">Welcome Screen</h4>
+                    <h4 className="text-md sm:text-lg font-medium text-[#493B32]">Welcome Screen</h4>
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-[#493B32]/60">Version 1.0</span>
                       <IoArrowForward className="w-5 h-5 text-[#493B32]" />
@@ -1253,7 +1253,7 @@ const Guardian = () => {
                 {/* Contacts Screen Evolution */}
                 <div className="bg-white rounded-2xl p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-lg font-medium text-[#493B32]">Adding Contacts Overlay Screen</h4>
+                    <h4 className="text-md sm:text-lg font-medium text-[#493B32]">Adding Contacts Overlay Screen</h4>
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-[#493B32]/60">Version 1.0</span>
                       <IoArrowForward className="w-5 h-5 text-[#493B32]" />
@@ -1311,7 +1311,7 @@ const Guardian = () => {
                 {/* Timer Screen Evolution */}
                 <div className="bg-white rounded-2xl p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-lg font-medium text-[#493B32]">Timer Screen</h4>
+                    <h4 className="text-md sm:text-lg font-medium text-[#493B32]">Timer Screen</h4>
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-[#493B32]/60">Version 1.0</span>
                       <IoArrowForward className="w-5 h-5 text-[#493B32]" />
