@@ -1506,6 +1506,8 @@ const Guardian = () => {
 
                   {/* Navigation Dots */}
                   <div className="flex justify-center items-center gap-3 mt-12">
+                  <button className="w-10 h-10 bg-blue-500">Dot</button>
+
                     <button 
                       onClick={() => updateActiveVersion(1)}
                       className={activeVersion === 1 
