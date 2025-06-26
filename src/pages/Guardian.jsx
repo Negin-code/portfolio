@@ -157,7 +157,7 @@ const Guardian = () => {
         </div>
 
         {/* Project Overview Section */}
-        <section id="overview" className="space-y-6 mt-12 mr-10 md:mr-0">
+        <section id="overview" className="space-y-6 mt-12 mr-15 md:mr-0">
           <div className="flex flex-row items-center gap-2">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -178,7 +178,7 @@ const Guardian = () => {
         </section>
 
         {/* Problem Section */}
-        <section id="problem" className="space-y-6 mt-12 mr-10 md:mr-0">
+        <section id="problem" className="space-y-6 mt-12 mr-15 md:mr-0">
           <div className="flex flex-row items-center gap-2">
             <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
             <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -658,7 +658,7 @@ const Guardian = () => {
             </div>
           </div>
           {/* Scenario Planning Subsection */}
-          <div className="space-y-6 mt-12 mr-10 md:mr-0">
+          <div className="space-y-6 mt-12">
             <div className="flex flex-row items-center gap-2 pl-4">
               <div className="w-[2vh] sm:w-[2vh] md:w-[3vh] h-[2px] bg-[#493B32]"></div>
               <h3 className="text-xl sm:text-2xl font-tan text-[#493B32]">
