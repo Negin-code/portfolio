@@ -273,6 +273,7 @@ const Guardian = () => {
                       src={PersonaImage}
                       alt="Evelyn Chen - User Persona"
                       className="w-full h-full object-cover rounded-lg shadow-sm"
+                      loading="lazy"
                     />
                   </div>
 
