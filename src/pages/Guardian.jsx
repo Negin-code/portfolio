@@ -1285,7 +1285,7 @@ const Guardian = () => {
                     {/* Mobile Navigation Dots */}
                     <div className="flex justify-center items-center gap-3 mt-6 md:hidden">
                       <button 
-                        className={`h-3 rounded-full transition-all duration-300 ${
+                        className={`h-3 w-3 rounded-full bg-[#493B32]${
                           welcomeVersion === 1 ? 'w-8 bg-[#493B32]' : 'w-3 bg-[#493B32]/30 hover:bg-[#493B32]/50'
                         }`}
                         aria-label="Show Version 1"
