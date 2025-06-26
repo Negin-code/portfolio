@@ -1487,7 +1487,7 @@ const Guardian = () => {
 
                       {/* Reflection Text */}
                       <div className="space-y-6">
-                        <p className="text-lg md:text-xl text-[#493B32] leading-relaxed">
+                        <p className=" text-base md:text-xl text-[#493B32] leading-relaxed">
                           Designing Guardian required blending empathy with usability. It was about more than UI—it was about creating emotional trust. By focusing on micro-interactions, accessible patterns, and real user voices, we built a product that could genuinely save lives.
                         </p>
                       </div>
