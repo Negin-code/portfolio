@@ -37,6 +37,7 @@ const Guardian = () => {
   const [activeVersion, setActiveVersion] = useState(1);
   const [welcomeVersion, setWelcomeVersion] = useState(1);
   const [contactsVersion, setContactsVersion] = useState(1);
+ 
 
   const updateActiveVersion = (version) => {
     setActiveVersion(version);
@@ -1508,7 +1509,7 @@ const Guardian = () => {
                     <button 
                       onClick={() => updateActiveVersion(1)}
                       className={activeVersion === 1 
-                        ? "w-5 h-5 rounded-full bg-[#493B32]" 
+                        ? "w-5 h-5 rounded-full bg-red-500" 
                         : "w-5 h-5 rounded-full border-2 border-[#493B32]"}
                       aria-label="Show Version 1"
                     />
