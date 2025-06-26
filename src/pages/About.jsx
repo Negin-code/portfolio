@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from 'react-helmet-async';
 import {
   FaFigma,
   FaWordpress,
@@ -86,7 +87,22 @@ const About = () => {
   const loopedTools = [...softwareTools, ...softwareTools];
 
   return (
-    <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>About Negin Asem - UI/UX Designer & Frontend Developer</title>
+        <meta name="description" content="Learn about Negin Asem, a UI/UX designer and frontend developer studying New Media Design and Web Development at BCIT. Passionate about human-centered design and creating meaningful digital experiences." />
+        <meta name="keywords" content="About Negin Asem, UX Designer Background, Frontend Developer Skills, BCIT Student, Design Philosophy, Software Tools" />
+        <meta property="og:title" content="About Negin Asem - UI/UX Designer & Frontend Developer" />
+        <meta property="og:description" content="Learn about Negin Asem, a UI/UX designer and frontend developer studying New Media Design and Web Development at BCIT. Passionate about human-centered design and creating meaningful digital experiences." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://neginasem.ca/about" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Negin Asem - UI/UX Designer & Frontend Developer" />
+        <meta name="twitter:description" content="Learn about Negin Asem, a UI/UX designer and frontend developer studying New Media Design and Web Development at BCIT." />
+        <link rel="canonical" href="https://neginasem.ca/about" />
+      </Helmet>
+      
+      <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
       {/* Left vertical line */}
       <div className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-4rem)] w-[2px] bg-[#493b32]"></div>
 
@@ -103,7 +119,7 @@ const About = () => {
             <div className="lg:col-span-7">
               <HeroContent
                 title="Hi, I'm Negin"
-                description="A UX/UI designer and front-end developer blending logic with empathy to create meaningful digital experiences. With a foundation in software engineering and a passion for human-centered design, I thrive at the intersection of creativity and functionality. I am in the last steps of studying New Media Design and Web Development at BCIT, where I’ve built strong foundations in everything from brand strategy and UI systems to creative coding. Beyond the classroom, I’ve collaborated with community organizations and innovation labs to design services and tools that support real people in meaningful ways."
+                description="A UX/UI designer and front-end developer blending logic with empathy to create meaningful digital experiences. With a foundation in software engineering and a passion for human-centered design, I thrive at the intersection of creativity and functionality. I am in the last steps of studying New Media Design and Web Development at BCIT, where I've built strong foundations in everything from brand strategy and UI systems to creative coding. Beyond the classroom, I've collaborated with community organizations and innovation labs to design services and tools that support real people in meaningful ways."
               />
             </div>
           </div>
@@ -111,7 +127,7 @@ const About = () => {
 
         <div className="pl-22 lg:pl-0 pr-10 lg:pr-0">
           <p className="text-[#493B32] leading-relaxed text-base md:text-lg mt-2 sm:mt-4 lg:mt-6">
-          When I’m not designing, you’ll likely find me enjoying a good coffee, reading a book, capturing a moment through photography, or reflecting on how small details shape big experiences.
+          When I'm not designing, you'll likely find me enjoying a good coffee, reading a book, capturing a moment through photography, or reflecting on how small details shape big experiences.
           </p>
         </div>
 
@@ -186,6 +202,7 @@ const About = () => {
         </section>
       </div>
     </main>
+    </>
   );
 };
 

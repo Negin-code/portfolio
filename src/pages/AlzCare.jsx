@@ -9,10 +9,26 @@ import UserPersona from "../assets/userpersona.svg";
 import CompetitorAnalysis from "../assets/competitive.svg";
 import JourneyMap from "../assets/journeymap.svg";
 import UserFlow from "../assets/userflow.svg";
+import { Helmet } from 'react-helmet-async';
 
 const AlzCare = () => {
   return (
-    <main id="top" className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>AlzCare App - Mobile Health Design | Negin Asem</title>
+        <meta name="description" content="AlzCare is a user-friendly mobile app that integrates with a smart medication container, helping caregivers monitor medication adherence for individuals with Alzheimer's disease." />
+        <meta name="keywords" content="AlzCare, Alzheimer's App, Healthcare Design, Mobile Health, Medication Management, Caregiver Support, UX Design" />
+        <meta property="og:title" content="AlzCare App - Mobile Health Design" />
+        <meta property="og:description" content="AlzCare is a user-friendly mobile app that integrates with a smart medication container, helping caregivers monitor medication adherence for individuals with Alzheimer's disease." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://neginasem.ca/projects/alzcare" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AlzCare App - Mobile Health Design" />
+        <meta name="twitter:description" content="AlzCare is a user-friendly mobile app that integrates with a smart medication container, helping caregivers monitor medication adherence for individuals with Alzheimer's disease." />
+        <link rel="canonical" href="https://neginasem.ca/projects/alzcare" />
+      </Helmet>
+      
+      <main id="top" className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
       {/* Left vertical line */}
       <div className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"></div>
 
@@ -219,6 +235,7 @@ const AlzCare = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 

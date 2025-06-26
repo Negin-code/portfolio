@@ -8,7 +8,7 @@ import ListeningLab01 from "../assets/LL01-1.jpeg";
 import ListeningLab02 from "../assets/LL01-2.jpeg";
 import ListeningLab03 from "../assets/LL02-1.jpeg";
 import ListeningLab04 from "../assets/LLCover.png";
-
+import { Helmet } from 'react-helmet-async';
 
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
@@ -63,7 +63,22 @@ const ListeningLab = () => {
   }, []);
 
   return (
-    <main id="top" className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Listening Lab - Service Design Project | Negin Asem</title>
+        <meta name="description" content="The Listening Lab service design project enhances the effectiveness of listening practices within the immigrant services sector by fostering trust, cultural understanding, and empathy." />
+        <meta name="keywords" content="Listening Lab, Service Design, Immigrant Services, Community Engagement, UX Research, Social Impact Design" />
+        <meta property="og:title" content="Listening Lab - Service Design Project" />
+        <meta property="og:description" content="The Listening Lab service design project enhances the effectiveness of listening practices within the immigrant services sector by fostering trust, cultural understanding, and empathy." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://neginasem.ca/projects/listening-lab" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Listening Lab - Service Design Project" />
+        <meta name="twitter:description" content="The Listening Lab service design project enhances listening practices within the immigrant services sector." />
+        <link rel="canonical" href="https://neginasem.ca/projects/listening-lab" />
+      </Helmet>
+      
+      <main id="top" className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
       {/* Left vertical line */}
       <div className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-10rem)] w-[2px] bg-[#493b32]"></div>
 
@@ -348,6 +363,7 @@ const ListeningLab = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 

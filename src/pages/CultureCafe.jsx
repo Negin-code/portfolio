@@ -17,6 +17,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { Helmet } from 'react-helmet-async';
 
 // Import Swiper components and styles
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -65,7 +66,22 @@ const CultureCafe = () => {
   }, []);
 
   return (
-    <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Culture Cafe - Service Design Project | Negin Asem</title>
+        <meta name="description" content="Culture Cafe is a digital platform designed to connect people through cultural experiences and foster community engagement through innovative service design." />
+        <meta name="keywords" content="Culture Cafe, Service Design, Community Platform, Cultural Experiences, Social Connection, UX Design" />
+        <meta property="og:title" content="Culture Cafe - Service Design Project" />
+        <meta property="og:description" content="Culture Cafe is a digital platform designed to connect people through cultural experiences and foster community engagement through innovative service design." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://neginasem.ca/projects/culture-cafe" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Culture Cafe - Service Design Project" />
+        <meta name="twitter:description" content="Culture Cafe is a digital platform designed to connect people through cultural experiences and foster community engagement." />
+        <link rel="canonical" href="https://neginasem.ca/projects/culture-cafe" />
+      </Helmet>
+      
+      <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
       {/* Left vertical line */}
       <div className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-10rem)] w-[2px] bg-[#493b32]"></div>
 
@@ -496,6 +512,7 @@ const CultureCafe = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 

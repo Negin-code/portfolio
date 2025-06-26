@@ -31,6 +31,7 @@ import { ImQuotesLeft } from "react-icons/im";
 
 import "./Guardian.css";
 import ProjectHero from '../components/ProjectHero';
+import { Helmet } from 'react-helmet-async';
 
 const Guardian = () => {
   const [selectedFeature, setSelectedFeature] = useState(1);
@@ -77,7 +78,22 @@ const Guardian = () => {
   ];
 
   return (
-    <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Guardian - Overdose Prevention App | Negin Asem</title>
+        <meta name="description" content="Guardian is a harm reduction mobile application designed for recreational substance users, particularly young adults like Evelyn who use drugs in isolation or in social settings. The app acts as a virtual safety companion, offering real-time monitoring, overdose alerts, and access to local support resources." />
+        <meta name="keywords" content="Guardian App, Overdose Prevention, Harm Reduction, UX Design, Mobile App Design, Safety App, Healthcare Design" />
+        <meta property="og:title" content="Guardian - Overdose Prevention App" />
+        <meta property="og:description" content="Guardian is a harm reduction mobile application designed for recreational substance users. The app acts as a virtual safety companion, offering real-time monitoring, overdose alerts, and access to local support resources." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://neginasem.ca/projects/guardian" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Guardian - Overdose Prevention App" />
+        <meta name="twitter:description" content="Guardian is a harm reduction mobile application designed for recreational substance users." />
+        <link rel="canonical" href="https://neginasem.ca/projects/guardian" />
+      </Helmet>
+      
+      <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
       {/* Left vertical line */}
       <div className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"></div>
 
@@ -1179,7 +1195,7 @@ const Guardian = () => {
             </div>
           </div>
         </section>
-          {/* User Feedback & Iteration Section */}    
+          {/* User Feedback & Iteration Section */ }
           <section id="user-feedback" className="mt-16">
             <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
               <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
@@ -1524,11 +1540,10 @@ const Guardian = () => {
                 </div>
               </div>
             </div>
-
-
           </section>
+          
           {/* Design system Section */}
-         <section id="design-system" className="mt-16 mb-10">
+          <section id="design-system" className="mt-16 mb-10">
             <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
               <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
               <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -1664,6 +1679,7 @@ const Guardian = () => {
             </section>
       </div>
     </main>
+    </>
   );
 };
 
