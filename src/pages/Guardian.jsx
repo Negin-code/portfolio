@@ -1510,14 +1510,14 @@ const Guardian = () => {
                       <button 
                         key={version}
                         onClick={() => updateActiveVersion(version)}
-                        className={`flex items-center justify-center w-10 h-10 rounded-lg transition-all ${
+                        className={`flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg transition-all ${
                           activeVersion === version 
                             ? 'bg-[#493B32] text-pink-500 font-bold' 
                             : 'border-2 border-[#493B32] text-[#493B32] font-medium hover:bg-[#493B32]/10'
                         }`}
                         aria-label={`Show Version ${version}`}
                       >
-                        <span className="text-lg font-medium">V{version}</span>
+                        <span className="text-sm sm:text-base md:text-lg">V{version}</span>
                       </button>
                     ))}
                   </div>
