@@ -1282,22 +1282,32 @@ const Guardian = () => {
                       </div>
                     </div>
 
-                    {/* Mobile Navigation Dots */}
-                    <div className="flex justify-center items-center gap-6 mt-8 mb-4 md:hidden">
+                    {/* Mobile Navigation Arrows */}
+                    <div className="flex justify-center items-center gap-8 mt-8 mb-4 md:hidden">
                       <button 
-                        className={`w-6 h-6 rounded-full border-2 border-[#493B32] transition-all duration-300 ${
-                          welcomeVersion === 1 ? 'bg-[#493B32]' : 'bg-white'
-                        } hover:bg-[#493B32]/50`}
-                        aria-label="Show Version 1"
-                        onClick={() => setWelcomeVersion(1)}
-                      ></button>
+                        className={`p-3 rounded-full border-2 border-[#493B32] ${
+                          welcomeVersion === 1 ? 'opacity-50 bg-[#493B32]/5' : 'bg-white'
+                        }`}
+                        aria-label="Previous Version"
+                        onClick={() => welcomeVersion > 1 && setWelcomeVersion(welcomeVersion - 1)}
+                        disabled={welcomeVersion === 1}
+                      >
+                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
                       <button 
-                        className={`w-6 h-6 rounded-full border-2 border-[#493B32] transition-all duration-300 ${
-                          welcomeVersion === 2 ? 'bg-[#493B32]' : 'bg-white'
-                        } hover:bg-[#493B32]/50`}
-                        aria-label="Show Version 2"
-                        onClick={() => setWelcomeVersion(2)}
-                      ></button>
+                        className={`p-3 rounded-full border-2 border-[#493B32] ${
+                          welcomeVersion === 2 ? 'opacity-50 bg-[#493B32]/5' : 'bg-white'
+                        }`}
+                        aria-label="Next Version"
+                        onClick={() => welcomeVersion < 2 && setWelcomeVersion(welcomeVersion + 1)}
+                        disabled={welcomeVersion === 2}
+                      >
+                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
                     </div>
 
                     {/* Version Label - Mobile */}
@@ -1390,22 +1400,32 @@ const Guardian = () => {
                       </div>
                     </div>
 
-                    {/* Mobile Navigation Dots */}
-                    <div className="flex justify-center items-center gap-6 mt-8 mb-4 md:hidden">
+                    {/* Mobile Navigation Arrows */}
+                    <div className="flex justify-center items-center gap-8 mt-8 mb-4 md:hidden">
                       <button 
-                        className={`w-6 h-6 rounded-full border-2 border-[#493B32] transition-all duration-300 ${
-                          contactsVersion === 1 ? 'bg-[#493B32]' : 'bg-red'
+                        className={`p-3 rounded-full border-2 border-[#493B32] ${
+                          contactsVersion === 1 ? 'opacity-50 bg-[#493B32]/5' : 'bg-white'
                         }`}
-                        aria-label="Show Version 1"
-                        onClick={() => setContactsVersion(1)}
-                      ></button>
+                        aria-label="Previous Version"
+                        onClick={() => contactsVersion > 1 && setContactsVersion(contactsVersion - 1)}
+                        disabled={contactsVersion === 1}
+                      >
+                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
                       <button 
-                        className={`w-6 h-6 rounded-full border-2 border-[#493B32] transition-all duration-300 ${
-                          contactsVersion === 2 ? 'bg-[#493B32]' : 'bg-white'
-                        } hover:bg-[#493B32]/50`}
-                        aria-label="Show Version 2"
-                        onClick={() => setContactsVersion(2)}
-                      ></button>
+                        className={`p-3 rounded-full border-2 border-[#493B32] ${
+                          contactsVersion === 2 ? 'opacity-50 bg-[#493B32]/5' : 'bg-white'
+                        }`}
+                        aria-label="Next Version"
+                        onClick={() => contactsVersion < 2 && setContactsVersion(contactsVersion + 1)}
+                        disabled={contactsVersion === 2}
+                      >
+                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
                     </div>
 
                     {/* Version Label - Mobile */}
