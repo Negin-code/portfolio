@@ -1044,7 +1044,7 @@ const Guardian = () => {
               {/* Two Column Layout */}
               <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                 {/* Left Column - iPhone Frame */}
-                <div className="w-full lg:w-1/2">
+                <div className="w-full lg:w-1/2 flex justify-center lg:block">
                   <div className="relative">
                     {/* Left Gradient Overlay */}
                     <div 
@@ -1190,7 +1190,7 @@ const Guardian = () => {
               <h3 className="text-xl font-medium text-[#493B32] mb-6">UI Evolution</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Timer Screen Evolution */}
-                <div className="bg-white rounded-2xl p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
+                <div className="bg-white rounded-2xl p-4 sm:p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-md sm:text-lg font-medium text-[#493B32]">Welcome Screen</h4>
                     <div className="flex items-center gap-2">
@@ -1251,7 +1251,7 @@ const Guardian = () => {
                 </div>
 
                 {/* Contacts Screen Evolution */}
-                <div className="bg-white rounded-2xl p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
+                <div className="bg-white rounded-2xl p-4 sm:p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-md sm:text-lg font-medium text-[#493B32]">Adding Contacts Overlay Screen</h4>
                     <div className="flex items-center gap-2">
@@ -1309,7 +1309,7 @@ const Guardian = () => {
                   </div>
                 </div>
                 {/* Timer Screen Evolution */}
-                <div className="bg-white rounded-2xl p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
+                <div className="bg-white rounded-2xl p-4 sm:p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-md sm:text-lg font-medium text-[#493B32]">Timer Screen</h4>
                     <div className="flex items-center gap-2">
