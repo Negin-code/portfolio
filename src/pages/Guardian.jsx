@@ -1186,7 +1186,7 @@ const Guardian = () => {
             </div>
 
             {/* Before/After UI Comparisons */}
-            <div className="px-4 md:px-8 mb-16">
+            <div className="md:px-8 mb-16">
               <h3 className="text-xl font-medium text-[#493B32] mb-6">UI Evolution</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Timer Screen Evolution */}
@@ -1229,7 +1229,7 @@ const Guardian = () => {
                             />
                             {/* Version 1 Hover Instruction */}
                             <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                              <div className="bg-[#493B32]/80 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                              <div className="bg-[#493B32]/80 text-white px-4 py-2 text-base rounded-lg backdrop-blur-sm">
                                 Hover to see Version 2.0
                               </div>
                             </div>
