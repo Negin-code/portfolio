@@ -1436,7 +1436,7 @@ const Guardian = () => {
             </div>
           </section>
             {/* Reflection Section */}
-            <section id="reflection" className="mt-16 mb-24 mr-10 sm:mr-0">
+            <section id="reflection" className="mt-10 sm:mt-16 mb-24 mr-10 sm:mr-0">
               <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
                 <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
                 <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
