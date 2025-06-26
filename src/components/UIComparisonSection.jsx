@@ -10,21 +10,21 @@ import beforeImage from "../assets/Before1.png";
 import afterImage from "../assets/After1.png";
 
 const FlowStep = ({ icon: Icon, text, iconColor, bgColor }) => (
-  <div className="flex flex-col items-center gap-1 text-center">
+  <div className="flex flex-col items-center gap-1 text-center min-w-[60px] sm:min-w-[80px]">
     <div
-      className="w-6 h-6 rounded-lg flex items-center justify-center"
+      className="w-5 h-5 sm:w-6 sm:h-6 rounded-lg flex items-center justify-center"
       style={{ backgroundColor: bgColor }}
     >
-      <Icon className="w-3 h-3" style={{ color: iconColor }} />
+      <Icon className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: iconColor }} />
     </div>
-    <span className="text-xs text-[#493B32]/80 max-w-[80px] font-medium">
+    <span className="text-[10px] sm:text-xs text-[#493B32]/80 max-w-[60px] sm:max-w-[80px] font-medium leading-tight">
       {text}
     </span>
   </div>
 );
 
 const UserFlow = ({ steps }) => (
-  <div className="flex items-center justify-between w-full gap-2 py-3">
+  <div className="flex items-center justify-between w-full gap-1 sm:gap-2 py-2 sm:py-3 overflow-x-auto hide-scrollbar">
     {steps.map((step, index) => (
       <React.Fragment key={index}>
         <FlowStep
@@ -34,7 +34,7 @@ const UserFlow = ({ steps }) => (
           bgColor={step.bgColor}
         />
         {index < steps.length - 1 && (
-          <BsArrowRight className="text-[#493B32]/40 w-4 h-4 flex-shrink-0" />
+          <BsArrowRight className="text-[#493B32]/40 w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
         )}
       </React.Fragment>
     ))}
@@ -190,6 +190,17 @@ const UIComparisonSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Add this CSS at the bottom of the component */}
+      <style jsx>{`
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </div>
   );
 };
