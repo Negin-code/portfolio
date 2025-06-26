@@ -82,7 +82,7 @@ const Guardian = () => {
       <div className="absolute right-10 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"></div>
 
       {/* Project Content Container */}
-      <div className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 mr-15 md:mr-0 ml-20 lg:ml-10">
+      <div className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 mr-15 lg:mr-0 ml-20 lg:ml-10">
         <ProjectHero 
           title="Guardian - Overdose Prevention App"
           image={GuardianImage}
