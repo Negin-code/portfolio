@@ -1490,13 +1490,42 @@ const Guardian = () => {
 
                     {/* Right Column - Figma Prototype */}
                     <div className="flex-1">
-                      <div className="relative w-full rounded-xl overflow-hidden bg-white shadow-lg" style={{ paddingTop: '100%' }}> {/* Square Aspect Ratio */}
+                      <div className="relative w-full rounded-xl overflow-hidden bg-white shadow-lg" 
+                        style={{ 
+                          paddingTop: '100%',
+                          maxHeight: '600px' 
+                        }}
+                      > 
+                        {/* Mobile Notice */}
+                        <div className="md:hidden absolute top-0 left-0 right-0 bg-amber-50 p-4 z-10 rounded-t-xl border-b border-amber-200">
+                          <p className="text-sm text-amber-800 text-center">
+                            Tap to interact with the prototype →
+                          </p>
+                        </div>
+                        
                         <iframe 
                           className="absolute top-0 left-0 w-full h-full"
-                          style={{ border: '1px solid rgba(73, 59, 50, 0.1)' }}
+                          style={{ 
+                            border: '1px solid rgba(73, 59, 50, 0.1)',
+                            height: 'calc(100% - 40px)',
+                            marginTop: '40px'
+                          }}
                           src="https://embed.figma.com/proto/7rSfnfAkZTMI3ttCdej9n1/Design-Jam?page-id=148%3A3413&node-id=148-3414&p=f&viewport=278%2C88%2C0.5&scaling=scale-down&starting-point-node-id=148%3A3414&content-scaling=0.5&embed-host=share"
                           allowFullScreen
                         ></iframe>
+                      </div>
+                      
+                      {/* View in Figma Link */}
+                      <div className="mt-4 flex justify-center">
+                        <a 
+                          href="https://www.figma.com/proto/7rSfnfAkZTMI3ttCdej9n1/Design-Jam?page-id=148%3A3413&node-id=148-3414&p=f&viewport=278%2C88%2C0.5&scaling=scale-down&starting-point-node-id=148%3A3414&content-scaling=0.5&embed-host=share" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-[#493B32]/10 text-[#493B32] rounded-lg hover:bg-[#493B32]/20 transition-colors text-sm"
+                        >
+                          <FaFigma className="w-4 h-4" />
+                          <span>View Prototype in Figma</span>
+                        </a>
                       </div>
                     </div>
                   </div>
