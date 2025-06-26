@@ -1166,7 +1166,7 @@ const Guardian = () => {
           </div>
         </section>
           {/* User Feedback & Iteration Section */}    
-          <section id="user-feedback" className="mt-16">
+          <section id="user-feedback" className="mt-16 mr-10 md:mr-0">
             <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
               <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
               <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
@@ -1398,7 +1398,7 @@ const Guardian = () => {
 
           </section>
           {/* Design system Section */}
-         <section id="design-system" className="mt-16 mb-24">
+         <section id="design-system" className="mt-16 mb-24 mr-10 md:mr-0">
             <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
               <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
               <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
