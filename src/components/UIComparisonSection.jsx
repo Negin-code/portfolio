@@ -113,17 +113,19 @@ const UIComparisonSection = () => {
       </div>
 
       {/* UI Comparison Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8">
         {/* Before Panel */}
-        <div className="bg-white rounded-xl p-6 shadow-sm border border-[#493B32]/10">
-          <h3 className="text-xl font-semibold text-[#493B32] mb-4">Before</h3>
+        <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10">
+          <h3 className="text-lg sm:text-xl font-semibold text-[#493B32] mb-4">Before</h3>
 
-          {/* Before Image with Magnification */}
-          <MagnifiableImage
-            src={beforeImage}
-            alt="Original Goodreads shelf creation interface"
-            caption="Original interface with hidden input field and no guidance"
-          />
+          {/* Image Container */}
+          <div className="w-full aspect-[4/3] mb-4">
+            <MagnifiableImage
+              src={beforeImage}
+              alt="Original Goodreads shelf creation interface"
+              caption="Original interface with hidden input field and no guidance"
+            />
+          </div>
 
           <div className="mt-4 bg-[#493B32]/5 rounded-lg p-3">
             <p className="text-xs text-[#493B32]/80 mb-2 font-medium">
@@ -134,15 +136,17 @@ const UIComparisonSection = () => {
         </div>
 
         {/* After Panel */}
-        <div className="bg-white rounded-xl p-6 shadow-sm border border-[#493B32]/10">
-          <h3 className="text-xl font-semibold text-[#493B32] mb-4">After</h3>
+        <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10">
+          <h3 className="text-lg sm:text-xl font-semibold text-[#493B32] mb-4">After</h3>
 
-          {/* After Image with Magnification */}
-          <MagnifiableImage
-            src={afterImage}
-            alt="Redesigned Goodreads shelf creation interface"
-            caption="Redesigned interface with clear modal and guided process"
-          />
+          {/* Image Container */}
+          <div className="w-full aspect-[4/3] mb-4">
+            <MagnifiableImage
+              src={afterImage}
+              alt="Redesigned Goodreads shelf creation interface"
+              caption="Redesigned interface with clear modal and guided process"
+            />
+          </div>
 
           <div className="mt-4 bg-[#493B32]/5 rounded-lg p-3">
             <p className="text-xs text-[#493B32]/80 mb-2 font-medium">
@@ -154,8 +158,8 @@ const UIComparisonSection = () => {
       </div>
 
       {/* Key Improvements Callout */}
-      <div className="bg-[#493B32]/5 rounded-xl p-6">
-        <h4 className="text-lg font-semibold text-[#493B32] mb-3">
+      <div className="bg-[#493B32]/5 rounded-xl p-4 sm:p-6">
+        <h4 className="text-base sm:text-lg font-semibold text-[#493B32] mb-3">
           Key Improvements
         </h4>
         <div className="space-y-4">
