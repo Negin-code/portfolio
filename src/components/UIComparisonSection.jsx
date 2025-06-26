@@ -24,20 +24,22 @@ const FlowStep = ({ icon: Icon, text, iconColor, bgColor }) => (
 );
 
 const UserFlow = ({ steps }) => (
-  <div className="flex items-center justify-between w-full gap-1 sm:gap-2 py-2 sm:py-3 overflow-x-auto hide-scrollbar">
-    {steps.map((step, index) => (
-      <React.Fragment key={index}>
-        <FlowStep
-          icon={step.icon}
-          text={step.text}
-          iconColor={step.iconColor}
-          bgColor={step.bgColor}
-        />
-        {index < steps.length - 1 && (
-          <BsArrowRight className="text-[#493B32]/40 w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
-        )}
-      </React.Fragment>
-    ))}
+  <div className="overflow-x-auto pb-2">
+    <div className="flex items-center w-max gap-1 sm:gap-2 py-2 sm:py-3">
+      {steps.map((step, index) => (
+        <React.Fragment key={index}>
+          <FlowStep
+            icon={step.icon}
+            text={step.text}
+            iconColor={step.iconColor}
+            bgColor={step.bgColor}
+          />
+          {index < steps.length - 1 && (
+            <BsArrowRight className="text-[#493B32]/40 w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+          )}
+        </React.Fragment>
+      ))}
+    </div>
   </div>
 );
 
@@ -190,17 +192,6 @@ const UIComparisonSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Add this CSS at the bottom of the component */}
-      <style jsx>{`
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </div>
   );
 };
