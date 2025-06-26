@@ -1512,8 +1512,8 @@ const Guardian = () => {
                         onClick={() => updateActiveVersion(version)}
                         className={`flex items-center justify-center w-10 h-10 rounded-lg transition-all ${
                           activeVersion === version 
-                            ? 'bg-[#493B32] text-pink-500' 
-                            : 'border-2 border-[#493B32] text-[#493B32] hover:bg-[#493B32]/10'
+                            ? 'bg-[#493B32] text-pink-500 font-bold' 
+                            : 'border-2 border-[#493B32] text-[#493B32] font-medium hover:bg-[#493B32]/10'
                         }`}
                         aria-label={`Show Version ${version}`}
                       >
