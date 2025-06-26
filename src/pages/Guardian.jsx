@@ -1504,21 +1504,27 @@ const Guardian = () => {
                   </div>
 
                   {/* Navigation Dots */}
-                  <div className="flex justify-center items-center gap-3 mt-12 ">
+                  <div className="flex justify-center items-center gap-3 mt-12">
                     <button 
-                      className="w-5 h-5 rounded-full bg-[#493B32] shadow-lg hover:scale-125"
+                      className={`w-5 h-5 rounded-full shadow-lg transition-all duration-300 ${
+                        activeVersion === 1 ? 'bg-[#493B32]' : 'bg-white'
+                      }`}
                       style={{ boxShadow: '0 0 0 2px #493B32' }}
                       aria-label="Show Version 1"
                       onClick={() => updateActiveVersion(1)}
                     ></button>
                     <button 
-                      className="w-5 h-5 rounded-full bg-[#493B32] shadow-lg hover:scale-125"
-                      style={{ boxShadow: '0 0 0 2px #493B32',}}
+                      className={`w-5 h-5 rounded-full shadow-lg transition-all duration-300 ${
+                        activeVersion === 2 ? 'bg-[#493B32]' : 'bg-white'
+                      }`}
+                      style={{ boxShadow: '0 0 0 2px #493B32' }}
                       aria-label="Show Version 2"
                       onClick={() => updateActiveVersion(2)}
                     ></button>
                     <button 
-                      className="w-5 h-5 rounded-full bg-[#493B32] shadow-lg hover:scale-125"
+                      className={`w-5 h-5 rounded-full shadow-lg transition-all duration-300 ${
+                        activeVersion === 3 ? 'bg-[#493B32]' : 'bg-white'
+                      }`}
                       style={{ boxShadow: '0 0 0 2px #493B32' }}
                       aria-label="Show Version 3"
                       onClick={() => updateActiveVersion(3)}
