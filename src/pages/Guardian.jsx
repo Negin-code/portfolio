@@ -1507,23 +1507,23 @@ const Guardian = () => {
                   <div className="flex justify-center items-center gap-3 mt-12">
                     <button 
                       onClick={() => updateActiveVersion(1)}
-                      className={`w-5 h-5 rounded-full bg-[#493B32]  ${
-                        activeVersion === 1 ? 'border-2 border-[#493B32] bg-white' : ''
-                      }`}
+                      className={activeVersion === 1 
+                        ? "w-5 h-5 rounded-full bg-[#493B32]" 
+                        : "w-5 h-5 rounded-full border-2 border-[#493B32]"}
                       aria-label="Show Version 1"
                     />
                     <button 
                       onClick={() => updateActiveVersion(2)}
-                      className={`w-5 h-5 rounded-full border-2 border-[#493B32] ${
-                        activeVersion === 2 ? 'bg-[#493B32]' : 'bg-transparent'
-                      }`}
+                      className={activeVersion === 2 
+                        ? "w-5 h-5 rounded-full bg-[#493B32]" 
+                        : "w-5 h-5 rounded-full border-2 border-[#493B32]"}
                       aria-label="Show Version 2"
                     />
                     <button 
                       onClick={() => updateActiveVersion(3)}
-                      className={`w-5 h-5 rounded-full border-2 border-[#493B32] ${
-                        activeVersion === 3 ? 'bg-[#493B32]' : 'bg-transparent'
-                      }`}
+                      className={activeVersion === 3 
+                        ? "w-5 h-5 rounded-full bg-[#493B32]" 
+                        : "w-5 h-5 rounded-full border-2 border-[#493B32]"}
                       aria-label="Show Version 3"
                     />
                   </div>
