@@ -26,7 +26,7 @@ import TimerImage from "../assets/Timer.svg";
 import ContactImage from "../assets/AddContact.svg";
 import DrugAlertImage from "../assets/DrugAlertFeed.svg";
 import ResourceHubImage from "../assets/ResourcesHome.png";
-import MagnifiableMobileFrame from "../components/MagnifiableMobileFrame";
+
 import { ImQuotesLeft } from "react-icons/im";
 
 import "./Guardian.css";
