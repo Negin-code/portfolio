@@ -1046,13 +1046,13 @@ const Guardian = () => {
                 {/* Left Column - iPhone Frame */}
                 <div className="w-full lg:w-1/2 flex justify-center lg:block">
                   <div className="relative">
-                    {/* Left Gradient Overlay */}
+                    {/* Left Gradient Overlay 
                     <div 
                       className="absolute left-0 top-0 bottom-0 w-8 md:w-16 z-10 lg:hidden"
                       style={{
                         background: 'linear-gradient(to right, #FFF7F2, transparent)'
                       }}
-                    ></div>
+                    ></div>*/}
                     
                     {/* Right Gradient Overlay */}
                     <div 
