@@ -1029,7 +1029,7 @@ const Guardian = () => {
           </div>
 
           {/* Main Content Container */}
-          <div className="relative mx-auto max-w-[1200px] p-4 md:p-8">
+          <div className="relative mx-auto max-w-[1920px] p-4 md:p-8">
             {/* Background Pattern */}
             <div className="absolute inset-0 bg-[#FFF7F2] rounded-3xl shadow-lg">
               <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/50 rounded-3xl"></div>
