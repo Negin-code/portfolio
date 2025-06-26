@@ -1231,8 +1231,8 @@ const Guardian = () => {
                         {/* Screen Content */}
                         <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
                           {/* Mobile Carousel */}
-                          <div className="md:hidden relative w-full h-full">
-                            <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out" 
+                          <div className="md:hidden relative w-full h-full bg-[#F8F8F8]">
+                            <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out bg-[#F8F8F8]" 
                               style={{ transform: `translateX(-${(welcomeVersion - 1) * 100}%)` }}>
                               {/* Version 1 */}
                               <div className="min-w-full h-full">
@@ -1339,8 +1339,8 @@ const Guardian = () => {
                         {/* Screen Content */}
                         <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
                           {/* Mobile Carousel */}
-                          <div className="md:hidden relative w-full h-full">
-                            <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out" 
+                          <div className="md:hidden relative w-full h-full bg-[#F8F8F8]">
+                            <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out bg-[#F8F8F8]" 
                               style={{ transform: `translateX(-${(contactsVersion - 1) * 100}%)` }}>
                               {/* Version 1 */}
                               <div className="min-w-full h-full">
@@ -1449,7 +1449,8 @@ const Guardian = () => {
                         {/* Screen Content */}
                         <div className="relative w-full h-full bg-white rounded-[38px] md:rounded-[48px] overflow-hidden">
                           {/* Carousel Container */}
-                          <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(activeVersion - 1) * 100}%)` }}>
+                          <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out bg-[#F8F8F8]" 
+                            style={{ transform: `translateX(-${(activeVersion - 1) * 100}%)` }}>
                             {/* Version 1 */}
                             <div className="min-w-full transition-opacity duration-300">
                               <img 
