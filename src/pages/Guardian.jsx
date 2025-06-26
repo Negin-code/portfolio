@@ -35,6 +35,8 @@ import ProjectHero from '../components/ProjectHero';
 const Guardian = () => {
   const [selectedFeature, setSelectedFeature] = useState(1);
   const [activeVersion, setActiveVersion] = useState(1);
+  const [welcomeVersion, setWelcomeVersion] = useState(1);
+  const [contactsVersion, setContactsVersion] = useState(1);
 
   const updateActiveVersion = (version) => {
     setActiveVersion(version);
@@ -1199,7 +1201,7 @@ const Guardian = () => {
                       <span className="text-sm text-[#493B32]/60">Version 2.0</span>
                     </div>
                   </div>
-                  <div className="relative group cursor-pointer">
+                  <div className="relative">
                     {/* Phone Frame */}
                     <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative">
                       <div className="absolute inset-0 bg-[#F75590] rounded-[45px] md:rounded-[55px] p-4 shadow-xl">
@@ -1220,33 +1222,75 @@ const Guardian = () => {
 
                         {/* Screen Content */}
                         <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
-                          {/* Version 1 */}
-                          <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
-                            <img 
-                              src={WelcomeImageV1} 
-                              alt="Timer Screen Version 1.0" 
-                              className="w-full h-full object-cover"
-                            />
-                            {/* Version 1 Hover Instruction */}
-                            <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                              <div className="bg-[#493B32]/80 text-white px-4 py-2 text-base rounded-lg backdrop-blur-sm">
-                                Hover to see Version 2.0
+                          {/* Mobile Carousel */}
+                          <div className="md:hidden relative w-full h-full">
+                            <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out" 
+                              style={{ transform: `translateX(-${(welcomeVersion - 1) * 100}%)` }}>
+                              {/* Version 1 */}
+                              <div className="min-w-full h-full">
+                                <img 
+                                  src={WelcomeImageV1} 
+                                  alt="Welcome Screen Version 1.0" 
+                                  className="w-full h-full object-cover"
+                                />
+                              </div>
+                              {/* Version 2 */}
+                              <div className="min-w-full h-full">
+                                <img 
+                                  src={WelcomeImage} 
+                                  alt="Welcome Screen Version 2.0" 
+                                  className="w-full h-full object-cover"
+                                />
                               </div>
                             </div>
                           </div>
-                          {/* Version 2 */}
-                          <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <img 
-                              src={WelcomeImage} 
-                              alt="Timer Screen Version 2.0" 
-                              className="w-full h-full object-cover"
-                            />
+
+                          {/* Desktop Hover Effect */}
+                          <div className="hidden md:block relative w-full h-full group">
+                            {/* Version 1 */}
+                            <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
+                              <img 
+                                src={WelcomeImageV1} 
+                                alt="Welcome Screen Version 1.0" 
+                                className="w-full h-full object-cover"
+                              />
+                              {/* Version 1 Hover Instruction */}
+                              <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                                <div className="bg-[#493B32]/80 text-white px-4 py-2 text-base rounded-lg backdrop-blur-sm">
+                                  Hover to see Version 2.0
+                                </div>
+                              </div>
+                            </div>
+                            {/* Version 2 */}
+                            <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                              <img 
+                                src={WelcomeImage} 
+                                alt="Welcome Screen Version 2.0" 
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                   
+                    {/* Mobile Navigation Dots */}
+                    <div className="flex justify-center items-center gap-2 mt-4 md:hidden">
+                      <button 
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          welcomeVersion === 1 ? 'bg-[#493B32] w-6' : 'bg-[#493B32]/30'
+                        }`}
+                        aria-label="Show Version 1"
+                        onClick={() => setWelcomeVersion(1)}
+                      ></button>
+                      <button 
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          welcomeVersion === 2 ? 'bg-[#493B32] w-6' : 'bg-[#493B32]/30'
+                        }`}
+                        aria-label="Show Version 2"
+                        onClick={() => setWelcomeVersion(2)}
+                      ></button>
+                    </div>
                   </div>
                 </div>
 
@@ -1260,7 +1304,7 @@ const Guardian = () => {
                       <span className="text-sm text-[#493B32]/60">Version 2.0</span>
                     </div>
                   </div>
-                  <div className="relative group cursor-pointer">
+                  <div className="relative">
                     {/* Phone Frame */}
                     <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative">
                       <div className="absolute inset-0 bg-[#F75590] rounded-[45px] md:rounded-[55px] p-4 shadow-xl">
@@ -1281,30 +1325,74 @@ const Guardian = () => {
 
                         {/* Screen Content */}
                         <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
-                          {/* Version 1 */}
-                          <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
-                            <img 
-                              src={HomeImageV1} 
-                              alt="Home Screen Version 1.0" 
-                              className="w-full h-full object-cover"
-                            />
-                            {/* Version 1 Hover Instruction */}
-                            <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                              <div className="bg-[#493B32]/80 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
-                                Hover to see Version 2.0
+                          {/* Mobile Carousel */}
+                          <div className="md:hidden relative w-full h-full">
+                            <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out" 
+                              style={{ transform: `translateX(-${(contactsVersion - 1) * 100}%)` }}>
+                              {/* Version 1 */}
+                              <div className="min-w-full h-full">
+                                <img 
+                                  src={HomeImageV1} 
+                                  alt="Contacts Screen Version 1.0" 
+                                  className="w-full h-full object-cover"
+                                />
+                              </div>
+                              {/* Version 2 */}
+                              <div className="min-w-full h-full">
+                                <img 
+                                  src={HomeImage} 
+                                  alt="Contacts Screen Version 2.0" 
+                                  className="w-full h-full object-cover"
+                                />
                               </div>
                             </div>
                           </div>
-                          {/* Version 2 */}
-                          <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <img 
-                              src={HomeImage} 
-                              alt="Home Screen Version 2.0" 
-                              className="w-full h-full object-cover"
-                            />
+
+                          {/* Desktop Hover Effect */}
+                          <div className="hidden md:block relative w-full h-full group">
+                            {/* Version 1 */}
+                            <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
+                              <img 
+                                src={HomeImageV1} 
+                                alt="Contacts Screen Version 1.0" 
+                                className="w-full h-full object-cover"
+                              />
+                              {/* Version 1 Hover Instruction */}
+                              <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                                <div className="bg-[#493B32]/80 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                                  Hover to see Version 2.0
+                                </div>
+                              </div>
+                            </div>
+                            {/* Version 2 */}
+                            <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                              <img 
+                                src={HomeImage} 
+                                alt="Contacts Screen Version 2.0" 
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
+                    </div>
+
+                    {/* Mobile Navigation Dots */}
+                    <div className="flex justify-center items-center gap-2 mt-4 md:hidden">
+                      <button 
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          contactsVersion === 1 ? 'bg-[#493B32] w-6' : 'bg-[#493B32]/30'
+                        }`}
+                        aria-label="Show Version 1"
+                        onClick={() => setContactsVersion(1)}
+                      ></button>
+                      <button 
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          contactsVersion === 2 ? 'bg-[#493B32] w-6' : 'bg-[#493B32]/30'
+                        }`}
+                        aria-label="Show Version 2"
+                        onClick={() => setContactsVersion(2)}
+                      ></button>
                     </div>
                   </div>
                 </div>
