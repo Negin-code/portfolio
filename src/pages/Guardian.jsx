@@ -1054,13 +1054,13 @@ const Guardian = () => {
                       }}
                     ></div>*/}
                     
-                    {/* Right Gradient Overlay */}
+                    {/* Right Gradient Overlay 
                     <div 
                       className="absolute right-0 top-0 bottom-0 w-8 md:w-16 z-10 lg:hidden"
                       style={{
                         background: 'linear-gradient(to left, #FFF7F2, transparent)'
                       }}
-                    ></div>
+                    ></div>*/}
 
                     {/* iPhone Frame */}
                     <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative transform transition-transform duration-700 hover:scale-[1.02]">
