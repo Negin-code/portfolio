@@ -1025,7 +1025,7 @@ const Guardian = () => {
             <div className="relative z-10 p-4 md:p-8 lg:p-12">
               {/* Feature Category Label */}
               <div className="text-center mb-8">
-                <span className="inline-block px-6 py-2 bg-[#493B32]/5 rounded-full text-sm font-medium text-[#493B32]/70 tracking-wider uppercase">
+                <span className="inline-block px-6 py-2 bg-[#493B32]/5 rounded-full text-sm text-[#493B32]/70 tracking-wider uppercase">
                   Feature {selectedFeature} of {features.length}
                 </span>
               </div>
@@ -1102,7 +1102,7 @@ const Guardian = () => {
                         {features[selectedFeature - 1].title}
                       </h3>
                     </div>
-                    <p className="text-[#493B32]/70 text-lg leading-relaxed">
+                    <p className="text-[#493B32]/70 text-base sm:text-lg leading-relaxed">
                       {features[selectedFeature - 1].description}
                     </p>
                   </div>
