@@ -12,7 +12,7 @@ const NextStepCard = ({ step, number }) => (
       {/* Step Content */}
       <div className="flex-1">
         <div className="flex items-center gap-3">
-          <BsArrowRightCircle className="text-[#493B32]/40 text-lg group-hover:text-[#493B32] transition-colors" />
+          
           <p className="text-lg text-[#493B32] leading-relaxed">{step}</p>
         </div>
       </div>
