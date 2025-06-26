@@ -1420,7 +1420,7 @@ const Guardian = () => {
                 {/* Figma Link */}
                 <div className="mt-6 flex justify-center">
                   <a 
-                    href="https://www.figma.com/file/yourFigmaFileID" 
+                    href="https://www.figma.com/design/7rSfnfAkZTMI3ttCdej9n1/Design-Jam?node-id=87-254&t=4jjywuLFBMGJvYxD-1" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-[#493B32] text-white rounded-xl hover:bg-[#493B32]/90 transition-colors"
