@@ -19,6 +19,7 @@ const Home = () => {
         <meta property="og:description" content="UI/UX Designer and Frontend Developer bridging the gap between logic and empathy. Creating meaningful digital experiences with a focus on user-centered design and modern web development." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://neginasem.ca/assets/Logo.png" />
+        <meta name="twitter:image" content="https://neginasem.ca/assets/Logo.png" />
         <meta property="og:url" content="https://neginasem.ca" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Negin Asem - UI/UX Designer & Frontend Developer" />
