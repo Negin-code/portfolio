@@ -1190,6 +1190,14 @@ const Guardian = () => {
             {/* Before/After UI Comparisons */}
             <div className="md:px-8 mb-16">
               <h3 className="text-xl font-medium text-[#493B32] mb-6">UI Evolution</h3>
+              
+              {/* Mobile Instruction */}
+              <div className="md:hidden mb-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
+                <p className="text-sm text-amber-800 text-center">
+                  Tap the dots below each screen to see the evolution →
+                </p>
+              </div>
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Timer Screen Evolution */}
                 <div className="bg-white rounded-2xl p-4 sm:p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
