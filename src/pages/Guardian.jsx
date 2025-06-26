@@ -950,13 +950,6 @@ const Guardian = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator - Mobile Only */}
-      <div className="flex justify-center gap-1 mt-3 md:hidden">
-        <div className="w-8 h-1 bg-[#493B32]/20 rounded-full"></div>
-        <div className="w-8 h-1 bg-[#493B32]/10 rounded-full"></div>
-        <div className="w-8 h-1 bg-[#493B32]/10 rounded-full"></div>
-      </div>
-
         </section>
 
         {/* Design goals section */}
