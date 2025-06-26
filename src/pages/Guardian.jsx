@@ -1283,21 +1283,26 @@ const Guardian = () => {
                     </div>
 
                     {/* Mobile Navigation Dots */}
-                    <div className="flex justify-center items-center gap-2 mt-4 md:hidden">
+                    <div className="flex justify-center items-center gap-3 mt-6 md:hidden">
                       <button 
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          welcomeVersion === 1 ? 'bg-[#493B32] w-6' : 'bg-[#493B32]/30'
+                        className={`h-3 rounded-full transition-all duration-300 ${
+                          welcomeVersion === 1 ? 'w-8 bg-[#493B32]' : 'w-3 bg-[#493B32]/30 hover:bg-[#493B32]/50'
                         }`}
                         aria-label="Show Version 1"
                         onClick={() => setWelcomeVersion(1)}
                       ></button>
                       <button 
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          welcomeVersion === 2 ? 'bg-[#493B32] w-6' : 'bg-[#493B32]/30'
+                        className={`h-3 rounded-full transition-all duration-300 ${
+                          welcomeVersion === 2 ? 'w-8 bg-[#493B32]' : 'w-3 bg-[#493B32]/30 hover:bg-[#493B32]/50'
                         }`}
                         aria-label="Show Version 2"
                         onClick={() => setWelcomeVersion(2)}
                       ></button>
+                    </div>
+                    
+                    {/* Version Label - Mobile */}
+                    <div className="text-center mt-3 md:hidden">
+                      <span className="text-sm font-medium text-[#493B32]">Version {welcomeVersion}.0</span>
                     </div>
                   </div>
                 </div>
@@ -1386,21 +1391,26 @@ const Guardian = () => {
                     </div>
 
                     {/* Mobile Navigation Dots */}
-                    <div className="flex justify-center items-center gap-2 mt-4 md:hidden">
+                    <div className="flex justify-center items-center gap-3 mt-6 md:hidden">
                       <button 
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          contactsVersion === 1 ? 'bg-[#493B32] w-6' : 'bg-[#493B32]/30'
+                        className={`h-3 rounded-full transition-all duration-300 ${
+                          contactsVersion === 1 ? 'w-8 bg-[#493B32]' : 'w-3 bg-[#493B32]/30 hover:bg-[#493B32]/50'
                         }`}
                         aria-label="Show Version 1"
                         onClick={() => setContactsVersion(1)}
                       ></button>
                       <button 
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          contactsVersion === 2 ? 'bg-[#493B32] w-6' : 'bg-[#493B32]/30'
+                        className={`h-3 rounded-full transition-all duration-300 ${
+                          contactsVersion === 2 ? 'w-8 bg-[#493B32]' : 'w-3 bg-[#493B32]/30 hover:bg-[#493B32]/50'
                         }`}
                         aria-label="Show Version 2"
                         onClick={() => setContactsVersion(2)}
                       ></button>
+                    </div>
+                    
+                    {/* Version Label - Mobile */}
+                    <div className="text-center mt-3 md:hidden">
+                      <span className="text-sm font-medium text-[#493B32]">Version {contactsVersion}.0</span>
                     </div>
                   </div>
                 </div>
