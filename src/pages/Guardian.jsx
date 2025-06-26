@@ -1283,25 +1283,25 @@ const Guardian = () => {
                     </div>
 
                     {/* Mobile Navigation Dots */}
-                    <div className="flex justify-center items-center gap-4 mt-8 md:hidden">
+                    <div className="flex justify-center items-center gap-6 mt-8 mb-4 md:hidden">
                       <button 
-                        className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                          welcomeVersion === 1 ? 'bg-[#493B32]' : 'bg-[#493B32]/30'
-                        } hover:bg-[#493B32]/70`}
+                        className={`w-6 h-6 rounded-full border-2 border-[#493B32] transition-all duration-300 ${
+                          welcomeVersion === 1 ? 'bg-[#493B32]' : 'bg-white'
+                        } hover:bg-[#493B32]/50`}
                         aria-label="Show Version 1"
                         onClick={() => setWelcomeVersion(1)}
                       ></button>
                       <button 
-                        className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                          welcomeVersion === 2 ? 'bg-[#493B32]' : 'bg-[#493B32]/30'
-                        } hover:bg-[#493B32]/70`}
+                        className={`w-6 h-6 rounded-full border-2 border-[#493B32] transition-all duration-300 ${
+                          welcomeVersion === 2 ? 'bg-[#493B32]' : 'bg-white'
+                        } hover:bg-[#493B32]/50`}
                         aria-label="Show Version 2"
                         onClick={() => setWelcomeVersion(2)}
                       ></button>
                     </div>
 
                     {/* Version Label - Mobile */}
-                    <div className="text-center mt-4 md:hidden">
+                    <div className="text-center mt-2 md:hidden">
                       <span className="text-sm font-medium text-[#493B32]">Version {welcomeVersion}.0</span>
                     </div>
                   </div>
@@ -1391,25 +1391,25 @@ const Guardian = () => {
                     </div>
 
                     {/* Mobile Navigation Dots */}
-                    <div className="flex justify-center items-center gap-4 mt-8 md:hidden">
+                    <div className="flex justify-center items-center gap-6 mt-8 mb-4 md:hidden">
                       <button 
-                        className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                          contactsVersion === 1 ? 'bg-[#493B32]' : 'bg-[#493B32]/30'
-                        } hover:bg-[#493B32]/70`}
+                        className={`w-6 h-6 rounded-full border-2 border-[#493B32] transition-all duration-300 ${
+                          contactsVersion === 1 ? 'bg-[#493B32]' : 'bg-white'
+                        } hover:bg-[#493B32]/50`}
                         aria-label="Show Version 1"
                         onClick={() => setContactsVersion(1)}
                       ></button>
                       <button 
-                        className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                          contactsVersion === 2 ? 'bg-[#493B32]' : 'bg-[#493B32]/30'
-                        } hover:bg-[#493B32]/70`}
+                        className={`w-6 h-6 rounded-full border-2 border-[#493B32] transition-all duration-300 ${
+                          contactsVersion === 2 ? 'bg-[#493B32]' : 'bg-white'
+                        } hover:bg-[#493B32]/50`}
                         aria-label="Show Version 2"
                         onClick={() => setContactsVersion(2)}
                       ></button>
                     </div>
 
                     {/* Version Label - Mobile */}
-                    <div className="text-center mt-4 md:hidden">
+                    <div className="text-center mt-2 md:hidden">
                       <span className="text-sm font-medium text-[#493B32]">Version {contactsVersion}.0</span>
                     </div>
                   </div>
