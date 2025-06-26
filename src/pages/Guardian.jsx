@@ -1505,28 +1505,26 @@ const Guardian = () => {
                   </div>
 
                   {/* Navigation Dots */}
-                  <div className="flex justify-center items-center gap-3 mt-12">
-                  <button className="w-10 h-10 bg-blue-500">Dot</button>
-
+                  <div className="relative z-50 flex justify-center items-center gap-3 mt-12 bg-white p-4">
                     <button 
                       onClick={() => updateActiveVersion(1)}
                       className={activeVersion === 1 
-                        ? "w-5 h-5 rounded-full bg-red-500" 
-                        : "w-5 h-5 rounded-full border-2 border-[#493B32]"}
+                        ? "w-8 h-8 rounded-full bg-[#493B32]" 
+                        : "w-8 h-8 rounded-full border-4 border-[#493B32]"}
                       aria-label="Show Version 1"
                     />
                     <button 
                       onClick={() => updateActiveVersion(2)}
                       className={activeVersion === 2 
-                        ? "w-5 h-5 rounded-full bg-[#493B32]" 
-                        : "w-5 h-5 rounded-full border-2 border-[#493B32]"}
+                        ? "w-8 h-8 rounded-full bg-[#493B32]" 
+                        : "w-8 h-8 rounded-full border-4 border-[#493B32]"}
                       aria-label="Show Version 2"
                     />
                     <button 
                       onClick={() => updateActiveVersion(3)}
                       className={activeVersion === 3 
-                        ? "w-5 h-5 rounded-full bg-[#493B32]" 
-                        : "w-5 h-5 rounded-full border-2 border-[#493B32]"}
+                        ? "w-8 h-8 rounded-full bg-[#493B32]" 
+                        : "w-8 h-8 rounded-full border-4 border-[#493B32]"}
                       aria-label="Show Version 3"
                     />
                   </div>
