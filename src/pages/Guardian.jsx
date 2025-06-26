@@ -1506,29 +1506,26 @@ const Guardian = () => {
                   {/* Navigation Dots */}
                   <div className="flex justify-center items-center gap-3 mt-12">
                     <button 
-                      className={`w-5 h-5 rounded-full shadow-lg transition-all duration-300 ${
-                        activeVersion === 1 ? 'bg-[#493B32]' : 'bg-white'
-                      }`}
-                      style={{ boxShadow: '0 0 0 2px #493B32' }}
-                      aria-label="Show Version 1"
                       onClick={() => updateActiveVersion(1)}
-                    ></button>
-                    <button 
-                      className={`w-5 h-5 rounded-full shadow-lg transition-all duration-300 ${
-                        activeVersion === 2 ? 'bg-[#493B32]' : 'bg-white'
+                      className={`w-5 h-5 rounded-full border-2 border-[#493B32] ${
+                        activeVersion === 1 ? 'bg-[#493B32]' : 'bg-transparent'
                       }`}
-                      style={{ boxShadow: '0 0 0 2px #493B32' }}
-                      aria-label="Show Version 2"
+                      aria-label="Show Version 1"
+                    />
+                    <button 
                       onClick={() => updateActiveVersion(2)}
-                    ></button>
-                    <button 
-                      className={`w-5 h-5 rounded-full shadow-lg transition-all duration-300 ${
-                        activeVersion === 3 ? 'bg-[#493B32]' : 'bg-white'
+                      className={`w-5 h-5 rounded-full border-2 border-[#493B32] ${
+                        activeVersion === 2 ? 'bg-[#493B32]' : 'bg-transparent'
                       }`}
-                      style={{ boxShadow: '0 0 0 2px #493B32' }}
-                      aria-label="Show Version 3"
+                      aria-label="Show Version 2"
+                    />
+                    <button 
                       onClick={() => updateActiveVersion(3)}
-                    ></button>
+                      className={`w-5 h-5 rounded-full border-2 border-[#493B32] ${
+                        activeVersion === 3 ? 'bg-[#493B32]' : 'bg-transparent'
+                      }`}
+                      aria-label="Show Version 3"
+                    />
                   </div>
 
                   {/* Version Label */}
