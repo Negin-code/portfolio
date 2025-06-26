@@ -1504,34 +1504,22 @@ const Guardian = () => {
                     </div>
                   </div>
 
-                  {/* Navigation Dots */}
-                  <div className="relative z-50 flex justify-center items-center gap-3 mt-12 bg-white p-4">
-                    <button 
-                      onClick={() => updateActiveVersion(1)}
-                      className={activeVersion === 1 
-                        ? "w-8 h-8 rounded-full bg-[#493B32]" 
-                        : "w-8 h-8 rounded-full border-4 border-[#493B32]"}
-                      aria-label="Show Version 1"
-                    />
-                    <button 
-                      onClick={() => updateActiveVersion(2)}
-                      className={activeVersion === 2 
-                        ? "w-8 h-8 rounded-full bg-[#493B32]" 
-                        : "w-8 h-8 rounded-full border-4 border-[#493B32]"}
-                      aria-label="Show Version 2"
-                    />
-                    <button 
-                      onClick={() => updateActiveVersion(3)}
-                      className={activeVersion === 3 
-                        ? "w-8 h-8 rounded-full bg-[#493B32]" 
-                        : "w-8 h-8 rounded-full border-4 border-[#493B32]"}
-                      aria-label="Show Version 3"
-                    />
-                  </div>
-
-                  {/* Version Label */}
-                  <div className="text-center mt-6">
-                    <span className="text-lg font-medium text-[#493B32]">Version {activeVersion}.0</span>
+                  {/* Version Navigation */}
+                  <div className="relative z-50 flex justify-center items-center gap-4 mt-12">
+                    {[1, 2, 3].map((version) => (
+                      <button 
+                        key={version}
+                        onClick={() => updateActiveVersion(version)}
+                        className={`flex items-center justify-center w-10 h-10 rounded-lg transition-all ${
+                          activeVersion === version 
+                            ? 'bg-[#493B32] text-white' 
+                            : 'border-2 border-[#493B32] text-[#493B32] hover:bg-[#493B32]/10'
+                        }`}
+                        aria-label={`Show Version ${version}`}
+                      >
+                        <span className="text-lg font-medium">V{version}</span>
+                      </button>
+                    ))}
                   </div>
                 </div>
               </div>
