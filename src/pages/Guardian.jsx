@@ -5,10 +5,14 @@ import {
   IoMedkitOutline,
   IoAlertOutline,
   IoLocationOutline,
-  IoHeartOutline
+  IoHeartOutline,
+  IoInformationCircle,
+  IoArrowForward,
+  IoShieldCheckmark,
+  IoEyeOutline
 } from "react-icons/io5";
 import { SiCanva } from "react-icons/si";
-import { FaFigma, FaClock, FaUsers, FaCog } from "react-icons/fa";
+import { FaFigma, FaClock, FaUsers, FaCog, FaHeart, FaShieldAlt } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import GuardianImage from "../assets/hero.png";
 import PersonaImage from "../assets/Persona.jpg";
@@ -22,7 +26,8 @@ import TimerImage from "../assets/Timer.svg";
 import ContactImage from "../assets/AddContact.svg";
 import DrugAlertImage from "../assets/DrugAlertFeed.svg";
 import ResourceHubImage from "../assets/ResourcesHome.png";
-
+import MagnifiableMobileFrame from "../components/MagnifiableMobileFrame";
+import { ImQuotesLeft } from "react-icons/im";
 
 import "./Guardian.css";
 import ProjectHero from '../components/ProjectHero';
@@ -230,34 +235,7 @@ const Guardian = () => {
               <div className="flex flex-col md:flex-row items-start gap-6">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-[#493B32]/10">
-                    <svg
-                      className="w-6 h-6 md:w-8 md:h-8 text-[#493B32]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M12 16V12"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M12 8H12.01"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <IoInformationCircle className="w-6 h-6 md:w-8 md:h-8 text-[#493B32]" />
                   </div>
                 </div>
                 <div className="space-y-3 flex-grow">
@@ -1205,9 +1183,7 @@ const Guardian = () => {
                     <h4 className="text-lg font-medium text-[#493B32]">Welcome Screen</h4>
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-[#493B32]/60">Version 1.0</span>
-                      <svg className="w-5 h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
+                      <IoArrowForward className="w-5 h-5 text-[#493B32]" />
                       <span className="text-sm text-[#493B32]/60">Version 2.0</span>
                     </div>
                   </div>
@@ -1268,9 +1244,7 @@ const Guardian = () => {
                     <h4 className="text-lg font-medium text-[#493B32]">Adding Contacts Overlay Screen</h4>
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-[#493B32]/60">Version 1.0</span>
-                      <svg className="w-5 h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
+                      <IoArrowForward className="w-5 h-5 text-[#493B32]" />
                       <span className="text-sm text-[#493B32]/60">Version 2.0</span>
                     </div>
                   </div>
@@ -1328,13 +1302,9 @@ const Guardian = () => {
                     <h4 className="text-lg font-medium text-[#493B32]">Timer Screen</h4>
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-[#493B32]/60">Version 1.0</span>
-                      <svg className="w-5 h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
+                      <IoArrowForward className="w-5 h-5 text-[#493B32]" />
                       <span className="text-sm text-[#493B32]/60">Version 2.0</span>
-                      <svg className="w-5 h-5 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
+                      <IoArrowForward className="w-5 h-5 text-[#493B32]" />
                       <span className="text-sm text-[#493B32]/60">Version 3.0</span>
                     </div>
             </div>
@@ -1480,9 +1450,7 @@ const Guardian = () => {
                     <div className="flex-1 space-y-6">
                       {/* Quote Mark */}
                       <div className="flex justify-center lg:justify-start mb-8">
-                        <svg className="w-12 h-12 text-[#493B32]/20" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                        </svg>
+                        <ImQuotesLeft className="w-12 h-12 text-[#493B32]/20" />
                       </div>
 
                       {/* Reflection Text */}
@@ -1496,9 +1464,7 @@ const Guardian = () => {
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                         <div className="text-center">
                           <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[#493B32]/10 flex items-center justify-center">
-                            <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                            </svg>
+                            <FaHeart className="w-6 h-6 text-[#493B32]" />
                           </div>
                           <h3 className="text-lg font-medium text-[#493B32]">Empathy-Driven</h3>
                           <p className="text-[#493B32]/70 mt-2">Design decisions based on real user experiences</p>
@@ -1506,9 +1472,7 @@ const Guardian = () => {
 
                         <div className="text-center">
                           <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[#493B32]/10 flex items-center justify-center">
-                            <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
+                            <IoShieldCheckmark className="w-6 h-6 text-[#493B32]" />
                           </div>
                           <h3 className="text-lg font-medium text-[#493B32]">Trust-Building</h3>
                           <p className="text-[#493B32]/70 mt-2">Focus on creating a safe experience</p>
@@ -1516,10 +1480,7 @@ const Guardian = () => {
 
                         <div className="text-center">
                           <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[#493B32]/10 flex items-center justify-center">
-                            <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                            </svg>
+                            <IoEyeOutline className="w-6 h-6 text-[#493B32]" />
                           </div>
                           <h3 className="text-lg font-medium text-[#493B32]">User-Centered</h3>
                           <p className="text-[#493B32]/70 mt-2">Every feature crafted with safety in mind</p>
