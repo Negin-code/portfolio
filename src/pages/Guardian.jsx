@@ -82,7 +82,7 @@ const Guardian = () => {
       <div className="absolute right-10 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"></div>
 
       {/* Project Content Container */}
-      <div className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 mt-12 lg:mt-0 ml-20 lg:ml-10">
+      <div className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 ml-20 lg:ml-10">
         <ProjectHero 
           title="Guardian - Overdose Prevention App"
           image={GuardianImage}
@@ -90,7 +90,7 @@ const Guardian = () => {
         />
 
         {/* Project Info Cards */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 mr-10 sm:gap-6 mb-8 sm:mb-12 px-4 sm:px-0">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 mr-10 md:mr-0 sm:gap-6 mb-8 sm:mb-12 px-4 sm:px-0">
           {/* Project Type Card */}
           <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
