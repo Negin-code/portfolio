@@ -838,7 +838,7 @@ const Guardian = () => {
         </section>
 
         {/* Narrative Arc Subsection */}
-        <div className="space-y-6 mt-12">
+        <section className="space-y-6 mt-12">
           <div className="flex flex-row items-center gap-2 pl-4">
             <div className="w-[2vh] sm:w-[2vh] md:w-[3vh] h-[2px] bg-[#493B32]"></div>
             <h3 className="text-xl sm:text-2xl font-tan text-[#493B32]">
@@ -846,16 +846,25 @@ const Guardian = () => {
             </h3>
           </div>
 
-          {/* Arc Container */}
-          <div className="relative w-full bg-[#FFF7F2] p-8 rounded-lg border border-[#493B32]/10">
-            <div className="max-w-4xl mx-auto">
-              {/* Title and Description */}
-              <div className="text-center mb-8">
-                <p className="text-base font-open text-[#493B32]/70">The journey of Guardian's development through the classic story arc</p>
-              </div>
+          {/* Mobile Scroll Notice */}
+          <div className="md:hidden p-4 bg-amber-50 rounded-lg border border-amber-200 mb-4 mx-4">
+            <p className="text-sm text-amber-800">
+              Swipe horizontally to explore the complete story arc →
+            </p>
+          </div>
 
-              {/* SVG Arc */}
-              <div className="relative h-[500px] w-full">
+          {/* Arc Container - Scrollable on mobile */}
+          <div className="overflow-x-auto md:overflow-visible -mx-4 px-4 md:mx-0 md:px-0">
+            <div className="inline-block min-w-[800px] w-full md:min-w-0">
+              <div className="relative w-full bg-[#FFF7F2] p-4 md:p-8 rounded-lg border border-[#493B32]/10">
+                <div className="max-w-4xl mx-auto">
+                  {/* Title and Description */}
+                  <div className="text-center mb-4 md:mb-8">
+                    <p className="text-sm md:text-base font-open text-[#493B32]/70">The journey of Guardian's development through the classic story arc</p>
+                  </div>
+
+                  {/* SVG Arc */}
+                  <div className="relative h-[400px] md:h-[500px] w-full">
                 {/* Content Cards - Positioned BEHIND the SVG */}
                 <div className="absolute top-0 left-0 w-full h-full">
                   <div className="relative w-full h-full">
@@ -938,8 +947,17 @@ const Guardian = () => {
               </div>
             </div>
           </div>
-
         </div>
+      </div>
+
+      {/* Scroll Indicator - Mobile Only */}
+      <div className="flex justify-center gap-1 mt-3 md:hidden">
+        <div className="w-8 h-1 bg-[#493B32]/20 rounded-full"></div>
+        <div className="w-8 h-1 bg-[#493B32]/10 rounded-full"></div>
+        <div className="w-8 h-1 bg-[#493B32]/10 rounded-full"></div>
+      </div>
+
+        </section>
 
         {/* Design goals section */}
         <section id="design-goals" className="space-y-6 mt-16">
