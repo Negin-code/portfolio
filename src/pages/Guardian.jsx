@@ -962,7 +962,7 @@ const Guardian = () => {
           </div>
 
           {/* Goals Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 mb-0">
             {/* Goal 1 */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-[#493B32]/5 to-[#493B32]/10 transform skew-y-0 -rotate-3 rounded-2xl transition-transform group-hover:-rotate-1"></div>
