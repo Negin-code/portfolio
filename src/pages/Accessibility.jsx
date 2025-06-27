@@ -193,9 +193,9 @@ const Accessibility = () => {
             ></div>
             <h2
               id="overview-heading"
-              className="text-2xl sm:text-3xl font-tan text-[#493B32] flex items-center gap-2"
+              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
-              🧠 Project Overview
+              Project Overview
             </h2>
           </header>
 
@@ -219,7 +219,7 @@ const Accessibility = () => {
               id="problem-heading"
               className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
-              🔍 Problem
+              Problem
             </h2>
           </header>
 
@@ -248,7 +248,7 @@ const Accessibility = () => {
               id="research-heading"
               className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
-              🧪 Research & Empathy
+              Research & Empathy
             </h2>
           </header>
 
@@ -309,7 +309,7 @@ const Accessibility = () => {
               id="design-heading"
               className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
-              🎨 Accessible Design Exploration
+              Accessible Design Exploration
             </h2>
           </header>
 
@@ -346,7 +346,7 @@ const Accessibility = () => {
               id="testing-heading"
               className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
-              👀 User Testing & Observations
+              User Testing & Observations
             </h2>
           </header>
 
@@ -382,7 +382,7 @@ const Accessibility = () => {
               id="solutions-heading"
               className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
-              🛠 Proposed Solutions
+              Proposed Solutions
             </h2>
           </header>
 
@@ -437,7 +437,7 @@ const Accessibility = () => {
               id="learnings-heading"
               className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
-              💡 Key Learnings
+              Key Learnings
             </h2>
           </header>
 
@@ -484,7 +484,7 @@ const Accessibility = () => {
               id="conclusion-heading"
               className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
-              📣 Conclusion
+              Conclusion
             </h2>
           </header>
 
