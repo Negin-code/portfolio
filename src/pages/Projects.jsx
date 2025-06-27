@@ -101,41 +101,47 @@ const Projects = () => {
 
       
       <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 min-h-screen relative w-full pt-30 sm:pt-45 lg:pt-50 lg:px-0 overflow-hidden">
-      {/* Left vertical line */}
-      <div className="absolute left-16 md:left-20 top-0 sm:h-[190rem] h-[185rem] md:h-[150rem] lg:h-[80rem] w-[2px] bg-[#493b32]"></div>
-
-      {/* Right vertical line */}
-      <div className="absolute right-10 top-0 sm:h-[190rem] h-[185rem] md:h-[150rem] lg:h-[80rem] w-[2px] bg-[#493b32]"></div>
+      {/* Decorative elements - kept as divs since they're purely visual */}
+      <div className="absolute left-16 md:left-20 top-0 sm:h-[190rem] h-[185rem] md:h-[150rem] lg:h-[80rem] w-[2px] bg-[#493b32]" aria-hidden="true"></div>
+      <div className="absolute right-10 top-0 sm:h-[190rem] h-[185rem] md:h-[150rem] lg:h-[80rem] w-[2px] bg-[#493b32]" aria-hidden="true"></div>
 
       {/* Content container */}
       <section className="col-span-full grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 ml-20 lg:ml-10">
         <div className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 pr-15 sm:pr-15 lg:pl-0 lg:pr-0">
-          {/* Project Title */}
-          <div className="flex flex-row items-start justify-start gap-1 mb-8">
-            <div className="w-[4vh] sm:w-[4vh] md:w-[5vh] h-[3px] bg-gradient-to-r from-[#493B32] to-[#F75590] mt-4"></div>
+          {/* Page Header */}
+          <header className="flex flex-row items-start justify-start gap-1 mb-8">
+            <div className="w-[4vh] sm:w-[4vh] md:w-[5vh] h-[3px] bg-gradient-to-r from-[#493B32] to-[#F75590] mt-4" aria-hidden="true"></div>
             <h1
               id="top"
               className="text-2xl sm:text-5xl font-tan text-[#493B32]"
             >
               My Projects
             </h1>
-          </div>
+          </header>
 
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 sm:ml-0 md:ml-8 lg:ml-0 mb-20 mx-auto max-w-7xl">
-            {filteredProjects.map((project, index) => (
-              <ChromaGridCard key={index} {...project} index={index} />
-            ))}
-          </div>
-
-          {/* Empty State */}
-          {filteredProjects.length === 0 && (
-            <div className="text-center py-20">
-              <p className="text-[#493B32]/60 text-lg">
-                No projects found in this category.
-              </p>
+          {/* Projects Section */}
+          <section aria-labelledby="projects-heading">
+            <h2 id="projects-heading" className="sr-only">
+              {selectedCategory === "all" ? "All Projects" : `${selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)} Projects`}
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 sm:ml-0 md:ml-8 lg:ml-0 mb-20 mx-auto max-w-7xl" role="list">
+              {filteredProjects.map((project, index) => (
+                <article key={index} role="listitem">
+                  <ChromaGridCard {...project} index={index} />
+                </article>
+              ))}
             </div>
-          )}
+
+            {/* Empty State */}
+            {filteredProjects.length === 0 && (
+              <div className="text-center py-20" role="status" aria-live="polite">
+                <p className="text-[#493B32]/60 text-lg">
+                  No projects found in this category.
+                </p>
+              </div>
+            )}
+          </section>
         </div>
       </section>
     </main>

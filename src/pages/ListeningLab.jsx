@@ -20,12 +20,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// Import additional images for your slider here
-// import SliderImage2 from "../assets/SliderImage2.png";
-// import SliderImage3 from "../assets/SliderImage3.png";
-
-// Add custom styles for Swiper
-// import "./ListeningLab.css";
 
 const ListeningLab = () => {
   // Sample images for the slider - replace with your actual project images
