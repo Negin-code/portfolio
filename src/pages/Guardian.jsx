@@ -9,10 +9,17 @@ import {
   IoInformationCircle,
   IoArrowForward,
   IoShieldCheckmark,
-  IoEyeOutline
+  IoEyeOutline,
 } from "react-icons/io5";
 import { SiCanva } from "react-icons/si";
-import { FaFigma, FaClock, FaUsers, FaCog, FaHeart, FaShieldAlt } from "react-icons/fa";
+import {
+  FaFigma,
+  FaClock,
+  FaUsers,
+  FaCog,
+  FaHeart,
+  FaShieldAlt,
+} from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import GuardianImage from "../assets/hero.png";
 import PersonaImage from "../assets/Persona.jpg";
@@ -30,15 +37,13 @@ import ResourceHubImage from "../assets/ResourcesHome.png";
 import { ImQuotesLeft } from "react-icons/im";
 
 import "./Guardian.css";
-import ProjectHero from '../components/ProjectHero';
-
+import ProjectHero from "../components/ProjectHero";
 
 const Guardian = () => {
   const [selectedFeature, setSelectedFeature] = useState(1);
   const [activeVersion, setActiveVersion] = useState(1);
   const [welcomeVersion, setWelcomeVersion] = useState(1);
   const [contactsVersion, setContactsVersion] = useState(1);
- 
 
   const updateActiveVersion = (version) => {
     setActiveVersion(version);
@@ -48,128 +53,195 @@ const Guardian = () => {
     {
       id: 1,
       title: "Timer Setup",
-      description: "Set customizable timers based on substance type. Automatic alerts sent if unresponsive.",
-      image: TimerImage 
+      description:
+        "Set customizable timers based on substance type. Automatic alerts sent if unresponsive.",
+      image: TimerImage,
     },
     {
       id: 2,
       title: "Custom Contacts",
-      description: "Add and manage trusted emergency contacts. Choose who gets notified and when.",
-      image: ContactImage 
+      description:
+        "Add and manage trusted emergency contacts. Choose who gets notified and when.",
+      image: ContactImage,
     },
     {
       id: 3,
       title: "Live Alerts Feed",
-      description: "Real-time drug contamination alerts from Vancouver Coastal Health, prioritized by severity.",
-      image: DrugAlertImage 
+      description:
+        "Real-time drug contamination alerts from Vancouver Coastal Health, prioritized by severity.",
+      image: DrugAlertImage,
     },
     {
       id: 4,
       title: "Resource Hub",
-      description: "Access harm reduction guides, naloxone training resources, and mental health support.",
-      image: ResourceHubImage
+      description:
+        "Access harm reduction guides, naloxone training resources, and mental health support.",
+      image: ResourceHubImage,
     },
     {
       id: 5,
       title: "Anonymous Mode",
-      description: "Use the app without registration. Privacy-first approach with no personal data stored.",
-      image: WelcomeImage 
-    }
+      description:
+        "Use the app without registration. Privacy-first approach with no personal data stored.",
+      image: WelcomeImage,
+    },
   ];
 
   return (
-  
-      
-      <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
-      {/* Left vertical line */}
-      <div className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"></div>
+    <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
+      {/* Decorative elements - purely visual */}
+      <div
+        className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"
+        aria-hidden="true"
+      ></div>
 
-      {/* Right border line */}
-      <div className="absolute right-10 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"></div>
+      <div
+        className="absolute right-10 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"
+        aria-hidden="true"
+      ></div>
 
-      {/* Project Content Container */}
-      <div className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 mr-15 lg:mr-0 ml-20 lg:ml-10">
-        <ProjectHero 
+      {/* Project Content */}
+      <article className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 mr-15 lg:mr-0 ml-20 lg:ml-10">
+        <ProjectHero
           title="Guardian - Overdose Prevention App"
           image={GuardianImage}
           imageAlt="Guardian Project Preview"
         />
 
-        {/* Project Info Cards */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12 px-4 sm:px-0">
-          {/* Project Type Card */}
-          <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
+        {/* Project Metadata */}
+        <aside
+          className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12 px-4 sm:px-0"
+          aria-label="Project information"
+        >
+          {/* Project Type */}
+          <section className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
+              <div
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors"
+                aria-hidden="true"
+              >
                 <FaClock className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
               </div>
               <div>
-                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">Project Type</h3>
-                <p className="text-base sm:text-lg font-medium text-[#493B32]">5-week design sprint</p>
-                <p className="text-xs sm:text-sm text-[#493B32]/80 mt-0.5 sm:mt-1">(Lean UX)</p>
+                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">
+                  Project Type
+                </h3>
+                <p className="text-base sm:text-lg font-medium text-[#493B32]">
+                  5-week design sprint
+                </p>
+                <p className="text-xs sm:text-sm text-[#493B32]/80 mt-0.5 sm:mt-1">
+                  (Lean UX)
+                </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* Team Size Card */}
-          <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
+          {/* Team Size */}
+          <section className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
+              <div
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors"
+                aria-hidden="true"
+              >
                 <FaUsers className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
               </div>
               <div>
-                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">Team Size</h3>
-                <p className="text-base sm:text-lg font-medium text-[#493B32]">2 members</p>
-                <p className="text-xs sm:text-sm text-[#493B32]/80 mt-0.5 sm:mt-1">Collaborative effort</p>
+                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">
+                  Team Size
+                </h3>
+                <p className="text-base sm:text-lg font-medium text-[#493B32]">
+                  2 members
+                </p>
+                <p className="text-xs sm:text-sm text-[#493B32]/80 mt-0.5 sm:mt-1">
+                  Collaborative effort
+                </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* Role Card */}
-          <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
+          {/* Role */}
+          <section className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
+              <div
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors"
+                aria-hidden="true"
+              >
                 <MdWork className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
               </div>
               <div>
-                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">My Role</h3>
-                <p className="text-base sm:text-lg font-medium text-[#493B32]">UX/UI Designer</p>
+                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">
+                  My Role
+                </h3>
+                <p className="text-base sm:text-lg font-medium text-[#493B32]">
+                  UX/UI Designer
+                </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* Tools & Process Card */}
-          <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
+          {/* Tools & Process */}
+          <section className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
+              <div
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors"
+                aria-hidden="true"
+              >
                 <FaCog className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
               </div>
               <div>
-                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">Tools & Process</h3>
-                <div className="flex items-center gap-2 sm:gap-3 mt-1 sm:mt-2">
-                  {/* Figma Icon */}
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer" title="Figma">
-                    <FaFigma className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
-                  </div>
-                  
-                  {/* Canva Icon */}
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer" title="Canva">
-                    <SiCanva className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
-                  </div>
-                </div>
+                <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-0.5 sm:mb-1">
+                  Tools & Process
+                </h3>
+                <ul
+                  className="flex items-center gap-2 sm:gap-3 mt-1 sm:mt-2"
+                  role="list"
+                  aria-label="Tools used in project"
+                >
+                  <li>
+                    <div
+                      className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                      title="Figma"
+                      role="img"
+                      aria-label="Figma"
+                    >
+                      <FaFigma className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
+                    </div>
+                  </li>
+
+                  <li>
+                    <div
+                      className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                      title="Canva"
+                      role="img"
+                      aria-label="Canva"
+                    >
+                      <SiCanva className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-        </div>
+          </section>
+        </aside>
 
         {/* Project Overview Section */}
-        <section id="overview" className="space-y-6 mt-12">
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
-            <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
+        <section
+          id="overview"
+          className="space-y-6 mt-12"
+          aria-labelledby="overview-heading"
+        >
+          <header className="flex flex-row items-center gap-2">
+            <div
+              className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
+              aria-hidden="true"
+            ></div>
+            <h2
+              id="overview-heading"
+              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
+            >
               Project Overview
             </h2>
-          </div>
+          </header>
 
           <p className="text-[#493B32] leading-relaxed">
             Guardian is a harm reduction mobile application designed for
@@ -178,19 +250,30 @@ const Guardian = () => {
             virtual safety companion, offering real-time monitoring, overdose
             alerts, and access to local support resources. This case study
             outlines the UX/UI design process behind Guardian, emphasizing
-            empathy, accessibility, and emotional clarity.
-            It was developed during a school Design Jam, where the challenge was to create a solution that promotes social good.
+            empathy, accessibility, and emotional clarity. It was developed
+            during a school Design Jam, where the challenge was to create a
+            solution that promotes social good.
           </p>
         </section>
 
         {/* Problem Section */}
-        <section id="problem" className="space-y-6 mt-12">
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
-            <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
+        <section
+          id="problem"
+          className="space-y-6 mt-12"
+          aria-labelledby="problem-heading"
+        >
+          <header className="flex flex-row items-center gap-2">
+            <div
+              className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
+              aria-hidden="true"
+            ></div>
+            <h2
+              id="problem-heading"
+              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
+            >
               The Problem
             </h2>
-          </div>
+          </header>
 
           <div className="bg-[#493B32]/5 p-8 rounded-lg border border-[#493B32]/10">
             <p className="text-[#493B32] leading-relaxed">
@@ -688,7 +771,8 @@ const Guardian = () => {
                           Without Guardian
                         </p>
                         <p className="text-sm text-red-700">
-                          Uses substances alone without any safety measures in place.
+                          Uses substances alone without any safety measures in
+                          place.
                         </p>
                       </div>
                       <div className="bg-white/50 rounded-lg p-3">
@@ -696,7 +780,8 @@ const Guardian = () => {
                           With Guardian
                         </p>
                         <p className="text-sm text-red-700">
-                          Sets timer, enables location sharing, and connects with trusted contacts.
+                          Sets timer, enables location sharing, and connects
+                          with trusted contacts.
                         </p>
                       </div>
                     </div>
@@ -723,7 +808,8 @@ const Guardian = () => {
                           Without Guardian
                         </p>
                         <p className="text-sm text-purple-700">
-                          Gets separated from friends in crowded venue with no way to coordinate.
+                          Gets separated from friends in crowded venue with no
+                          way to coordinate.
                         </p>
                       </div>
                       <div className="bg-white/50 rounded-lg p-3">
@@ -731,7 +817,8 @@ const Guardian = () => {
                           With Guardian
                         </p>
                         <p className="text-sm text-purple-700">
-                          Shares location with designated friend and sets up emergency contacts.
+                          Shares location with designated friend and sets up
+                          emergency contacts.
                         </p>
                       </div>
                     </div>
@@ -758,7 +845,8 @@ const Guardian = () => {
                           Without Guardian
                         </p>
                         <p className="text-sm text-amber-700">
-                          Experiences adverse effects alone with no immediate help available.
+                          Experiences adverse effects alone with no immediate
+                          help available.
                         </p>
                       </div>
                       <div className="bg-white/50 rounded-lg p-3">
@@ -766,7 +854,8 @@ const Guardian = () => {
                           With Guardian
                         </p>
                         <p className="text-sm text-amber-700">
-                          Uses SOS button to alert friend and access immediate support resources.
+                          Uses SOS button to alert friend and access immediate
+                          support resources.
                         </p>
                       </div>
                     </div>
@@ -793,7 +882,8 @@ const Guardian = () => {
                           Without Guardian
                         </p>
                         <p className="text-sm text-green-700">
-                          Takes unknown substance without verifying content or safety measures.
+                          Takes unknown substance without verifying content or
+                          safety measures.
                         </p>
                       </div>
                       <div className="bg-white/50 rounded-lg p-3">
@@ -801,7 +891,8 @@ const Guardian = () => {
                           With Guardian
                         </p>
                         <p className="text-sm text-green-700">
-                          Checks safety alerts and notifies trusted contacts before use.
+                          Checks safety alerts and notifies trusted contacts
+                          before use.
                         </p>
                       </div>
                     </div>
@@ -821,11 +912,11 @@ const Guardian = () => {
             {/* Add this CSS to your global styles or a CSS module */}
             <style jsx>{`
               .hide-scrollbar {
-                -ms-overflow-style: none;  /* IE and Edge */
-                scrollbar-width: none;  /* Firefox */
+                -ms-overflow-style: none; /* IE and Edge */
+                scrollbar-width: none; /* Firefox */
               }
               .hide-scrollbar::-webkit-scrollbar {
-                display: none;  /* Chrome, Safari and Opera */
+                display: none; /* Chrome, Safari and Opera */
               }
             `}</style>
           </div>
@@ -836,7 +927,7 @@ const Guardian = () => {
               <div
                 key={index}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === 0 ? 'bg-[#493B32]' : 'bg-[#493B32]/30'
+                  index === 0 ? "bg-[#493B32]" : "bg-[#493B32]/30"
                 }`}
               ></div>
             ))}
@@ -866,96 +957,198 @@ const Guardian = () => {
                 <div className="max-w-4xl mx-auto">
                   {/* Title and Description */}
                   <div className="text-center mb-4 md:mb-8">
-                    <p className="text-sm md:text-base font-open text-[#493B32]/70">The journey of Guardian's development through the classic story arc</p>
+                    <p className="text-sm md:text-base font-open text-[#493B32]/70">
+                      The journey of Guardian's development through the classic
+                      story arc
+                    </p>
                   </div>
 
                   {/* SVG Arc */}
                   <div className="relative h-[400px] md:h-[500px] w-full">
-                {/* Content Cards - Positioned BEHIND the SVG */}
-                <div className="absolute top-0 left-0 w-full h-full">
-                  <div className="relative w-full h-full">
-                    {/* Context Content */}
-                    <div className="absolute left-[5%] bottom-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                      <p className="text-xs text-[#493B32]">After initial research, She downloads the app</p>
+                    {/* Content Cards - Positioned BEHIND the SVG */}
+                    <div className="absolute top-0 left-0 w-full h-full">
+                      <div className="relative w-full h-full">
+                        {/* Context Content */}
+                        <div className="absolute left-[5%] bottom-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                          <p className="text-xs text-[#493B32]">
+                            After initial research, She downloads the app
+                          </p>
+                        </div>
+
+                        {/* Conflict Content */}
+                        <div className="absolute left-[5%] top-[22%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                          <p className="text-xs text-[#493B32]">
+                            Evelyn attends a rave on the weekend with friends.
+                            They've bought pills from a new source.
+                          </p>
+                        </div>
+                        <div className="absolute left-[5%] top-[40%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                          <p className="text-xs text-[#493B32]">
+                            She's unsure about the pill's safety due to recent
+                            overdose warnings on Instagram.
+                          </p>
+                        </div>
+
+                        {/* Climax Content */}
+                        <div className="absolute left-[55%] top-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                          <p className="text-xs text-[#493B32]">
+                            {" "}
+                            Decides to use the app. Sets her roommate as a
+                            contact, and enters "Pills" as method then the timer
+                            activated.
+                          </p>
+                        </div>
+                        <div className="absolute left-[75%] top-[30%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                          <p className="text-xs text-[#493B32]">
+                            {" "}
+                            Evelyn doesn't tap "I'm OK" in time. App sends alert
+                            + GPS to roommate. Roommate checks in and revives
+                            her. After the event, Evelyn reads resources in the
+                            app, finds naloxone training nearby, and shares app
+                            with friends
+                          </p>
+                        </div>
+
+                        {/* Closure Content */}
+                        <div className="absolute right-[5%] bottom-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+                          <p className="text-xs text-[#493B32]">
+                            App becomes a trusted harm-reduction tool
+                          </p>
+                        </div>
+                      </div>
                     </div>
 
-                    {/* Conflict Content */}
-                    <div className="absolute left-[5%] top-[22%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                      <p className="text-xs text-[#493B32]">Evelyn attends a rave on the weekend with friends. They've bought pills from a new source.</p>
-                    </div>
-                    <div className="absolute left-[5%] top-[40%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                      <p className="text-xs text-[#493B32]">She's unsure about the pill's safety due to recent overdose warnings on Instagram.</p>
-                    </div>
+                    {/* SVG with points and labels - Positioned ABOVE the content cards */}
+                    <svg
+                      className="w-full h-full absolute top-0 left-0 z-10"
+                      viewBox="0 0 800 500"
+                      preserveAspectRatio="xMidYMid meet"
+                    >
+                      {/* Background Grid - subtle lines */}
+                      <defs>
+                        <pattern
+                          id="grid"
+                          width="40"
+                          height="40"
+                          patternUnits="userSpaceOnUse"
+                        >
+                          <path
+                            d="M 40 0 L 0 0 0 40"
+                            fill="none"
+                            stroke="#493B32"
+                            strokeWidth="0.1"
+                          />
+                        </pattern>
+                      </defs>
+                      <rect width="100%" height="100%" fill="url(#grid)" />
 
-                    {/* Climax Content */}
-                    <div className="absolute left-[55%] top-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                      <p className="text-xs text-[#493B32]"> Decides to use the app. Sets her roommate as a contact, and enters "Pills" as method then the timer activated.</p>
-                    </div>
-                    <div className="absolute left-[75%] top-[30%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                      <p className="text-xs text-[#493B32]"> Evelyn doesn't tap "I'm OK" in time. App sends alert + GPS to roommate. Roommate checks in and revives her. After the event, Evelyn reads resources in the app, finds naloxone training nearby, and shares app with friends</p>
-                    </div>
+                      {/* Main Arc Path */}
+                      <path
+                        d="M 50,350 C 200,350 350,100 400,100 C 450,100 600,350 750,350"
+                        fill="none"
+                        stroke="#493B32"
+                        strokeWidth="3"
+                        className="animate-draw-line"
+                      />
 
-                    {/* Closure Content */}
-                    <div className="absolute right-[5%] bottom-[5%] max-w-[200px] bg-white/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-                      <p className="text-xs text-[#493B32]">App becomes a trusted harm-reduction tool</p>
-                    </div>
+                      {/* Points and Labels */}
+                      {/* Context */}
+                      <g>
+                        <circle cx="50" cy="350" r="6" fill="#493B32" />
+                        <text
+                          x="50"
+                          y="380"
+                          textAnchor="middle"
+                          className="text-sm font-medium"
+                          fill="#493B32"
+                        >
+                          Research
+                        </text>
+                        <text
+                          x="50"
+                          y="395"
+                          textAnchor="middle"
+                          className="text-xs"
+                          fill="#493B32"
+                        >
+                          CONTEXT
+                        </text>
+                      </g>
+
+                      {/* Conflict */}
+                      <g>
+                        <circle cx="243" cy="245" r="6" fill="#493B32" />
+                        <text
+                          x="250"
+                          y="220"
+                          textAnchor="middle"
+                          className="text-sm font-medium"
+                          fill="#493B32"
+                        >
+                          Core Insight
+                        </text>
+                        <text
+                          x="250"
+                          y="235"
+                          textAnchor="middle"
+                          className="text-xs"
+                          fill="#493B32"
+                        >
+                          CONFLICT
+                        </text>
+                      </g>
+
+                      {/* Climax */}
+                      <g>
+                        <circle cx="400" cy="100" r="6" fill="#493B32" />
+                        <text
+                          x="400"
+                          y="80"
+                          textAnchor="middle"
+                          className="text-sm font-medium"
+                          fill="#493B32"
+                        >
+                          Solution
+                        </text>
+                        <text
+                          x="400"
+                          y="65"
+                          textAnchor="middle"
+                          className="text-xs"
+                          fill="#493B32"
+                        >
+                          CLIMAX
+                        </text>
+                      </g>
+
+                      {/* Closure */}
+                      <g>
+                        <circle cx="750" cy="350" r="6" fill="#493B32" />
+                        <text
+                          x="750"
+                          y="380"
+                          textAnchor="middle"
+                          className="text-sm font-medium"
+                          fill="#493B32"
+                        >
+                          Vision of Future
+                        </text>
+                        <text
+                          x="750"
+                          y="395"
+                          textAnchor="middle"
+                          className="text-xs"
+                          fill="#493B32"
+                        >
+                          CLOSURE
+                        </text>
+                      </g>
+                    </svg>
                   </div>
                 </div>
-
-                {/* SVG with points and labels - Positioned ABOVE the content cards */}
-                <svg className="w-full h-full absolute top-0 left-0 z-10" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
-                  {/* Background Grid - subtle lines */}
-                  <defs>
-                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#493B32" strokeWidth="0.1"/>
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#grid)" />
-
-                  {/* Main Arc Path */}
-                  <path
-                    d="M 50,350 C 200,350 350,100 400,100 C 450,100 600,350 750,350"
-                    fill="none"
-                    stroke="#493B32"
-                    strokeWidth="3"
-                    className="animate-draw-line"
-                  />
-
-                  {/* Points and Labels */}
-                  {/* Context */}
-                  <g>
-                    <circle cx="50" cy="350" r="6" fill="#493B32"/>
-                    <text x="50" y="380" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Research</text>
-                    <text x="50" y="395" textAnchor="middle" className="text-xs" fill="#493B32">CONTEXT</text>
-                  </g>
-
-                  {/* Conflict */}
-                  <g>
-                    <circle cx="243" cy="245" r="6" fill="#493B32"/>
-                    <text x="250" y="220" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Core Insight</text>
-                    <text x="250" y="235" textAnchor="middle" className="text-xs" fill="#493B32">CONFLICT</text>
-                  </g>
-
-                  {/* Climax */}
-                  <g>
-                    <circle cx="400" cy="100" r="6" fill="#493B32"/>
-                    <text x="400" y="80" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Solution</text>
-                    <text x="400" y="65" textAnchor="middle" className="text-xs" fill="#493B32">CLIMAX</text>
-                  </g>
-
-                  {/* Closure */}
-                  <g>
-                    <circle cx="750" cy="350" r="6" fill="#493B32"/>
-                    <text x="750" y="380" textAnchor="middle" className="text-sm font-medium" fill="#493B32">Vision of Future</text>
-                    <text x="750" y="395" textAnchor="middle" className="text-xs" fill="#493B32">CLOSURE</text>
-                  </g>
-                </svg>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
         </section>
 
         {/* Design goals section */}
@@ -1059,7 +1252,7 @@ const Guardian = () => {
                         background: 'linear-gradient(to right, #FFF7F2, transparent)'
                       }}
                     ></div>*/}
-                    
+
                     {/* Right Gradient Overlay 
                     <div 
                       className="absolute right-0 top-0 bottom-0 w-8 md:w-16 z-10 lg:hidden"
@@ -1089,12 +1282,19 @@ const Guardian = () => {
                         {/* Screen Content */}
                         <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
                           {/* Carousel Container */}
-                          <div 
-                            className="carousel-container relative w-full h-full flex transition-transform duration-700 ease-in-out" 
-                            style={{ transform: `translateX(-${(selectedFeature - 1) * 100}%)` }}
+                          <div
+                            className="carousel-container relative w-full h-full flex transition-transform duration-700 ease-in-out"
+                            style={{
+                              transform: `translateX(-${
+                                (selectedFeature - 1) * 100
+                              }%)`,
+                            }}
                           >
                             {features.map((feature) => (
-                              <div key={feature.id} className="min-w-full h-full">
+                              <div
+                                key={feature.id}
+                                className="min-w-full h-full"
+                              >
                                 <img
                                   src={feature.image}
                                   alt={feature.title}
@@ -1150,29 +1350,55 @@ const Guardian = () => {
                     {/* Arrow Navigation */}
                     <div className="flex justify-center lg:justify-start gap-4">
                       <button
-                        onClick={() => setSelectedFeature(prev => Math.max(1, prev - 1))}
+                        onClick={() =>
+                          setSelectedFeature((prev) => Math.max(1, prev - 1))
+                        }
                         className={`p-2 rounded-full transition-all duration-300 ${
-                          selectedFeature === 1 
-                            ? 'opacity-30 cursor-not-allowed' 
-                            : 'hover:bg-[#493B32]/10'
+                          selectedFeature === 1
+                            ? "opacity-30 cursor-not-allowed"
+                            : "hover:bg-[#493B32]/10"
                         }`}
                         disabled={selectedFeature === 1}
                       >
-                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        <svg
+                          className="w-6 h-6 text-[#493B32]"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M15 19l-7-7 7-7"
+                          />
                         </svg>
                       </button>
                       <button
-                        onClick={() => setSelectedFeature(prev => Math.min(features.length, prev + 1))}
+                        onClick={() =>
+                          setSelectedFeature((prev) =>
+                            Math.min(features.length, prev + 1)
+                          )
+                        }
                         className={`p-2 rounded-full transition-all duration-300 ${
-                          selectedFeature === features.length 
-                            ? 'opacity-30 cursor-not-allowed' 
-                            : 'hover:bg-[#493B32]/10'
+                          selectedFeature === features.length
+                            ? "opacity-30 cursor-not-allowed"
+                            : "hover:bg-[#493B32]/10"
                         }`}
                         disabled={selectedFeature === features.length}
                       >
-                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <svg
+                          className="w-6 h-6 text-[#493B32]"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
                         </svg>
                       </button>
                     </div>
@@ -1182,489 +1408,638 @@ const Guardian = () => {
             </div>
           </div>
         </section>
-          {/* User Feedback & Iteration Section */ }
-          <section id="user-feedback" className="mt-16">
-            <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
-              <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
-              <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
-                User Feedback & Iterations
-              </h2>
+        {/* User Feedback & Iteration Section */}
+        <section id="user-feedback" className="mt-16">
+          <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
+            <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
+            <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
+              User Feedback & Iterations
+            </h2>
+          </div>
+
+          {/* Before/After UI Comparisons */}
+          <div className="md:px-8 mb-16">
+            <h3 className="text-xl font-medium text-[#493B32] mb-6">
+              UI Evolution
+            </h3>
+
+            {/* Mobile Instruction */}
+            <div className="md:hidden mb-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
+              <p className="text-sm text-amber-800 text-center">
+                Tap the dots below each screen to see the evolution →
+              </p>
             </div>
 
-            {/* Before/After UI Comparisons */}
-            <div className="md:px-8 mb-16">
-              <h3 className="text-xl font-medium text-[#493B32] mb-6">UI Evolution</h3>
-              
-              {/* Mobile Instruction */}
-              <div className="md:hidden mb-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
-                <p className="text-sm text-amber-800 text-center">
-                  Tap the dots below each screen to see the evolution →
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Timer Screen Evolution */}
-                <div className="bg-white rounded-2xl p-4 sm:p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
-                  <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-md sm:text-lg font-medium text-[#493B32]">Welcome Screen</h4>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm text-[#493B32]/60">Version 1.0</span>
-                      <IoArrowForward className="w-5 h-5 text-[#493B32]" />
-                      <span className="text-sm text-[#493B32]/60">Version 2.0</span>
-                    </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Timer Screen Evolution */}
+              <div className="bg-white rounded-2xl p-4 sm:p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="text-md sm:text-lg font-medium text-[#493B32]">
+                    Welcome Screen
+                  </h4>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-[#493B32]/60">
+                      Version 1.0
+                    </span>
+                    <IoArrowForward className="w-5 h-5 text-[#493B32]" />
+                    <span className="text-sm text-[#493B32]/60">
+                      Version 2.0
+                    </span>
                   </div>
-                  <div className="relative">
-                    {/* Phone Frame */}
-                    <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative">
-                      <div className="absolute inset-0 bg-[#F75590] rounded-[45px] md:rounded-[55px] p-4 shadow-xl">
-                        {/* Dynamic Island */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95px] md:w-[126px] h-[26px] md:h-[35px] bg-[#F75590] rounded-b-[18px] md:rounded-b-[24px] flex items-center justify-center">
-                          <div className="w-[68px] md:w-[90px] h-[18px] md:h-[24px] bg-black rounded-[15px] md:rounded-[20px] flex items-center">
-                            <div className="w-[9px] md:w-[12px] h-[9px] md:h-[12px] rounded-full bg-[#1a1a1a] ml-2"></div>
-                            <div className="w-[6px] md:w-[8px] h-[6px] md:h-[8px] rounded-full bg-[#1a1a1a] ml-2"></div>
-                            <div className="w-[30px] md:w-[40px] h-[3px] md:h-[4px] rounded-full bg-[#1a1a1a] ml-2"></div>
-                          </div>
+                </div>
+                <div className="relative">
+                  {/* Phone Frame */}
+                  <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative">
+                    <div className="absolute inset-0 bg-[#F75590] rounded-[45px] md:rounded-[55px] p-4 shadow-xl">
+                      {/* Dynamic Island */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95px] md:w-[126px] h-[26px] md:h-[35px] bg-[#F75590] rounded-b-[18px] md:rounded-b-[24px] flex items-center justify-center">
+                        <div className="w-[68px] md:w-[90px] h-[18px] md:h-[24px] bg-black rounded-[15px] md:rounded-[20px] flex items-center">
+                          <div className="w-[9px] md:w-[12px] h-[9px] md:h-[12px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                          <div className="w-[6px] md:w-[8px] h-[6px] md:h-[8px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                          <div className="w-[30px] md:w-[40px] h-[3px] md:h-[4px] rounded-full bg-[#1a1a1a] ml-2"></div>
                         </div>
+                      </div>
 
-                        {/* Buttons */}
-                        <div className="absolute top-[83px] md:top-[110px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
-                        <div className="absolute top-[143px] md:top-[190px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
-                        <div className="absolute top-[180px] md:top-[240px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
-                        <div className="absolute top-[98px] md:top-[130px] -right-[2px] w-[3px] md:w-[4px] h-[38px] md:h-[50px] bg-[#2a2a2a] rounded-r-full"></div>
+                      {/* Buttons */}
+                      <div className="absolute top-[83px] md:top-[110px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                      <div className="absolute top-[143px] md:top-[190px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                      <div className="absolute top-[180px] md:top-[240px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                      <div className="absolute top-[98px] md:top-[130px] -right-[2px] w-[3px] md:w-[4px] h-[38px] md:h-[50px] bg-[#2a2a2a] rounded-r-full"></div>
 
-                        {/* Screen Content */}
-                        <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
-                          {/* Mobile Carousel */}
-                          <div className="md:hidden relative w-full h-full bg-[#F8F8F8]">
-                            <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out bg-[#F8F8F8]" 
-                              style={{ transform: `translateX(-${(welcomeVersion - 1) * 100}%)` }}>
-                              {/* Version 1 */}
-                              <div className="min-w-full h-full">
-                                <img 
-                                  src={WelcomeImageV1} 
-                                  alt="Welcome Screen Version 1.0" 
-                                  className="w-full h-full object-cover"
-                                />
-                              </div>
-                              {/* Version 2 */}
-                              <div className="min-w-full h-full">
-                                <img 
-                                  src={WelcomeImage} 
-                                  alt="Welcome Screen Version 2.0" 
-                                  className="w-full h-full object-cover"
-                                />
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Desktop Hover Effect */}
-                          <div className="hidden md:block relative w-full h-full group">
+                      {/* Screen Content */}
+                      <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
+                        {/* Mobile Carousel */}
+                        <div className="md:hidden relative w-full h-full bg-[#F8F8F8]">
+                          <div
+                            className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out bg-[#F8F8F8]"
+                            style={{
+                              transform: `translateX(-${
+                                (welcomeVersion - 1) * 100
+                              }%)`,
+                            }}
+                          >
                             {/* Version 1 */}
-                            <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
-                              <img 
-                                src={WelcomeImageV1} 
-                                alt="Welcome Screen Version 1.0" 
+                            <div className="min-w-full h-full">
+                              <img
+                                src={WelcomeImageV1}
+                                alt="Welcome Screen Version 1.0"
                                 className="w-full h-full object-cover"
                               />
-                              {/* Version 1 Hover Instruction */}
-                              <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                                <div className="bg-[#493B32]/80 text-white px-4 py-2 text-base rounded-lg backdrop-blur-sm">
-                                  Hover to see Version 2.0
-                                </div>
-                              </div>
                             </div>
                             {/* Version 2 */}
-                            <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                              <img 
-                                src={WelcomeImage} 
-                                alt="Welcome Screen Version 2.0" 
+                            <div className="min-w-full h-full">
+                              <img
+                                src={WelcomeImage}
+                                alt="Welcome Screen Version 2.0"
                                 className="w-full h-full object-cover"
                               />
                             </div>
+                          </div>
+                        </div>
+
+                        {/* Desktop Hover Effect */}
+                        <div className="hidden md:block relative w-full h-full group">
+                          {/* Version 1 */}
+                          <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
+                            <img
+                              src={WelcomeImageV1}
+                              alt="Welcome Screen Version 1.0"
+                              className="w-full h-full object-cover"
+                            />
+                            {/* Version 1 Hover Instruction */}
+                            <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                              <div className="bg-[#493B32]/80 text-white px-4 py-2 text-base rounded-lg backdrop-blur-sm">
+                                Hover to see Version 2.0
+                              </div>
+                            </div>
+                          </div>
+                          {/* Version 2 */}
+                          <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <img
+                              src={WelcomeImage}
+                              alt="Welcome Screen Version 2.0"
+                              className="w-full h-full object-cover"
+                            />
                           </div>
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    {/* Mobile Navigation Arrows */}
-                    <div className="flex justify-center items-center gap-8 mt-8 mb-4 md:hidden">
-                      <button 
-                        className={`p-3 rounded-full border-2 border-[#493B32] ${
-                          welcomeVersion === 1 ? 'opacity-50 bg-[#493B32]/5' : 'bg-white'
-                        }`}
-                        aria-label="Previous Version"
-                        onClick={() => welcomeVersion > 1 && setWelcomeVersion(welcomeVersion - 1)}
-                        disabled={welcomeVersion === 1}
+                  {/* Mobile Navigation Arrows */}
+                  <div className="flex justify-center items-center gap-8 mt-8 mb-4 md:hidden">
+                    <button
+                      className={`p-3 rounded-full border-2 border-[#493B32] ${
+                        welcomeVersion === 1
+                          ? "opacity-50 bg-[#493B32]/5"
+                          : "bg-white"
+                      }`}
+                      aria-label="Previous Version"
+                      onClick={() =>
+                        welcomeVersion > 1 &&
+                        setWelcomeVersion(welcomeVersion - 1)
+                      }
+                      disabled={welcomeVersion === 1}
+                    >
+                      <svg
+                        className="w-6 h-6 text-[#493B32]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
                       >
-                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                      </button>
-                      <button 
-                        className={`p-3 rounded-full border-2 border-[#493B32] ${
-                          welcomeVersion === 2 ? 'opacity-50 bg-[#493B32]/5' : 'bg-white'
-                        }`}
-                        aria-label="Next Version"
-                        onClick={() => welcomeVersion < 2 && setWelcomeVersion(welcomeVersion + 1)}
-                        disabled={welcomeVersion === 2}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M15 19l-7-7 7-7"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      className={`p-3 rounded-full border-2 border-[#493B32] ${
+                        welcomeVersion === 2
+                          ? "opacity-50 bg-[#493B32]/5"
+                          : "bg-white"
+                      }`}
+                      aria-label="Next Version"
+                      onClick={() =>
+                        welcomeVersion < 2 &&
+                        setWelcomeVersion(welcomeVersion + 1)
+                      }
+                      disabled={welcomeVersion === 2}
+                    >
+                      <svg
+                        className="w-6 h-6 text-[#493B32]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
                       >
-                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
-                    </div>
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+                  </div>
 
-                    {/* Version Label - Mobile */}
-                    <div className="text-center mt-2 md:hidden">
-                      <span className="text-sm font-medium text-[#493B32]">Version {welcomeVersion}.0</span>
-                    </div>
+                  {/* Version Label - Mobile */}
+                  <div className="text-center mt-2 md:hidden">
+                    <span className="text-sm font-medium text-[#493B32]">
+                      Version {welcomeVersion}.0
+                    </span>
                   </div>
                 </div>
+              </div>
 
-                {/* Contacts Screen Evolution */}
-                <div className="bg-white rounded-2xl p-4 sm:p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
-                  <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-md sm:text-lg font-medium text-[#493B32]">Adding Contacts Overlay Screen</h4>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm text-[#493B32]/60">Version 1.0</span>
-                      <IoArrowForward className="w-5 h-5 text-[#493B32]" />
-                      <span className="text-sm text-[#493B32]/60">Version 2.0</span>
-                    </div>
+              {/* Contacts Screen Evolution */}
+              <div className="bg-white rounded-2xl p-4 sm:p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="text-md sm:text-lg font-medium text-[#493B32]">
+                    Adding Contacts Overlay Screen
+                  </h4>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-[#493B32]/60">
+                      Version 1.0
+                    </span>
+                    <IoArrowForward className="w-5 h-5 text-[#493B32]" />
+                    <span className="text-sm text-[#493B32]/60">
+                      Version 2.0
+                    </span>
                   </div>
-                  <div className="relative">
-                    {/* Phone Frame */}
-                    <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative">
-                      <div className="absolute inset-0 bg-[#F75590] rounded-[45px] md:rounded-[55px] p-4 shadow-xl">
-                        {/* Dynamic Island */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95px] md:w-[126px] h-[26px] md:h-[35px] bg-[#F75590] rounded-b-[18px] md:rounded-b-[24px] flex items-center justify-center">
-                          <div className="w-[68px] md:w-[90px] h-[18px] md:h-[24px] bg-black rounded-[15px] md:rounded-[20px] flex items-center">
-                            <div className="w-[9px] md:w-[12px] h-[9px] md:h-[12px] rounded-full bg-[#1a1a1a] ml-2"></div>
-                            <div className="w-[6px] md:w-[8px] h-[6px] md:h-[8px] rounded-full bg-[#1a1a1a] ml-2"></div>
-                            <div className="w-[30px] md:w-[40px] h-[3px] md:h-[4px] rounded-full bg-[#1a1a1a] ml-2"></div>
-                          </div>
+                </div>
+                <div className="relative">
+                  {/* Phone Frame */}
+                  <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative">
+                    <div className="absolute inset-0 bg-[#F75590] rounded-[45px] md:rounded-[55px] p-4 shadow-xl">
+                      {/* Dynamic Island */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95px] md:w-[126px] h-[26px] md:h-[35px] bg-[#F75590] rounded-b-[18px] md:rounded-b-[24px] flex items-center justify-center">
+                        <div className="w-[68px] md:w-[90px] h-[18px] md:h-[24px] bg-black rounded-[15px] md:rounded-[20px] flex items-center">
+                          <div className="w-[9px] md:w-[12px] h-[9px] md:h-[12px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                          <div className="w-[6px] md:w-[8px] h-[6px] md:h-[8px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                          <div className="w-[30px] md:w-[40px] h-[3px] md:h-[4px] rounded-full bg-[#1a1a1a] ml-2"></div>
                         </div>
+                      </div>
 
-                        {/* Buttons */}
-                        <div className="absolute top-[83px] md:top-[110px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
-                        <div className="absolute top-[143px] md:top-[190px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
-                        <div className="absolute top-[180px] md:top-[240px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
-                        <div className="absolute top-[98px] md:top-[130px] -right-[2px] w-[3px] md:w-[4px] h-[38px] md:h-[50px] bg-[#2a2a2a] rounded-r-full"></div>
+                      {/* Buttons */}
+                      <div className="absolute top-[83px] md:top-[110px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                      <div className="absolute top-[143px] md:top-[190px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                      <div className="absolute top-[180px] md:top-[240px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                      <div className="absolute top-[98px] md:top-[130px] -right-[2px] w-[3px] md:w-[4px] h-[38px] md:h-[50px] bg-[#2a2a2a] rounded-r-full"></div>
 
-                        {/* Screen Content */}
-                        <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
-                          {/* Mobile Carousel */}
-                          <div className="md:hidden relative w-full h-full bg-[#F8F8F8]">
-                            <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out bg-[#F8F8F8]" 
-                              style={{ transform: `translateX(-${(contactsVersion - 1) * 100}%)` }}>
-                              {/* Version 1 */}
-                              <div className="min-w-full h-full">
-                                <img 
-                                  src={HomeImageV1} 
-                                  alt="Contacts Screen Version 1.0" 
-                                  className="w-full h-full object-cover"
-                                />
-                              </div>
-                              {/* Version 2 */}
-                              <div className="min-w-full h-full">
-                                <img 
-                                  src={HomeImage} 
-                                  alt="Contacts Screen Version 2.0" 
-                                  className="w-full h-full object-cover"
-                                />
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Desktop Hover Effect */}
-                          <div className="hidden md:block relative w-full h-full group">
+                      {/* Screen Content */}
+                      <div className="relative w-full h-full rounded-[38px] md:rounded-[48px] overflow-hidden bg-white">
+                        {/* Mobile Carousel */}
+                        <div className="md:hidden relative w-full h-full bg-[#F8F8F8]">
+                          <div
+                            className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out bg-[#F8F8F8]"
+                            style={{
+                              transform: `translateX(-${
+                                (contactsVersion - 1) * 100
+                              }%)`,
+                            }}
+                          >
                             {/* Version 1 */}
-                            <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
-                              <img 
-                                src={HomeImageV1} 
-                                alt="Contacts Screen Version 1.0" 
+                            <div className="min-w-full h-full">
+                              <img
+                                src={HomeImageV1}
+                                alt="Contacts Screen Version 1.0"
                                 className="w-full h-full object-cover"
                               />
-                              {/* Version 1 Hover Instruction */}
-                              <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                                <div className="bg-[#493B32]/80 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
-                                  Hover to see Version 2.0
-                                </div>
-                              </div>
                             </div>
                             {/* Version 2 */}
-                            <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                              <img 
-                                src={HomeImage} 
-                                alt="Contacts Screen Version 2.0" 
+                            <div className="min-w-full h-full">
+                              <img
+                                src={HomeImage}
+                                alt="Contacts Screen Version 2.0"
                                 className="w-full h-full object-cover"
                               />
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
 
-                    {/* Mobile Navigation Arrows */}
-                    <div className="flex justify-center items-center gap-8 mt-8 mb-4 md:hidden">
-                      <button 
-                        className={`p-3 rounded-full border-2 border-[#493B32] ${
-                          contactsVersion === 1 ? 'opacity-50 bg-[#493B32]/5' : 'bg-white'
-                        }`}
-                        aria-label="Previous Version"
-                        onClick={() => contactsVersion > 1 && setContactsVersion(contactsVersion - 1)}
-                        disabled={contactsVersion === 1}
-                      >
-                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                      </button>
-                      <button 
-                        className={`p-3 rounded-full border-2 border-[#493B32] ${
-                          contactsVersion === 2 ? 'opacity-50 bg-[#493B32]/5' : 'bg-white'
-                        }`}
-                        aria-label="Next Version"
-                        onClick={() => contactsVersion < 2 && setContactsVersion(contactsVersion + 1)}
-                        disabled={contactsVersion === 2}
-                      >
-                        <svg className="w-6 h-6 text-[#493B32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
-                    </div>
-
-                    {/* Version Label - Mobile */}
-                    <div className="text-center mt-2 md:hidden">
-                      <span className="text-sm font-medium text-[#493B32]">Version {contactsVersion}.0</span>
-                    </div>
-                  </div>
-                </div>
-                {/* Timer Screen Evolution */}
-                <div className="bg-white rounded-2xl p-4 sm:p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
-                  <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-md sm:text-lg font-medium text-[#493B32]">Timer Screen</h4>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm text-[#493B32]/60">Version 1.0</span>
-                      <IoArrowForward className="w-5 h-5 text-[#493B32]" />
-                      <span className="text-sm text-[#493B32]/60">Version 2.0</span>
-                      <IoArrowForward className="w-5 h-5 text-[#493B32]" />
-                      <span className="text-sm text-[#493B32]/60">Version 3.0</span>
-                    </div>
-            </div>
-
-                  <div className="relative group">
-                    {/* Phone Frame */}
-                    <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative">
-                      <div className="absolute inset-0 bg-[#F75590] rounded-[45px] md:rounded-[55px] p-4 shadow-xl">
-                        {/* Dynamic Island */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95px] md:w-[126px] h-[26px] md:h-[35px] bg-[#F75590] rounded-b-[18px] md:rounded-b-[24px] flex items-center justify-center">
-                          <div className="w-[68px] md:w-[90px] h-[18px] md:h-[24px] bg-black rounded-[15px] md:rounded-[20px] flex items-center">
-                            <div className="w-[9px] md:w-[12px] h-[9px] md:h-[12px] rounded-full bg-[#1a1a1a] ml-2"></div>
-                            <div className="w-[6px] md:w-[8px] h-[6px] md:h-[8px] rounded-full bg-[#1a1a1a] ml-2"></div>
-                            <div className="w-[30px] md:w-[40px] h-[3px] md:h-[4px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                        {/* Desktop Hover Effect */}
+                        <div className="hidden md:block relative w-full h-full group">
+                          {/* Version 1 */}
+                          <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
+                            <img
+                              src={HomeImageV1}
+                              alt="Contacts Screen Version 1.0"
+                              className="w-full h-full object-cover"
+                            />
+                            {/* Version 1 Hover Instruction */}
+                            <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                              <div className="bg-[#493B32]/80 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                                Hover to see Version 2.0
+                              </div>
+                            </div>
                           </div>
-                        </div>
-
-                        {/* Buttons */}
-                        <div className="absolute top-[83px] md:top-[110px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
-                        <div className="absolute top-[143px] md:top-[190px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
-                        <div className="absolute top-[180px] md:top-[240px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
-                        <div className="absolute top-[98px] md:top-[130px] -right-[2px] w-[3px] md:w-[4px] h-[38px] md:h-[50px] bg-[#2a2a2a] rounded-r-full"></div>
-
-                        {/* Screen Content */}
-                        <div className="relative w-full h-full bg-white rounded-[38px] md:rounded-[48px] overflow-hidden">
-                          {/* Carousel Container */}
-                          <div className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out bg-[#F8F8F8]" 
-                            style={{ transform: `translateX(-${(activeVersion - 1) * 100}%)` }}>
-                            {/* Version 1 */}
-                            <div className="min-w-full transition-opacity duration-300">
-                              <img 
-                                src={TimerImageV1} 
-                                alt="Timer Screen Version 1.0" 
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-
-                            {/* Version 2 */}
-                            <div className="min-w-full transition-opacity duration-300">
-                              <img 
-                                src={TimerImageV2} 
-                                alt="Timer Screen Version 2.0" 
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-
-                            {/* Version 3 */}
-                            <div className="min-w-full transition-opacity duration-300">
-                              <img 
-                                src={TimerImage} 
-                                alt="Timer Screen Version 3.0" 
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
+                          {/* Version 2 */}
+                          <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <img
+                              src={HomeImage}
+                              alt="Contacts Screen Version 2.0"
+                              className="w-full h-full object-cover"
+                            />
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Version Navigation */}
-                  <div className="relative z-50 flex justify-center items-center gap-4 mt-12">
-                    {[1, 2, 3].map((version) => (
-                      <button 
-                        key={version}
-                        onClick={() => updateActiveVersion(version)}
-                        className={`flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg transition-all ${
-                          activeVersion === version 
-                            ? 'bg-[#493B32] text-pink-500 font-bold' 
-                            : 'border-2 border-[#493B32] text-[#493B32] font-medium hover:bg-[#493B32]/10'
-                        }`}
-                        aria-label={`Show Version ${version}`}
+                  {/* Mobile Navigation Arrows */}
+                  <div className="flex justify-center items-center gap-8 mt-8 mb-4 md:hidden">
+                    <button
+                      className={`p-3 rounded-full border-2 border-[#493B32] ${
+                        contactsVersion === 1
+                          ? "opacity-50 bg-[#493B32]/5"
+                          : "bg-white"
+                      }`}
+                      aria-label="Previous Version"
+                      onClick={() =>
+                        contactsVersion > 1 &&
+                        setContactsVersion(contactsVersion - 1)
+                      }
+                      disabled={contactsVersion === 1}
+                    >
+                      <svg
+                        className="w-6 h-6 text-[#493B32]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
                       >
-                        <span className="text-sm sm:text-base md:text-lg">V{version}</span>
-                      </button>
-                    ))}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M15 19l-7-7 7-7"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      className={`p-3 rounded-full border-2 border-[#493B32] ${
+                        contactsVersion === 2
+                          ? "opacity-50 bg-[#493B32]/5"
+                          : "bg-white"
+                      }`}
+                      aria-label="Next Version"
+                      onClick={() =>
+                        contactsVersion < 2 &&
+                        setContactsVersion(contactsVersion + 1)
+                      }
+                      disabled={contactsVersion === 2}
+                    >
+                      <svg
+                        className="w-6 h-6 text-[#493B32]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  {/* Version Label - Mobile */}
+                  <div className="text-center mt-2 md:hidden">
+                    <span className="text-sm font-medium text-[#493B32]">
+                      Version {contactsVersion}.0
+                    </span>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-          
-          {/* Design system Section */}
-          <section id="design-system" className="mt-16 mb-10">
-            <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
-              <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
-              <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
-                Design System
-              </h2>
-            </div>
-
-            {/* Figma Design Container */}
-            <div className="px-4 md:px-8">
-              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#493B32]/10">
-                {/* Figma Embed */}
-                <div className="relative w-full" style={{ paddingTop: '56.25%' }}> {/* 16:9 Aspect Ratio */}
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full rounded-xl"
-                    src="https://embed.figma.com/design/7rSfnfAkZTMI3ttCdej9n1/Design-Jam?node-id=87-254&embed-host=share" 
-                    allowFullScreen
-                  ></iframe>
+              {/* Timer Screen Evolution */}
+              <div className="bg-white rounded-2xl p-4 sm:p-6 overflow-hidden shadow-sm border border-[#493B32]/10">
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="text-md sm:text-lg font-medium text-[#493B32]">
+                    Timer Screen
+                  </h4>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-[#493B32]/60">
+                      Version 1.0
+                    </span>
+                    <IoArrowForward className="w-5 h-5 text-[#493B32]" />
+                    <span className="text-sm text-[#493B32]/60">
+                      Version 2.0
+                    </span>
+                    <IoArrowForward className="w-5 h-5 text-[#493B32]" />
+                    <span className="text-sm text-[#493B32]/60">
+                      Version 3.0
+                    </span>
+                  </div>
                 </div>
 
-                {/* Figma Link */}
-                <div className="mt-6 flex justify-center">
-                  <a 
-                    href="https://www.figma.com/design/7rSfnfAkZTMI3ttCdej9n1/Design-Jam?node-id=87-254&t=4jjywuLFBMGJvYxD-1" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#493B32] text-white rounded-xl hover:bg-[#493B32]/90 transition-colors"
-                  >
-                    <FaFigma className="w-5 h-5" />
-                    <span>View Full Design System in Figma</span>
-                    <IoArrowForward className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-            {/* Reflection Section */}
-            <section id="reflection" className="mt-10 sm:mt-16 mb-24">
-              <div className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
-                <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
-                <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
-                  Reflection
-                </h2>
-              </div>
-
-              <div className="px-4 md:px-8">
-                <div className="bg-gradient-to-br from-[#493B32]/5 via-white to-[#493B32]/5 rounded-2xl p-8 md:p-12 shadow-sm border border-[#493B32]/10">
-                  <div className="flex flex-col lg:flex-row gap-12">
-                    {/* Left Column - Reflection Text */}
-                    <div className="flex-1 space-y-6">
-                      {/* Quote Mark */}
-                      <div className="flex justify-center lg:justify-start mb-8">
-                        <ImQuotesLeft className="w-12 h-12 text-[#493B32]/20" />
-                      </div>
-
-                      {/* Reflection Text */}
-                      <div className="space-y-6">
-                        <p className=" text-base md:text-xl text-[#493B32] leading-relaxed">
-                          Designing Guardian required blending empathy with usability. It was about more than UI—it was about creating emotional trust. By focusing on micro-interactions, accessible patterns, and real user voices, we built a product that could genuinely save lives.
-                        </p>
-                      </div>
-
-                      {/* Key Metrics */}
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                        <div className="text-center">
-                          <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[#493B32]/10 flex items-center justify-center">
-                            <FaHeart className="w-6 h-6 text-[#493B32]" />
-                          </div>
-                          <h3 className="text-lg font-medium text-[#493B32]">Empathy-Driven</h3>
-                          <p className="text-[#493B32]/70 mt-2">Design decisions based on real user experiences</p>
-                        </div>
-
-                        <div className="text-center">
-                          <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[#493B32]/10 flex items-center justify-center">
-                            <IoShieldCheckmark className="w-6 h-6 text-[#493B32]" />
-                          </div>
-                          <h3 className="text-lg font-medium text-[#493B32]">Trust-Building</h3>
-                          <p className="text-[#493B32]/70 mt-2">Focus on creating a safe experience</p>
-                        </div>
-
-                        <div className="text-center">
-                          <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[#493B32]/10 flex items-center justify-center">
-                            <IoEyeOutline className="w-6 h-6 text-[#493B32]" />
-                          </div>
-                          <h3 className="text-lg font-medium text-[#493B32]">User-Centered</h3>
-                          <p className="text-[#493B32]/70 mt-2">Every feature crafted with safety in mind</p>
+                <div className="relative group">
+                  {/* Phone Frame */}
+                  <div className="w-[240px] md:w-[320px] h-[480px] md:h-[660px] mx-auto relative">
+                    <div className="absolute inset-0 bg-[#F75590] rounded-[45px] md:rounded-[55px] p-4 shadow-xl">
+                      {/* Dynamic Island */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95px] md:w-[126px] h-[26px] md:h-[35px] bg-[#F75590] rounded-b-[18px] md:rounded-b-[24px] flex items-center justify-center">
+                        <div className="w-[68px] md:w-[90px] h-[18px] md:h-[24px] bg-black rounded-[15px] md:rounded-[20px] flex items-center">
+                          <div className="w-[9px] md:w-[12px] h-[9px] md:h-[12px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                          <div className="w-[6px] md:w-[8px] h-[6px] md:h-[8px] rounded-full bg-[#1a1a1a] ml-2"></div>
+                          <div className="w-[30px] md:w-[40px] h-[3px] md:h-[4px] rounded-full bg-[#1a1a1a] ml-2"></div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Right Column - Figma Prototype */}
-                    <div className="flex-1">
-                      <div className="relative w-full rounded-xl overflow-hidden bg-white shadow-lg" 
-                        style={{ 
-                          paddingTop: '100%',
-                          maxHeight: '600px' 
-                        }}
-                      > 
-                        {/* Mobile Notice */}
-                        <div className="md:hidden absolute top-0 left-0 right-0 bg-amber-50 p-4 z-10 rounded-t-xl border-b border-amber-200">
-                          <p className="text-sm text-amber-800 text-center">
-                            Tap to interact with the prototype →
-                          </p>
-                        </div>
-                        
-                        <iframe 
-                          className="absolute top-0 left-0 w-full h-full"
-                          style={{ 
-                            border: '1px solid rgba(73, 59, 50, 0.1)',
-                            height: 'calc(100% - 40px)',
-                            marginTop: '40px'
+                      {/* Buttons */}
+                      <div className="absolute top-[83px] md:top-[110px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                      <div className="absolute top-[143px] md:top-[190px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                      <div className="absolute top-[180px] md:top-[240px] -left-[2px] w-[3px] md:w-[4px] h-[30px] md:h-[40px] bg-[#2a2a2a] rounded-l-full"></div>
+                      <div className="absolute top-[98px] md:top-[130px] -right-[2px] w-[3px] md:w-[4px] h-[38px] md:h-[50px] bg-[#2a2a2a] rounded-r-full"></div>
+
+                      {/* Screen Content */}
+                      <div className="relative w-full h-full bg-white rounded-[38px] md:rounded-[48px] overflow-hidden">
+                        {/* Carousel Container */}
+                        <div
+                          className="carousel-container relative w-full h-full flex transition-transform duration-500 ease-in-out bg-[#F8F8F8]"
+                          style={{
+                            transform: `translateX(-${
+                              (activeVersion - 1) * 100
+                            }%)`,
                           }}
-                          src="https://embed.figma.com/proto/7rSfnfAkZTMI3ttCdej9n1/Design-Jam?page-id=148%3A3413&node-id=148-3414&p=f&viewport=278%2C88%2C0.5&scaling=scale-down&starting-point-node-id=148%3A3414&content-scaling=0.5&embed-host=share"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                      
-                      {/* View in Figma Link */}
-                      <div className="mt-4 flex justify-center">
-                        <a 
-                          href="https://www.figma.com/proto/7rSfnfAkZTMI3ttCdej9n1/Design-Jam?page-id=148%3A3413&node-id=148-3414&p=f&viewport=278%2C88%2C0.5&scaling=scale-down&starting-point-node-id=148%3A3414&content-scaling=0.5&embed-host=share" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-[#493B32]/10 text-[#493B32] rounded-lg hover:bg-[#493B32]/20 transition-colors text-sm"
                         >
-                          <FaFigma className="w-4 h-4" />
-                          <span>View Prototype in Figma</span>
-                        </a>
+                          {/* Version 1 */}
+                          <div className="min-w-full transition-opacity duration-300">
+                            <img
+                              src={TimerImageV1}
+                              alt="Timer Screen Version 1.0"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+
+                          {/* Version 2 */}
+                          <div className="min-w-full transition-opacity duration-300">
+                            <img
+                              src={TimerImageV2}
+                              alt="Timer Screen Version 2.0"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+
+                          {/* Version 3 */}
+                          <div className="min-w-full transition-opacity duration-300">
+                            <img
+                              src={TimerImage}
+                              alt="Timer Screen Version 3.0"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                {/* Version Navigation */}
+                <div className="relative z-50 flex justify-center items-center gap-4 mt-12">
+                  {[1, 2, 3].map((version) => (
+                    <button
+                      key={version}
+                      onClick={() => updateActiveVersion(version)}
+                      className={`flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg transition-all ${
+                        activeVersion === version
+                          ? "bg-[#493B32] text-pink-500 font-bold"
+                          : "border-2 border-[#493B32] text-[#493B32] font-medium hover:bg-[#493B32]/10"
+                      }`}
+                      aria-label={`Show Version ${version}`}
+                    >
+                      <span className="text-sm sm:text-base md:text-lg">
+                        V{version}
+                      </span>
+                    </button>
+                  ))}
+                </div>
               </div>
-            </section>
-      </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Design system Section */}
+        <section
+          id="design-system"
+          className="mt-16 mb-10"
+          aria-labelledby="design-system-heading"
+        >
+          <header className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
+            <div
+              className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
+              aria-hidden="true"
+            ></div>
+            <h2
+              id="design-system-heading"
+              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
+            >
+              Design System
+            </h2>
+          </header>
+
+          {/* Figma Design Container */}
+          <div className="px-4 md:px-8">
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#493B32]/10">
+              {/* Figma Embed */}
+              <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+                {" "}
+                {/* 16:9 Aspect Ratio */}
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-xl"
+                  src="https://embed.figma.com/design/7rSfnfAkZTMI3ttCdej9n1/Design-Jam?node-id=87-254&embed-host=share"
+                  allowFullScreen
+                  title="Guardian Design System in Figma"
+                  aria-label="Interactive Figma design system for Guardian app"
+                ></iframe>
+              </div>
+
+              {/* Figma Link */}
+              <div className="mt-6 flex justify-center">
+                <a
+                  href="https://www.figma.com/design/7rSfnfAkZTMI3ttCdej9n1/Design-Jam?node-id=87-254&t=4jjywuLFBMGJvYxD-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#493B32] text-white rounded-xl hover:bg-[#493B32]/90 transition-colors"
+                >
+                  <FaFigma className="w-5 h-5" />
+                  <span>View Full Design System in Figma</span>
+                  <IoArrowForward className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Reflection Section */}
+        <section
+          id="reflection"
+          className="mt-10 sm:mt-16 mb-24"
+          aria-labelledby="reflection-heading"
+        >
+          <header className="flex flex-row items-center gap-2 px-4 md:px-8 mb-12">
+            <div
+              className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
+              aria-hidden="true"
+            ></div>
+            <h2
+              id="reflection-heading"
+              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
+            >
+              Reflection
+            </h2>
+          </header>
+
+          <div className="px-4 md:px-8">
+            <div className="bg-gradient-to-br from-[#493B32]/5 via-white to-[#493B32]/5 rounded-2xl p-8 md:p-12 shadow-sm border border-[#493B32]/10">
+              <div className="flex flex-col lg:flex-row gap-12">
+                {/* Left Column - Reflection Text */}
+                <div className="flex-1 space-y-6">
+                  {/* Quote Mark */}
+                  <div className="flex justify-center lg:justify-start mb-8">
+                    <ImQuotesLeft className="w-12 h-12 text-[#493B32]/20" />
+                  </div>
+
+                  {/* Reflection Text */}
+                  <div className="space-y-6">
+                    <p className=" text-base md:text-xl text-[#493B32] leading-relaxed">
+                      Designing Guardian required blending empathy with
+                      usability. It was about more than UI—it was about creating
+                      emotional trust. By focusing on micro-interactions,
+                      accessible patterns, and real user voices, we built a
+                      product that could genuinely save lives.
+                    </p>
+                  </div>
+
+                  {/* Key Metrics */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                    <div className="text-center">
+                      <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[#493B32]/10 flex items-center justify-center">
+                        <FaHeart className="w-6 h-6 text-[#493B32]" />
+                      </div>
+                      <h3 className="text-lg font-medium text-[#493B32]">
+                        Empathy-Driven
+                      </h3>
+                      <p className="text-[#493B32]/70 mt-2">
+                        Design decisions based on real user experiences
+                      </p>
+                    </div>
+
+                    <div className="text-center">
+                      <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[#493B32]/10 flex items-center justify-center">
+                        <IoShieldCheckmark className="w-6 h-6 text-[#493B32]" />
+                      </div>
+                      <h3 className="text-lg font-medium text-[#493B32]">
+                        Trust-Building
+                      </h3>
+                      <p className="text-[#493B32]/70 mt-2">
+                        Focus on creating a safe experience
+                      </p>
+                    </div>
+
+                    <div className="text-center">
+                      <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[#493B32]/10 flex items-center justify-center">
+                        <IoEyeOutline className="w-6 h-6 text-[#493B32]" />
+                      </div>
+                      <h3 className="text-lg font-medium text-[#493B32]">
+                        User-Centered
+                      </h3>
+                      <p className="text-[#493B32]/70 mt-2">
+                        Every feature crafted with safety in mind
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column - Figma Prototype */}
+                <div className="flex-1">
+                  <div
+                    className="relative w-full rounded-xl overflow-hidden bg-white shadow-lg"
+                    style={{
+                      paddingTop: "100%",
+                      maxHeight: "600px",
+                    }}
+                  >
+                    {/* Mobile Notice */}
+                    <div className="md:hidden absolute top-0 left-0 right-0 bg-amber-50 p-4 z-10 rounded-t-xl border-b border-amber-200">
+                      <p className="text-sm text-amber-800 text-center">
+                        Tap to interact with the prototype →
+                      </p>
+                    </div>
+
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full"
+                      style={{
+                        border: "1px solid rgba(73, 59, 50, 0.1)",
+                        height: "calc(100% - 40px)",
+                        marginTop: "40px",
+                      }}
+                      src="https://embed.figma.com/proto/7rSfnfAkZTMI3ttCdej9n1/Design-Jam?page-id=148%3A3413&node-id=148-3414&p=f&viewport=278%2C88%2C0.5&scaling=scale-down&starting-point-node-id=148%3A3414&content-scaling=0.5&embed-host=share"
+                      allowFullScreen
+                      title="Guardian App Interactive Prototype"
+                      aria-label="Interactive prototype of Guardian overdose prevention app"
+                    ></iframe>
+                  </div>
+
+                  {/* View in Figma Link */}
+                  <div className="mt-4 flex justify-center">
+                    <a
+                      href="https://www.figma.com/proto/7rSfnfAkZTMI3ttCdej9n1/Design-Jam?page-id=148%3A3413&node-id=148-3414&p=f&viewport=278%2C88%2C0.5&scaling=scale-down&starting-point-node-id=148%3A3414&content-scaling=0.5&embed-host=share"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-[#493B32]/10 text-[#493B32] rounded-lg hover:bg-[#493B32]/20 transition-colors text-sm"
+                    >
+                      <FaFigma className="w-4 h-4" />
+                      <span>View Prototype in Figma</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
     </main>
   );
 };
