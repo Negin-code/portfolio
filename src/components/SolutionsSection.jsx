@@ -5,33 +5,52 @@ import FriendDiscoverySection from "./FriendDiscoverySection";
 
 const SolutionsSection = () => {
   return (
-    <div className="space-y-12">
+    <section className="space-y-12" aria-labelledby="solutions-heading">
       {/* Header */}
-      <div className="flex flex-row items-center gap-2">
-        <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
-        <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
+      <header className="flex flex-row items-center gap-2">
+        <div
+          className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
+          aria-hidden="true"
+        ></div>
+        <h2
+          id="solutions-heading"
+          className="text-2xl sm:text-3xl font-tan text-[#493B32]"
+        >
           Solutions
         </h2>
-      </div>
+      </header>
 
       {/* Solutions Container */}
-      <div className="grid grid-cols-1 gap-16">
+      <div
+        className="grid grid-cols-1 gap-16"
+        role="list"
+        aria-label="Design solutions"
+      >
         {/* First Solution */}
-        <div className="bg-white rounded-xl p-8 shadow-sm border border-[#493B32]/10">
+        <article
+          className="bg-white rounded-xl p-8 shadow-sm border border-[#493B32]/10"
+          role="listitem"
+        >
           <UIComparisonSection />
-        </div>
+        </article>
 
         {/* Second Solution */}
-        <div className="bg-white rounded-xl p-8 shadow-sm border border-[#493B32]/10">
+        <article
+          className="bg-white rounded-xl p-8 shadow-sm border border-[#493B32]/10"
+          role="listitem"
+        >
           <DiscussionUISection />
-        </div>
+        </article>
 
         {/* Third Solution */}
-        <div className="bg-white rounded-xl p-8 shadow-sm border border-[#493B32]/10">
+        <article
+          className="bg-white rounded-xl p-8 shadow-sm border border-[#493B32]/10"
+          role="listitem"
+        >
           <FriendDiscoverySection />
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
   );
 };
 
