@@ -59,6 +59,9 @@ const Projects = () => {
       categoryType: "design",
       title: "Accessibility Study",
       description: "The goal of the Accessibility Study was to evaluate the effectiveness of the website's design and functionality in meeting the needs of its users.",
+      projectLink: "/projects/accessibility#top",
+      gradientFrom: "#F75590",
+      gradientTo: "#FF8C94"
     },
     {
       image: CultureCafeImage,
