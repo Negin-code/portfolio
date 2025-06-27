@@ -7,7 +7,7 @@ const ChromaGridCard = ({
   category,
   title,
   description,
-  technologies,
+  technologies = [],
   projectLink,
   index = 0,
   gradientFrom,
