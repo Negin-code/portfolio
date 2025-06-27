@@ -11,7 +11,7 @@ import ListeningLab from './pages/ListeningLab';
 import CultureCafe from './pages/CultureCafe';
 import Guardian from './pages/Guardian.jsx';
 import GoodReads from './pages/GoodReads.jsx';
-import Accessability from './pages/Accessability.jsx';
+import Accessibility from './pages/Accessibility.jsx';
 import './App.css';
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
           <Route path="/projects/culture-cafe" element={<CultureCafe />} />
           <Route path="/projects/guardian" element={<Guardian />} />
           <Route path="/projects/goodreads" element={<GoodReads />} />
-          <Route path="/projects/accessability" element={<Accessability />} />
+          <Route path="/projects/accessibility" element={<Accessibility />} />
           <Route path="*" element={<div>404 - Page Not Found</div>} />
         </Route>
       </Routes>
