@@ -1,15 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 import { IoMdSearch } from "react-icons/io";
 
 const MagnifiableImage = ({ src, alt, caption }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Handle escape key to close modal
+  useEffect(() => {
+    const handleEscapeKey = (event) => {
+      if (event.key === "Escape" && isModalOpen) {
+        setIsModalOpen(false);
+      }
+    };
+
+    if (isModalOpen) {
+      document.addEventListener("keydown", handleEscapeKey);
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKey);
+      document.body.style.overflow = "unset";
+    };
+  }, [isModalOpen]);
+
   return (
-    <div className="relative w-full">
+    <figure className="relative w-full">
       {/* Image Container */}
-      <div 
-        className="w-full overflow-hidden rounded-lg cursor-zoom-in group"
+      <button
+        className="w-full overflow-hidden rounded-lg cursor-zoom-in group block text-left"
         onClick={() => setIsModalOpen(true)}
+        aria-label={`View larger version of ${alt}`}
+        type="button"
       >
         <img
           src={src}
@@ -18,32 +42,44 @@ const MagnifiableImage = ({ src, alt, caption }) => {
           loading="lazy"
         />
         {/* Zoom Icon Overlay */}
-        <div className="absolute top-2 right-2 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+        <div
+          className="absolute top-2 right-2 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+          aria-hidden="true"
+        >
           <IoMdSearch className="text-[#493B32] text-lg sm:text-xl" />
         </div>
-      </div>
-      
+      </button>
+
       {/* Caption */}
       {caption && (
-        <p className="mt-2 text-xs sm:text-sm text-[#493B32]/70 text-center">
+        <figcaption className="mt-2 text-xs sm:text-sm text-[#493B32]/70 text-center">
           {caption}
-        </p>
+        </figcaption>
       )}
 
       {/* Modal */}
       {isModalOpen && (
-        <div
+        <dialog
           className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 sm:p-6"
+          open
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-image-title"
+          aria-describedby={caption ? "modal-image-caption" : undefined}
           onClick={() => setIsModalOpen(false)}
         >
           <div className="relative max-w-[95vw] max-h-[90vh]">
             <img
+              id="modal-image-title"
               src={src}
               alt={alt}
               className="max-w-full max-h-[85vh] object-contain rounded-lg"
             />
             {caption && (
-              <p className="text-white text-center mt-2 text-xs sm:text-sm">
+              <p
+                id="modal-image-caption"
+                className="text-white text-center mt-2 text-xs sm:text-sm"
+              >
                 {caption}
               </p>
             )}
@@ -53,12 +89,15 @@ const MagnifiableImage = ({ src, alt, caption }) => {
                 e.stopPropagation();
                 setIsModalOpen(false);
               }}
+              aria-label="Close image modal"
+              type="button"
             >
               <svg
                 className="w-4 h-4 sm:w-6 sm:h-6 text-[#493B32]"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -69,9 +108,9 @@ const MagnifiableImage = ({ src, alt, caption }) => {
               </svg>
             </button>
           </div>
-        </div>
+        </dialog>
       )}
-    </div>
+    </figure>
   );
 };
 
