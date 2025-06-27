@@ -11,7 +11,7 @@ import KeyTakeawaysSection from "../components/KeyTakeawaysSection";
 import ReflectionSection from "../components/ReflectionSection";
 import NextStepsSection from "../components/NextStepsSection";
 
-const Accessibility = () => {
+const Accessability = () => {
   return (
     <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
       {/* Decorative elements - purely visual */}
@@ -540,4 +540,4 @@ const Accessibility = () => {
   );
 };
 
-export default Accessibility;
+export default Accessability;
