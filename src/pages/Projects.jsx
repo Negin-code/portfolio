@@ -1,7 +1,6 @@
 import React from "react";
 import { useOutletContext, useSearchParams } from "react-router-dom";
 import CrimsonPlateImage from "../assets/CrimsonPlate.webp";
-import AlzcareImage from "../assets/Alzcare.svg";
 import ListeningLabImage from "../assets/LLCover.png";
 import CultureCafeImage from "../assets/CCCover.png";
 import GuardianImage from "../assets/Guardiancard.webp";
@@ -65,19 +64,6 @@ const Projects = () => {
       projectLink: "/projects/culture-cafe#top",
       gradientFrom: "#7B6F63",
       gradientTo: "#493B32"
-    },
-    
-    {
-      image: AlzcareImage,
-      imageAlt: "AlzCare App Design",
-      category: "UI/UX Design",
-      categoryType: "design",
-      title: "AlzCare App",
-      description: "The goal of AlzCare is to create a user-friendly mobile app that integrates with a smart medication container, helping caregivers monitor medication adherence for individuals with Alzheimer's.",
-      technologies: ["Figma", "Illustrator"],
-      projectLink: "/projects/alzcare#top",
-      gradientFrom: "#493B32",
-      gradientTo: "#7B6F63"
     },
     {
       image: ListeningLabImage,
