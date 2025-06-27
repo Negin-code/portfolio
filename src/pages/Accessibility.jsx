@@ -71,11 +71,9 @@ const Accessibility = () => {
                   Team
                 </h3>
                 <p className="text-base sm:text-lg font-medium text-[#493B32]">
-                  Ju, Juan, Negin
+                  Team of 3
                 </p>
-                <p className="text-xs sm:text-sm text-[#493B32]/80 mt-0.5 sm:mt-1">
-                  3 UX Designers
-                </p>
+                
               </div>
             </div>
           </section>
