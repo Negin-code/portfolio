@@ -14,32 +14,40 @@ import NextStepsSection from "../components/NextStepsSection";
 import GoodReadsImage from "../assets/goodreadshero.png";
 import SolutionsSection from "../components/SolutionsSection";
 
-
 const GoodReads = () => {
   return (
-  
-      
-      <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
-      {/* Left vertical line */}
-      <div className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"></div>
+    <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
+      {/* Decorative elements - purely visual */}
+      <div
+        className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"
+        aria-hidden="true"
+      ></div>
 
-      {/* Right border line */}
-      <div className="absolute right-10 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"></div>
+      <div
+        className="absolute right-10 top-0 bottom-8 h-[calc(100%-5rem)] w-[2px] bg-[#493b32]"
+        aria-hidden="true"
+      ></div>
 
-      {/* Project Content Container */}
-              <div className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 mr-15 lg:mr-0 ml-20 lg:ml-10">
-          <ProjectHero
+      {/* Project Content */}
+      <article className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 mr-15 lg:mr-0 ml-20 lg:ml-10">
+        <ProjectHero
           title="GoodReads Website Usability Study"
           image={GoodReadsImage}
           imageAlt="GoodReads Website Usability Study Preview"
         />
 
-        {/* Project Info Cards */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12 px-4 sm:px-0">
-          {/* Project Type Card */}
-          <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
+        {/* Project Metadata */}
+        <aside
+          className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12 px-4 sm:px-0"
+          aria-label="Project information"
+        >
+          {/* Project Type */}
+          <section className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
+              <div
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors"
+                aria-hidden="true"
+              >
                 <FaClock className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
               </div>
               <div>
@@ -54,12 +62,15 @@ const GoodReads = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* Team Size Card */}
-          <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
+          {/* Team Size */}
+          <section className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
+              <div
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors"
+                aria-hidden="true"
+              >
                 <FaUsers className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
               </div>
               <div>
@@ -74,12 +85,15 @@ const GoodReads = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* Role Card */}
-          <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
+          {/* Role */}
+          <section className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
+              <div
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors"
+                aria-hidden="true"
+              >
                 <MdWork className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
               </div>
               <div>
@@ -90,76 +104,107 @@ const GoodReads = () => {
                   <p className="text-base sm:text-lg font-medium text-[#493B32]">
                     UX/UI Designer
                   </p>
-                  
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* Tools & Process Card */}
-          <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
+          {/* Tools & Process */}
+          <section className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10 hover:shadow-md transition-shadow group">
             <div className="flex items-start gap-3 sm:gap-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors">
+              <div
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#493B32]/5 flex items-center justify-center group-hover:bg-[#493B32]/10 transition-colors"
+                aria-hidden="true"
+              >
                 <FaCog className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
               </div>
               <div>
                 <h3 className="text-xs sm:text-sm font-medium text-[#493B32]/60 mb-4 sm:mb-5">
                   Tools & Process
                 </h3>
-                <div className="flex items-center gap-2 sm:gap-3 mt-4 sm:mt-5 flex-wrap">
-                  {/* Figma Icon */}
-                  <div
-                    className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
-                    title="Figma"
-                  >
-                    <FaFigma className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
-                  </div>
+                <ul
+                  className="flex items-center gap-2 sm:gap-3 mt-4 sm:mt-5 flex-wrap"
+                  role="list"
+                  aria-label="Tools used in project"
+                >
+                  <li>
+                    <div
+                      className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                      title="Figma"
+                      role="img"
+                      aria-label="Figma"
+                    >
+                      <FaFigma className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
+                    </div>
+                  </li>
 
-                  {/* Canva Icon */}
-                  <div
-                    className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
-                    title="Canva"
-                  >
-                    <SiCanva className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
-                  </div>
+                  <li>
+                    <div
+                      className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                      title="Canva"
+                      role="img"
+                      aria-label="Canva"
+                    >
+                      <SiCanva className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
+                    </div>
+                  </li>
 
-                  {/* Zoom Icon */}
-                  <div
-                    className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
-                    title="Zoom"
-                  >
-                    <SiZoom className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
-                  </div>
+                  <li>
+                    <div
+                      className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                      title="Zoom"
+                      role="img"
+                      aria-label="Zoom"
+                    >
+                      <SiZoom className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
+                    </div>
+                  </li>
 
-                  {/* SUS Icon */}
-                  <div
-                    className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
-                    title="System Usability Scale (SUS)"
-                  >
-                    <MdAssessment className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
-                  </div>
+                  <li>
+                    <div
+                      className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                      title="System Usability Scale (SUS)"
+                      role="img"
+                      aria-label="System Usability Scale"
+                    >
+                      <MdAssessment className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
+                    </div>
+                  </li>
 
-                  {/* Google Forms Icon */}
-                  <div
-                    className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
-                    title="Google Forms"
-                  >
-                    <SiGoogleforms className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
-                  </div>
-                </div>
+                  <li>
+                    <div
+                      className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-[#493B32]/5 rounded-lg hover:bg-[#493B32]/10 transition-colors group cursor-pointer"
+                      title="Google Forms"
+                      role="img"
+                      aria-label="Google Forms"
+                    >
+                      <SiGoogleforms className="w-4 h-4 sm:w-5 sm:h-5 text-[#493B32]" />
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-        </div>
+          </section>
+        </aside>
 
         {/* Project Overview Section */}
-        <section id="overview" className="space-y-6 mt-12">
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
-            <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
+        <section
+          id="overview"
+          className="space-y-6 mt-12"
+          aria-labelledby="overview-heading"
+        >
+          <header className="flex flex-row items-center gap-2">
+            <div
+              className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
+              aria-hidden="true"
+            ></div>
+            <h2
+              id="overview-heading"
+              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
+            >
               Project Overview
             </h2>
-          </div>
+          </header>
 
           <p className="text-[#493B32] leading-relaxed text-lg">
             Goodreads is a well-established platform for book lovers, but key
@@ -178,30 +223,49 @@ const GoodReads = () => {
         </section>
 
         {/* Project Objectives Section */}
-        <section id="objectives" className="space-y-6 mt-16">
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"></div>
-            <h2 className="text-2xl sm:text-3xl font-tan text-[#493B32]">
+        <section
+          id="objectives"
+          className="space-y-6 mt-16"
+          aria-labelledby="objectives-heading"
+        >
+          <header className="flex flex-row items-center gap-2">
+            <div
+              className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
+              aria-hidden="true"
+            ></div>
+            <h2
+              id="objectives-heading"
+              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
+            >
               Project Objectives
             </h2>
-          </div>
+          </header>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ObjectiveCard
-              number="01"
-              title="Improve Task Success"
-              description="Increase success rate of core Goodreads tasks by 25% through intuitive interface design and streamlined user flows"
-            />
-            <ObjectiveCard
-              number="02"
-              title="Enhance Usability"
-              description="Raise System Usability Scale (SUS) score from 53 to 70+ by implementing user-centered design improvements"
-            />
-            <ObjectiveCard
-              number="03"
-              title="Community Focus"
-              description="Create a streamlined, community-first experience that better connects readers and facilitates meaningful discussions"
-            />
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            role="list"
+          >
+            <div role="listitem">
+              <ObjectiveCard
+                number="01"
+                title="Improve Task Success"
+                description="Increase success rate of core Goodreads tasks by 25% through intuitive interface design and streamlined user flows"
+              />
+            </div>
+            <div role="listitem">
+              <ObjectiveCard
+                number="02"
+                title="Enhance Usability"
+                description="Raise System Usability Scale (SUS) score from 53 to 70+ by implementing user-centered design improvements"
+              />
+            </div>
+            <div role="listitem">
+              <ObjectiveCard
+                number="03"
+                title="Community Focus"
+                description="Create a streamlined, community-first experience that better connects readers and facilitates meaningful discussions"
+              />
+            </div>
           </div>
         </section>
 
@@ -239,7 +303,7 @@ const GoodReads = () => {
         <section id="next" className="mt-16 mb-16">
           <NextStepsSection />
         </section>
-      </div>
+      </article>
     </main>
   );
 };
