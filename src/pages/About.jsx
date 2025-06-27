@@ -28,7 +28,7 @@ import Value from "../components/Value";
 import GlassIcon from "../components/GlassIcon";
 import NeginImage1 from "../assets/profilephoto.png";
 import styles from "../components/Scroll.module.css";
-import Button from '../components/Button';
+import Button from "../components/Button";
 
 const About = () => {
   const [expandedSection, setExpandedSection] = useState(null);
@@ -87,16 +87,21 @@ const About = () => {
 
   return (
     <main className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 min-h-screen bg-[#FFF7F2] pt-20 lg:pt-50 lg:px-0 md:px-8 relative overflow-hidden">
-      {/* Left vertical line */}
-      <div className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-4rem)] w-[2px] bg-[#493b32]"></div>
+      {/* Decorative elements - purely visual */}
+      <div
+        className="absolute left-17 md:left-20 top-0 bottom-8 h-[calc(100%-4rem)] w-[2px] bg-[#493b32]"
+        aria-hidden="true"
+      ></div>
 
-      {/* Right border line */}
-      <div className="absolute right-10 top-0 bottom-8 h-[calc(100%-4rem)] w-[2px] bg-[#493b32]"></div>
+      <div
+        className="absolute right-10 top-0 bottom-8 h-[calc(100%-4rem)] w-[2px] bg-[#493b32]"
+        aria-hidden="true"
+      ></div>
 
-      {/* Main content container */}
-      <div className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2">
+      {/* Page Content */}
+      <article className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2">
         {/* Hero Section */}
-        <section className="pl-20">
+        <header className="pl-20" aria-labelledby="about-heading">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
             <ProfileImage imageSrc={NeginImage1} altText="Negin Asem" />
 
@@ -107,17 +112,22 @@ const About = () => {
               />
             </div>
           </div>
-        </section>
 
-        <div className="pl-22 lg:pl-0 pr-10 lg:pr-0">
-          <p className="text-[#493B32] leading-relaxed text-base md:text-lg mt-2 sm:mt-4 lg:mt-6">
-          When I'm not designing, you'll likely find me enjoying a good coffee, reading a book, capturing a moment through photography, or reflecting on how small details shape big experiences.
-          </p>
-        </div>
+          <div className="pl-22 lg:pl-0 pr-10 lg:pr-0">
+            <p className="text-[#493B32] leading-relaxed text-base md:text-lg mt-2 sm:mt-4 lg:mt-6">
+              When I'm not designing, you'll likely find me enjoying a good
+              coffee, reading a book, capturing a moment through photography, or
+              reflecting on how small details shape big experiences.
+            </p>
+          </div>
+        </header>
 
-        {/* Resume button section */}
-        <section className="pl-22 lg:pl-0 pr-10 lg:pr-0 pt-8 sm:pt-10">
-          <Button 
+        {/* Call to Action */}
+        <section
+          className="pl-22 lg:pl-0 pr-10 lg:pr-0 pt-8 sm:pt-10"
+          aria-label="Resume download"
+        >
+          <Button
             href="/assets/resume/resume.pdf"
             variant="primary"
             showArrow={true}
@@ -126,16 +136,26 @@ const About = () => {
           </Button>
         </section>
 
-        {/* glass icons of the softwares I know */}
-        <section className="pl-22 lg:pl-0 pr-12 lg:pr-0  pt-12 col-start-1 mb-12 sm:mb-16">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl text-[#493B32] xl:text-5xl font-tan leading-tight mb-6 sm:mb-8">
+        {/* Skills and Tools */}
+        <section
+          className="pl-22 lg:pl-0 pr-12 lg:pr-0  pt-12 col-start-1 mb-12 sm:mb-16"
+          aria-labelledby="tools-heading"
+        >
+          <h2
+            id="tools-heading"
+            className="text-2xl sm:text-3xl md:text-4xl text-[#493B32] xl:text-5xl font-tan leading-tight mb-6 sm:mb-8"
+          >
             Software & Tools
-          </h3>
+          </h2>
 
-          <div className={`${styles.scrollContainer} mt-12`}>
-            <div className={styles.scrollTrack}>
+          <div
+            className={`${styles.scrollContainer} mt-12`}
+            role="region"
+            aria-label="Software tools showcase"
+          >
+            <div className={styles.scrollTrack} role="list">
               {softwareTools.map((tool, index) => (
-                <div key={index} className={styles.item}>
+                <div key={index} className={styles.item} role="listitem">
                   <GlassIcon
                     icon={tool.icon}
                     name={tool.name}
@@ -144,7 +164,12 @@ const About = () => {
                 </div>
               ))}
               {softwareTools.map((tool, index) => (
-                <div key={`clone-${index}`} className={styles.item}>
+                <div
+                  key={`clone-${index}`}
+                  className={styles.item}
+                  role="listitem"
+                  aria-hidden="true"
+                >
                   <GlassIcon
                     icon={tool.icon}
                     name={tool.name}
@@ -156,20 +181,21 @@ const About = () => {
           </div>
         </section>
 
-        {/* Accordion Sections */}
-        <section className=" space-y-4 sm:space-y-4 mb-12 sm:mb-16 lg:mb-20">
+        {/* Values and Philosophy */}
+        <section
+          className=" space-y-4 sm:space-y-4 mb-12 sm:mb-16 lg:mb-20"
+          aria-label="Personal values and design philosophy"
+        >
           <AccordionSection
             title="My Core Values"
             isExpanded={expandedSection === "value"}
             onToggle={() => toggleSection("value")}
           >
-            <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-4 sm:space-y-6" role="list">
               {values.map((val, index) => (
-                <Value
-                  key={index}
-                  title={val.title}
-                  description={val.description}
-                />
+                <div key={index} role="listitem">
+                  <Value title={val.title} description={val.description} />
+                </div>
               ))}
             </div>
           </AccordionSection>
@@ -184,7 +210,7 @@ const About = () => {
             </div>
           </AccordionSection>
         </section>
-      </div>
+      </article>
     </main>
   );
 };
