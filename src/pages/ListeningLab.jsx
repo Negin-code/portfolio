@@ -420,30 +420,6 @@ const ListeningLab = () => {
           </div>
         </section>
       </div>
-      {/* Navigation Footer */}
-      <nav
-        className="col-span-8 md:col-span-10 lg:col-start-2 col-start-1 flex justify-between items-center mt-0"
-        aria-label="Page navigation"
-      >
-        <Link
-          to="/projects"
-          className="flex items-center gap-2 mx-20 lg:mx-10 lg:my-20 lg:mb-20 hover:opacity-80 transition-opacity"
-          aria-label="Back to Projects"
-        >
-          <IoIosArrowRoundBack size={42} color="#493B32" className="my-4" />
-          <span className="font-open font-semibold text-xl lg:text-2xl text-[#493B32]">
-            Projects
-          </span>
-        </Link>
-        <button
-          type="button"
-          className="mx-20 my-10 mb-10 lg:mx-10 lg:my-20 lg:mb-20 cursor-pointer hover:opacity-80 transition-opacity"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          aria-label="Scroll to top"
-        >
-          <IoIosArrowDropupCircle size={40} color="#493B32" />
-        </button>
-      </nav>
     </main>
   );
 };
