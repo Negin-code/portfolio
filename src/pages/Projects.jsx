@@ -52,7 +52,14 @@ const Projects = () => {
       gradientFrom: "#F75590",
       gradientTo: "#FF6B6B"
     },
-    
+    {
+      image: GoodReadsImage,
+      imageAlt: "Accessibility Study",
+      category: "Accessibility",
+      categoryType: "design",
+      title: "Accessibility Study",
+      description: "The goal of the Accessibility Study was to evaluate the effectiveness of the website's design and functionality in meeting the needs of its users.",
+    },
     {
       image: CultureCafeImage,
       imageAlt: "Culture Cafe",
