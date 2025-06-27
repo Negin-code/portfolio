@@ -102,7 +102,7 @@ const About = () => {
       <article className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2">
         {/* Hero Section */}
         <header className="pl-20" aria-labelledby="about-heading">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12">
             <ProfileImage imageSrc={NeginImage1} altText="Negin Asem" />
 
             <div className="lg:col-span-7">
@@ -111,17 +111,15 @@ const About = () => {
                 description="A UX/UI designer and front-end developer blending logic with empathy to create meaningful digital experiences. With a foundation in software engineering and a passion for human-centered design, I thrive at the intersection of creativity and functionality. I am in the last steps of studying New Media Design and Web Development at BCIT, where I've built strong foundations in everything from brand strategy and UI systems to creative coding. Beyond the classroom, I've collaborated with community organizations and innovation labs to design services and tools that support real people in meaningful ways."
               />
             </div>
-          </div>
-
-          
+          </div>  
         </header>
 
         {/* Call to Action */}
         <section
-          className="pl-22 lg:pl-0 pr-10 lg:pr-0 pt-8 sm:pt-10"
+          className="pl-22 lg:pl-0 pr-10 lg:pr-0 pt-8"
           aria-label="Resume download"
         >
-          <p className="text-[#493B32] leading-relaxed text-base md:text-lg mt-2 sm:mt-4 lg:mt-6">
+          <p className="text-[#493B32] leading-relaxed text-base md:text-lg mt-2 sm:mt-4 lg:mt-6 pb-8">
               When I'm not designing, you'll likely find me enjoying a good
               coffee, reading a book, capturing a moment through photography, or
               reflecting on how small details shape big experiences.
