@@ -113,13 +113,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="pl-22 lg:pl-0 pr-10 lg:pr-0">
-            <p className="text-[#493B32] leading-relaxed text-base md:text-lg mt-2 sm:mt-4 lg:mt-6">
-              When I'm not designing, you'll likely find me enjoying a good
-              coffee, reading a book, capturing a moment through photography, or
-              reflecting on how small details shape big experiences.
-            </p>
-          </div>
+          
         </header>
 
         {/* Call to Action */}
@@ -127,6 +121,11 @@ const About = () => {
           className="pl-22 lg:pl-0 pr-10 lg:pr-0 pt-8 sm:pt-10"
           aria-label="Resume download"
         >
+          <p className="text-[#493B32] leading-relaxed text-base md:text-lg mt-2 sm:mt-4 lg:mt-6">
+              When I'm not designing, you'll likely find me enjoying a good
+              coffee, reading a book, capturing a moment through photography, or
+              reflecting on how small details shape big experiences.
+            </p>
           <Button
             href="/assets/resume/resume.pdf"
             variant="primary"
