@@ -289,7 +289,7 @@ const Accessibility = () => {
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Navigate to Unsplash</h5>
-                          <p className="text-xs text-[#493B32]/80">Open the image search platform</p>
+                          <p className="text-xs text-[#493B32]/80">Open the image search on Unsplash</p>
                         </div>
                       </div>
                     </div>
@@ -302,7 +302,7 @@ const Accessibility = () => {
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Search Query</h5>
-                          <p className="text-xs text-[#493B32]/80">Type "red building" in search bar</p>
+                          <p className="text-xs text-[#493B32]/80">Typed "red building" in search bar</p>
                         </div>
                       </div>
                     </div>
@@ -361,10 +361,6 @@ const Accessibility = () => {
                       </div>
                     </div>
                   </div>
-
-                  <p className="text-sm text-[#493B32]/80 max-w-xl mx-auto">
-                    Red elements appear as muted browns or yellows to users with protanopia, making visual identification extremely challenging.
-                  </p>
                 </div>
 
                 {/* Challenges & Results */}
@@ -433,7 +429,7 @@ const Accessibility = () => {
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Open Coolors.co</h5>
-                          <p className="text-xs text-[#493B32]/80">Navigate to the color palette generation tool</p>
+                          <p className="text-xs text-[#493B32]/80">Navigate to the color palette generator on Coolors.co</p>
                         </div>
                       </div>
                     </div>
@@ -477,57 +473,10 @@ const Accessibility = () => {
                       </div>
                     </div>
 
-                    {/* Step 5 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                          5
-                        </div>
-                        <div>
-                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Focus on High Contrast</h5>
-                          <p className="text-xs text-[#493B32]/80">Create distinguishable palette under simulated vision</p>
-                        </div>
-                      </div>
-                    </div>
-
                   </div>
                 </div>
-
-                {/* Challenges & Results */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
-                      <HiExclamation className="w-5 h-5 text-[#493B32]" />
-                      Challenges Encountered
-                    </h4>
-                    <div className="space-y-2">
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Orange with red undertones still appeared muted</p>
-                      </div>
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Blue–orange combinations were difficult to evaluate without feedback from normal vision users</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
-                      <FaCheck className="w-5 h-5 text-[#493B32]" />
-                      Result
-                    </h4>
-                    <div className="space-y-2">
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Created a yellow-based orange and bright blue palette</p>
-                      </div>
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Noted the need for additional contrast strategies beyond color (e.g., labels, spacing)</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                                 {/* Color Palette Visual */}
-                 <div className="text-center space-y-4">
+                {/* Color Palette Visual */}
+                <div className="text-center space-y-4">
                    <h4 className="text-lg font-medium text-[#493B32] flex items-center justify-center gap-2">
                      <MdColorLens className="w-5 h-5" />
                      Accessible Blue-Orange Palette
@@ -556,6 +505,40 @@ const Accessibility = () => {
                      The final palette features yellow-based orange tones and bright blue colors that maintain high contrast and visibility for users with protanopia.
                    </p>
                  </div>
+
+                {/* Challenges & Results */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                      <HiExclamation className="w-5 h-5 text-[#493B32]" />
+                      Challenges Encountered
+                    </h4>
+                    <div className="space-y-2">
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Orange with red undertones still appeared muted</p>
+                      </div>
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Red–orange combinations were difficult to evaluate without feedback from normal vision users</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                      <FaCheck className="w-5 h-5 text-[#493B32]" />
+                      Key Insights
+                    </h4>
+                    <div className="space-y-2">
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Created a green-based orange and bright blue palette</p>
+                      </div>
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Noted the need for additional contrast strategies beyond color (e.g., labels, spacing)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 
                </div>
              </div>
 
@@ -601,7 +584,7 @@ const Accessibility = () => {
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Apply Custom Color Palette</h5>
-                          <p className="text-xs text-[#493B32]/80">Use the previously created blue and yellow-based orange palette</p>
+                          <p className="text-xs text-[#493B32]/80">Use the previously created blue and green-based orange palette</p>
                         </div>
                       </div>
                     </div>
@@ -613,21 +596,8 @@ const Accessibility = () => {
                           3
                         </div>
                         <div>
-                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Design Enhancements</h5>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Add Text Labels</h5>
                           <p className="text-xs text-[#493B32]/80">Add text labels over color-coded areas to ensure meaning isn't lost</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Step 4 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                          4
-                        </div>
-                        <div>
-                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Test & Validate</h5>
-                          <p className="text-xs text-[#493B32]/80">Review design through protanopia simulation and team feedback</p>
                         </div>
                       </div>
                     </div>
