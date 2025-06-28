@@ -269,7 +269,7 @@ const Accessibility = () => {
               <div className="space-y-6">
                 <div>
                   <h4 className="text-lg font-medium text-[#493B32] mb-3 flex items-center gap-2">
-                    <IoNavigate className="text-blue-600 w-5 h-5" /> Step-by-Step Flow
+                    <IoNavigate className="text-[#493B32] w-6 h-6" /> Step-by-Step Flow
                   </h4>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -277,16 +277,16 @@ const Accessibility = () => {
                       <div className="bg-gray-50 rounded-lg p-4">
                         <h5 className="font-medium text-[#493B32] mb-2">Setup Environment</h5>
                         <ul className="space-y-1 text-sm text-[#493B32]/80">
-                          <li className="flex items-center gap-2"><FaCheck className="text-green-600 w-3 h-3" /> Enable ChromeLens with protanopia (red-blind) simulation</li>
-                          <li className="flex items-center gap-2"><FaSearch className="text-blue-600 w-3 h-3" /> Open Unsplash.com</li>
+                          <li className="flex items-center gap-2"><FaCheck className="text-[#493B32] w-4 h-4" /> Enable ChromeLens with protanopia (red-blind) simulation</li>
+                          <li className="flex items-center gap-2"><FaSearch className="text-[#493B32] w-4 h-4" /> Open Unsplash.com</li>
                         </ul>
                       </div>
                       
                       <div className="bg-gray-50 rounded-lg p-4">
                         <h5 className="font-medium text-[#493B32] mb-2">Search</h5>
                         <ul className="space-y-1 text-sm text-[#493B32]/80">
-                          <li className="flex items-center gap-2"><MdKeyboard className="text-purple-600 w-3 h-3" /> Type "red building" in the Unsplash search bar</li>
-                          <li className="flex items-center gap-2"><FaSearch className="text-blue-600 w-3 h-3" /> Browse image results with ChromeLens simulation still active</li>
+                          <li className="flex items-center gap-2"><MdKeyboard className="text-[#493B32] w-4 h-4" /> Type "red building" in the Unsplash search bar</li>
+                          <li className="flex items-center gap-2"><FaSearch className="text-[#493B32] w-4 h-4" /> Browse image results with ChromeLens simulation still active</li>
                         </ul>
                       </div>
                     </div>
@@ -295,16 +295,16 @@ const Accessibility = () => {
                       <div className="bg-gray-50 rounded-lg p-4">
                         <h5 className="font-medium text-[#493B32] mb-2">Cognitive Challenge</h5>
                         <ul className="space-y-1 text-sm text-[#493B32]/80">
-                          <li className="flex items-center gap-2"><MdPsychology className="text-indigo-600 w-3 h-3" /> Visually scan for images that might contain red highlights</li>
-                          <li className="flex items-center gap-2"><HiExclamation className="text-orange-600 w-3 h-3" /> Confusion: many red elements appear desaturated, muted, or indistinguishable from browns or greens</li>
+                          <li className="flex items-center gap-2"><MdPsychology className="text-[#493B32] w-4 h-4" /> Visually scan for images that might contain red highlights</li>
+                          <li className="flex items-center gap-2"><HiExclamation className="text-[#493B32] w-4 h-4" /> Confusion: many red elements appear desaturated, muted, or indistinguishable from browns or greens</li>
                         </ul>
                       </div>
                       
                       <div className="bg-gray-50 rounded-lg p-4">
                         <h5 className="font-medium text-[#493B32] mb-2">Pain Point</h5>
                         <ul className="space-y-1 text-sm text-[#493B32]/80">
-                          <li className="flex items-center gap-2"><FaTimes className="text-red-600 w-3 h-3" /> The user fails to identify whether the image matches the "red building" query</li>
-                          <li className="flex items-center gap-2"><IoNavigate className="text-blue-600 w-3 h-3" /> Relies heavily on titles, tags, or descriptions (if available) rather than visual content</li>
+                          <li className="flex items-center gap-2"><FaTimes className="text-[#493B32] w-4 h-4" /> The user fails to identify whether the image matches the "red building" query</li>
+                          <li className="flex items-center gap-2"><IoNavigate className="text-[#493B32] w-4 h-4" /> Relies heavily on titles, tags, or descriptions (if available) rather than visual content</li>
                         </ul>
                       </div>
                     </div>
@@ -315,7 +315,7 @@ const Accessibility = () => {
                                  <div className="bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-gray-300">
                    <div className="space-y-2">
                      <div className="w-16 h-16 bg-gray-300 rounded-lg mx-auto flex items-center justify-center">
-                       <MdInsertChart className="text-gray-600 w-8 h-8" />
+                       <MdInsertChart className="text-[#493B32] w-10 h-10" />
                      </div>
                      <h5 className="font-medium text-gray-600">User Flow Diagram</h5>
                      <p className="text-sm text-gray-500">Visual representation of the ChromeLens simulation process</p>
@@ -331,7 +331,7 @@ const Accessibility = () => {
                                              <div className="bg-gradient-to-br from-red-100 to-red-200 rounded-lg p-8 text-center border-2 border-dashed border-red-300">
                          <div className="space-y-2">
                            <div className="w-12 h-12 bg-red-400 rounded-lg mx-auto flex items-center justify-center">
-                             <FaBuilding className="text-white w-6 h-6" />
+                             <FaBuilding className="text-white w-8 h-8" />
                            </div>
                            <p className="text-sm text-red-700">Red building clearly visible</p>
                          </div>
@@ -343,7 +343,7 @@ const Accessibility = () => {
                                              <div className="bg-gradient-to-br from-amber-100 to-brown-200 rounded-lg p-8 text-center border-2 border-dashed border-amber-300">
                          <div className="space-y-2">
                            <div className="w-12 h-12 bg-amber-600 rounded-lg mx-auto flex items-center justify-center">
-                             <FaBuilding className="text-white w-6 h-6" />
+                             <FaBuilding className="text-white w-8 h-8" />
                            </div>
                            <p className="text-sm text-amber-700">Red appears as brown/yellow</p>
                          </div>
@@ -357,11 +357,11 @@ const Accessibility = () => {
                   <h4 className="text-lg font-medium text-blue-800 mb-3">Key Insights</h4>
                                      <div className="space-y-2">
                      <div className="flex items-start gap-3">
-                       <MdWarning className="text-red-500 w-5 h-5 mt-0.5" />
+                       <MdWarning className="text-[#493B32] w-6 h-6 mt-0.5" />
                        <p className="text-blue-700"><strong>Visual Limitation:</strong> Users with red-blindness cannot reliably spot red visual cues</p>
                      </div>
                      <div className="flex items-start gap-3">
-                       <MdExtension className="text-blue-500 w-5 h-5 mt-0.5" />
+                       <MdExtension className="text-[#493B32] w-6 h-6 mt-0.5" />
                        <p className="text-blue-700"><strong>User Frustration:</strong> Searching for visual characteristics is frustrating and uncertain without assistive labels or alternative visual signals</p>
                      </div>
                    </div>
