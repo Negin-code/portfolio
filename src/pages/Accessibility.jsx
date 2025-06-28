@@ -198,7 +198,7 @@ const Accessibility = () => {
           </header>
 
           <p className="text-[#493B32] leading-relaxed text-lg">
-            The goal of this project was to explore how users with red-blindness (protanopia) interact with digital interfaces and identify barriers they face. As a UX design team, we simulated a red-blind user's perspective, analyzed pain points, and prototyped inclusive solutions that promote accessibility in visual design.
+          The goal of this school project was to explore how users with red-blindness (protanopia) interact with digital interfaces and identify the barriers they face. As a UX design team, we simulated a red-blind user's perspective, analyzed pain points, and prototyped inclusive solutions that promote accessibility in visual design. This hands-on assignment challenged us to apply accessibility principles in real-world contexts and advocate for inclusive user experiences from the ground up.
           </p>
         </section>
 
