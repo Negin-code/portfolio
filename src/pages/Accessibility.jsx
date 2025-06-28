@@ -269,56 +269,79 @@ const Accessibility = () => {
                   <p className="text-[#493B32]/80 text-sm max-w-2xl mx-auto">
                     Simulating how users with red-blindness experience visual search on Unsplash
                   </p>
+                  <div className="mt-2 text-xs text-[#493B32]/60 bg-[#493B32]/5 px-3 py-1 rounded-full inline-block">
+                    Tool Active: ChromeLens – Protanopia mode
+                  </div>
                 </div>
 
-                {/* User Flow */}
+                {/* Steps */}
                 <div className="space-y-4">
-                  <h4 className="text-lg font-medium text-[#493B32] text-center">User Journey</h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                  <h4 className="text-lg font-medium text-[#493B32] text-center">User Flow Steps</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     
                     {/* Step 1 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4 text-center">
-                      <div className="w-10 h-10 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
-                        1
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          1
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Enable ChromeLens</h5>
+                          <p className="text-xs text-[#493B32]/80">Activate protanopia simulation mode</p>
+                        </div>
                       </div>
-                      <h5 className="font-medium text-[#493B32] text-sm mb-2">Setup</h5>
-                      <p className="text-xs text-[#493B32]/80">Enable ChromeLens protanopia simulation</p>
                     </div>
 
                     {/* Step 2 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4 text-center">
-                      <div className="w-10 h-10 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
-                        2
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          2
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Navigate to Unsplash</h5>
+                          <p className="text-xs text-[#493B32]/80">Open the image search platform</p>
+                        </div>
                       </div>
-                      <h5 className="font-medium text-[#493B32] text-sm mb-2">Search</h5>
-                      <p className="text-xs text-[#493B32]/80">Type "red building" on Unsplash</p>
                     </div>
 
                     {/* Step 3 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4 text-center">
-                      <div className="w-10 h-10 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
-                        3
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          3
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Search Query</h5>
+                          <p className="text-xs text-[#493B32]/80">Type "red building" in search bar</p>
+                        </div>
                       </div>
-                      <h5 className="font-medium text-[#493B32] text-sm mb-2">Challenge</h5>
-                      <p className="text-xs text-[#493B32]/80">Visual confusion due to muted colors</p>
                     </div>
 
                     {/* Step 4 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4 text-center">
-                      <div className="w-10 h-10 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
-                        4
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          4
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Attempt Visual Scan</h5>
+                          <p className="text-xs text-[#493B32]/80">Try to identify red buildings in results</p>
+                        </div>
                       </div>
-                      <h5 className="font-medium text-[#493B32] text-sm mb-2">Pain Point</h5>
-                      <p className="text-xs text-[#493B32]/80">Failed identification, relying on text</p>
                     </div>
 
                     {/* Step 5 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4 text-center">
-                      <div className="w-10 h-10 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
-                        5
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          5
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Experience Difficulty</h5>
+                          <p className="text-xs text-[#493B32]/80">Struggle with color-based identification</p>
+                        </div>
                       </div>
-                      <h5 className="font-medium text-[#493B32] text-sm mb-2">Insight</h5>
-                      <p className="text-xs text-[#493B32]/80">Color-only cues create barriers</p>
                     </div>
 
                   </div>
@@ -355,24 +378,49 @@ const Accessibility = () => {
                   </p>
                 </div>
 
-                {/* Key Findings */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-[#493B32]/5 rounded-lg p-4">
-                    <div className="flex items-start gap-3">
-                      <MdWarning className="text-[#493B32] w-5 h-5 mt-1 flex-shrink-0" />
-                      <div>
-                        <h5 className="font-medium text-[#493B32] mb-1">Visual Limitation</h5>
-                        <p className="text-sm text-[#493B32]/80">Users with red-blindness cannot reliably identify red visual cues</p>
+                {/* Challenges & Results */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                      <HiExclamation className="w-5 h-5 text-[#493B32]" />
+                      Challenges Encountered
+                    </h4>
+                    <div className="space-y-2">
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Visual confusion due to muted red tones</p>
+                      </div>
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Failed identification, had to rely on text descriptions</p>
                       </div>
                     </div>
                   </div>
-                  <div className="bg-[#493B32]/5 rounded-lg p-4">
-                    <div className="flex items-start gap-3">
-                      <MdExtension className="text-[#493B32] w-5 h-5 mt-1 flex-shrink-0" />
-                      <div>
-                        <h5 className="font-medium text-[#493B32] mb-1">User Frustration</h5>
-                        <p className="text-sm text-[#493B32]/80">Visual search becomes uncertain without alternative signals</p>
+
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                      <FaCheck className="w-5 h-5 text-[#493B32]" />
+                      Key Insights
+                    </h4>
+                    <div className="space-y-2">
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Color-only cues create significant barriers</p>
                       </div>
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Alternative visual signals are essential</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* UX Takeaway */}
+                <div className="bg-[#493B32]/5 rounded-lg p-4 border-l-4 border-[#493B32]">
+                  <div className="flex items-start gap-3">
+                    <MdPsychology className="w-5 h-5 text-[#493B32] mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h5 className="font-medium text-[#493B32] mb-2">UX Takeaway</h5>
+                      <p className="text-sm text-[#493B32]/80">
+                        This simulation revealed how heavily we rely on color for visual communication. When red becomes indistinguishable, 
+                        users must depend on alternative cues like text, patterns, or icons to complete basic tasks successfully.
+                      </p>
                     </div>
                   </div>
                 </div>
