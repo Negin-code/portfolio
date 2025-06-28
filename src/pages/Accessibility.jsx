@@ -311,16 +311,119 @@ const Accessibility = () => {
                   </div>
                 </div>
 
-                {/* Visual Diagram Placeholder */}
-                                 <div className="bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-gray-300">
-                   <div className="space-y-2">
-                     <div className="w-16 h-16 bg-gray-300 rounded-lg mx-auto flex items-center justify-center">
-                       <MdInsertChart className="text-[#493B32] w-10 h-10" />
-                     </div>
-                     <h5 className="font-medium text-gray-600">User Flow Diagram</h5>
-                     <p className="text-sm text-gray-500">Visual representation of the ChromeLens simulation process</p>
-                   </div>
-                 </div>
+                                {/* User Flow Diagram */}
+                <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10">
+                  <h4 className="text-lg font-medium text-[#493B32] mb-6 text-center">
+                    Overcoming Red-Blindness in Visual Search
+                  </h4>
+                  
+                  <div className="relative">
+                    {/* Flow Steps */}
+                    <div className="space-y-6">
+                      
+                      {/* Step 1: Setup Environment */}
+                      <div className="flex items-center gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            1
+                          </div>
+                        </div>
+                        <div className="flex-1 bg-[#493B32]/5 rounded-lg p-4">
+                          <h5 className="font-medium text-[#493B32] mb-2 flex items-center gap-2">
+                            <FaCheck className="w-4 h-4" />
+                            Setup Environment
+                          </h5>
+                          <p className="text-sm text-[#493B32]/80">Enable ChromeLens with protanopia simulation and open Unsplash.</p>
+                        </div>
+                      </div>
+
+                      {/* Connector */}
+                      <div className="flex justify-center">
+                        <div className="w-px h-4 bg-[#493B32]/30"></div>
+                      </div>
+
+                      {/* Step 2: Search */}
+                      <div className="flex items-center gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            2
+                          </div>
+                        </div>
+                        <div className="flex-1 bg-[#493B32]/5 rounded-lg p-4">
+                          <h5 className="font-medium text-[#493B32] mb-2 flex items-center gap-2">
+                            <FaSearch className="w-4 h-4" />
+                            Search
+                          </h5>
+                          <p className="text-sm text-[#493B32]/80">Type "red building" in the search bar and browse results.</p>
+                        </div>
+                      </div>
+
+                      {/* Connector */}
+                      <div className="flex justify-center">
+                        <div className="w-px h-4 bg-[#493B32]/30"></div>
+                      </div>
+
+                      {/* Step 3: Cognitive Challenge */}
+                      <div className="flex items-center gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            3
+                          </div>
+                        </div>
+                        <div className="flex-1 bg-[#493B32]/5 rounded-lg p-4">
+                          <h5 className="font-medium text-[#493B32] mb-2 flex items-center gap-2">
+                            <MdPsychology className="w-4 h-4" />
+                            Cognitive Challenge
+                          </h5>
+                          <p className="text-sm text-[#493B32]/80">Scan images for red highlights, facing confusion due to desaturation.</p>
+                        </div>
+                      </div>
+
+                      {/* Connector */}
+                      <div className="flex justify-center">
+                        <div className="w-px h-4 bg-[#493B32]/30"></div>
+                      </div>
+
+                      {/* Step 4: Pain Point */}
+                      <div className="flex items-center gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            4
+                          </div>
+                        </div>
+                        <div className="flex-1 bg-[#493B32]/5 rounded-lg p-4">
+                          <h5 className="font-medium text-[#493B32] mb-2 flex items-center gap-2">
+                            <FaTimes className="w-4 h-4" />
+                            Pain Point
+                          </h5>
+                          <p className="text-sm text-[#493B32]/80">Fail to identify red buildings, relying on text descriptions.</p>
+                        </div>
+                      </div>
+
+                      {/* Connector */}
+                      <div className="flex justify-center">
+                        <div className="w-px h-4 bg-[#493B32]/30"></div>
+                      </div>
+
+                      {/* Step 5: Insight */}
+                      <div className="flex items-center gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            5
+                          </div>
+                        </div>
+                        <div className="flex-1 bg-[#493B32]/5 rounded-lg p-4">
+                          <h5 className="font-medium text-[#493B32] mb-2 flex items-center gap-2">
+                            <MdWarning className="w-4 h-4" />
+                            Insight
+                          </h5>
+                          <p className="text-sm text-[#493B32]/80">Recognize the difficulty for red-blind users to spot red cues.</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
 
                 {/* Side-by-Side Comparison Placeholder */}
                 <div>
