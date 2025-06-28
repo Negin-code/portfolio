@@ -250,7 +250,7 @@ const Accessibility = () => {
               id="research-heading"
               className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
-              Research & Empathy
+              User Testing & Observations
             </h2>
           </header>
 
@@ -674,41 +674,6 @@ const Accessibility = () => {
           </div>
         </section>
 
-        {/* User Testing Section */}
-        <section
-          id="testing"
-          className="space-y-6 mt-16"
-          aria-labelledby="testing-heading"
-        >
-          <header className="flex flex-row items-center gap-2">
-            <div
-              className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
-              aria-hidden="true"
-            ></div>
-            <h2
-              id="testing-heading"
-              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
-            >
-              User Testing & Observations
-            </h2>
-          </header>
-
-          <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10">
-            <p className="text-[#493B32] leading-relaxed text-base mb-4">
-              We conducted two rounds of informal usability testing, using simulated red-blindness:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-medium text-[#493B32] mb-2">Observed Behavior:</h4>
-                <p className="text-[#493B32]/80 text-sm">Missed cues in traditional red elements</p>
-              </div>
-              <div>
-                <h4 className="font-medium text-[#493B32] mb-2">Challenges Reported:</h4>
-                <p className="text-[#493B32]/80 text-sm">Difficulty reading low-contrast text, misidentification of UI elements based on color alone</p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Solutions Section */}
         <section
