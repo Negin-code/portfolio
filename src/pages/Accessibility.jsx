@@ -8,6 +8,7 @@ import { HiExclamation } from "react-icons/hi";
 import ProjectHero from "../components/ProjectHero";
 import ObjectiveCard from "../components/ObjectiveCard";
 import comparison from "../assets/comparison.png";
+import colorpalette from "../assets/colorpalette.png";
 
 const Accessibility = () => {
   return (
@@ -513,21 +514,52 @@ const Accessibility = () => {
                   </div>
                 </div>
 
-                {/* UX Takeaway */}
-                <div className="bg-[#493B32]/5 rounded-lg p-4 border-l-4 border-[#493B32]">
-                  <div className="flex items-start gap-3">
-                    <MdPsychology className="w-5 h-5 text-[#493B32] mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h5 className="font-medium text-[#493B32] mb-2">UX Takeaway</h5>
-                      <p className="text-sm text-[#493B32]/80">
-                        Keeping ChromeLens active during both tasks provided a realistic simulation of challenges faced by red-blind users. 
-                        These insights helped guide accessible design decisions and reinforced the importance of contrast, multi-channel cues, and inclusive color strategies.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                                 {/* UX Takeaway */}
+                 <div className="bg-[#493B32]/5 rounded-lg p-4 border-l-4 border-[#493B32]">
+                   <div className="flex items-start gap-3">
+                     <MdPsychology className="w-5 h-5 text-[#493B32] mt-0.5 flex-shrink-0" />
+                     <div>
+                       <h5 className="font-medium text-[#493B32] mb-2">UX Takeaway</h5>
+                       <p className="text-sm text-[#493B32]/80">
+                         Keeping ChromeLens active during both tasks provided a realistic simulation of challenges faced by red-blind users. 
+                         These insights helped guide accessible design decisions and reinforced the importance of contrast, multi-channel cues, and inclusive color strategies.
+                       </p>
+                     </div>
+                   </div>
+                 </div>
+
+                 {/* Color Palette Visual */}
+                 <div className="text-center space-y-4">
+                   <h4 className="text-lg font-medium text-[#493B32] flex items-center justify-center gap-2">
+                     <MdColorLens className="w-5 h-5" />
+                     Accessible Blue-Orange Palette
+                   </h4>
+                   
+                   <div className="relative overflow-hidden rounded-lg shadow-md max-w-2xl mx-auto border-4 border-[#493B32]">
+                     <img
+                       src={colorpalette}
+                       alt="Custom blue-orange color palette designed for red-blind accessibility, showing yellow-based orange and bright blue colors"
+                       className="w-full h-auto object-cover max-h-80"
+                       onError={(e) => {
+                         e.target.style.display = 'none';
+                         e.target.nextElementSibling.style.display = 'block';
+                       }}
+                     />
+                     <div className="hidden bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-gray-300">
+                       <div className="space-y-3">
+                         <MdColorLens className="w-12 h-12 text-gray-400 mx-auto" />
+                         <h5 className="font-medium text-gray-600">Color Palette</h5>
+                         <p className="text-sm text-gray-500">Blue-Orange accessibility palette</p>
+                       </div>
+                     </div>
+                   </div>
+
+                   <p className="text-sm text-[#493B32]/80 max-w-xl mx-auto">
+                     The final palette features yellow-based orange tones and bright blue colors that maintain high contrast and visibility for users with protanopia.
+                   </p>
+                 </div>
+               </div>
+             </div>
 
             {/* Task 3 */}
             <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10">
