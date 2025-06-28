@@ -275,7 +275,7 @@ const Accessibility = () => {
                   {/* Mobile: Vertical Flow, Desktop: Horizontal Grid */}
                   <div className="grid grid-cols-1 lg:grid-cols-5 gap-3 lg:gap-4">
                     
-                    {/* Step 1: Setup */}
+                                         {/* Step 1: Setup */}
                     <div className="relative">
                       <div className="bg-[#493B32]/5 rounded-lg p-3 h-full">
                         <div className="flex lg:flex-col items-center lg:items-start gap-3 lg:gap-2">
@@ -291,8 +291,6 @@ const Accessibility = () => {
                           </div>
                         </div>
                       </div>
-                      {/* Connector for desktop */}
-                      <div className="hidden lg:block absolute top-1/2 -right-2 w-4 h-px bg-[#493B32]/30 transform -translate-y-1/2"></div>
                     </div>
 
                     {/* Step 2: Search */}
@@ -311,7 +309,6 @@ const Accessibility = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="hidden lg:block absolute top-1/2 -right-2 w-4 h-px bg-[#493B32]/30 transform -translate-y-1/2"></div>
                     </div>
 
                     {/* Step 3: Challenge */}
@@ -330,7 +327,6 @@ const Accessibility = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="hidden lg:block absolute top-1/2 -right-2 w-4 h-px bg-[#493B32]/30 transform -translate-y-1/2"></div>
                     </div>
 
                     {/* Step 4: Pain Point */}
@@ -349,7 +345,6 @@ const Accessibility = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="hidden lg:block absolute top-1/2 -right-2 w-4 h-px bg-[#493B32]/30 transform -translate-y-1/2"></div>
                     </div>
 
                     {/* Step 5: Insight */}
@@ -370,16 +365,6 @@ const Accessibility = () => {
                       </div>
                     </div>
 
-                  </div>
-
-                  {/* Mobile connectors */}
-                  <div className="lg:hidden flex justify-center py-2">
-                    <div className="flex flex-col items-center space-y-1">
-                      <div className="w-px h-3 bg-[#493B32]/30"></div>
-                      <div className="w-px h-3 bg-[#493B32]/30"></div>
-                      <div className="w-px h-3 bg-[#493B32]/30"></div>
-                      <div className="w-px h-3 bg-[#493B32]/30"></div>
-                    </div>
                   </div>
                 </div>
 
