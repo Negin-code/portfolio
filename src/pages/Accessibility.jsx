@@ -368,7 +368,7 @@ const Accessibility = () => {
                   <div className="space-y-3">
                     <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
                       <HiExclamation className="w-5 h-5 text-[#493B32]" />
-                      Challenges Encountered
+                      Challenges
                     </h4>
                     <div className="space-y-2">
                       <div className="bg-red-50 border border-red-200 rounded-lg p-3">
@@ -511,7 +511,7 @@ const Accessibility = () => {
                   <div className="space-y-3">
                     <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
                       <HiExclamation className="w-5 h-5 text-[#493B32]" />
-                      Challenges Encountered
+                      Challenges 
                     </h4>
                     <div className="space-y-2">
                       <div className="bg-red-50 border border-red-200 rounded-lg p-3">
@@ -632,7 +632,7 @@ const Accessibility = () => {
                   </div>
 
                   <p className="text-sm text-[#493B32]/80 max-w-xl mx-auto">
-                    The final poster incorporates accessible colors, text labels, and clear visual hierarchy to ensure meaning is conveyed beyond color alone.
+                    The final poster incorporates accessible colors, text labels.
                   </p>
                 </div>
 
@@ -656,7 +656,7 @@ const Accessibility = () => {
                   <div className="space-y-3">
                     <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
                       <FaCheck className="w-5 h-5 text-[#493B32]" />
-                      Solutions Applied
+                      Key Insights
                     </h4>
                     <div className="space-y-2">
                       <div className="bg-green-50 border border-green-200 rounded-lg p-3">
