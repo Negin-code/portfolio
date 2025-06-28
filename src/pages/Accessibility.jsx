@@ -400,19 +400,6 @@ const Accessibility = () => {
                   </div>
                 </div>
 
-                {/* UX Takeaway */}
-                <div className="bg-[#493B32]/5 rounded-lg p-4 border-l-4 border-[#493B32]">
-                  <div className="flex items-start gap-3">
-                    <MdPsychology className="w-5 h-5 text-[#493B32] mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h5 className="font-medium text-[#493B32] mb-2">UX Takeaway</h5>
-                      <p className="text-sm text-[#493B32]/80">
-                        This simulation revealed how heavily we rely on color for visual communication. When red becomes indistinguishable, 
-                        users must depend on alternative cues like text, patterns, or icons to complete basic tasks successfully.
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -539,21 +526,7 @@ const Accessibility = () => {
                   </div>
                 </div>
 
-                                 {/* UX Takeaway */}
-                 <div className="bg-[#493B32]/5 rounded-lg p-4 border-l-4 border-[#493B32]">
-                   <div className="flex items-start gap-3">
-                     <MdPsychology className="w-5 h-5 text-[#493B32] mt-0.5 flex-shrink-0" />
-                     <div>
-                       <h5 className="font-medium text-[#493B32] mb-2">UX Takeaway</h5>
-                       <p className="text-sm text-[#493B32]/80">
-                         Keeping ChromeLens active during both tasks provided a realistic simulation of challenges faced by red-blind users. 
-                         These insights helped guide accessible design decisions and reinforced the importance of contrast, multi-channel cues, and inclusive color strategies.
-                       </p>
-                     </div>
-                   </div>
-                 </div>
-
-                 {/* Color Palette Visual */}
+                                 {/* Color Palette Visual */}
                  <div className="text-center space-y-4">
                    <h4 className="text-lg font-medium text-[#493B32] flex items-center justify-center gap-2">
                      <MdColorLens className="w-5 h-5" />
@@ -726,21 +699,8 @@ const Accessibility = () => {
                   </div>
                 </div>
 
-                {/* UX Takeaway */}
-                <div className="bg-[#493B32]/5 rounded-lg p-4 border-l-4 border-[#493B32]">
-                  <div className="flex items-start gap-3">
-                    <MdPsychology className="w-5 h-5 text-[#493B32] mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h5 className="font-medium text-[#493B32] mb-2">UX Takeaway</h5>
-                      <p className="text-sm text-[#493B32]/80">
-                        Designing under simulated constraints revealed how unreliable red and orange are for visual communication in accessibility contexts. 
-                        Collaboration, validation, and multi-sensory design choices (like icons and text labels) are essential when designing inclusive interfaces.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                               </div>
+             </div>
           </div>
         </section>
 
