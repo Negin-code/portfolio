@@ -7,6 +7,7 @@ import { BiTestTube } from "react-icons/bi";
 import { HiExclamation } from "react-icons/hi";
 import ProjectHero from "../components/ProjectHero";
 import ObjectiveCard from "../components/ObjectiveCard";
+import comparison from "../assets/comparison.png";
 
 const Accessibility = () => {
   return (
@@ -331,7 +332,7 @@ const Accessibility = () => {
                   
                   <div className="relative overflow-hidden rounded-lg shadow-md max-w-2xl mx-auto border-4 border-[#F75590]">
                     <img
-                      src="./assets/comparison.png"
+                      src={comparison}
                       alt="Side-by-side comparison showing how red buildings appear in normal vision versus protanopia (red-blind) vision"
                       className="w-full h-auto object-cover max-h-80"
                       onError={(e) => {
