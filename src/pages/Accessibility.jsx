@@ -289,43 +289,24 @@ const Accessibility = () => {
                 <li>• Despite using simulations, we struggled to validate color effectiveness without outside input</li>
               </ul>
             </div>
-          </div>
-        </section>
 
-        {/* Accessible Design Exploration Section */}
-        <section
-          id="design"
-          className="space-y-6 mt-16"
-          aria-labelledby="design-heading"
-        >
-          <header className="flex flex-row items-center gap-2">
-            <div
-              className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
-              aria-hidden="true"
-            ></div>
-            <h2
-              id="design-heading"
-              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
-            >
-              Accessible Design Exploration
-            </h2>
-          </header>
-
-          <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10">
-            <h3 className="text-xl font-medium text-[#493B32] mb-4">
-              Task 3: Creating an accessible poster using Canva
-            </h3>
-            <p className="text-[#493B32] leading-relaxed text-base mb-4">
-              Using our accessible palette, we designed a simple poster. To strengthen clarity, we added:
-            </p>
-            <ul className="space-y-2 text-[#493B32]/80">
-              <li>• Text labels and icons alongside color codes</li>
-              <li>• Strong contrast between elements</li>
-              <li>• Clear typography hierarchy</li>
-            </ul>
-            <p className="text-[#493B32]/80 text-sm mt-4 italic">
-              Feedback loops with teammates helped us validate contrast and usability, especially since color-blind validation tools had limits.
-            </p>
+            {/* Task 3 */}
+            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10">
+              <h3 className="text-xl font-medium text-[#493B32] mb-4">
+                Task 3: Creating an accessible poster using Canva
+              </h3>
+              <p className="text-[#493B32] leading-relaxed text-base mb-4">
+                Using our accessible palette, we designed a simple poster. To strengthen clarity, we added:
+              </p>
+              <ul className="space-y-2 text-[#493B32]/80">
+                <li>• Text labels and icons alongside color codes</li>
+                <li>• Strong contrast between elements</li>
+                <li>• Clear typography hierarchy</li>
+              </ul>
+              <p className="text-[#493B32]/80 text-sm mt-4 italic">
+                Feedback loops with teammates helped us validate contrast and usability, especially since color-blind validation tools had limits.
+              </p>
+            </div>
           </div>
         </section>
 
