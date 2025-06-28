@@ -278,25 +278,13 @@ const Accessibility = () => {
                 <div className="space-y-4">
                   <h4 className="text-lg font-medium text-[#493B32] text-center">User Flow Steps</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    
+
+
                     {/* Step 1 */}
                     <div className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
                         <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                           1
-                        </div>
-                        <div>
-                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Enable ChromeLens</h5>
-                          <p className="text-xs text-[#493B32]/80">Activate protanopia simulation mode</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Step 2 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                          2
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Navigate to Unsplash</h5>
@@ -305,11 +293,11 @@ const Accessibility = () => {
                       </div>
                     </div>
 
-                    {/* Step 3 */}
+                    {/* Step 2 */}
                     <div className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
                         <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                          3
+                            2
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Search Query</h5>
@@ -318,11 +306,11 @@ const Accessibility = () => {
                       </div>
                     </div>
 
-                    {/* Step 4 */}
+                    {/* Step 3 */}
                     <div className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
                         <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                          4
+                            3
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Attempt Visual Scan</h5>
@@ -331,11 +319,11 @@ const Accessibility = () => {
                       </div>
                     </div>
 
-                    {/* Step 5 */}
+                    {/* Step 4 */}
                     <div className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
                         <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                          5
+                            4
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Experience Difficulty</h5>
