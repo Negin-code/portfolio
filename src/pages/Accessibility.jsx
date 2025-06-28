@@ -9,6 +9,7 @@ import ProjectHero from "../components/ProjectHero";
 import ObjectiveCard from "../components/ObjectiveCard";
 import comparison from "../assets/comparison.png";
 import colorpalette from "../assets/colorpalette.png";
+import poster from "../assets/poster.png";
 
 const Accessibility = () => {
   return (
@@ -587,20 +588,158 @@ const Accessibility = () => {
 
             {/* Task 3 */}
             <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10">
-              <h3 className="text-xl font-medium text-[#493B32] mb-4">
-                Task 3: Creating an accessible poster using Canva
-              </h3>
-              <p className="text-[#493B32] leading-relaxed text-base mb-4">
-                Using our accessible palette, we designed a simple poster. To strengthen clarity, we added:
-              </p>
-              <ul className="space-y-2 text-[#493B32]/80">
-                <li>• Text labels and icons alongside color codes</li>
-                <li>• Strong contrast between elements</li>
-                <li>• Clear typography hierarchy</li>
-              </ul>
-              <p className="text-[#493B32]/80 text-sm mt-4 italic">
-                Feedback loops with teammates helped us validate contrast and usability, especially since color-blind validation tools had limits.
-              </p>
+              <div className="space-y-6">
+                {/* Header */}
+                <div className="text-center border-b border-[#493B32]/10 pb-4">
+                  <h3 className="text-xl font-medium text-[#493B32] mb-2">
+                    Task 3: Designing a Poster in Canva Using the Accessible Color Palette
+                  </h3>
+                  <p className="text-[#493B32]/80 text-sm max-w-2xl mx-auto">
+                    Create a visually appealing and accessible poster using the custom color palette and selected Unsplash photo
+                  </p>
+                  <div className="mt-2 text-xs text-[#493B32]/60 bg-[#493B32]/5 px-3 py-1 rounded-full inline-block">
+                    Tool Active: ChromeLens – Protanopia mode (still ON)
+                  </div>
+                </div>
+
+                {/* Steps */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-medium text-[#493B32] text-center">User Flow Steps</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                    {/* Step 1 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          1
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Preparation</h5>
+                          <p className="text-xs text-[#493B32]/80">Upload the selected Unsplash stock photo (chosen during Task 1)</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 2 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          2
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Apply Custom Color Palette</h5>
+                          <p className="text-xs text-[#493B32]/80">Use the previously created blue and yellow-based orange palette</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 3 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          3
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Design Enhancements</h5>
+                          <p className="text-xs text-[#493B32]/80">Add text labels over color-coded areas to ensure meaning isn't lost</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 4 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          4
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Test & Validate</h5>
+                          <p className="text-xs text-[#493B32]/80">Review design through protanopia simulation and team feedback</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* Poster Result */}
+                <div className="text-center space-y-4">
+                  <h4 className="text-lg font-medium text-[#493B32] flex items-center justify-center gap-2">
+                    <SiCanva className="w-5 h-5" />
+                    Final Poster Result
+                  </h4>
+                  
+                  <div className="relative overflow-hidden rounded-lg shadow-md max-w-2xl mx-auto border-4 border-[#493B32]">
+                    <img
+                      src={poster}
+                      alt="Final accessible poster created in Canva using blue-orange color palette with text labels and clear visual hierarchy"
+                      className="w-full h-auto object-cover max-h-80"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextElementSibling.style.display = 'block';
+                      }}
+                    />
+                    <div className="hidden bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-gray-300">
+                      <div className="space-y-3">
+                        <SiCanva className="w-12 h-12 text-gray-400 mx-auto" />
+                        <h5 className="font-medium text-gray-600">Accessible Poster</h5>
+                        <p className="text-sm text-gray-500">Canva design with accessible palette</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-[#493B32]/80 max-w-xl mx-auto">
+                    The final poster incorporates accessible colors, text labels, and clear visual hierarchy to ensure meaning is conveyed beyond color alone.
+                  </p>
+                </div>
+
+                {/* Challenges & Results */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                      <HiExclamation className="w-5 h-5 text-[#493B32]" />
+                      Challenges
+                    </h4>
+                    <div className="space-y-2">
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Red-orange still rendered as greenish; difficult to assess solo</p>
+                      </div>
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Simulated view alone wasn't enough to ensure accessibility — required team review</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                      <FaCheck className="w-5 h-5 text-[#493B32]" />
+                      Solutions Applied
+                    </h4>
+                    <div className="space-y-2">
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Added text labels over color-coded areas</p>
+                      </div>
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Implemented strong contrast and clear typography hierarchy</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* UX Takeaway */}
+                <div className="bg-[#493B32]/5 rounded-lg p-4 border-l-4 border-[#493B32]">
+                  <div className="flex items-start gap-3">
+                    <MdPsychology className="w-5 h-5 text-[#493B32] mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h5 className="font-medium text-[#493B32] mb-2">UX Takeaway</h5>
+                      <p className="text-sm text-[#493B32]/80">
+                        Designing under simulated constraints revealed how unreliable red and orange are for visual communication in accessibility contexts. 
+                        Collaboration, validation, and multi-sensory design choices (like icons and text labels) are essential when designing inclusive interfaces.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
