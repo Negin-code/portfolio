@@ -343,7 +343,7 @@ const Accessibility = () => {
                     Vision Comparison
                   </h4>
                   
-                  <div className="relative overflow-hidden rounded-lg shadow-md max-w-2xl mx-auto border-4 border-[#F75590]">
+                  <div className="relative overflow-hidden rounded-lg shadow-md max-w-2xl mx-auto border-4 border-[#493B32]">
                     <img
                       src={comparison}
                       alt="Side-by-side comparison showing how red buildings appear in normal vision versus protanopia (red-blind) vision"
