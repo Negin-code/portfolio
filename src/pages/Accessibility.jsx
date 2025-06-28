@@ -400,6 +400,7 @@ const Accessibility = () => {
                   <h4 className="text-lg font-medium text-[#493B32] text-center">User Flow Steps</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     
+
                     {/* Step 1 */}
                     <div className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
@@ -407,8 +408,8 @@ const Accessibility = () => {
                           1
                         </div>
                         <div>
-                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Remain in Simulation</h5>
-                          <p className="text-xs text-[#493B32]/80">ChromeLens Protanopia simulation continues running</p>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Open Coolors.co</h5>
+                          <p className="text-xs text-[#493B32]/80">Navigate to the color palette generation tool</p>
                         </div>
                       </div>
                     </div>
@@ -420,8 +421,8 @@ const Accessibility = () => {
                           2
                         </div>
                         <div>
-                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Open Coolors.co</h5>
-                          <p className="text-xs text-[#493B32]/80">Navigate to the color palette generation tool</p>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Start with Base Colors</h5>
+                          <p className="text-xs text-[#493B32]/80">Select blue as primary color (unaffected by red-blindness)</p>
                         </div>
                       </div>
                     </div>
@@ -433,8 +434,8 @@ const Accessibility = () => {
                           3
                         </div>
                         <div>
-                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Start with Base Colors</h5>
-                          <p className="text-xs text-[#493B32]/80">Select blue as primary color (unaffected by red-blindness)</p>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Experiment with Orange</h5>
+                          <p className="text-xs text-[#493B32]/80">Adjust orange variants by shifting hue toward yellow spectrum</p>
                         </div>
                       </div>
                     </div>
@@ -446,8 +447,8 @@ const Accessibility = () => {
                           4
                         </div>
                         <div>
-                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Experiment with Orange</h5>
-                          <p className="text-xs text-[#493B32]/80">Adjust orange variants by shifting hue toward yellow spectrum</p>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Validate Colors Visually</h5>
+                          <p className="text-xs text-[#493B32]/80">Use ChromeLens to preview contrast and visibility in real time</p>
                         </div>
                       </div>
                     </div>
@@ -457,19 +458,6 @@ const Accessibility = () => {
                       <div className="flex items-start gap-3">
                         <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                           5
-                        </div>
-                        <div>
-                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Validate Colors Visually</h5>
-                          <p className="text-xs text-[#493B32]/80">Use ChromeLens to preview contrast and visibility in real time</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Step 6 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                          6
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Focus on High Contrast</h5>
