@@ -258,159 +258,121 @@ const Accessibility = () => {
 
             {/* Task 1 */}
             <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10">
-              <h3 className="text-xl font-medium text-[#493B32] mb-4">
-                Task 1 – User Flow: Finding a Red-Accented Building Photo on Unsplash with ChromeLens
-              </h3>
-              <p className="text-[#493B32] mb-6">
-                <strong>Goal:</strong> Simulate how a user with red-blindness experiences searching for "red building" images on Unsplash.
-              </p>
+              <div className="space-y-6">
+                {/* Header */}
+                <div className="text-center border-b border-[#493B32]/10 pb-4">
+                  <h3 className="text-xl font-medium text-[#493B32] mb-2">
+                    Task 1: Red Building Search with ChromeLens
+                  </h3>
+                  <p className="text-[#493B32]/80 text-sm max-w-2xl mx-auto">
+                    Simulating how users with red-blindness experience visual search on Unsplash
+                  </p>
+                </div>
 
+                {/* User Flow */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-medium text-[#493B32] text-center">User Journey</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                    
+                    {/* Step 1 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4 text-center">
+                      <div className="w-10 h-10 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
+                        1
+                      </div>
+                      <h5 className="font-medium text-[#493B32] text-sm mb-2">Setup</h5>
+                      <p className="text-xs text-[#493B32]/80">Enable ChromeLens protanopia simulation</p>
+                    </div>
 
-                                 {/* User Flow Diagram */}
-                <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-[#493B32]/10">
-                  <h4 className="text-lg font-medium text-[#493B32] mb-4 text-center">
-                    User Flow: Red-Blindness Visual Search Challenge
+                    {/* Step 2 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4 text-center">
+                      <div className="w-10 h-10 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
+                        2
+                      </div>
+                      <h5 className="font-medium text-[#493B32] text-sm mb-2">Search</h5>
+                      <p className="text-xs text-[#493B32]/80">Type "red building" on Unsplash</p>
+                    </div>
+
+                    {/* Step 3 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4 text-center">
+                      <div className="w-10 h-10 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
+                        3
+                      </div>
+                      <h5 className="font-medium text-[#493B32] text-sm mb-2">Challenge</h5>
+                      <p className="text-xs text-[#493B32]/80">Visual confusion due to muted colors</p>
+                    </div>
+
+                    {/* Step 4 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4 text-center">
+                      <div className="w-10 h-10 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
+                        4
+                      </div>
+                      <h5 className="font-medium text-[#493B32] text-sm mb-2">Pain Point</h5>
+                      <p className="text-xs text-[#493B32]/80">Failed identification, relying on text</p>
+                    </div>
+
+                    {/* Step 5 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4 text-center">
+                      <div className="w-10 h-10 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
+                        5
+                      </div>
+                      <h5 className="font-medium text-[#493B32] text-sm mb-2">Insight</h5>
+                      <p className="text-xs text-[#493B32]/80">Color-only cues create barriers</p>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* Visual Comparison */}
+                <div className="text-center space-y-4">
+                  <h4 className="text-lg font-medium text-[#493B32] flex items-center justify-center gap-2">
+                    <MdVisibility className="w-5 h-5" />
+                    Vision Comparison
                   </h4>
                   
-                  {/* Mobile: Vertical Flow, Desktop: Horizontal Grid */}
-                  <div className="grid grid-cols-1 lg:grid-cols-5 gap-3 lg:gap-4">
-                    
-                                         {/* Step 1: Setup */}
-                    <div className="relative">
-                      <div className="bg-[#493B32]/5 rounded-lg p-3 h-full">
-                        <div className="flex lg:flex-col items-center lg:items-start gap-3 lg:gap-2">
-                          <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                            1
-                          </div>
-                          <div className="flex-1 lg:flex-none">
-                            <h5 className="font-medium text-[#493B32] text-sm mb-1 flex items-center gap-1">
-                              <FaCheck className="w-3 h-3" />
-                              Setup
-                            </h5>
-                            <p className="text-xs text-[#493B32]/80 leading-tight">Enable ChromeLens protanopia simulation, open Unsplash</p>
-                          </div>
-                        </div>
+                  <div className="relative overflow-hidden rounded-lg shadow-md max-w-2xl mx-auto border-4 border-[#F75590]">
+                    <img
+                      src="/src/assets/comparison.png"
+                      alt="Side-by-side comparison showing how red buildings appear in normal vision versus protanopia (red-blind) vision"
+                      className="w-full h-auto object-cover max-h-80"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextElementSibling.style.display = 'block';
+                      }}
+                    />
+                    <div className="hidden bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-gray-300">
+                      <div className="space-y-3">
+                        <MdVisibility className="w-12 h-12 text-gray-400 mx-auto" />
+                        <h5 className="font-medium text-gray-600">Vision Comparison</h5>
+                        <p className="text-sm text-gray-500">Normal vs. Protanopia vision</p>
                       </div>
-                    </div>
-
-                    {/* Step 2: Search */}
-                    <div className="relative">
-                      <div className="bg-[#493B32]/5 rounded-lg p-3 h-full">
-                        <div className="flex lg:flex-col items-center lg:items-start gap-3 lg:gap-2">
-                          <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                            2
-                          </div>
-                          <div className="flex-1 lg:flex-none">
-                            <h5 className="font-medium text-[#493B32] text-sm mb-1 flex items-center gap-1">
-                              <FaSearch className="w-3 h-3" />
-                              Search
-                            </h5>
-                            <p className="text-xs text-[#493B32]/80 leading-tight">Type "red building", browse image results with simulation active</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Step 3: Challenge */}
-                    <div className="relative">
-                      <div className="bg-[#493B32]/5 rounded-lg p-3 h-full">
-                        <div className="flex lg:flex-col items-center lg:items-start gap-3 lg:gap-2">
-                          <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                            3
-                          </div>
-                          <div className="flex-1 lg:flex-none">
-                            <h5 className="font-medium text-[#493B32] text-sm mb-1 flex items-center gap-1">
-                              <MdPsychology className="w-3 h-3" />
-                              Challenge
-                            </h5>
-                            <p className="text-xs text-[#493B32]/80 leading-tight">Visual scan for red highlights, confusion due to muted/brown appearance</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Step 4: Pain Point */}
-                    <div className="relative">
-                      <div className="bg-[#493B32]/5 rounded-lg p-3 h-full">
-                        <div className="flex lg:flex-col items-center lg:items-start gap-3 lg:gap-2">
-                          <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                            4
-                          </div>
-                          <div className="flex-1 lg:flex-none">
-                            <h5 className="font-medium text-[#493B32] text-sm mb-1 flex items-center gap-1">
-                              <FaTimes className="w-3 h-3" />
-                              Pain Point
-                            </h5>
-                            <p className="text-xs text-[#493B32]/80 leading-tight">Fail to identify red buildings, rely heavily on text descriptions</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Step 5: Insight */}
-                    <div className="relative">
-                      <div className="bg-[#493B32]/5 rounded-lg p-3 h-full">
-                        <div className="flex lg:flex-col items-center lg:items-start gap-3 lg:gap-2">
-                          <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                            5
-                          </div>
-                          <div className="flex-1 lg:flex-none">
-                            <h5 className="font-medium text-[#493B32] text-sm mb-1 flex items-center gap-1">
-                              <MdWarning className="w-3 h-3" />
-                              Insight
-                            </h5>
-                            <p className="text-xs text-[#493B32]/80 leading-tight">Recognize difficulty for red-blind users to spot visual red cues</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                {/* Side-by-Side Comparison Placeholder */}
-                <div>
-                  <h4 className="text-lg font-medium text-[#493B32] mb-4">Side-by-Side Comparison</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-3">
-                      <h5 className="font-medium text-[#493B32]">Normal Vision</h5>
-                                             <div className="bg-gradient-to-br from-red-100 to-red-200 rounded-lg p-8 text-center border-2 border-dashed border-red-300">
-                         <div className="space-y-2">
-                           <div className="w-12 h-12 bg-red-400 rounded-lg mx-auto flex items-center justify-center">
-                             <FaBuilding className="text-white w-8 h-8" />
-                           </div>
-                           <p className="text-sm text-red-700">Red building clearly visible</p>
-                         </div>
-                       </div>
-                    </div>
-                    
-                    <div className="space-y-3">
-                      <h5 className="font-medium text-[#493B32]">Protanopia (Red-Blind) Vision</h5>
-                                             <div className="bg-gradient-to-br from-amber-100 to-brown-200 rounded-lg p-8 text-center border-2 border-dashed border-amber-300">
-                         <div className="space-y-2">
-                           <div className="w-12 h-12 bg-amber-600 rounded-lg mx-auto flex items-center justify-center">
-                             <FaBuilding className="text-white w-8 h-8" />
-                           </div>
-                           <p className="text-sm text-amber-700">Red appears as brown/yellow</p>
-                         </div>
-                       </div>
                     </div>
                   </div>
+
+                  <p className="text-sm text-[#493B32]/80 max-w-xl mx-auto">
+                    Red elements appear as muted browns or yellows to users with protanopia, making visual identification extremely challenging.
+                  </p>
                 </div>
 
-                {/* Key Insights */}
-                <div className="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-400">
-                  <h4 className="text-lg font-medium text-blue-800 mb-3">Key Insights</h4>
-                                     <div className="space-y-2">
-                     <div className="flex items-start gap-3">
-                       <MdWarning className="text-[#493B32] w-6 h-6 mt-0.5" />
-                       <p className="text-blue-700"><strong>Visual Limitation:</strong> Users with red-blindness cannot reliably spot red visual cues</p>
-                     </div>
-                     <div className="flex items-start gap-3">
-                       <MdExtension className="text-[#493B32] w-6 h-6 mt-0.5" />
-                       <p className="text-blue-700"><strong>User Frustration:</strong> Searching for visual characteristics is frustrating and uncertain without assistive labels or alternative visual signals</p>
-                     </div>
-                   </div>
+                {/* Key Findings */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-[#493B32]/5 rounded-lg p-4">
+                    <div className="flex items-start gap-3">
+                      <MdWarning className="text-[#493B32] w-5 h-5 mt-1 flex-shrink-0" />
+                      <div>
+                        <h5 className="font-medium text-[#493B32] mb-1">Visual Limitation</h5>
+                        <p className="text-sm text-[#493B32]/80">Users with red-blindness cannot reliably identify red visual cues</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[#493B32]/5 rounded-lg p-4">
+                    <div className="flex items-start gap-3">
+                      <MdExtension className="text-[#493B32] w-5 h-5 mt-1 flex-shrink-0" />
+                      <div>
+                        <h5 className="font-medium text-[#493B32] mb-1">User Frustration</h5>
+                        <p className="text-sm text-[#493B32]/80">Visual search becomes uncertain without alternative signals</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -444,7 +406,7 @@ const Accessibility = () => {
                 Feedback loops with teammates helped us validate contrast and usability, especially since color-blind validation tools had limits.
               </p>
             </div>
-          
+          </div>
         </section>
 
         {/* User Testing Section */}
