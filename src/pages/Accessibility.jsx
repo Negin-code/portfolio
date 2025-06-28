@@ -258,21 +258,111 @@ const Accessibility = () => {
             {/* Task 1 */}
             <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10">
               <h3 className="text-xl font-medium text-[#493B32] mb-4">
-                Task 1: Search for an architecture photo with red highlights on Unsplash
+                Task 1 – User Flow: Finding a Red-Accented Building Photo on Unsplash with ChromeLens
               </h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <span className="text-red-500 font-bold text-lg">🔴</span>
-                  <div>
-                    <strong className="text-[#493B32]">Issue:</strong>
-                    <p className="text-[#493B32]/80 mt-1">Red elements appeared muted or blended into brown/green, making them hard to spot.</p>
+              <p className="text-[#493B32] mb-6">
+                <strong>Goal:</strong> Simulate how a user with red-blindness experiences searching for "red building" images on Unsplash.
+              </p>
+
+              {/* Step-by-Step Flow */}
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-lg font-medium text-[#493B32] mb-3 flex items-center gap-2">
+                    <span className="text-blue-600">🧭</span> Step-by-Step Flow
+                  </h4>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-4">
+                      <div className="bg-gray-50 rounded-lg p-4">
+                        <h5 className="font-medium text-[#493B32] mb-2">Setup Environment</h5>
+                        <ul className="space-y-1 text-sm text-[#493B32]/80">
+                          <li>✅ Enable ChromeLens with protanopia (red-blind) simulation</li>
+                          <li>🔍 Open Unsplash.com</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-gray-50 rounded-lg p-4">
+                        <h5 className="font-medium text-[#493B32] mb-2">Search</h5>
+                        <ul className="space-y-1 text-sm text-[#493B32]/80">
+                          <li>🔤 Type "red building" in the Unsplash search bar</li>
+                          <li>🔍 Browse image results with ChromeLens simulation still active</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      <div className="bg-gray-50 rounded-lg p-4">
+                        <h5 className="font-medium text-[#493B32] mb-2">Cognitive Challenge</h5>
+                        <ul className="space-y-1 text-sm text-[#493B32]/80">
+                          <li>🤔 Visually scan for images that might contain red highlights</li>
+                          <li>❗️ Confusion: many red elements appear desaturated, muted, or indistinguishable from browns or greens</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-gray-50 rounded-lg p-4">
+                        <h5 className="font-medium text-[#493B32] mb-2">Pain Point</h5>
+                        <ul className="space-y-1 text-sm text-[#493B32]/80">
+                          <li>❌ The user fails to identify whether the image matches the "red building" query</li>
+                          <li>🧭 Relies heavily on titles, tags, or descriptions (if available) rather than visual content</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-blue-500 font-bold text-lg">🎯</span>
-                  <div>
-                    <strong className="text-[#493B32]">Insight:</strong>
-                    <p className="text-[#493B32]/80 mt-1">Users with color blindness may miss critical cues if color is the only differentiator.</p>
+
+                {/* Visual Diagram Placeholder */}
+                <div className="bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-gray-300">
+                  <div className="space-y-2">
+                    <div className="w-16 h-16 bg-gray-300 rounded-lg mx-auto flex items-center justify-center">
+                      <span className="text-2xl">📊</span>
+                    </div>
+                    <h5 className="font-medium text-gray-600">User Flow Diagram</h5>
+                    <p className="text-sm text-gray-500">Visual representation of the ChromeLens simulation process</p>
+                  </div>
+                </div>
+
+                {/* Side-by-Side Comparison Placeholder */}
+                <div>
+                  <h4 className="text-lg font-medium text-[#493B32] mb-4">Side-by-Side Comparison</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-3">
+                      <h5 className="font-medium text-[#493B32]">Normal Vision</h5>
+                      <div className="bg-gradient-to-br from-red-100 to-red-200 rounded-lg p-8 text-center border-2 border-dashed border-red-300">
+                        <div className="space-y-2">
+                          <div className="w-12 h-12 bg-red-400 rounded-lg mx-auto flex items-center justify-center">
+                            <span className="text-white text-xl">🏢</span>
+                          </div>
+                          <p className="text-sm text-red-700">Red building clearly visible</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <h5 className="font-medium text-[#493B32]">Protanopia (Red-Blind) Vision</h5>
+                      <div className="bg-gradient-to-br from-amber-100 to-brown-200 rounded-lg p-8 text-center border-2 border-dashed border-amber-300">
+                        <div className="space-y-2">
+                          <div className="w-12 h-12 bg-amber-600 rounded-lg mx-auto flex items-center justify-center">
+                            <span className="text-white text-xl">🏢</span>
+                          </div>
+                          <p className="text-sm text-amber-700">Red appears as brown/yellow</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Key Insights */}
+                <div className="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-400">
+                  <h4 className="text-lg font-medium text-blue-800 mb-3">Key Insights</h4>
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-3">
+                      <span className="text-red-500 font-bold text-lg">🔴</span>
+                      <p className="text-blue-700"><strong>Visual Limitation:</strong> Users with red-blindness cannot reliably spot red visual cues</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-blue-500 font-bold text-lg">🧩</span>
+                      <p className="text-blue-700"><strong>User Frustration:</strong> Searching for visual characteristics is frustrating and uncertain without assistive labels or alternative visual signals</p>
+                    </div>
                   </div>
                 </div>
               </div>
