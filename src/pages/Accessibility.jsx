@@ -378,16 +378,155 @@ const Accessibility = () => {
               </div>
             </div>
 
-            {/* Color Palette Creation */}
+            {/* Task 2 */}
             <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10">
-              <h3 className="text-xl font-medium text-[#493B32] mb-4">
-                Custom Blue-Orange Palette in Coolors
-              </h3>
-              <ul className="space-y-2 text-[#493B32]/80">
-                <li>• Blue was chosen as the primary hue due to its visibility in protanopia</li>
-                <li>• Orange was adjusted to be more yellow-based to avoid red tones</li>
-                <li>• Despite using simulations, we struggled to validate color effectiveness without outside input</li>
-              </ul>
+              <div className="space-y-6">
+                {/* Header */}
+                <div className="text-center border-b border-[#493B32]/10 pb-4">
+                  <h3 className="text-xl font-medium text-[#493B32] mb-2">
+                    Task 2: Creating a Custom Color Palette on Coolors.co
+                  </h3>
+                  <p className="text-[#493B32]/80 text-sm max-w-2xl mx-auto">
+                    Design an accessible blue–orange color palette suitable for red-blind users
+                  </p>
+                  <div className="mt-2 text-xs text-[#493B32]/60 bg-[#493B32]/5 px-3 py-1 rounded-full inline-block">
+                    Tool Active: ChromeLens – Protanopia mode (still ON)
+                  </div>
+                </div>
+
+                {/* Steps */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-medium text-[#493B32] text-center">User Flow Steps</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                    {/* Step 1 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          1
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Remain in Simulation</h5>
+                          <p className="text-xs text-[#493B32]/80">ChromeLens Protanopia simulation continues running</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 2 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          2
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Open Coolors.co</h5>
+                          <p className="text-xs text-[#493B32]/80">Navigate to the color palette generation tool</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 3 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          3
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Start with Base Colors</h5>
+                          <p className="text-xs text-[#493B32]/80">Select blue as primary color (unaffected by red-blindness)</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 4 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          4
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Experiment with Orange</h5>
+                          <p className="text-xs text-[#493B32]/80">Adjust orange variants by shifting hue toward yellow spectrum</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 5 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          5
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Validate Colors Visually</h5>
+                          <p className="text-xs text-[#493B32]/80">Use ChromeLens to preview contrast and visibility in real time</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 6 */}
+                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          6
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-[#493B32] text-sm mb-1">Focus on High Contrast</h5>
+                          <p className="text-xs text-[#493B32]/80">Create distinguishable palette under simulated vision</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* Challenges & Results */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                      <HiExclamation className="w-5 h-5 text-[#493B32]" />
+                      Challenges Encountered
+                    </h4>
+                    <div className="space-y-2">
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Orange with red undertones still appeared muted</p>
+                      </div>
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Blue–orange combinations were difficult to evaluate without feedback from normal vision users</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                      <FaCheck className="w-5 h-5 text-[#493B32]" />
+                      Result
+                    </h4>
+                    <div className="space-y-2">
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Created a yellow-based orange and bright blue palette</p>
+                      </div>
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Noted the need for additional contrast strategies beyond color (e.g., labels, spacing)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* UX Takeaway */}
+                <div className="bg-[#493B32]/5 rounded-lg p-4 border-l-4 border-[#493B32]">
+                  <div className="flex items-start gap-3">
+                    <MdPsychology className="w-5 h-5 text-[#493B32] mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h5 className="font-medium text-[#493B32] mb-2">UX Takeaway</h5>
+                      <p className="text-sm text-[#493B32]/80">
+                        Keeping ChromeLens active during both tasks provided a realistic simulation of challenges faced by red-blind users. 
+                        These insights helped guide accessible design decisions and reinforced the importance of contrast, multi-channel cues, and inclusive color strategies.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Task 3 */}
