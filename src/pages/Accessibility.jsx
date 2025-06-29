@@ -696,87 +696,116 @@ const Accessibility = () => {
             </h2>
           </header>
 
-         
-            {/* ColorRef Plugin Comparison */}
-            <div className="mt-8 space-y-6">
-              <div className="text-center">
-                
-                <h3 className="text-lg font-medium text-[#493B32] mb-4 flex items-center justify-center gap-2">
-                  <MdExtension className="w-5 h-5" />
-                   Solution 1: ColorRef Tooltip Plugin
-                </h3>
-                <p className="text-sm text-[#493B32]/80 mb-6">
-                  The ColorRef tooltip plugin helps designers support color-blind users by providing textual color context, such as names, contrast values, or icons, when they hover over or focus on a UI element.
-                </p>
+          {/* Solutions Container */}
+          <div className="bg-gradient-to-br from-white to-[#FFF7F2] rounded-2xl p-8 sm:p-12 shadow-lg border border-[#493B32]/10 mt-8">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-[#493B32] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <MdExtension className="w-4 h-4" />
+                Accessibility Solutions
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                {/* Normal Vision */}
-                <div className="text-center space-y-3">
-                  <h4 className="font-medium text-[#493B32]">Normal Vision</h4>
-                  <div className="relative overflow-hidden rounded-lg shadow-md border-2 border-[#493B32] w-72 h-96 mx-auto">
-                    <img
-                      src={colorref}
-                      alt="ColorRef plugin showing normal color vision with clear red and green distinctions"
-                      className="w-full h-full object-contain"
-                      style={{ imageRendering: 'crisp-edges' }}
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.nextElementSibling.style.display = 'block';
-                      }}
-                    />
-                    <div className="hidden bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-gray-300 w-full h-full">
-                      <div className="space-y-3 flex flex-col justify-center h-full">
-                        <MdColorLens className="w-12 h-12 text-gray-400 mx-auto" />
-                        <h5 className="font-medium text-gray-600">Normal Vision</h5>
-                        <p className="text-sm text-gray-500">ColorRef normal view</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Red-Blind Vision */}
-                <div className="text-center space-y-3">
-                  <h4 className="font-medium text-[#493B32]">Red-Blind Vision (Protanopia)</h4>
-                  <div className="relative overflow-hidden rounded-lg shadow-md border-2 border-[#493B32] w-72 h-96 mx-auto">
-                    <img
-                      src={redblind}
-                      alt="ColorRef plugin showing red-blind vision where red elements appear muted and difficult to distinguish"
-                      className="w-full h-full object-contain"
-                      style={{ imageRendering: 'crisp-edges' }}
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.nextElementSibling.style.display = 'block';
-                      }}
-                    />
-                    <div className="hidden bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-gray-300 w-full h-full">
-                      <div className="space-y-3 flex flex-col justify-center h-full">
-                        <MdVisibility className="w-12 h-12 text-gray-400 mx-auto" />
-                        <h5 className="font-medium text-gray-600">Red-Blind Vision</h5>
-                        <p className="text-sm text-gray-500">ColorRef protanopia view</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+              <p className="text-[#493B32]/80 max-w-2xl mx-auto">
+                Two powerful Figma plugins that help designers create more inclusive interfaces for users with color vision deficiencies.
+              </p>
             </div>
 
-            {/* Solution 2: Contrast Fixer */}
-            <div className="mt-12 space-y-6">
-              <div className="text-center">
-                <h3 className="text-lg font-medium text-[#493B32] mb-4 flex items-center justify-center gap-2">
-                  <MdExtension className="w-5 h-5" />
-                  Solution 2: Contrast Fixer – Figma Plugin
-                </h3>
-                <p className="text-sm text-[#493B32]/80 mb-6">
-                  The Contrast Fixer plugin automatically analyzes and give feedback to designers to improve color combinations to meet WCAG accessibility standards, ensuring sufficient contrast ratios for users with visual impairments.
-                </p>
-                              </div>
-                
+            <div className="space-y-16">
+              {/* Solution 1: ColorRef Plugin */}
+              <div className="space-y-8">
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold text-[#493B32] mb-4 flex items-center justify-center gap-3">
+                    <div className="w-8 h-8 bg-[#493B32] text-white rounded-full flex items-center justify-center text-sm font-bold">
+                      1
+                    </div>
+                    ColorRef Tooltip Plugin
+                  </h3>
+                  <p className="text-[#493B32]/80 mb-8 max-w-3xl mx-auto">
+                    The ColorRef tooltip plugin helps designers support color-blind users by providing textual color context, such as names, contrast values, or icons, when they hover over or focus on a UI element.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                  {/* Normal Vision */}
+                  <div className="text-center space-y-4">
+                    <h4 className="font-semibold text-[#493B32]">Normal Vision</h4>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg border-4 border-[#493B32] w-72 h-96 mx-auto">
+                      <img
+                        src={colorref}
+                        alt="ColorRef plugin showing normal color vision with clear red and green distinctions"
+                        className="w-full h-full object-contain"
+                        style={{ imageRendering: 'crisp-edges' }}
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.nextElementSibling.style.display = 'block';
+                        }}
+                      />
+                      <div className="hidden bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl p-8 text-center border-2 border-dashed border-gray-300 w-full h-full">
+                        <div className="space-y-3 flex flex-col justify-center h-full">
+                          <MdColorLens className="w-12 h-12 text-gray-400 mx-auto" />
+                          <h5 className="font-medium text-gray-600">Normal Vision</h5>
+                          <p className="text-sm text-gray-500">ColorRef normal view</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Red-Blind Vision */}
+                  <div className="text-center space-y-4">
+                    <h4 className="font-semibold text-[#493B32]">Red-Blind Vision (Protanopia)</h4>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg border-4 border-[#493B32] w-72 h-96 mx-auto">
+                      <img
+                        src={redblind}
+                        alt="ColorRef plugin showing red-blind vision where red elements appear muted and difficult to distinguish"
+                        className="w-full h-full object-contain"
+                        style={{ imageRendering: 'crisp-edges' }}
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.nextElementSibling.style.display = 'block';
+                        }}
+                      />
+                      <div className="hidden bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl p-8 text-center border-2 border-dashed border-gray-300 w-full h-full">
+                        <div className="space-y-3 flex flex-col justify-center h-full">
+                          <MdVisibility className="w-12 h-12 text-gray-400 mx-auto" />
+                          <h5 className="font-medium text-gray-600">Red-Blind Vision</h5>
+                          <p className="text-sm text-gray-500">ColorRef protanopia view</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <p className="text-sm text-[#493B32]/80 max-w-2xl mx-auto italic">
+                    The ColorRef plugin reveals how red elements become indistinguishable for users with protanopia, 
+                    highlighting the critical need for alternative visual cues beyond color alone.
+                  </p>
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="flex items-center justify-center">
+                <div className="w-24 h-px bg-[#493B32]/20"></div>
+                <div className="mx-4 w-2 h-2 bg-[#493B32]/20 rounded-full"></div>
+                <div className="w-24 h-px bg-[#493B32]/20"></div>
+              </div>
+
+              {/* Solution 2: Contrast Fixer */}
+              <div className="space-y-8">
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold text-[#493B32] mb-4 flex items-center justify-center gap-3">
+                    <div className="w-8 h-8 bg-[#493B32] text-white rounded-full flex items-center justify-center text-sm font-bold">
+                      2
+                    </div>
+                    Contrast Fixer – Figma Plugin
+                  </h3>
+                  <p className="text-[#493B32]/80 mb-8 max-w-3xl mx-auto">
+                    The Contrast Fixer plugin automatically analyzes and give feedback to designers to improve color combinations to meet WCAG accessibility standards, ensuring sufficient contrast ratios for users with visual impairments.
+                  </p>
+                </div>
+                  
                 {/* Figma Embed */}
-                <div className="max-w-4xl mx-auto px-4">
-                  <div className="relative bg-white rounded-xl shadow-md border border-[#493B32]/10 overflow-hidden">
+                <div className="max-w-5xl mx-auto">
+                  <div className="relative bg-white rounded-xl shadow-lg border border-[#493B32]/10 overflow-hidden">
                     <div className="aspect-video w-full">
                       <iframe 
                         className="w-full h-full border-0"
@@ -786,54 +815,58 @@ const Accessibility = () => {
                       />
                     </div>
                     
-                    {/* Optional Caption */}
-                    <div className="p-3 bg-[#493B32]/5 border-t border-[#493B32]/10">
-                      <p className="text-sm text-[#493B32]/80 text-center">
+                    {/* Caption */}
+                    <div className="p-4 bg-[#493B32]/5 border-t border-[#493B32]/10">
+                      <p className="text-sm text-[#493B32]/80 text-center font-medium">
                         Interactive demo of the Contrast Fixer plugin in action
                       </p>
                     </div>
                   </div>
                 </div>
-              <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10 max-w-3xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
-                      <FaCheck className="w-5 h-5 text-[#493B32]" />
-                      Key Features
-                    </h4>
-                    <div className="space-y-2">
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Real-time contrast ratio calculations</p>
-                      </div>
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• WCAG AA/AAA compliance checking</p>
-                      </div>
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Automatic color adjustments</p>
+
+                {/* Features Grid */}
+                <div className="bg-white rounded-xl p-8 shadow-sm border border-[#493B32]/10 max-w-4xl mx-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-[#493B32] flex items-center gap-2">
+                        <FaCheck className="w-5 h-5 text-green-600" />
+                        Key Features
+                      </h4>
+                      <div className="space-y-3">
+                        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                          <p className="text-sm text-[#493B32]/80 font-medium">• Real-time contrast ratio calculations</p>
+                        </div>
+                        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                          <p className="text-sm text-[#493B32]/80 font-medium">• WCAG AA/AAA compliance checking</p>
+                        </div>
+                        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                          <p className="text-sm text-[#493B32]/80 font-medium">• Automatic color adjustments</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
-                      <MdWarning className="w-5 h-5 text-[#493B32]" />
-                      Benefits for Red-Blind Users
-                    </h4>
-                    <div className="space-y-2">
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Ensures text remains readable</p>
-                      </div>
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Reduces reliance on color alone</p>
-                      </div>
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Improves overall visual hierarchy</p>
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-[#493B32] flex items-center gap-2">
+                        <MdVisibility className="w-5 h-5 text-blue-600" />
+                        Benefits for Red-Blind Users
+                      </h4>
+                      <div className="space-y-3">
+                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                          <p className="text-sm text-[#493B32]/80 font-medium">• Ensures text remains readable</p>
+                        </div>
+                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                          <p className="text-sm text-[#493B32]/80 font-medium">• Reduces reliance on color alone</p>
+                        </div>
+                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                          <p className="text-sm text-[#493B32]/80 font-medium">• Improves overall visual hierarchy</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
             
           
         </section>
