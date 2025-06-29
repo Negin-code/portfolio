@@ -874,7 +874,7 @@ const Accessibility = () => {
         {/* Key Learnings Section */}
         <section
           id="learnings"
-          className="space-y-6 mt-16"
+          className="space-y-8 mt-16"
           aria-labelledby="learnings-heading"
         >
           <header className="flex flex-row items-center gap-2">
@@ -890,30 +890,102 @@ const Accessibility = () => {
             </h2>
           </header>
 
-          <div
-            className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6"
-            role="list"
-          >
-            <div role="listitem">
-              <ObjectiveCard
-                number="01"
-                title="Color ≠ Communication"
-                description="Visual hierarchy should never depend solely on color. Patterns, icons, and text are essential for inclusive design."
-              />
+          {/* Key Learnings Container */}
+          <div className="bg-gradient-to-br from-[#493B32] to-[#5a4a3e] rounded-2xl p-8 sm:p-12 shadow-xl border border-[#493B32]/20 relative overflow-hidden">
+            {/* Decorative Background Elements */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16" aria-hidden="true"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12" aria-hidden="true"></div>
+            
+            {/* Header */}
+            <div className="text-center mb-12 relative z-10">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <MdPsychology className="w-4 h-4" />
+                Research Insights
+              </div>
+              <p className="text-white/90 max-w-2xl mx-auto text-lg">
+                Three fundamental insights that transformed our understanding of accessible design and will guide future projects.
+              </p>
             </div>
-            <div role="listitem">
-              <ObjectiveCard
-                number="02"
-                title="Design with Simulation"
-                description="Tools like ChromeLens are critical in the design process to understand user experiences with visual impairments."
-              />
+
+            {/* Cards Grid */}
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 relative z-10"
+              role="list"
+            >
+              <div role="listitem" className="transform hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg border border-white/10 h-full">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-[#493B32] text-white rounded-xl flex items-center justify-center text-xl font-bold">
+                      01
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#493B32]">
+                      Color ≠ Communication
+                    </h3>
+                  </div>
+                  <p className="text-[#493B32]/80 leading-relaxed">
+                    Visual hierarchy should never depend solely on color. Patterns, icons, and text are essential for inclusive design.
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-[#493B32]/10">
+                    <div className="flex items-center gap-2 text-sm text-[#493B32]/60">
+                      <MdAccessibility className="w-4 h-4" />
+                      <span>Design Principle</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div role="listitem" className="transform hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg border border-white/10 h-full">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-[#493B32] text-white rounded-xl flex items-center justify-center text-xl font-bold">
+                      02
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#493B32]">
+                      Design with Simulation
+                    </h3>
+                  </div>
+                  <p className="text-[#493B32]/80 leading-relaxed">
+                    Tools like ChromeLens are critical in the design process to understand user experiences with visual impairments.
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-[#493B32]/10">
+                    <div className="flex items-center gap-2 text-sm text-[#493B32]/60">
+                      <MdExtension className="w-4 h-4" />
+                      <span>Tool Integration</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div role="listitem" className="transform hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg border border-white/10 h-full">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-[#493B32] text-white rounded-xl flex items-center justify-center text-xl font-bold">
+                      03
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#493B32]">
+                      Universal Benefits
+                    </h3>
+                  </div>
+                  <p className="text-[#493B32]/80 leading-relaxed">
+                    Accessible design benefits everyone. High contrast and clear patterns aid not only color-blind users but all users.
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-[#493B32]/10">
+                    <div className="flex items-center gap-2 text-sm text-[#493B32]/60">
+                      <MdVisibility className="w-4 h-4" />
+                      <span>Universal Design</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div role="listitem">
-              <ObjectiveCard
-                number="03"
-                title="Universal Benefits"
-                description="Accessible design benefits everyone. High contrast and clear patterns aid not only color-blind users but all users."
-              />
+
+            {/* Bottom Accent */}
+            <div className="mt-12 text-center relative z-10">
+              <div className="inline-flex items-center gap-2 text-white/70 text-sm">
+                <div className="w-6 h-px bg-white/30"></div>
+                <span>Insights from accessibility research</span>
+                <div className="w-6 h-px bg-white/30"></div>
+              </div>
             </div>
           </div>
         </section>
