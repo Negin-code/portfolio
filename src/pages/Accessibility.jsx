@@ -772,8 +772,28 @@ const Accessibility = () => {
                 <p className="text-sm text-[#493B32]/80 mb-6">
                   The Contrast Fixer plugin automatically analyzes and give feedback to designers to improve color combinations to meet WCAG accessibility standards, ensuring sufficient contrast ratios for users with visual impairments.
                 </p>
-              </div>
-
+                              </div>
+                
+                {/* Figma Embed */}
+                <div className="max-w-4xl mx-auto px-4">
+                  <div className="relative bg-white rounded-xl shadow-md border border-[#493B32]/10 overflow-hidden">
+                    <div className="aspect-video w-full">
+                      <iframe 
+                        className="w-full h-full border-0"
+                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F1234567890%2FMy-Project%3Fnode-id%3D1234567890%253A1234567890%26scaling%3Dscale-down%26page-id%3D1234567890%253A1234567890%26starting-point-node-id%3D1234567890%253A1234567890" 
+                        allowFullScreen
+                        title="Contrast Fixer Figma Plugin Demo"
+                      />
+                    </div>
+                    
+                    {/* Optional Caption */}
+                    <div className="p-3 bg-[#493B32]/5 border-t border-[#493B32]/10">
+                      <p className="text-sm text-[#493B32]/80 text-center">
+                        Interactive demo of the Contrast Fixer plugin in action
+                      </p>
+                    </div>
+                  </div>
+                </div>
               <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10 max-w-3xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-3">
@@ -815,13 +835,6 @@ const Accessibility = () => {
               </div>
             </div>
             
-            <div className="mt-6 space-y-2">
-              <p className="text-[#493B32] font-medium">Recommended Figma Plugins:</p>
-              <div className="flex gap-4 text-sm">
-                <a href="#" className="text-blue-600 hover:underline">🔗 Color Ref Plugin</a>
-                <a href="#" className="text-blue-600 hover:underline">🔗 Contrast Fixer Plugin</a>
-              </div>
-            </div>
           
         </section>
 
