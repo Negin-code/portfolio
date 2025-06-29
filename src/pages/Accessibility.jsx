@@ -10,6 +10,8 @@ import ObjectiveCard from "../components/ObjectiveCard";
 import comparison from "../assets/comparison.png";
 import colorpalette from "../assets/colorpalette.png";
 import poster from "../assets/poster.png";
+import colorref from "../assets/ColorRef.png";
+import redblind from "../assets/redblind.png";
 
 const Accessibility = () => {
   return (
@@ -694,30 +696,123 @@ const Accessibility = () => {
             </h2>
           </header>
 
-          <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-[#493B32]/20">
-                    <th className="text-left py-4 px-2 text-[#493B32] font-medium">Issue</th>
-                    <th className="text-left py-4 px-2 text-[#493B32] font-medium">Solution</th>
-                  </tr>
-                </thead>
-                <tbody className="space-y-4">
-                  <tr className="border-b border-[#493B32]/10">
-                    <td className="py-4 px-2 text-[#493B32]/80">Color-only UI indicators</td>
-                    <td className="py-4 px-2 text-[#493B32]/80">Add icons, patterns, and text labels</td>
-                  </tr>
-                  <tr className="border-b border-[#493B32]/10">
-                    <td className="py-4 px-2 text-[#493B32]/80">Poor red contrast</td>
-                    <td className="py-4 px-2 text-[#493B32]/80">Shift brand palette to high-contrast blue & orange with simulation tests</td>
-                  </tr>
-                  <tr>
-                    <td className="py-4 px-2 text-[#493B32]/80">Designer feedback gap</td>
-                    <td className="py-4 px-2 text-[#493B32]/80">Use plugins like Color Ref and Contrast Fixer in Figma</td>
-                  </tr>
-                </tbody>
-              </table>
+         
+            {/* ColorRef Plugin Comparison */}
+            <div className="mt-8 space-y-6">
+              <div className="text-center">
+                
+                <h3 className="text-lg font-medium text-[#493B32] mb-4 flex items-center justify-center gap-2">
+                  <MdExtension className="w-5 h-5" />
+                   Solution 1: ColorRef Tooltip Plugin
+                </h3>
+                <p className="text-sm text-[#493B32]/80 mb-6">
+                  The ColorRef tooltip plugin helps designers support color-blind users by providing textual color context, such as names, contrast values, or icons, when they hover over or focus on a UI element.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                {/* Normal Vision */}
+                <div className="text-center space-y-3">
+                  <h4 className="font-medium text-[#493B32]">Normal Vision</h4>
+                  <div className="relative overflow-hidden rounded-lg shadow-md border-2 border-[#493B32] w-72 h-96 mx-auto">
+                    <img
+                      src={colorref}
+                      alt="ColorRef plugin showing normal color vision with clear red and green distinctions"
+                      className="w-full h-full object-contain"
+                      style={{ imageRendering: 'crisp-edges' }}
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextElementSibling.style.display = 'block';
+                      }}
+                    />
+                    <div className="hidden bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-gray-300 w-full h-full">
+                      <div className="space-y-3 flex flex-col justify-center h-full">
+                        <MdColorLens className="w-12 h-12 text-gray-400 mx-auto" />
+                        <h5 className="font-medium text-gray-600">Normal Vision</h5>
+                        <p className="text-sm text-gray-500">ColorRef normal view</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Red-Blind Vision */}
+                <div className="text-center space-y-3">
+                  <h4 className="font-medium text-[#493B32]">Red-Blind Vision (Protanopia)</h4>
+                  <div className="relative overflow-hidden rounded-lg shadow-md border-2 border-[#493B32] w-72 h-96 mx-auto">
+                    <img
+                      src={redblind}
+                      alt="ColorRef plugin showing red-blind vision where red elements appear muted and difficult to distinguish"
+                      className="w-full h-full object-contain"
+                      style={{ imageRendering: 'crisp-edges' }}
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextElementSibling.style.display = 'block';
+                      }}
+                    />
+                    <div className="hidden bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-gray-300 w-full h-full">
+                      <div className="space-y-3 flex flex-col justify-center h-full">
+                        <MdVisibility className="w-12 h-12 text-gray-400 mx-auto" />
+                        <h5 className="font-medium text-gray-600">Red-Blind Vision</h5>
+                        <p className="text-sm text-gray-500">ColorRef protanopia view</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Solution 2: Contrast Fixer */}
+            <div className="mt-12 space-y-6">
+              <div className="text-center">
+                <h3 className="text-lg font-medium text-[#493B32] mb-4 flex items-center justify-center gap-2">
+                  <MdExtension className="w-5 h-5" />
+                  Solution 2: Contrast Fixer – Figma Plugin
+                </h3>
+                <p className="text-sm text-[#493B32]/80 mb-6">
+                  The Contrast Fixer plugin automatically analyzes and give feedback to designers to improve color combinations to meet WCAG accessibility standards, ensuring sufficient contrast ratios for users with visual impairments.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10 max-w-3xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                      <FaCheck className="w-5 h-5 text-[#493B32]" />
+                      Key Features
+                    </h4>
+                    <div className="space-y-2">
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Real-time contrast ratio calculations</p>
+                      </div>
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• WCAG AA/AAA compliance checking</p>
+                      </div>
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Automatic color adjustments</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                      <MdWarning className="w-5 h-5 text-[#493B32]" />
+                      Benefits for Red-Blind Users
+                    </h4>
+                    <div className="space-y-2">
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Ensures text remains readable</p>
+                      </div>
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Reduces reliance on color alone</p>
+                      </div>
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                        <p className="text-sm text-[#493B32]/80">• Improves overall visual hierarchy</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             
             <div className="mt-6 space-y-2">
@@ -727,7 +822,7 @@ const Accessibility = () => {
                 <a href="#" className="text-blue-600 hover:underline">🔗 Contrast Fixer Plugin</a>
               </div>
             </div>
-          </div>
+          
         </section>
 
         {/* Key Learnings Section */}
