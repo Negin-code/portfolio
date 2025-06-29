@@ -990,10 +990,10 @@ const Accessibility = () => {
           </div>
         </section>
 
-        {/* Conclusion Section */}
+        {/* Reflection Section */}
         <section
           id="conclusion"
-          className="space-y-6 mt-16 mb-16"
+          className="space-y-8 mt-16 mb-16"
           aria-labelledby="conclusion-heading"
         >
           <header className="flex flex-row items-center gap-2">
@@ -1005,31 +1005,105 @@ const Accessibility = () => {
               id="conclusion-heading"
               className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
-              Conclusion
+              Reflection
             </h2>
           </header>
 
-          <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-[#493B32]/10">
-            <p className="text-[#493B32] leading-relaxed text-lg mb-6">
-              This project deepened my understanding of accessibility-first design. By putting ourselves in the shoes of users with color blindness, we were able to identify critical flaws and rethink our visual design language.
-            </p>
+          {/* Reflection Container */}
+          <div className="bg-gradient-to-br from-white via-[#FFF7F2] to-white rounded-2xl p-8 sm:p-12 shadow-xl border border-[#493B32]/10 relative overflow-hidden">
+            {/* Decorative Background Elements */}
+            <div className="absolute top-0 left-0 w-40 h-40 bg-[#493B32]/5 rounded-full -translate-y-20 -translate-x-20" aria-hidden="true"></div>
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#493B32]/5 rounded-full translate-y-16 translate-x-16" aria-hidden="true"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#493B32]/5 to-transparent opacity-50" aria-hidden="true"></div>
             
-            <div>
-              <h3 className="text-xl font-medium text-[#493B32] mb-4">Going forward, I will:</h3>
-              <ul className="space-y-3 text-[#493B32]/80">
-                <li className="flex items-start gap-3">
-                  <span className="text-green-500 font-bold">•</span>
-                  <span>Advocate for inclusive design principles in all projects</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-500 font-bold">•</span>
-                  <span>Incorporate color blindness simulation tools and plugins into my Figma workflow</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-500 font-bold">•</span>
-                  <span>Push for alternatives to color-based information in collaborative settings</span>
-                </li>
-              </ul>
+            {/* Content Container */}
+            <div className="relative z-10">
+              {/* Header Section */}
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center gap-2 bg-[#493B32]/10 backdrop-blur-sm text-[#493B32] px-4 py-2 rounded-full text-sm font-medium mb-4">
+                  <MdPsychology className="w-4 h-4" />
+                  Personal Reflection
+                </div>
+                <p className="text-[#493B32]/70 max-w-2xl mx-auto text-base">
+                  Transformative insights that will shape my future approach to inclusive design
+                </p>
+              </div>
+
+              {/* Main Reflection Content */}
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-[#493B32]/10 mb-8">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-3 h-3 bg-[#493B32] rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-[#493B32] mb-4 flex items-center gap-2">
+                      <MdExplore className="w-5 h-5" />
+                      Key Reflection
+                    </h3>
+                    <p className="text-[#493B32] leading-relaxed text-lg">
+                      This project deepened my understanding of accessibility-first design. By putting ourselves in the shoes of users with color blindness, we were able to identify critical flaws and rethink our visual design language.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Future Commitments */}
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-[#493B32]/10">
+                <div className="flex items-start gap-4">
+                  <div className="w-3 h-3 bg-[#493B32] rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
+                  <div className="w-full">
+                    <h3 className="text-xl font-semibold text-[#493B32] mb-6 flex items-center gap-2">
+                      <IoNavigate className="w-5 h-5" />
+                      Future Commitments
+                    </h3>
+                    
+                    <div className="grid gap-4 sm:gap-6">
+                      <div className="group">
+                        <div className="flex items-start gap-4 p-4 rounded-lg bg-gradient-to-r from-[#493B32]/5 to-transparent hover:from-[#493B32]/10 transition-all duration-300 border border-transparent hover:border-[#493B32]/20">
+                          <div className="w-8 h-8 bg-[#493B32] text-white rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <MdAccessibility className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <h4 className="font-medium text-[#493B32] mb-1">Advocate for Inclusive Design</h4>
+                            <p className="text-[#493B32]/70 text-sm">Promote accessibility principles in all future projects and team collaborations</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="group">
+                        <div className="flex items-start gap-4 p-4 rounded-lg bg-gradient-to-r from-[#493B32]/5 to-transparent hover:from-[#493B32]/10 transition-all duration-300 border border-transparent hover:border-[#493B32]/20">
+                          <div className="w-8 h-8 bg-[#493B32] text-white rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <MdExtension className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <h4 className="font-medium text-[#493B32] mb-1">Integrate Simulation Tools</h4>
+                            <p className="text-[#493B32]/70 text-sm">Embed color blindness simulation tools and plugins into my standard Figma workflow</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="group">
+                        <div className="flex items-start gap-4 p-4 rounded-lg bg-gradient-to-r from-[#493B32]/5 to-transparent hover:from-[#493B32]/10 transition-all duration-300 border border-transparent hover:border-[#493B32]/20">
+                          <div className="w-8 h-8 bg-[#493B32] text-white rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <MdVisibility className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <h4 className="font-medium text-[#493B32] mb-1">Champion Alternative Methods</h4>
+                            <p className="text-[#493B32]/70 text-sm">Push for alternatives to color-based information across all collaborative design settings</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Quote */}
+              <div className="mt-10 text-center">
+                <div className="inline-flex items-center gap-2 text-[#493B32]/60 text-sm italic">
+                  <div className="w-8 h-px bg-[#493B32]/30"></div>
+                  <span>"Accessibility is not a feature, it's a fundamental design principle"</span>
+                  <div className="w-8 h-px bg-[#493B32]/30"></div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
