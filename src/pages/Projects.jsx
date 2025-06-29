@@ -5,6 +5,7 @@ import ListeningLabImage from "../assets/LLCover.png";
 import CultureCafeImage from "../assets/CCCover.png";
 import GuardianImage from "../assets/Guardiancard.webp";
 import GoodReadsImage from "../assets/goodreadshero.png";
+import AccessibilityImage from "../assets/contrast.png";
 
 import ChromaGridCard from "../components/ChromaGridCard";
 
@@ -53,7 +54,7 @@ const Projects = () => {
       gradientTo: "#FF6B6B"
     },
     {
-      image: GoodReadsImage,
+      image: AccessibilityImage,
       imageAlt: "Accessibility Study",
       category: "Accessibility",
       categoryType: "design",
