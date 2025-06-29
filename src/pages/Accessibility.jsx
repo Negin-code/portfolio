@@ -780,7 +780,7 @@ const Accessibility = () => {
                     <div className="aspect-video w-full">
                       <iframe 
                         className="w-full h-full border-0"
-                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F1234567890%2FMy-Project%3Fnode-id%3D1234567890%253A1234567890%26scaling%3Dscale-down%26page-id%3D1234567890%253A1234567890%26starting-point-node-id%3D1234567890%253A1234567890" 
+                        src="https://embed.figma.com/design/DFFVHQQcx0p21vLODLOVWu/Contrast-Fixer?node-id=0-1&embed-host=share"
                         allowFullScreen
                         title="Contrast Fixer Figma Plugin Demo"
                       />
