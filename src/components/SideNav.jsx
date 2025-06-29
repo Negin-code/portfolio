@@ -157,6 +157,38 @@ const SideNav = ({ onCategoryChange, selectedCategory }) => {
         label: "Next Steps",
       },
     ],
+    "/projects/accessibility": [
+      {
+        path: "/projects/accessibility#overview",
+        icon: IoEyeOutline,
+        label: "Project Overview",
+      },
+      {
+        path: "/projects/accessibility#problem",
+        icon: IoWarningOutline,
+        label: "The Problem",
+      },
+      {
+        path: "/projects/accessibility#research",
+        icon: IoSearchOutline,
+        label: "User Testing & Observations",
+      },
+      {
+        path: "/projects/accessibility#solutions",
+        icon: IoConstructOutline,
+        label: "Solutions",
+      },
+      {
+        path: "/projects/accessibility#learnings",
+        icon: IoBulbOutline,
+        label: "Key Learnings",
+      },
+      {
+        path: "/projects/accessibility#conclusion",
+        icon: IoChatboxEllipsesOutline,
+        label: "Reflection",
+      },
+    ],
   };
 
   const handleNavClick = (e, path) => {
