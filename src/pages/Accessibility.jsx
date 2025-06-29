@@ -284,13 +284,10 @@ const Accessibility = () => {
                 {/* Steps */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-medium text-[#493B32] text-center">User Flow Steps</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-
-                    {/* Step 1 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                  <ol className="grid grid-cols-1 md:grid-cols-2 gap-4" role="list" aria-label="Task 1 user flow steps">
+                    <li className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" aria-hidden="true">
                           1
                         </div>
                         <div>
@@ -298,52 +295,48 @@ const Accessibility = () => {
                           <p className="text-xs text-[#493B32]/80">Open the image search on Unsplash</p>
                         </div>
                       </div>
-                    </div>
+                    </li>
 
-                    {/* Step 2 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                    <li className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                            2
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" aria-hidden="true">
+                          2
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Search Query</h5>
                           <p className="text-xs text-[#493B32]/80">Typed "red building" in search bar</p>
                         </div>
                       </div>
-                    </div>
+                    </li>
 
-                    {/* Step 3 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                    <li className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                            3
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" aria-hidden="true">
+                          3
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Attempt Visual Scan</h5>
                           <p className="text-xs text-[#493B32]/80">Try to identify red buildings in results</p>
                         </div>
                       </div>
-                    </div>
+                    </li>
 
-                    {/* Step 4 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                    <li className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                            4
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" aria-hidden="true">
+                          4
                         </div>
                         <div>
                           <h5 className="font-medium text-[#493B32] text-sm mb-1">Experience Difficulty</h5>
                           <p className="text-xs text-[#493B32]/80">Struggle with color-based identification</p>
                         </div>
                       </div>
-                    </div>
-
-                  </div>
+                    </li>
+                  </ol>
                 </div>
 
                 {/* Visual Comparison */}
-                <div className="text-center space-y-4">
+                <figure className="text-center space-y-4">
                   <h4 className="text-lg font-medium text-[#493B32] flex items-center justify-center gap-2">
                     <MdVisibility className="w-5 h-5" />
                     Vision Comparison
@@ -367,40 +360,46 @@ const Accessibility = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                  
+                  <figcaption className="text-sm text-[#493B32]/70 max-w-lg mx-auto">
+                    Visual demonstration of how red building search results appear to users with normal vision compared to those with protanopia (red-blindness)
+                  </figcaption>
+                </figure>
 
                 {/* Challenges & Results */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-6" aria-labelledby="task1-findings">
+                  <h4 id="task1-findings" className="sr-only">Task 1 Findings</h4>
+                  
                   <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                    <h5 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
                       <HiExclamation className="w-5 h-5 text-[#493B32]" />
                       Challenges
-                    </h4>
-                    <div className="space-y-2">
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Visual confusion due to muted red tones</p>
-                      </div>
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Failed identification, had to rely on text descriptions</p>
-                      </div>
-                    </div>
+                    </h5>
+                    <ul className="space-y-2" role="list" aria-label="Challenges encountered">
+                      <li className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Visual confusion due to muted red tones</span>
+                      </li>
+                      <li className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Failed identification, had to rely on text descriptions</span>
+                      </li>
+                    </ul>
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                    <h5 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
                       <FaCheck className="w-5 h-5 text-[#493B32]" />
                       Key Insights
-                    </h4>
-                    <div className="space-y-2">
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Color-only cues create significant barriers</p>
-                      </div>
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Alternative visual signals are essential</p>
-                      </div>
-                    </div>
+                    </h5>
+                    <ul className="space-y-2" role="list" aria-label="Key insights learned">
+                      <li className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Color-only cues create significant barriers</span>
+                      </li>
+                      <li className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Alternative visual signals are essential</span>
+                      </li>
+                    </ul>
                   </div>
-                </div>
+                </section>
 
               </div>
             </div>
@@ -424,13 +423,10 @@ const Accessibility = () => {
                 {/* Steps */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-medium text-[#493B32] text-center">User Flow Steps</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    
-
-                    {/* Step 1 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                  <ol className="grid grid-cols-1 md:grid-cols-2 gap-4" role="list" aria-label="Task 2 user flow steps">
+                    <li className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" aria-hidden="true">
                           1
                         </div>
                         <div>
@@ -438,12 +434,11 @@ const Accessibility = () => {
                           <p className="text-xs text-[#493B32]/80">Navigate to the color palette generator on Coolors.co</p>
                         </div>
                       </div>
-                    </div>
+                    </li>
 
-                    {/* Step 2 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                    <li className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" aria-hidden="true">
                           2
                         </div>
                         <div>
@@ -451,12 +446,11 @@ const Accessibility = () => {
                           <p className="text-xs text-[#493B32]/80">Select blue as primary color (unaffected by red-blindness)</p>
                         </div>
                       </div>
-                    </div>
+                    </li>
 
-                    {/* Step 3 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                    <li className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" aria-hidden="true">
                           3
                         </div>
                         <div>
@@ -464,12 +458,11 @@ const Accessibility = () => {
                           <p className="text-xs text-[#493B32]/80">Adjust orange variants by shifting hue toward yellow spectrum</p>
                         </div>
                       </div>
-                    </div>
+                    </li>
 
-                    {/* Step 4 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                    <li className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" aria-hidden="true">
                           4
                         </div>
                         <div>
@@ -477,12 +470,11 @@ const Accessibility = () => {
                           <p className="text-xs text-[#493B32]/80">Use ChromeLens to preview contrast and visibility in real time</p>
                         </div>
                       </div>
-                    </div>
-
-                  </div>
+                    </li>
+                  </ol>
                 </div>
                 {/* Color Palette Visual */}
-                <div className="text-center space-y-4">
+                <figure className="text-center space-y-4">
                    <h4 className="text-lg font-medium text-[#493B32] flex items-center justify-center gap-2">
                      <MdColorLens className="w-5 h-5" />
                      Accessible Blue-Orange Palette
@@ -507,43 +499,45 @@ const Accessibility = () => {
                      </div>
                    </div>
 
-                   <p className="text-sm text-[#493B32]/80 max-w-xl mx-auto">
+                   <figcaption className="text-sm text-[#493B32]/80 max-w-xl mx-auto">
                      The final palette features yellow-based orange tones and bright blue colors that maintain high contrast and visibility for users with protanopia.
-                   </p>
-                 </div>
+                   </figcaption>
+                 </figure>
 
                 {/* Challenges & Results */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-6" aria-labelledby="task2-findings">
+                  <h4 id="task2-findings" className="sr-only">Task 2 Findings</h4>
+                  
                   <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                    <h5 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
                       <HiExclamation className="w-5 h-5 text-[#493B32]" />
                       Challenges 
-                    </h4>
-                    <div className="space-y-2">
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Orange with red undertones still appeared muted</p>
-                      </div>
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Red–orange combinations were difficult to evaluate without feedback from normal vision users</p>
-                      </div>
-                    </div>
+                    </h5>
+                    <ul className="space-y-2" role="list" aria-label="Challenges encountered in Task 2">
+                      <li className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Orange with red undertones still appeared muted</span>
+                      </li>
+                      <li className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Red–orange combinations were difficult to evaluate without feedback from normal vision users</span>
+                      </li>
+                    </ul>
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                    <h5 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
                       <FaCheck className="w-5 h-5 text-[#493B32]" />
                       Key Insights
-                    </h4>
-                    <div className="space-y-2">
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Created a green-based orange and bright blue palette</p>
-                      </div>
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Noted the need for additional contrast strategies beyond color (e.g., labels, spacing)</p>
-                      </div>
-                    </div>
+                    </h5>
+                    <ul className="space-y-2" role="list" aria-label="Key insights from Task 2">
+                      <li className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Created a green-based orange and bright blue palette</span>
+                      </li>
+                      <li className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Noted the need for additional contrast strategies beyond color (e.g., labels, spacing)</span>
+                      </li>
+                    </ul>
                   </div>
-                </div>
+                </section>
                  
                </div>
              </div>
@@ -567,12 +561,10 @@ const Accessibility = () => {
                 {/* Steps */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-medium text-[#493B32] text-center">User Flow Steps</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    
-                    {/* Step 1 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                  <ol className="grid grid-cols-1 md:grid-cols-2 gap-4" role="list" aria-label="Task 3 user flow steps">
+                    <li className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" aria-hidden="true">
                           1
                         </div>
                         <div>
@@ -580,12 +572,11 @@ const Accessibility = () => {
                           <p className="text-xs text-[#493B32]/80">Upload the selected Unsplash stock photo (chosen during Task 1)</p>
                         </div>
                       </div>
-                    </div>
+                    </li>
 
-                    {/* Step 2 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                    <li className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" aria-hidden="true">
                           2
                         </div>
                         <div>
@@ -593,12 +584,11 @@ const Accessibility = () => {
                           <p className="text-xs text-[#493B32]/80">Use the previously created blue and green-based orange palette</p>
                         </div>
                       </div>
-                    </div>
+                    </li>
 
-                    {/* Step 3 */}
-                    <div className="bg-[#493B32]/5 rounded-lg p-4">
+                    <li className="bg-[#493B32]/5 rounded-lg p-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        <div className="w-8 h-8 bg-[#493B32] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" aria-hidden="true">
                           3
                         </div>
                         <div>
@@ -606,13 +596,12 @@ const Accessibility = () => {
                           <p className="text-xs text-[#493B32]/80">Add text labels over color-coded areas to ensure meaning isn't lost</p>
                         </div>
                       </div>
-                    </div>
-
-                  </div>
+                    </li>
+                  </ol>
                 </div>
 
                 {/* Poster Result */}
-                <div className="text-center space-y-4">
+                <figure className="text-center space-y-4">
                   <h4 className="text-lg font-medium text-[#493B32] flex items-center justify-center gap-2">
                     <SiCanva className="w-5 h-5" />
                     Final Poster Result
@@ -637,43 +626,45 @@ const Accessibility = () => {
                     </div>
                   </div>
 
-                  <p className="text-sm text-[#493B32]/80 max-w-xl mx-auto">
-                    The final poster incorporates accessible colors, text labels.
-                  </p>
-                </div>
+                  <figcaption className="text-sm text-[#493B32]/80 max-w-xl mx-auto">
+                    The final poster incorporates accessible colors and text labels for enhanced accessibility.
+                  </figcaption>
+                </figure>
 
                 {/* Challenges & Results */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-6" aria-labelledby="task3-findings">
+                  <h4 id="task3-findings" className="sr-only">Task 3 Findings</h4>
+                  
                   <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                    <h5 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
                       <HiExclamation className="w-5 h-5 text-[#493B32]" />
                       Challenges
-                    </h4>
-                    <div className="space-y-2">
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Red-orange still rendered as greenish; difficult to assess solo</p>
-                      </div>
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Simulated view alone wasn't enough to ensure accessibility — required team review</p>
-                      </div>
-                    </div>
+                    </h5>
+                    <ul className="space-y-2" role="list" aria-label="Challenges encountered in Task 3">
+                      <li className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Red-orange still rendered as greenish; difficult to assess solo</span>
+                      </li>
+                      <li className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Simulated view alone wasn't enough to ensure accessibility — required team review</span>
+                      </li>
+                    </ul>
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
+                    <h5 className="text-lg font-medium text-[#493B32] flex items-center gap-2">
                       <FaCheck className="w-5 h-5 text-[#493B32]" />
                       Key Insights
-                    </h4>
-                    <div className="space-y-2">
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Added text labels over color-coded areas</p>
-                      </div>
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm text-[#493B32]/80">• Implemented strong contrast and clear typography hierarchy</p>
-                      </div>
-                    </div>
+                    </h5>
+                    <ul className="space-y-2" role="list" aria-label="Key insights from Task 3">
+                      <li className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Added text labels over color-coded areas</span>
+                      </li>
+                      <li className="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <span className="text-sm text-[#493B32]/80">Implemented strong contrast and clear typography hierarchy</span>
+                      </li>
+                    </ul>
                   </div>
-                </div>
+                </section>
 
                                </div>
              </div>
@@ -829,45 +820,47 @@ const Accessibility = () => {
                 </div>
 
                 {/* Features Grid */}
-                <div className="bg-white rounded-xl p-8 shadow-sm border border-[#493B32]/10 max-w-4xl mx-auto">
+                <section className="bg-white rounded-xl p-8 shadow-sm border border-[#493B32]/10 max-w-4xl mx-auto" aria-labelledby="contrast-fixer-features">
+                  <h4 id="contrast-fixer-features" className="sr-only">Contrast Fixer Plugin Features and Benefits</h4>
+                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-[#493B32] flex items-center gap-2">
+                      <h5 className="text-lg font-semibold text-[#493B32] flex items-center gap-2">
                         <FaCheck className="w-5 h-5 text-green-600" />
                         Key Features
-                      </h4>
-                      <div className="space-y-3">
-                        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                          <p className="text-sm text-[#493B32]/80 font-medium">• Real-time contrast ratio calculations</p>
-                        </div>
-                        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                          <p className="text-sm text-[#493B32]/80 font-medium">• WCAG AA/AAA compliance checking</p>
-                        </div>
-                        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                          <p className="text-sm text-[#493B32]/80 font-medium">• Automatic color adjustments</p>
-                        </div>
-                      </div>
+                      </h5>
+                      <ul className="space-y-3" role="list" aria-label="Key features of Contrast Fixer plugin">
+                        <li className="bg-green-50 border border-green-200 rounded-lg p-4">
+                          <span className="text-sm text-[#493B32]/80 font-medium">Real-time contrast ratio calculations</span>
+                        </li>
+                        <li className="bg-green-50 border border-green-200 rounded-lg p-4">
+                          <span className="text-sm text-[#493B32]/80 font-medium">WCAG AA/AAA compliance checking</span>
+                        </li>
+                        <li className="bg-green-50 border border-green-200 rounded-lg p-4">
+                          <span className="text-sm text-[#493B32]/80 font-medium">Automatic color adjustments</span>
+                        </li>
+                      </ul>
                     </div>
 
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-[#493B32] flex items-center gap-2">
+                      <h5 className="text-lg font-semibold text-[#493B32] flex items-center gap-2">
                         <MdVisibility className="w-5 h-5 text-blue-600" />
                         Benefits for Red-Blind Users
-                      </h4>
-                      <div className="space-y-3">
-                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                          <p className="text-sm text-[#493B32]/80 font-medium">• Ensures text remains readable</p>
-                        </div>
-                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                          <p className="text-sm text-[#493B32]/80 font-medium">• Reduces reliance on color alone</p>
-                        </div>
-                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                          <p className="text-sm text-[#493B32]/80 font-medium">• Improves overall visual hierarchy</p>
-                        </div>
-                      </div>
+                      </h5>
+                      <ul className="space-y-3" role="list" aria-label="Benefits for red-blind users">
+                        <li className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                          <span className="text-sm text-[#493B32]/80 font-medium">Ensures text remains readable</span>
+                        </li>
+                        <li className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                          <span className="text-sm text-[#493B32]/80 font-medium">Reduces reliance on color alone</span>
+                        </li>
+                        <li className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                          <span className="text-sm text-[#493B32]/80 font-medium">Improves overall visual hierarchy</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                </div>
+                </section>
               </div>
             </div>
           </div>
