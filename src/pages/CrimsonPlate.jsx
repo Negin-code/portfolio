@@ -27,7 +27,7 @@ const CrimsonPlate = () => {
       ></div>
 
       {/* Project Content */}
-      <article className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 ml-20 lg:ml-10">
+      <article className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 ml-20 lg:ml-10 mr-15 lg:mr-0">
         <ProjectHero
           title="Crimson Plate"
           image={CrimsonPlateImage}
