@@ -324,29 +324,6 @@ const CrimsonPlate = () => {
         </section>
       </article>
 
-      {/* Navigation Footer */}
-      <nav
-        className="col-span-4 md:col-span-6 lg:col-span-10 lg:col-start-2 flex justify-between items-center mt-8 mb-8 px-20 lg:px-10"
-        aria-label="Page navigation"
-      >
-        <Link
-          to="/projects"
-          className="flex items-center gap-3 px-6 py-3 bg-[#493B32] text-[#FFF7F2] rounded-lg hover:bg-[#5E3F27] transition-colors group"
-          aria-label="Return to projects page"
-        >
-          <IoIosArrowRoundBack className="w-6 h-6 group-hover:translate-x-[-4px] transition-transform" />
-          <span className="font-medium">Back to Projects</span>
-        </Link>
-
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex items-center gap-2 px-4 py-2 text-[#493B32] hover:text-[#5E3F27] transition-colors group"
-          aria-label="Scroll to top of page"
-        >
-          <span className="text-sm font-medium">Back to Top</span>
-          <IoIosArrowDropupCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
-        </button>
-      </nav>
     </main>
   );
 };
