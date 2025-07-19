@@ -43,8 +43,7 @@ const Header = () => {
       boxShadow: "0 10px 40px rgba(73, 59, 50, 0.15)",
     },
     bmMenu: {
-      background: "rgba(255, 247, 242, 0.95)",
-      backdropFilter: "blur(10px)",
+      background: "#FFF7F2",
       padding: "1.5rem 1.25rem",
       fontSize: "1.1em",
       border: "1px solid rgba(73, 59, 50, 0.1)",
@@ -58,7 +57,6 @@ const Header = () => {
     },
     bmOverlay: {
       background: "rgba(0, 0, 0, 0.2)",
-      backdropFilter: "blur(2px)",
     },
   };
 
