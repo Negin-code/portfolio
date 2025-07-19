@@ -30,14 +30,14 @@ const FlowStep = ({ icon: Icon, text, iconColor, bgColor }) => (
 
 const UserFlow = ({ steps }) => (
   <nav
-    className="flex items-center justify-between w-full gap-2 py-3"
+    className="w-full py-3 overflow-x-auto"
     role="navigation"
     aria-label="User flow steps"
   >
-    <ol className="flex items-center justify-between w-full gap-2" role="list">
+    <ol className="flex items-center gap-2 min-w-max px-2" role="list">
       {steps.map((step, index) => (
         <React.Fragment key={index}>
-          <li role="listitem">
+          <li role="listitem" className="flex-shrink-0">
             <FlowStep
               icon={step.icon}
               text={step.text}
