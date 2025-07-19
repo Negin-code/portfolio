@@ -6,7 +6,6 @@ import { BiCodeAlt, BiPalette } from "react-icons/bi";
 import Button from "../components/Button";
 import AnimatedThreads from "../components/AnimatedThreads";
 import CategoryCard from "../components/CategoryCard";
-import { HeroHeading, SectionHeading, LargeText, GradientText } from "../components/Typography";
 
 const Home = () => {
   return (
@@ -62,29 +61,43 @@ const Home = () => {
       >
         {/* Hero Content */}
         <header className="col-span-4 md:col-span-6 lg:col-span-11 text-right mt-15 md:mt-20 px-6 md:px-10 lg:px-0">
-          <HeroHeading
+          <h1
             id="hero-heading"
-            className="leading-relaxed mb-6 mr-8 lg:mr-0"
+            className="font-tan text-[1.4rem] sm:text-[2.5rem] md:text-[3.25rem] lg:text-[5rem] xl:text-[6rem] leading-relaxed mb-6 mr-8 lg:mr-0"
           >
-            <GradientText as="span" className="block">
+            <span
+              className="block text-transparent"
+              style={{
+                background: "linear-gradient(to right, #493B32, #F75590)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+              }}
+            >
               UI/UX Designer
-            </GradientText>
+            </span>
             <span className="block text-[#493B32] mt-2" aria-hidden="true">
               &
             </span>
-            <GradientText as="span" className="block">
+            <span
+              className="block text-transparent"
+              style={{
+                background: "linear-gradient(to right, #493B32, #F75590)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+              }}
+            >
               Frontend Developer
-            </GradientText>
-          </HeroHeading>
+            </span>
+          </h1>
 
           <div className="max-w-2xl ml-auto mt-10">
-            <LargeText className="font-open mb-6 leading-relaxed sm:leading-tight mr-8 lg:mr-0">
+            <p className="text-lg sm:text-xl md:text-3xl font-open text-[#493B32] mb-6 leading-relaxed sm:leading-tight mr-8 lg:mr-0">
               Bridging the gap between
               <span className="block sm:inline text-[#F75590] font-bold">
                 {" "}
                 logic and empathy
               </span>
-            </LargeText>
+            </p>
           </div>
 
           {/* Call to Action */}
@@ -131,11 +144,12 @@ const Home = () => {
             }}
             aria-hidden="true"
           ></div>
-          <SectionHeading
+          <h2
             id="services-heading"
+            className="text-3xl md:text-5xl font-tan text-[#493B32]"
           >
             What I Do
-          </SectionHeading>
+          </h2>
         </header>
 
         {/* Services Grid */}

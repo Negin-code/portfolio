@@ -24,7 +24,6 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { PageHeading, SectionHeading, SubsectionHeading, MediumText, RegularText } from "../components/Typography";
 
 
 

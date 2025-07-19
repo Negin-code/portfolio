@@ -29,7 +29,6 @@ import GlassIcon from "../components/GlassIcon";
 import NeginImage1 from "../assets/profilephoto.jpg";
 import styles from "../components/Scroll.module.css";
 import Button from "../components/Button";
-import { SectionHeading, MediumText } from "../components/Typography";
 
 const About = () => {
   const [expandedSection, setExpandedSection] = useState(null);
@@ -120,11 +119,11 @@ const About = () => {
           className="pl-22 lg:pl-0 pr-10 lg:pr-0 pt-8"
           aria-label="Resume download"
         >
-          <MediumText className="mt-2 sm:mt-4 lg:mt-6 pb-8">
+          <p className="text-[#493B32] leading-relaxed text-base md:text-lg mt-2 sm:mt-4 lg:mt-6 pb-8">
               When I'm not designing, you'll likely find me enjoying a good
               coffee, reading a book, capturing a moment through photography, or
               reflecting on how small details shape big experiences.
-          </MediumText>
+            </p>
           <Button
             href="/assets/resume/resume.pdf"
             variant="primary"
@@ -139,12 +138,12 @@ const About = () => {
           className="pl-22 lg:pl-0 pr-12 lg:pr-0  pt-12 col-start-1 mb-12 sm:mb-16"
           aria-labelledby="tools-heading"
         >
-          <SectionHeading
+          <h2
             id="tools-heading"
-            className="leading-tight mb-6 sm:mb-8"
+            className="text-2xl sm:text-3xl md:text-4xl text-[#493B32] xl:text-5xl font-tan leading-tight mb-6 sm:mb-8"
           >
             Software & Tools
-          </SectionHeading>
+          </h2>
 
           <div
             className={`${styles.scrollContainer} mt-12`}

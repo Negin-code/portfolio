@@ -11,7 +11,6 @@ import {
 import { IoIosArrowDropupCircle, IoIosArrowRoundBack } from "react-icons/io";
 import CrimsonPlateImage from "../assets/CrimsonPlateHero.webp";
 import ProjectHero from "../components/ProjectHero";
-import { SectionHeading, SubsectionHeading, MediumText, RegularText, Metadata } from "../components/Typography";
 
 const CrimsonPlate = () => {
   return (
@@ -154,11 +153,12 @@ const CrimsonPlate = () => {
               className="w-[3vh] sm:w-[4vh] md:w-[5vh] h-[2px] bg-[#493B32]"
               aria-hidden="true"
             ></div>
-            <SectionHeading
+            <h2
               id="overview-heading"
+              className="text-2xl sm:text-3xl md:text-4xl font-tan text-[#493B32]"
             >
               Project Overview
-            </SectionHeading>
+            </h2>
           </header>
 
           <div className="space-y-6">
@@ -192,11 +192,12 @@ const CrimsonPlate = () => {
               className="w-[3vh] sm:w-[4vh] md:w-[5vh] h-[2px] bg-[#493B32]"
               aria-hidden="true"
             ></div>
-                      <SectionHeading
-            id="technologies-heading"
-          >
-            Technologies Used
-          </SectionHeading>
+            <h2
+              id="technologies-heading"
+              className="text-2xl sm:text-3xl md:text-4xl font-tan text-[#493B32]"
+            >
+              Technologies Used
+            </h2>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
@@ -297,11 +298,12 @@ const CrimsonPlate = () => {
               className="w-[3vh] sm:w-[4vh] md:w-[5vh] h-[2px] bg-[#493B32]"
               aria-hidden="true"
             ></div>
-                      <SectionHeading
-            id="accessibility-heading"
-          >
-            Accessibility & Performance
-          </SectionHeading>
+            <h2
+              id="accessibility-heading"
+              className="text-2xl sm:text-3xl md:text-4xl font-tan text-[#493B32]"
+            >
+              Accessibility & Performance
+            </h2>
           </header>
 
           <div className="bg-gradient-to-br from-[#493B32]/5 to-[#493B32]/10 p-8 sm:p-10 rounded-xl border border-[#493B32]/10">
