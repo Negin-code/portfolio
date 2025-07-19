@@ -26,7 +26,7 @@ import HeroContent from "../components/HeroContent";
 import AccordionSection from "../components/AccordionSection";
 import Value from "../components/Value";
 import GlassIcon from "../components/GlassIcon";
-import NeginImage1 from "../assets/profilephoto.png";
+import NeginImage1 from "../assets/profilephoto.jpg";
 import styles from "../components/Scroll.module.css";
 import Button from "../components/Button";
 
