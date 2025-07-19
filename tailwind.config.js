@@ -45,23 +45,23 @@ export default {
       const newUtilities = {
         // Heading Typography Utilities
         '.text-heading-hero': {
-          fontSize: '1.5rem',
-          lineHeight: '2rem',
+          fontSize: '2rem',
+          lineHeight: '2.25rem',
           '@screen sm': {
-            fontSize: '2.5rem',
-            lineHeight: '3rem',
+            fontSize: '3rem',
+            lineHeight: '3.25rem',
           },
           '@screen md': {
-            fontSize: '3.25rem',
-            lineHeight: '3.5rem',
+            fontSize: '4rem',
+            lineHeight: '4.25rem',
           },
           '@screen lg': {
-            fontSize: '5rem',
-            lineHeight: '5rem',
-          },
-          '@screen xl': {
             fontSize: '6rem',
             lineHeight: '6rem',
+          },
+          '@screen xl': {
+            fontSize: '7rem',
+            lineHeight: '7rem',
           },
         },
         '.text-heading-1': {
