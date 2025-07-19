@@ -24,32 +24,41 @@ const Header = () => {
     bmCrossButton: {
       height: "24px",
       width: "24px",
-      right: "32px",
-      top: "32px",
+      right: "24px",
+      top: "24px",
     },
     bmCross: {
       background: "#493B32",
+      height: "20px",
+      width: "3px",
     },
     bmMenuWrap: {
       position: "fixed",
-      height: "100%",
-      width: "300px",
-      top: "0px",
+      height: "auto",
+      maxHeight: "280px",
+      width: "280px",
+      top: "80px",
+      borderRadius: "16px",
+      overflow: "hidden",
+      boxShadow: "0 10px 40px rgba(73, 59, 50, 0.15)",
     },
     bmMenu: {
-      background: "#FFF7F2",
-      padding: "2.5em 1.5em",
-      fontSize: "1.15em",
-      borderLeft: "2px solid rgba(73, 59, 50, 0.1)",
+      background: "rgba(255, 247, 242, 0.95)",
+      backdropFilter: "blur(10px)",
+      padding: "1.5rem 1.25rem",
+      fontSize: "1.1em",
+      border: "1px solid rgba(73, 59, 50, 0.1)",
+      borderRadius: "16px",
     },
     bmItemList: {
       display: "flex",
       flexDirection: "column",
-      gap: "2rem",
-      padding: "2rem 0",
+      gap: "1rem",
+      padding: "0",
     },
     bmOverlay: {
-      background: "rgba(0, 0, 0, 0.3)",
+      background: "rgba(0, 0, 0, 0.2)",
+      backdropFilter: "blur(2px)",
     },
   };
 
@@ -134,44 +143,44 @@ const Header = () => {
             aria-label="Mobile navigation menu"
             id="mobile-menu"
           >
-            <nav role="navigation" aria-label="Mobile navigation links">
+            <nav>
               <Link
                 to="/"
                 onClick={closeMenu}
-                className="relative text-[#493B32] text-xl font-tan hover:text-[#F75590] transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded"
+                className="relative text-[#493B32] text-lg font-tan hover:text-[#F75590] transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded py-2 block"
                 aria-current={location.pathname === "/" ? "page" : undefined}
               >
                 <span className="relative z-10">Home</span>
                 <span
-                  className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#F75590] group-hover:w-full transition-all duration-300"
+                  className="absolute left-0 bottom-1 w-0 h-[2px] bg-[#F75590] group-hover:w-full transition-all duration-300"
                   aria-hidden="true"
                 ></span>
               </Link>
               <Link
                 to="/about"
                 onClick={closeMenu}
-                className="relative text-[#493B32] text-xl font-tan hover:text-[#F75590] transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded"
+                className="relative text-[#493B32] text-lg font-tan hover:text-[#F75590] transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded py-2 block"
                 aria-current={
                   location.pathname === "/about" ? "page" : undefined
                 }
               >
                 <span className="relative z-10">About Me</span>
                 <span
-                  className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#F75590] group-hover:w-full transition-all duration-300"
+                  className="absolute left-0 bottom-1 w-0 h-[2px] bg-[#F75590] group-hover:w-full transition-all duration-300"
                   aria-hidden="true"
                 ></span>
               </Link>
               <Link
                 to="/projects"
                 onClick={closeMenu}
-                className="relative text-[#493B32] text-xl font-tan hover:text-[#F75590] transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded"
+                className="relative text-[#493B32] text-lg font-tan hover:text-[#F75590] transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded py-2 block"
                 aria-current={
                   location.pathname === "/projects" ? "page" : undefined
                 }
               >
                 <span className="relative z-10">Projects</span>
                 <span
-                  className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#F75590] group-hover:w-full transition-all duration-300"
+                  className="absolute left-0 bottom-1 w-0 h-[2px] bg-[#F75590] group-hover:w-full transition-all duration-300"
                   aria-hidden="true"
                 ></span>
               </Link>
