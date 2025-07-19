@@ -13,6 +13,7 @@ import ReflectionSection from "../components/ReflectionSection";
 import NextStepsSection from "../components/NextStepsSection";
 import GoodReadsImage from "../assets/goodreadshero.png";
 import SolutionsSection from "../components/SolutionsSection";
+import { SectionHeading, MediumText, RegularText, Metadata } from "../components/Typography";
 
 const GoodReads = () => {
   return (
@@ -198,12 +199,11 @@ const GoodReads = () => {
               className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
               aria-hidden="true"
             ></div>
-            <h2
+            <SectionHeading
               id="overview-heading"
-              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
               Project Overview
-            </h2>
+            </SectionHeading>
           </header>
 
           <p className="text-[#493B32] leading-relaxed text-lg">
@@ -233,12 +233,11 @@ const GoodReads = () => {
               className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
               aria-hidden="true"
             ></div>
-            <h2
-              id="objectives-heading"
-              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
-            >
-              Project Objectives
-            </h2>
+                      <SectionHeading
+            id="objectives-heading"
+          >
+            Project Objectives
+          </SectionHeading>
           </header>
 
           <div

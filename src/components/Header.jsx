@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 import { FiMenu } from "react-icons/fi";
 import logo from "../assets/Logo.png";
+import { NavLink, MobileNavLink } from "./Typography";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -96,26 +97,26 @@ const Header = () => {
         >
           <Link
             to="/"
-            className="text-[#5a3e2b] text-lg hover:text-[#3e2a1e] transition duration-300 focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded px-2 py-1"
+            className="focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded px-2 py-1"
             aria-current={location.pathname === "/" ? "page" : undefined}
           >
-            Home
+            <NavLink>Home</NavLink>
           </Link>
           <Link
             to="/projects"
-            className="text-[#5a3e2b] text-lg hover:text-[#3e2a1e] transition duration-300 focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded px-2 py-1"
+            className="focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded px-2 py-1"
             aria-current={
               location.pathname === "/projects" ? "page" : undefined
             }
           >
-            Projects
+            <NavLink>Projects</NavLink>
           </Link>
           <Link
             to="/about"
-            className="text-[#5a3e2b] text-lg hover:text-[#3e2a1e] transition duration-300 focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded px-2 py-1"
+            className="focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded px-2 py-1"
             aria-current={location.pathname === "/about" ? "page" : undefined}
           >
-            About Me
+            <NavLink>About Me</NavLink>
           </Link>
         </nav>
 
@@ -145,10 +146,10 @@ const Header = () => {
               <Link
                 to="/"
                 onClick={closeMenu}
-                className="relative text-[#493B32] text-lg font-tan hover:text-[#F75590] transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded py-2 block"
+                className="relative transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded py-2 block"
                 aria-current={location.pathname === "/" ? "page" : undefined}
               >
-                <span className="relative z-10">Home</span>
+                <MobileNavLink className="relative z-10">Home</MobileNavLink>
                 <span
                   className="absolute left-0 bottom-1 w-0 h-[2px] bg-[#F75590] group-hover:w-full transition-all duration-300"
                   aria-hidden="true"
@@ -157,12 +158,12 @@ const Header = () => {
               <Link
                 to="/about"
                 onClick={closeMenu}
-                className="relative text-[#493B32] text-lg font-tan hover:text-[#F75590] transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded py-2 block"
+                className="relative transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded py-2 block"
                 aria-current={
                   location.pathname === "/about" ? "page" : undefined
                 }
               >
-                <span className="relative z-10">About Me</span>
+                <MobileNavLink className="relative z-10">About Me</MobileNavLink>
                 <span
                   className="absolute left-0 bottom-1 w-0 h-[2px] bg-[#F75590] group-hover:w-full transition-all duration-300"
                   aria-hidden="true"
@@ -171,12 +172,12 @@ const Header = () => {
               <Link
                 to="/projects"
                 onClick={closeMenu}
-                className="relative text-[#493B32] text-lg font-tan hover:text-[#F75590] transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded py-2 block"
+                className="relative transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#493B32] focus:ring-offset-2 rounded py-2 block"
                 aria-current={
                   location.pathname === "/projects" ? "page" : undefined
                 }
               >
-                <span className="relative z-10">Projects</span>
+                <MobileNavLink className="relative z-10">Projects</MobileNavLink>
                 <span
                   className="absolute left-0 bottom-1 w-0 h-[2px] bg-[#F75590] group-hover:w-full transition-all duration-300"
                   aria-hidden="true"

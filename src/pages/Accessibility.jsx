@@ -14,6 +14,7 @@ import poster from "../assets/poster.png";
 import colorref from "../assets/ColorRef.png";
 import redblind from "../assets/redblind.png";
 import contrastfixer from "../assets/contrast.png";
+import { SectionHeading, SubsectionHeading, MediumText, RegularText, Metadata, CardHeading } from "../components/Typography";
 
 const Accessibility = () => {
   return (

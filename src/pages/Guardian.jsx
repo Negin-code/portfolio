@@ -38,6 +38,7 @@ import { ImQuotesLeft } from "react-icons/im";
 
 import "./Guardian.css";
 import ProjectHero from "../components/ProjectHero";
+import { SectionHeading, SubsectionHeading, MediumText, RegularText, Metadata, SmallText } from "../components/Typography";
 
 const Guardian = () => {
   const [selectedFeature, setSelectedFeature] = useState(1);
@@ -235,15 +236,14 @@ const Guardian = () => {
               className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
               aria-hidden="true"
             ></div>
-            <h2
+            <SectionHeading
               id="overview-heading"
-              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
             >
               Project Overview
-            </h2>
+            </SectionHeading>
           </header>
 
-          <p className="text-[#493B32] leading-relaxed">
+          <RegularText>
             Guardian is a harm reduction mobile application designed for
             recreational substance users, particularly young adults like Evelyn
             who use drugs in isolation or in social settings. The app acts as a
@@ -253,7 +253,7 @@ const Guardian = () => {
             empathy, accessibility, and emotional clarity. It was developed
             during a school Design Jam, where the challenge was to create a
             solution that promotes social good.
-          </p>
+          </RegularText>
         </section>
 
         {/* Problem Section */}
@@ -267,12 +267,11 @@ const Guardian = () => {
               className="w-[3vh] sm:w-[3vh] md:w-[4vh] h-[2px] bg-[#493B32]"
               aria-hidden="true"
             ></div>
-            <h2
-              id="problem-heading"
-              className="text-2xl sm:text-3xl font-tan text-[#493B32]"
-            >
-              The Problem
-            </h2>
+                      <SectionHeading
+            id="problem-heading"
+          >
+            The Problem
+          </SectionHeading>
           </header>
 
           <div className="bg-[#493B32]/5 p-8 rounded-lg border border-[#493B32]/10">

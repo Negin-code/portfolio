@@ -9,6 +9,7 @@ import UserPersona from "../assets/userpersona.svg";
 import CompetitorAnalysis from "../assets/competitive.svg";
 import JourneyMap from "../assets/journeymap.svg";
 import UserFlow from "../assets/userflow.svg";
+import { PageHeading, SectionHeading, MediumText, RegularText } from "../components/Typography";
 
 
 const AlzCare = () => {
