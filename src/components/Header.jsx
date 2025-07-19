@@ -56,7 +56,7 @@ const Header = () => {
       padding: "0",
     },
     bmOverlay: {
-      background: "rgba(0, 0, 0, 0.2)",
+      background: "transparent",
     },
   };
 
