@@ -24,7 +24,7 @@ const AccordionSection = ({
         <button
           id={buttonId}
           onClick={onToggle}
-          className="flex justify-between items-center w-full text-left p-1 xs:p-5 sm:p-6 md:p-8 group focus:outline-none focus:ring-2 focus:ring-[#493b32] focus:ring-offset-2 rounded-lg"
+          className="flex justify-between items-center w-full text-left p-1 xs:p-5 sm:p-6 md:p-8"
           aria-expanded={isExpanded}
           aria-controls={panelId}
           aria-label={`${isExpanded ? "Collapse" : "Expand"} ${title} section`}
