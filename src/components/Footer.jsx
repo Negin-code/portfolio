@@ -54,12 +54,12 @@ const Footer = () => {
                 >
                   {copied ? (
                     <HiOutlineClipboardCheck
-                      className="text-sm text-[#90EE90]"
+                      className="text-md text-[#90EE90]"
                       aria-hidden="true"
                     />
                   ) : (
                     <HiOutlineClipboardCopy
-                      className="text-sm"
+                      className="text-md"
                       aria-hidden="true"
                     />
                   )}
