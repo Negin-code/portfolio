@@ -104,7 +104,7 @@ const Projects = () => {
 
       {/* Content container */}
       <section className="col-span-full grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 ml-20 lg:ml-10">
-        <div className="col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 pr-15 sm:pr-15 lg:pl-0 lg:pr-0">
+        <div className="mx-auto col-span-4 col-start-1 sm:col-span-4 sm:col-start-1 md:col-span-6 lg:col-span-10 lg:col-start-2 pr-15 sm:pr-15 lg:pl-0 lg:pr-0">
           {/* Page Header */}
           <header className="flex flex-row items-start justify-start gap-1 mb-8">
             <div className="w-[4vh] sm:w-[4vh] md:w-[5vh] h-[3px] bg-gradient-to-r from-[#493B32] to-[#F75590] mt-4" aria-hidden="true"></div>
